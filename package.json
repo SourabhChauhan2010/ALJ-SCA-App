@@ -1,0 +1,22 @@
+{
+  "name": "cw-user",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "forever -o output.log -e error.log start index.js"
+  },
+  "author": "Incture",
+  "license": "Private",
+  "dependencies": {
+    "async": "^0.9.0",
+    "bcrypt": "^0.8.0",
+    "bunyan": "^1.2.1",
+    "mongoose": "^3.8.19",
+    "nodemailer": "^1.3.0",
+    "nodemailer-ses-transport": "^1.2.0",
+    "restify": "^2.8.3",
+    "validator": "^3.22.1"
+  }
+}
