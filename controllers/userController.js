@@ -5,17 +5,18 @@ function UserController () {
 	var check = require('../utils/validator.js').validateParams;
 	var commonUtils = require('../utils/common.js');
 	var async = require('async');
+	var crypto = require('crypto');
 
 	this.register = function (req, res, next) {
 
 		var user = new User(req.params)
 		user.save(function(err, data) {
 			if(err) {
-				console.log('err');
-				console.log(err);
+				// console.log('err');
+				// console.log(err);
 				return res.send(400, {data: err});
 			}
-			console.log(data);
+			// console.log(data);
 			return res.send(200, {data: 'successfully registered'});
 		});
 	}
@@ -69,8 +70,7 @@ function UserController () {
 
 		], function errorChecker (err, data) {
 			if (err) {
-
-				console.log(err)
+				// console.log(err)
 				return res.send(400, {data: err});
 			}
 			return res.send(200, {data: data});
@@ -122,7 +122,7 @@ function UserController () {
           lastName: 'admin',
           phoneNo: '1231231233',
           email: 'admin@cherryworks.com',
-          userName: 'superadmin',
+          userName: 'admin@cherryworks.com',
           password: 'admin'
         });
 
@@ -141,7 +141,47 @@ function UserController () {
     });
   };
 
+  // Guess we need to change the access token for the admin 
+  // each login at least.
+
+  this.adminLogin = function(req, res, next) {
+  	try {
+      check('isEmail', 'Please provide a valid email address', req.params.email);
+      check('isLength', 'Please provide a valid password', req.params.password, 3); //min length - assumed 3
+    } catch (e) {
+      return res.send(400, {data: e.message});
+    }
+		
+		async.waterfall([
+			
+			User.findByEmail.bind(null, req.params.email),
+			
+			validatePassword.bind(null, req.params.password),
+
+			//use it only for admin right now
+			setAccessToken.bind(null),
+
+		], function errorChecker (err, data) {
+
+			if (err) {
+				return res.send(400, {data: err});
+			}
+			
+			var doc = {
+				"id": data._id,
+				"email": data.email,
+				"accessToken": data.accessToken,
+				"firstName": data.firstName,
+				"lastName": data.lastName,
+				"phoneNo": data.phoneNo
+			};
+			
+			return res.send(200, {data: doc});
+		});
+  }
+
 	function validatePassword(password, user, callback) {
+		//console.log(user);
 		User.validatePassword(password, user.password, function (err, match) {
       if (err) {
         return callback(err);
@@ -153,6 +193,21 @@ function UserController () {
 
       return callback(null, user);
     });
+	}
+
+	//only for Admin login currently
+	function setAccessToken(user, callback) {
+
+		var token = user.email + new Date();
+    user.accessToken = crypto.createHash('md5').update(token).digest('hex');
+
+    user.save(function(err, data) {
+    	if (err) {
+    		return callback(err);
+    	}
+    	return callback(null, data);
+    });
+
 	}
 
 

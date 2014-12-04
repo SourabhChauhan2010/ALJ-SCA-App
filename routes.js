@@ -9,6 +9,7 @@ module.exports = function(app) {
 
 	user.createSuperAdminIfNotPresent();
 	//USER 
+	app.post('/admin/login', user.adminLogin);
 	app.post('/user', user.register);
 	app.post('/user/login', user.login);
 	app.get('/users', user.index);

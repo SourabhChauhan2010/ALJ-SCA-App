@@ -105,6 +105,10 @@ module.exports = (function UserSchema() {
       if (err) {
         return callback(err);
       }
+      if(userDetail == null) {
+        return cb('No such user exists');
+      }
+      //console.log(userDetail);
       return callback(null, userDetail);
     });
   }

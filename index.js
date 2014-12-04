@@ -19,3 +19,4 @@ app.listen(config.port, function () {
 
 var routes = require('./routes')(app);
 
+GLOBAL.path = __dirname;
