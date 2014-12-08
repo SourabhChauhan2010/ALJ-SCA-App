@@ -6,6 +6,11 @@ exports.authenticateUser = function (email, accessToken, callback) {
 		if (err) {
 			return callback(err);
 		}
+
+		if (user == null) {
+			return callback('Invalid accessToken');
+		}
+		
 		return callback(null, user);
 	});
 }
