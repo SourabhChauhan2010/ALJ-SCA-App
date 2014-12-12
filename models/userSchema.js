@@ -39,6 +39,8 @@ module.exports = (function UserSchema() {
     email: { type: String, index: { unique: true } }, // used as login "username"
     phoneNo: { type: String, index: { unique: true } },
     userName: { type: String, index: { unique: true }, required: true},    
+    role: { type: String },
+    blocked: { type: Boolean, default: false}, // assuming only the admin can block
     password: String,
     resetPasswordToken: String,
     resetPasswordExpires: Date,
@@ -105,8 +107,11 @@ module.exports = (function UserSchema() {
       if (err) {
         return callback(err);
       }
-      if(userDetail == null) {
+      if (userDetail == null) {
         return cb('No such user exists');
+      }
+      if (userDetail.blocked) {
+        return cb('User blocked by Admin. Please contact admin');
       }
       //console.log(userDetail);
       return callback(null, userDetail);

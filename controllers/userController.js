@@ -44,19 +44,42 @@ function UserController () {
 		});
 	}
 
+
+	//should be exposed only for the admin.
 	this.index = function (req, res, next) {
-		async.waterfall([
 
-			commonUtils.authenticateUser.bind(null, req.params.email, req.params.accessToken),
+		// async.waterfall([
 
-			User.findAll.bind(null),
+		// 	commonUtils.authenticateUser.bind(null, req.params.email, req.params.accessToken),
 
-		], function errorChecker (err, data) {
+		// 	User.findAll.bind(null),
+
+		// ], function errorChecker (err, data) {
+		// 	if (err) {
+		// 		return res.send(400, {data: err});
+		// 	}
+		// 	//need to change the response data as per the UI
+		// 	return res.send(200, {data: data});
+		// });
+		User.find({ active: true }, fields, function (err, docs) {
+		 	if (err) {
+				return res.send(400, {data: err});
+			}
+			//need to change the response data as per the UI
+			return res.send(200, {data: data});
+			
+		});
+	}
+
+	this.show = function (req, res, next) {
+
+		commonUtils.authenticateUser(req.params.email, req.params.accessToken, function errorChecker (err, data) {
 			if (err) {
 				return res.send(400, {data: err});
 			}
+			//need to change the response data as per the UI
 			return res.send(200, {data: data});
-		});
+		});	
 	}
 
 	this.forgotPassword = function(req, res, next) {
@@ -140,6 +163,21 @@ function UserController () {
 
     });
   };
+
+  this.changeBlockStatus = function(req, res, next) {
+  	User.find({_id: req.params.id}, function (err, user) {
+  		if (err) {
+  			return res.send(400, err);
+  		}
+  		user.blocked = req.params.status;
+  		user.save(function(err1, data) {
+  			if (err1) {
+  				return res.send(400, err1);
+  			}
+  			return res.send(200, data);
+  		});
+  	});
+  } 
 
   // Guess we need to change the access token for the admin 
   // each login at least.

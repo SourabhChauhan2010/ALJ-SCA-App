@@ -10,6 +10,10 @@ exports.authenticateUser = function (email, accessToken, callback) {
 		if (user == null) {
 			return callback('Invalid accessToken');
 		}
+
+		if (user.blocked) {
+			return cb('User blocked by Admin. Please contact admin');
+		}
 		
 		return callback(null, user);
 	});

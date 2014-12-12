@@ -13,6 +13,8 @@ module.exports = function(app) {
 	app.post('/user', user.register);
 	app.post('/user/login', user.login);
 	app.get('/users', user.index);
+	app.get('/user/:id', user.show);
+	app.post('/user/:id/block', user.changeBlockStatus);
 	app.post('/forgot', user.forgotPassword);
 	app.get('/reset/:token', user.checkPasswordExpiry);
 	app.post('/reset/:token', user.resetPassword);
