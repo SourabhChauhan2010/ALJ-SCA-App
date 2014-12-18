@@ -6,17 +6,15 @@ function UserController () {
 	var commonUtils = require('../utils/common.js');
 	var async = require('async');
 	var crypto = require('crypto');
+	var J = require('../models/api/user.js');
 
 	this.register = function (req, res, next) {
 
 		var user = new User(req.params)
 		user.save(function(err, data) {
 			if(err) {
-				// console.log('err');
-				// console.log(err);
 				return res.send(400, {data: err});
 			}
-			// console.log(data);
 			return res.send(200, {data: 'successfully registered'});
 		});
 	}
@@ -48,27 +46,23 @@ function UserController () {
 	//should be exposed only for the admin.
 	this.index = function (req, res, next) {
 
-		// async.waterfall([
-
-		// 	commonUtils.authenticateUser.bind(null, req.params.email, req.params.accessToken),
-
-		// 	User.findAll.bind(null),
-
-		// ], function errorChecker (err, data) {
-		// 	if (err) {
-		// 		return res.send(400, {data: err});
-		// 	}
-		// 	//need to change the response data as per the UI
-		// 	return res.send(200, {data: data});
-		// });
-		User.find({ active: true }, fields, function (err, docs) {
+		var anchor_id = req.params.anchor_id || null;
+		var docs_per_page = 10;
+		User.findPaginated({ active: true }, function (err, docs) {
 		 	if (err) {
-				return res.send(400, {data: err});
+				return res.send(400, err);
 			}
 			//need to change the response data as per the UI
-			return res.send(200, {data: data});
+			var result = {};
+			J.as.public(docs.documents, {}, function(err1, data) {
+				result['documents'] = data;
+				result['totalPages'] = docs.totalPages;
+				result['prevAnchorId'] = docs.prevAnchorId;
+				result['nextAnchorId'] = docs.nextAnchorId;
+				return res.send(200, result);	
+			});
 			
-		});
+		}, docs_per_page, anchor_id);
 	}
 
 	this.show = function (req, res, next) {
@@ -126,6 +120,19 @@ function UserController () {
 				}
 				return res.send(200, {data: 'success'});
 			});
+		});
+	}
+
+	this.findByEmail = function(req, res, next) {
+
+		User.findByEmail(req.params.email, function(err, doc) {
+			if (err) {
+				return res.send(400, err);
+			}
+			J.as.public(doc, {}, function(err1, data) {
+				return res.send(200, result);	
+			});
+
 		});
 	}
 

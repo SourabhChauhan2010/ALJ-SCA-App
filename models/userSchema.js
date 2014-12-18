@@ -5,6 +5,7 @@ module.exports = (function UserSchema() {
 
     var crypto = require('crypto');
     var bcrypt = require('bcrypt');
+    var mongoosePages = require('mongoose-pages');
     var SALT_WORK_FACTOR = 10;
 
     var encrypt = function (text) {
@@ -61,6 +62,7 @@ module.exports = (function UserSchema() {
   var collectionName = 'user';
 
   var userSchema = mongoose.Schema(schema);
+  mongoosePages.anchor(userSchema);
   var User = mongoose.model(collectionName, userSchema);
 
   userSchema.pre('save', function(next) {
