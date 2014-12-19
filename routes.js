@@ -18,6 +18,7 @@ module.exports = function(app) {
 	app.post('/forgot', user.forgotPassword);
 	app.get('/reset/:token', user.checkPasswordExpiry);
 	app.post('/reset/:token', user.resetPassword);
+	app.get('/user', user.findByEmail);
 
 	//DEVICE
 	app.post('/user/device', device.add);

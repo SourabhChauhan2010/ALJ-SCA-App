@@ -46,23 +46,39 @@ function UserController () {
 	//should be exposed only for the admin.
 	this.index = function (req, res, next) {
 
-		var anchor_id = req.params.anchor_id || null;
-		var docs_per_page = 10;
-		User.findPaginated({ active: true }, function (err, docs) {
-		 	if (err) {
-				return res.send(400, err);
+		async.waterfall([
+
+			commonUtils.authenticateUser.bind(null, req.params.email, req.headers.accesstoken),
+
+			isAdmin.bind(null),
+
+			function() {
+				var anchor_id = req.params.anchor_id || null;
+				var docs_per_page = 10;
+				User.findPaginated({ active: true }, function (err, docs) {
+				 	if (err) {
+						return res.send(400, err);
+					}
+					//need to change the response data as per the UI
+					var result = {};
+					J.as.public(docs.documents, {}, function(err1, data) {
+						result['documents'] = data;
+						result['totalPages'] = docs.totalPages;
+						result['prevAnchorId'] = docs.prevAnchorId;
+						result['nextAnchorId'] = docs.nextAnchorId;
+						return res.send(200, result);	
+					});
+					
+				}, docs_per_page, anchor_id);		
+			}			
+		], function errorChecker (err, data) {
+			if (err) {
+				// console.log(err)
+				return res.send(400, {data: err});
 			}
-			//need to change the response data as per the UI
-			var result = {};
-			J.as.public(docs.documents, {}, function(err1, data) {
-				result['documents'] = data;
-				result['totalPages'] = docs.totalPages;
-				result['prevAnchorId'] = docs.prevAnchorId;
-				result['nextAnchorId'] = docs.nextAnchorId;
-				return res.send(200, result);	
-			});
-			
-		}, docs_per_page, anchor_id);
+			//return res.send(200, {data: data});
+		});
+		
 	}
 
 	this.show = function (req, res, next) {
@@ -125,14 +141,22 @@ function UserController () {
 
 	this.findByEmail = function(req, res, next) {
 
-		User.findByEmail(req.params.email, function(err, doc) {
-			if (err) {
-				return res.send(400, err);
-			}
-			J.as.public(doc, {}, function(err1, data) {
-				return res.send(200, result);	
-			});
+		async.waterfall([
 
+			commonUtils.authenticateUser.bind(null, req.params.email, req.headers.accesstoken),
+
+			isAdmin.bind(null),
+			
+			User.findByEmail.bind(null, req.params.email), 
+					
+		],function errorChecker (err, data) {
+			if (err) {
+				// console.log(err)
+				return res.send(400, {data: err});
+			}
+			J.as.public(data, {}, function(err1, doc) {
+				return res.send(200, doc);	
+			});
 		});
 	}
 
@@ -253,6 +277,10 @@ function UserController () {
     	return callback(null, data);
     });
 
+	}
+
+	function isAdmin(user, callback) {
+		return user.email == "admin@cherryworks.com" ? callback(null) : callback('Not Admin');
 	}
 
 

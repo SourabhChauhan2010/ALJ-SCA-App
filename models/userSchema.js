@@ -105,7 +105,7 @@ module.exports = (function UserSchema() {
 
   User.findByEmail = function(email, callback) {
     //fields = fields || 'id firstName lastName email userName phoneNo avatarUrl accounts accessToken';
-    User.findOne({ userName: email, active: true }, function (err, userDetail) {
+    User.findOne({ userName: new RegExp('^'+ email, "i"), active: true }, function (err, userDetail) {
       if (err) {
         return callback(err);
       }
@@ -225,7 +225,7 @@ module.exports = (function UserSchema() {
   }
 
   User.authenticate = function(userName, accessToken, cb) {
-    User.findOne({ userName: userName, accessToken: accessToken,  active: true }, function (err, doc) {
+    User.findOne({ accessToken: accessToken,  active: true }, function (err, doc) {
       if (err) {
         return cb(err);
       }    
