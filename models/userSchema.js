@@ -104,16 +104,18 @@ module.exports = (function UserSchema() {
   }
 
   User.findByEmail = function(email, callback) {
+    //var regex = new RegExp('^'+ email, "i")
+    //console.log(regex)
     //fields = fields || 'id firstName lastName email userName phoneNo avatarUrl accounts accessToken';
-    User.findOne({ userName: new RegExp('^'+ email, "i"), active: true }, function (err, userDetail) {
+    User.findOne({ email: email, active: true }, function (err, userDetail) {
       if (err) {
         return callback(err);
       }
       if (userDetail == null) {
-        return cb('No such user exists');
+        return callback('No such user exists');
       }
       if (userDetail.blocked) {
-        return cb('User blocked by Admin. Please contact admin');
+        return callback('User blocked by Admin. Please contact admin');
       }
       //console.log(userDetail);
       return callback(null, userDetail);

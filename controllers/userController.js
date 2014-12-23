@@ -1,12 +1,18 @@
 function UserController () {
 
 	var User = require('../models/userSchema.js');
+	var config = require('../config.js');
 	var passwordMailer = require('../mailers/password.js');
 	var check = require('../utils/validator.js').validateParams;
 	var commonUtils = require('../utils/common.js');
 	var async = require('async');
 	var crypto = require('crypto');
 	var J = require('../models/api/user.js');
+	var mongoose = require('mongoose');
+	mongoose.connect(config.dbPath);
+	var acl = require('acl');
+	
+	acl = new acl(new acl.mongodbBackend(mongoose.connection.db, 'acl_'));
 
 	this.register = function (req, res, next) {
 
@@ -14,6 +20,15 @@ function UserController () {
 		user.save(function(err, data) {
 			if(err) {
 				return res.send(400, {data: err});
+			}
+			// currently only user mgmt module is available. 
+			if (req.params.role == 'admin') {
+				acl.addUserRoles(user.email, 'admin');
+				acl.allow('admin', 'users', '*');
+			}
+			else
+			{
+				acl.addUserRoles(user.email, 'member');
 			}
 			return res.send(200, {data: 'successfully registered'});
 		});
@@ -38,7 +53,9 @@ function UserController () {
 			if (err) {
 				return res.send(400, {data: err});
 			}
-			return res.send(200, {data: data});
+			J.as.private(data, {}, function(err1, doc) {
+				return res.send(200, doc);	
+			});
 		});
 	}
 
@@ -280,7 +297,12 @@ function UserController () {
 	}
 
 	function isAdmin(user, callback) {
-		return user.email == "admin@cherryworks.com" ? callback(null) : callback('Not Admin');
+		//return user.email == "admin@cherryworks.com" ? callback(null) : callback('Not Admin');
+		acl.isAllowed(user.email, 'users', ['edit'], function(err, doc){
+			if (doc) return callback(null)
+				return callback('Not Admin');
+
+		});
 	}
 
 
