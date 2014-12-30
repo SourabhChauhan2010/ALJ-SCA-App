@@ -62,7 +62,7 @@ function UserController () {
 
 	//should be exposed only for the admin.
 	this.index = function (req, res, next) {
-
+		
 		async.waterfall([
 
 			commonUtils.authenticateUser.bind(null, req.params.email, req.headers.accesstoken),
@@ -100,7 +100,7 @@ function UserController () {
 
 	this.show = function (req, res, next) {
 
-		commonUtils.authenticateUser(req.params.email, req.params.accessToken, function errorChecker (err, data) {
+		commonUtils.authenticateUser(req.params.email, req.params.accesstoken, function errorChecker (err, data) {
 			if (err) {
 				return res.send(400, {data: err});
 			}
@@ -213,16 +213,20 @@ function UserController () {
   };
 
   this.changeBlockStatus = function(req, res, next) {
-  	User.find({_id: req.params.id}, function (err, user) {
+  	User.findOne({_id: req.params.id}, function (err, user) {
   		if (err) {
   			return res.send(400, err);
   		}
+  		
   		user.blocked = req.params.status;
   		user.save(function(err1, data) {
   			if (err1) {
   				return res.send(400, err1);
   			}
-  			return res.send(200, data);
+  			J.as.public(data, {}, function(err1, doc) {
+					return res.send(200, doc);	
+				});
+  			//return res.send(200, data);
   		});
   	});
   } 
@@ -297,12 +301,13 @@ function UserController () {
 	}
 
 	function isAdmin(user, callback) {
-		//return user.email == "admin@cherryworks.com" ? callback(null) : callback('Not Admin');
-		acl.isAllowed(user.email, 'users', ['edit'], function(err, doc){
-			if (doc) return callback(null)
-				return callback('Not Admin');
+		//	console.log(user.email)
+		return user.email == "admin@cherryworks.com" ? callback(null) : callback('Not Admin');
+		// acl.isAllowed(user.email, 'users', ['edit'], function(err, doc){
+		// 	if (doc) return callback(null)
+		// 		return callback('Not Admin');
 
-		});
+		// });
 	}
 
 
