@@ -62,7 +62,7 @@ function UserController () {
 
 	//should be exposed only for the admin.
 	this.index = function (req, res, next) {
-		
+
 		async.waterfall([
 
 			commonUtils.authenticateUser.bind(null, req.params.email, req.headers.accesstoken),
@@ -70,23 +70,26 @@ function UserController () {
 			isAdmin.bind(null),
 
 			function() {
-				var anchor_id = req.params.anchor_id || null;
+
+				var page = req.query.page || 1;
 				var docs_per_page = 10;
 				User.findPaginated({ active: true }, function (err, docs) {
 				 	if (err) {
 						return res.send(400, err);
 					}
+					
 					//need to change the response data as per the UI
 					var result = {};
 					J.as.public(docs.documents, {}, function(err1, data) {
+						
 						result['documents'] = data;
 						result['totalPages'] = docs.totalPages;
-						result['prevAnchorId'] = docs.prevAnchorId;
-						result['nextAnchorId'] = docs.nextAnchorId;
+						result['prevPage'] = docs.prevPage;
+						result['nextPage'] = docs.nextPage;
 						return res.send(200, result);	
 					});
 					
-				}, docs_per_page, anchor_id);		
+				}, docs_per_page, page);		
 			}			
 		], function errorChecker (err, data) {
 			if (err) {

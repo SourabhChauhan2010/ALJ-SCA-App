@@ -62,7 +62,7 @@ module.exports = (function UserSchema() {
   var collectionName = 'user';
 
   var userSchema = mongoose.Schema(schema);
-  mongoosePages.anchor(userSchema);
+  mongoosePages.skip(userSchema);
   var User = mongoose.model(collectionName, userSchema);
 
   userSchema.pre('save', function(next) {
