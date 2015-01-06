@@ -146,7 +146,6 @@ function UserController () {
 			if (err) {
 				return res.send(400, {data: err});
 			}
-
 			user.password = req.params.password;
 			user.resetPasswordToken = undefined;
 			user.resetPasswordExpires = undefined;
@@ -159,7 +158,7 @@ function UserController () {
 		});
 	}
 
-	this.findByEmail = function(req, res, next) {
+	this.searchByEmail = function(req, res, next) {
 
 		async.waterfall([
 
@@ -167,16 +166,23 @@ function UserController () {
 
 			isAdmin.bind(null),
 			
-			User.findByEmail.bind(null, req.params.email), 
+			User.searchByEmail.bind(null, req.query.email, req.query.page), 
 					
 		],function errorChecker (err, data) {
 			if (err) {
-				// console.log(err)
 				return res.send(400, {data: err});
 			}
-			J.as.public(data, {}, function(err1, doc) {
-				return res.send(200, doc);	
+			
+			var result = {}
+			J.as.public(data.documents, {}, function(err1, doc) {
+						
+				result['documents'] = doc;
+				result['totalPages'] = data.totalPages;
+				result['prevPage'] = data.prevPage;
+				result['nextPage'] = data.nextPage;
+				return res.send(200, result);	
 			});
+
 		});
 	}
 

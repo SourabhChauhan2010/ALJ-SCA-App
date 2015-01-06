@@ -122,6 +122,25 @@ module.exports = (function UserSchema() {
     });
   }
 
+  User.searchByEmail = function(email, page, callback) {
+    var regex = new RegExp('^'+ email, "i")
+    //console.log(regex)
+    //fields = fields || 'id firstName lastName email userName phoneNo avatarUrl accounts accessToken';
+    User.findPaginated({ email: regex }, function (err, userDetail) {
+      if (err) {
+        return callback(err);
+      }
+      if (userDetail == null) {
+        return callback('No such user exists');
+      }
+      if (userDetail.blocked) {
+        return callback('User blocked by Admin. Please contact admin');
+      }
+      //console.log(userDetail);
+      return callback(null, userDetail);
+    }, 10, page);
+  }
+
   User.findAll = function(user, cb) {
     // need to handle paginations
     fields = 'id firstName lastName email userName phoneNo avatarUrl accounts';
