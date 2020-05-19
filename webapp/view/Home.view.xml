@@ -14,7 +14,7 @@ Comments:
 					<Button icon="sap-icon://arrow-left" press="onBack"/>
 				</contentLeft>
 				<contentMiddle>
-					<Text text="Home"/>
+					<Text text="{i18n>TitleHome}"/>
 				</contentMiddle>
 			</Bar>
 		</customHeader>
