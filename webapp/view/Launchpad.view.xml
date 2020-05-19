@@ -1,9 +1,34 @@
+<!-- 
+*******************************DM 001****************************
+Developer: edzkh7fe6u
+Development Date: 19-May-2020
+Requirement: Create Launchpad view with Book a service Tile.
+Comments:
+*****************************************************************-->
 <mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.Launchpad" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content></content>
+				<Page id="page">
+					<customHeader>
+						<Bar>
+							<contentMiddle>
+								<Text text="{i18n>title}"/>
+							</contentMiddle>
+							<contentRight>
+								<MenuButton icon="sap-icon://globe" tooltip="{i18n>MenuBtnTooltip}">
+									<menu>
+										<Menu>
+											<MenuItem text="{i18n>MenuBtnEnglish}" press="onPresschangeLanguage"/>
+											<MenuItem text="{i18n>MenuBtnArabic}" press="onPresschangeLanguage"/>
+										</Menu>
+									</menu>
+								</MenuButton>
+							</contentRight>
+						</Bar>
+					</customHeader>
+					<GenericTile id="SCA_tile1" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>tile1}"
+						subheader="{i18n>tile1Subtitle}" press="pressTile"></GenericTile>
 				</Page>
 			</pages>
 		</App>

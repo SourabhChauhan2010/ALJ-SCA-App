@@ -76,17 +76,22 @@
 				"clearControlAggregation": false
 			},
 			"routes": [{
-				"name": "RouteLaunchpad",
-				"pattern": "RouteLaunchpad",
-				"target": ["TargetLaunchpad"]
+				"name": "Launchpad",
+				"pattern": "Launchpad",
+				"target": ["Launchpad"]
+			},{
+				"name": "Home",
+				"pattern": "Home",
+				"target": ["Home"]	
 			}],
 			"targets": {
-				"TargetLaunchpad": {
-					"viewType": "XML",
-					"transition": "slide",
-					"clearControlAggregation": false,
-					"viewId": "Launchpad",
+				"Launchpad": {
+				
 					"viewName": "Launchpad"
+				},
+				"Home": {
+				
+					"viewName": "Home"
 				}
 			}
 		}

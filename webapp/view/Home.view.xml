@@ -1,0 +1,22 @@
+<!-- 
+*******************************DM 001****************************
+Developer: edzkh7fe6u
+Development Date: 19-May-2020
+Requirement: 
+Comments:
+*****************************************************************-->
+<mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.Home" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
+	xmlns="sap.m">
+	<Page>
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button icon="sap-icon://arrow-left" press="onBack"/>
+				</contentLeft>
+				<contentMiddle>
+					<Text text="Home"/>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+	</Page>
+</mvc:View>
