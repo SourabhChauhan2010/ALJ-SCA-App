@@ -79,21 +79,29 @@
 				"name": "Launchpad",
 				"pattern": "Launchpad",
 				"target": ["Launchpad"]
-			},{
+			}, {
 				"name": "Home",
 				"pattern": "Home",
-				"target": ["Home"]	
+				"target": ["Home"]
+			}, {
+				"name": "BookAService",
+				"pattern": "BookAService",
+				"target":"BookAService"
+
 			}],
 			"targets": {
 				"Launchpad": {
-				
+
 					"viewName": "Launchpad"
 				},
 				"Home": {
-				
+
 					"viewName": "Home"
+				},
+				"BookAService": {
+					"viewName": "BookAService"
 				}
+			}
 			}
 		}
 	}
-}

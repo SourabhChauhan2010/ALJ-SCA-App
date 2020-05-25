@@ -29,6 +29,8 @@ Comments:
 					</customHeader>
 					<GenericTile id="SCA_tile1" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>tile1}"
 						subheader="{i18n>tile1Subtitle}" press="pressTile"></GenericTile>
+						<GenericTile id="SCA_tile2" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>tile2}"
+						subheader="{i18n>tile1Subtitle}" press="pressTile"></GenericTile>
 				</Page>
 			</pages>
 		</App>
