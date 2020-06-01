@@ -14,7 +14,6 @@
 			"version": "1.40.12"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -31,11 +30,10 @@
 			"phone": true
 		}
 	},
-
 	"sap.ui5": {
 		"flexEnabled": false,
 		"rootView": {
-				"viewName": "com.sap.alj.sca.ALJ_SCA.view.Launchpad",
+			"viewName": "com.sap.alj.sca.ALJ_SCA.view.App",
 			"type": "XML",
 			"async": true,
 			"id": "Launchpad"
@@ -58,12 +56,17 @@
 				"settings": {
 					"bundleName": "com.sap.alj.sca.ALJ_SCA.i18n.i18n"
 				}
+			},
+			"oAppModel": {
+				"type": "sap.ui.model.json.JSONModel"
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -71,22 +74,64 @@
 				"viewType": "XML",
 				"async": true,
 				"viewPath": "com.sap.alj.sca.ALJ_SCA.view",
-				"controlAggregation": "pages",
-				"controlId": "app",
-				"clearControlAggregation": false
+				"controlAggregation": "content",
+				"controlId": "page",
+				"clearControlAggregation": true
 			},
-			"routes": [{
-				"name": "RouteView1",
-				"pattern": "RouteView1",
-				"target": ["TargetView1"]
-			}],
+			"routes": [
+				{
+					"name": "Home",
+					"pattern": "Home",
+					"target": [
+						"Home"
+					]
+				},
+				{
+					"name": "BookAService",
+					"pattern": "BookAService",
+					"target": [
+						"BookAService"
+					]
+				},
+				{
+					"name": "MyCars",
+					"pattern": "MyCars",
+					"target": [
+						"MyCars"
+					]
+				},
+				{
+					"name": "MyServices",
+					"pattern": "MyServices",
+					"target": [
+						"MyServices"
+					]
+				}
+			],
 			"targets": {
-				"TargetView1": {
+				"App": {
 					"viewType": "XML",
-					"transition": "slide",
-					"clearControlAggregation": false,
-					"viewId": "View1",
-					"viewName": "View1"
+					"viewName": "App"
+				},
+				"Home": {
+					"viewType": "XML",
+					"viewName": "Home"
+				},
+				"BookAService": {
+					"viewType": "XML",
+					"viewName": "BookAService"
+				},
+				"MyCars": {
+					"viewType": "XML",
+					"viewName": "MyCars"
+				},
+				"MyServices": {
+					"viewType": "XML",
+					"viewName": "MyServices"
+				},
+				"Products": {
+					"viewType": "XML",
+					"viewName": "Products"
 				}
 			}
 		}

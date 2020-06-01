@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:commons="sap.suite.ui.commons">
+	<commons:Timeline showHeaderBar="false" showIcons="false" content="{oAppModel>/services}" enableScroll="false"
+		class="aljTimelineStyle sapUiSmallMarginTopBottom">
+		<commons:content>
+			<commons:TimelineItem>
+				<HBox justifyContent="SpaceBetween" alignItems="Center" width="100%">
+					<VBox>
+						<Label text="{oAppModel>soNumber}"/>
+						<HBox>
+							<Text text="PM: " class="sapUiTinyMarginEnd"/>
+							<Text text="{oAppModel>pm}" class="aljRedColorStyle"/>
+						</HBox>
+						<Text text="{oAppModel>date}"/>
+					</VBox>
+					<Button text="Know more" class="aljGrayBtnStyle"/>
+				</HBox>
+			</commons:TimelineItem>
+		</commons:content>
+	</commons:Timeline>
+</core:FragmentDefinition>

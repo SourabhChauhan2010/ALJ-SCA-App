@@ -1,0 +1,28 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.App"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App id="app">
+		<pages>
+			<Page id="page" class="aljPageStyle">
+				<customHeader>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Label text="{oAppModel>/currentScreen}"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+				</customHeader>
+				<footer>
+					<Toolbar design="Transparent">
+						<SegmentedButton selectedKey="{oAppModel>/currentScreen}" width="100%" selectionChange="onChangeScreen">
+							<items>
+								<SegmentedButtonItem text="Home" key="Home"/>
+								<SegmentedButtonItem text="My Cars" key="MyCars"/>
+								<SegmentedButtonItem text="Products" key="Products"/>
+								<SegmentedButtonItem text="Bookings" key="BookAService"/>
+							</items>
+						</SegmentedButton>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

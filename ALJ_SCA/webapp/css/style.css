@@ -1,1 +1,165 @@
-/* Enter your custom styles here */
+/********General Styles - Start*********/
+
+.aljPageStyle {
+    background: #fff;
+}
+
+.aljPageStyle .sapMIBar.sapMHeader-CTX {
+    background-color: #f00;
+    height: 3rem;
+}
+
+.aljPageStyle.sapMPage>.sapMPageHeader+section {
+    top: 3rem;
+}
+
+.aljPageStyle .sapMIBar-CTX .sapMLabel {
+    color: #fff;
+}
+
+.aljTitleClass {
+    font-weight: bold;
+    padding-bottom: 0.25rem;
+    border-bottom: solid 2px #e62f2d;
+}
+
+.aljTBStyle .sapMBtnContent,
+.aljGrayBtnStyle .sapMBtnContent,
+.aljRedBtnStyle .sapMBtnContent {
+    line-height: 1.9rem;
+}
+
+.aljLightGreyBtnStyle .sapMBtnContent {
+    line-height: 1.4rem;
+}
+
+.aljTBStyle .sapMBtnInner,
+.aljGrayBtnStyle .sapMBtnInner,
+.aljRedBtnStyle .sapMBtnInner {
+    height: 2rem;
+}
+
+.aljLightGreyBtnStyle .sapMBtnInner {
+    height: 1.5rem;
+}
+
+.aljTBStyle .sapMBtnInner {
+    border-color: #68696c;
+    color: #68696c;
+    border-radius: 0.4rem;
+}
+
+.aljTBStyle .sapMToggleBtnPressed {
+    background: #fff;
+    border-color: #e62f2d;
+}
+
+.aljGrayBtnStyle .sapMBtnInner {
+    border: none;
+    color: #fff;
+    background: #68696c;
+    border-radius: 0.75rem;
+}
+
+.aljRedBtnStyle .sapMBtnInner {
+    border: none;
+    color: #fff;
+    background: #e62f2d;
+    border-radius: 0.75rem;
+    min-width: 5rem;
+}
+
+.aljRedColorStyle {
+    color: #e62f2d;
+}
+
+.aljLightGreyBtnStyle .sapMBtnInner {
+    border: none;
+    color: #000;
+    background: #ebebeb;
+    border-radius: 1rem;
+}
+
+.aljLightGreyBtnStyle.sapMBtn {
+    height: 1.5rem;
+    padding: 0;
+}
+
+
+/********General Styles - End*********/
+
+
+/********Bookings Styles - Start*********/
+
+.aljBoxStyle {
+    background: #ebebeb;
+    padding-top: 1rem;
+    border-top-left-radius: 1.5rem;
+}
+
+.aljTimelineStyle.sapSuiteUiCommonsTimeline {
+    max-width: none;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemArrow {
+    display: none;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemBubble {
+    padding-left: 0px;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemBarV {
+    left: calc(50% - 1px);
+    width: 0.5px;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemNoIcon {
+    border: 4px solid #68696c;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemBarNoIcon.sapSuiteUiCommonsTimelineItemBarV {
+    top: 35px;
+    height: calc(100% - 5px);
+    height: webkit-calc(100% - 5px);
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemBox {
+    border-radius: 1rem;
+    border-color: transparent;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemShell {
+	padding: 0.25 0.75rem;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemShellBody {
+    padding: 0;
+}
+
+.aljTimelineStyle .sapMLabel,
+.aljTimelineStyle .sapMText {
+    font-size: 0.7rem
+}
+
+/********Bookings Styles - End*********/
+
+
+/********My Cars Styles - Start*********/
+
+.aljVehicleListHorStyle {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem 0.75rem 1rem 0;
+    border: solid #c1c1c1 1px;
+    height: calc(100% - 1rem);
+}
+
+.aljReccListStyle{
+	padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem 0.75rem 1rem 0;
+    height: calc(100% - 1rem);
+}
+
+/********My Cars Styles - End*********/
