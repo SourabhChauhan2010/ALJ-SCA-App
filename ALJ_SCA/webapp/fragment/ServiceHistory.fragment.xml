@@ -7,12 +7,12 @@
 					<VBox>
 						<Label text="{oAppModel>soNumber}"/>
 						<HBox>
-							<Text text="PM: " class="sapUiTinyMarginEnd"/>
+							<Text text="{i18n>PM}" class="sapUiTinyMarginEnd"/>
 							<Text text="{oAppModel>pm}" class="aljRedColorStyle"/>
 						</HBox>
 						<Text text="{oAppModel>date}"/>
 					</VBox>
-					<Button text="Know more" class="aljGrayBtnStyle"/>
+					<Button text="{i18n>KnowMore}" class="aljGrayBtnStyle"/>
 				</HBox>
 			</commons:TimelineItem>
 		</commons:content>

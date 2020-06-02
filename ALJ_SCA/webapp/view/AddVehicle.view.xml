@@ -2,13 +2,13 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<VBox alignItems="Center" class="sapUiSmallMargin">
 		<Image src="image/scan.png" width="5rem" class="sapUiTinyMarginBottom" press="onPressScan"/>
-		<Text text="Scan Ishthimara" class="aljHeadingTextStyle sapUiTinyMarginBottom"/>
-		<Label text="OR" class="sapUiSmallMarginBottom"/>
-		<Text text="Enter Manually" class="sapUiSmallMarginBottom"/>
+		<Text text="{i18n>ScanIshthimara}" class="aljHeadingTextStyle sapUiTinyMarginBottom"/>
+		<Label text="{i18n>OR}" class="sapUiSmallMarginBottom"/>
+		<Text text="{i18n>EnterManually}" class="sapUiSmallMarginBottom"/>
 		<VBox width="100%">
-			<Text text="What is your VIN number?"  class="aljHeadingTextStyle sapUiTinyMarginBottom"/>
+			<Text text="{i18n>EnterVIN}"  class="aljHeadingTextStyle sapUiTinyMarginBottom"/>
 			<Input class="aljInputStyle sapUiTinyMarginBottom"/>
-			<Button text="Add" class="aljWhiteBtnClass"/>
+			<Button text="{i18n>Add}" class="aljWhiteBtnClass"/>
 		</VBox>
 	</VBox>
 </mvc:View>

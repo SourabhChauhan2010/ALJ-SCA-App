@@ -7,7 +7,7 @@
 					<Label text="{oAppModel>serviceType}" class="sapUiTinyMarginBottom"/>
 					<Label text="{oAppModel>sar}" class="sapUiTinyMarginBottom"/>
 					<Image src="{oAppModel>src}" width="6rem"/>
-					<Button text="Book" class="aljRedBtnStyle"/>
+					<Button text="{i18n>Book}" class="aljRedBtnStyle"/>
 				</VBox>
 			</CustomListItem>
 		</HBox>

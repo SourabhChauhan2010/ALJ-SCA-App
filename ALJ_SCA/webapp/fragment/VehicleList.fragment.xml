@@ -7,7 +7,7 @@
 					<Text text="{oAppModel>model}"/>
 					<Text text="{oAppModel>year}" class="sapUiTinyMarginBottom"/>
 					<Image src="{oAppModel>src}" width="6rem"/>
-					<Text text="Last Service Date: {oAppModel>lastServiceDate}"/>
+					<Text text="{i18n>LastServiceDate} {oAppModel>lastServiceDate}"/>
 				</VBox>
 			</CustomListItem>
 		</HBox>

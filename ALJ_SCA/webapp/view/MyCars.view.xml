@@ -2,16 +2,16 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<VBox class="sapUiSmallMarginTop">
 		<HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBeginEnd">
-			<Label text="Select Vehicle" class="aljTitleClass"/>
-			<Button text="+ Add Vehicle" class="aljLightGreyBtnStyle" press="onAddVehiclePress"/>
+			<Label text="{i18n>SelectVehicle}" class="aljTitleClass"/>
+			<Button text="{i18n>AddVehicle}" class="aljLightGreyBtnStyle" press="onAddVehiclePress"/>
 		</HBox>
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>
 		<VBox class="aljBoxStyle sapUiSmallMarginTop">
-			<Label text="Recommended for you" class="aljTitleClass sapUiSmallMarginBegin"/>
+			<Label text="{i18n>Recommended}" class="aljTitleClass sapUiSmallMarginBegin"/>
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
 		</VBox>
 		<VBox class="aljBoxStyle sapUiSmallMarginTop">
-			<Label text="Vehicle Informatics" class="aljTitleClass sapUiSmallMarginBegin"/>
+			<Label text="{i18n>VehicleInformatics}" class="aljTitleClass sapUiSmallMarginBegin"/>
 			<HBox class="sapUiSmallMarginBeginEnd" items="{oAppModel>/vehicleInfo}">
 				<CustomListItem class="aljReccListStyle"
 					visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}" type="Active"
@@ -24,7 +24,7 @@
 			</HBox>
 		</VBox>
 		<VBox class="aljBoxStyle sapUiSmallMarginTop">
-			<Label text="Service History" class="aljTitleClass sapUiSmallMarginBegin"/>
+			<Label text="{i18n>ServiceHistory}" class="aljTitleClass sapUiSmallMarginBegin"/>
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceHistory" type="XML"/>
 		</VBox>
 	</VBox>
