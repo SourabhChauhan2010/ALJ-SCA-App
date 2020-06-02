@@ -46,10 +46,10 @@ Comments:
 	<VBox class="sapUiTinyMarginTop">
 		<Label text="Services" class="styleStatusTitle sapUiSmallMarginBegin sapUiTinyMarginBottom"/>
 		<ScrollContainer height="100%" width="100%" horizontal="false" focusable="true">
-			<VBox items="{oAppModel>/aServices}" class="sapUiSmallMarginBeginEnd">
+			<VBox items="{oAppModel>/aServices}" class="sapUiSmallMarginBeginEnd" id="idVBServiceListItems">
 				<!--<CustomListItem press="onPress" class="sapUiSmallMarginBottom">-->
 				<FlexBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiTinyMarginBottom styleServiceBox">
-					<Image src="{oAppModel>src}" width="40px" height="40px" class="sapUiTinyMarginBegin"/>
+					<Image src="{oAppModel>src}" width="40px" height="40px" class="sapUiTinyMarginBegin" press="NavtoServices" tooltip="{oAppModel>name}"/>
 					<Label text="{oAppModel>name}" class="styleLabel"/>
 					<VBox class="styleArrowBox">
 						<Image src="image/arrow.png" width="14px" height="26px" class="sapUiTinyMarginEnd"/>
