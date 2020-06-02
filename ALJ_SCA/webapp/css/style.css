@@ -210,13 +210,18 @@
     background: #f2f2f2;
 }
 
+.styleServiceBox {
+    background: #f2f2f2;
+    height: 65px;
+    border-radius: 10px;
+}
+
 .styleStatusTitle {
     font-size: 17px;
     font-family: Karbon-Semibold;
     color: #000000;
     font-weight: bold;
-    border-bottom: solid;
-    border-color: #eb0a1e;
+    border-bottom: solid 2px #eb0a1e;
 }
 
 .styleRecommendedBox {
@@ -233,6 +238,12 @@
     font-weight: bold;
 }
 
+.styleLabel {
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
+}
+
 .styleCAR2 {
     font-size: 14px;
     color: #000000;
@@ -244,6 +255,15 @@
     color: #000000;
     text-decoration: line-through;
     font-family: Karbon-Regular;
+}
+
+.styleArrowBox {
+    background: #c1c1c1;
+    height: 65px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 
 
