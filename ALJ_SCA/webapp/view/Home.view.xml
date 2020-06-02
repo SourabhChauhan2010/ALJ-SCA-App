@@ -8,7 +8,7 @@ Comments:
 <mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.Home" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
 	xmlns="sap.m">
 	<VBox>
-		<Carousel class="sapUiContentPadding" id="offersCarousel" pages="{oAppModel>/aOffers}" loop="true">
+		<Carousel id="offersCarousel" pages="{oAppModel>/aOffers}" loop="true">
 			<pages>
 				<Image press="onOfferPress" height="200px" src="{oAppModel>imageSource}"/>
 			</pages>
