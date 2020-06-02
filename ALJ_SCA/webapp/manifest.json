@@ -111,6 +111,13 @@
 					"target": [
 						"MyServices"
 					]
+				},
+				{
+					"name": "AddVehicle",
+					"pattern": "AddVehicle",
+					"target": [
+						"AddVehicle"
+					]
 				}
 			],
 			"targets": {
@@ -137,6 +144,10 @@
 				"Products": {
 					"viewType": "XML",
 					"viewName": "Products"
+				},
+				"AddVehicle": {
+					"viewType": "XML",
+					"viewName": "AddVehicle"
 				}
 			}
 		}

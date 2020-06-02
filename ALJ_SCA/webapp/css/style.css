@@ -6,26 +6,44 @@
 
 .aljPageStyle .sapMIBar.sapMHeader-CTX {
     background-color: #f00;
-    height: 3rem;
+    height: 4rem;
 }
 
 .aljPageStyle.sapMPage>.sapMPageHeader+section {
-    top: 3rem;
+    top: 4rem;
 }
 
 .aljPageStyle .sapMIBar-CTX .sapMLabel {
     color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
 }
 
 .aljTitleClass {
+	color: #000000;
     font-weight: bold;
+    font-size: 0.875rem;
     padding-bottom: 0.25rem;
     border-bottom: solid 2px #e62f2d;
+    letter-spacing: 1.75px;
+}
+
+.aljHeadingTextStyle {
+    color: #37383b;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.sapMBtnContent {
+    font-size: 1rem;
+    letter-spacing: 2px;
 }
 
 .aljTBStyle .sapMBtnContent,
 .aljGrayBtnStyle .sapMBtnContent,
-.aljRedBtnStyle .sapMBtnContent {
+.aljRedBtnStyle .sapMBtnContent,
+.aljWhiteBtnClass .sapMBtnContent {
     line-height: 1.9rem;
 }
 
@@ -35,7 +53,8 @@
 
 .aljTBStyle .sapMBtnInner,
 .aljGrayBtnStyle .sapMBtnInner,
-.aljRedBtnStyle .sapMBtnInner {
+.aljRedBtnStyle .sapMBtnInner,
+.aljWhiteBtnClass .sapMBtnInner {
     height: 2rem;
 }
 
@@ -83,6 +102,19 @@
 .aljLightGreyBtnStyle.sapMBtn {
     height: 1.5rem;
     padding: 0;
+}
+
+.aljWhiteBtnClass .sapMBtnInner {
+    min-width: 5rem;
+    border: 1px solid #eb0a1e;
+    color: #000;
+    background: #ffffff;
+    border-radius: 0.5rem;
+}
+
+.aljInputStyle .sapMInputBaseContentWrapper {
+    border: none;
+    border-bottom: 2px solid #BBBFC0;
 }
 
 
@@ -165,8 +197,9 @@
 }
 
 .aljSelectedItemStyle {
-	border: solid #e62f2d 1px;
+    border: solid #e62f2d 1px;
 }
+
 
 /********My Cars Styles - End*********/
 

@@ -61,6 +61,10 @@ sap.ui.define([
 			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
 			currObj.isSelected = !currObj.isSelected;
 			this.getModel("oAppModel").refresh();
+		},
+		
+		onPressScan: function(oEvent) {
+			
 		}
 		
 
