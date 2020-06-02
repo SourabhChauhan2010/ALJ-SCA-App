@@ -3,11 +3,11 @@
 		"soNumber": "21414",
 		"date": "21/05/2020",
 		"pm": "40k"
-	},{
+	}, {
 		"soNumber": "21414",
 		"date": "21/05/2020",
 		"pm": "40k"
-	},{
+	}, {
 		"soNumber": "21414",
 		"date": "21/05/2020",
 		"pm": "40k"
@@ -17,7 +17,7 @@
 		"year": "2020",
 		"lastServiceDate": "23/04/2020",
 		"src": "image/supra.png"
-	},{
+	}, {
 		"model": "Camry",
 		"year": "2020",
 		"lastServiceDate": "23/04/2020",
@@ -27,13 +27,16 @@
 		"serviceType": "Brake service",
 		"sar": "SAR 100",
 		"src": "image/brake.png"
-	},
-	{
+	}, {
 		"serviceType": "Battery",
 		"sar": "SAR 100",
 		"src": "image/battery.png"
 	}],
-	"vehicleInfo":[{
-		
+	"vehicleInfo": [{
+		"type": "Warranty Details",
+		"src": "image/warranty.png"
+	}, {
+		"type": "Service Contract Detail",
+		"src": "image/contract.png"
 	}]
 }

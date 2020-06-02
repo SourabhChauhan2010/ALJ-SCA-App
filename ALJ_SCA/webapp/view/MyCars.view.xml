@@ -12,17 +12,13 @@
 		</VBox>
 		<VBox class="aljBoxStyle sapUiSmallMarginTop">
 			<Label text="Vehicle Informatics" class="aljTitleClass sapUiSmallMarginBegin"/>
-			<HBox class="sapUiSmallMarginBeginEnd">
-				<CustomListItem class="aljReccListStyle">
+			<HBox class="sapUiSmallMarginBeginEnd" items="{oAppModel>/vehicleInfo}">
+				<CustomListItem class="aljReccListStyle"
+					visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}" type="Active"
+					press="onSelectableItemPress">
 					<VBox alignItems="Center" width="5rem">
-						<Image src="image/warranty.png" width="3rem"/>
-						<Text text="Warranty Details"/>
-					</VBox>
-				</CustomListItem>
-				<CustomListItem class="aljReccListStyle">
-					<VBox alignItems="Center" width="5rem">
-						<Image src="image/contract.png" width="3rem"/>
-						<Text text="service contract detail"/>
+						<Image src="{oAppModel>src}" width="3rem"/>
+						<Text text="{oAppModel>type}"/>
 					</VBox>
 				</CustomListItem>
 			</HBox>

@@ -159,7 +159,12 @@
 	padding: 0.5rem 1rem;
     border-radius: 1rem;
     margin: 0.5rem 0.75rem 1rem 0;
+    border: solid #fff 1px;
     height: calc(100% - 1rem);
+}
+
+.aljSelectedItemStyle {
+	border: solid #e62f2d 1px;
 }
 
 /********My Cars Styles - End*********/

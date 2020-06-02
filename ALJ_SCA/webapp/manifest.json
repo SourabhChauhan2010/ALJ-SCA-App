@@ -66,6 +66,11 @@
 				{
 					"uri": "css/style.css"
 				}
+			],
+			"js": [
+				{
+					"uri": "util/formatter.js"
+				}
 			]
 		},
 		"routing": {

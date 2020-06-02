@@ -34,8 +34,12 @@ sap.ui.define([
 		getResourceText: function (text) {
 			return this.getOwnerComponent().getModel("i18n").getResourceBundle().getText(text);
 		},
+		
+		getModel: function (oModel) {
+			return this.getView().getModel(oModel);
+		},
 
-		//Function to initalize Calibration detail app
+		//Function to initalize the application 
 		fnInitApp: function () {
 			this.busy = new BusyDialog();
 			this.MessageBox = MessageBox;
@@ -51,7 +55,14 @@ sap.ui.define([
 			var oAppModel = this.getOwnerComponent().getModel("oAppModel");
 			oAppModel.loadData("model/data.json");
 			this.oAppModel = oAppModel;
+		},
+		
+		onSelectableItemPress: function(oEvent) {
+			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
+			currObj.isSelected = !currObj.isSelected;
+			this.getModel("oAppModel").refresh();
 		}
+		
 
 	});
 });
