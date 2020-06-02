@@ -71,5 +71,12 @@
 			"src": "image/acservice.png"
 		}
 
-	]
+	],
+	"aServices": [{
+		"src": "image/bookservice.png",
+		"name": "BOOK A SERVICE"
+	}, {
+		"src": "image/myservice.png",
+		"name": "MY SERVICES"
+	}]
 }
