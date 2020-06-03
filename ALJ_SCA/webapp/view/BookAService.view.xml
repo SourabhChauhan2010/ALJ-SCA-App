@@ -1,3 +1,69 @@
-<mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.BookAService" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
-	xmlns="sap.m">
+<!-- Development Marker
+Developer:
+Development Date:
+Requirement:
+Comments:
+-->
+<!-- DM-001 start of code -->
+<mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.BookAService" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+<!-- Basic Information Panel -->
+	<Panel expanded="true" class="BAS_PNL_BI_CSS">
+		<headerToolbar>
+			<Toolbar class="BAS_HTB_BI_CSS">
+				<Label text="{i18n>BAS_BI_PNL_HEADER}" class="aljTitleClass"/>
+				<ToolbarSpacer/>
+				<Button text="Edit"/>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12"
+				adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+				singleContainerFullSize="false" class="BAS_SF_CSS1">
+				<f:content>
+					<Label text="{i18n>BAS_SF_Name}"/>
+					<Text text=""/>
+					<Label text="{i18n>BAS_SF_MobileNumber}"/>
+					<Text text=""/>
+					<Label text="{i18n>BAS_SF_EmailId}"/>
+					<Text text=""/>
+					<Label text="{i18n>BAS_SF_NID}"/>
+					<Text text=""/>
+				</f:content>
+			</f:SimpleForm>
+		</content>
+	</Panel>
+<!-- Vehicle Selection Panel -->
+	<Panel class="aljBoxStyle">
+		<headerToolbar>
+			<Toolbar class="BAS_HTB_SV_CSS">
+				<Label text="{i18n>BAS_SV_PNL_HEADER}" class="aljTitleClass"/>
+				<ToolbarSpacer/>
+				<Button text="{i18n>Bas_Sv_Btn_AddVehicle}" class="aljLightGreyBtnStyle"/>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>
+			<FlexBox alignItems="End" justifyContent="End">
+				<items>
+					<Button text="{i18n>Bas_Sv_Btn_AddWVehicle}" class="aljLightGreyBtnStyle"/>
+				</items>
+			</FlexBox>
+		</content>
+	</Panel>
+	
+<!-- KM Reading Panel -->
+	<Panel class="aljBoxStyleWhite">
+		<headerToolbar>
+			<Toolbar class="BAS_HTB_BI_CSS">
+				<Label text="{i18n>Bas_km_pnl_header}" class="aljTitleClass"/>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<HBox alignItems="Center" justifyContent="Center">
+				<Input value="79000 km" class="BAS_KMR_CSS"/>
+			</HBox>
+		</content>
+	</Panel>
 </mvc:View>
+<!-- DM-001 end of code -->

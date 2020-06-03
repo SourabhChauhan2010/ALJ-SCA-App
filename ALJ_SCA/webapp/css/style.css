@@ -266,5 +266,35 @@
     padding-left: 1rem;
 }
 
+/*book a service designs* - start */
 
+.BAS_SF_CSS1 .sapUiForm:not(.sapUiFormEdit) .sapMText {
+    min-height: 0.001rem;
+}
+
+.BAS_HTB_SV_CSS {
+    border-bottom: solid .0625rem #ebebeb;
+}
+
+.BAS_PNL_BI_CSS .sapMPanelContent:not(.sapMPanelBGTransparent) {
+    border-bottom: .0625rem solid #fff;
+}
+
+.BAS_HTB_BI_CSS {
+    border-bottom: solid .0625rem #ffff;
+}
+
+.BAS_KMR_CSS {
+    border-radius: 1rem!important;
+    width: 50%;
+}
+
+.BAS_KMR_CSS .sapMInputBaseContentWrapper {
+    border: .0625rem solid #0799b2;
+    background: #fff;
+    border-radius: 1rem;
+}
+
+
+/*book a service designs* - end */
 /*home page designs*/
