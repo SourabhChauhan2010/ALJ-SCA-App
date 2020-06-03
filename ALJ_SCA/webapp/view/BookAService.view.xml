@@ -1,3 +1,57 @@
-<mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.BookAService" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
-	xmlns="sap.m">
+<mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.BookAService" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<Panel expanded="true" class="BAS_PNL_BI_CSS">
+		<headerToolbar>
+			<Toolbar class="BAS_HTB_BI_CSS">
+				<Label text="Basic Information" class="aljTitleClass"/>
+				<ToolbarSpacer/>
+				<Button text="Edit"/>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12"
+				adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+				singleContainerFullSize="false" class="BAS_SF_CSS1">
+				<f:content>
+					<Label text="{i18n>BAS_SF_Name}"/>
+					<Text id="nameText" text=""/>
+					<Label text="{i18n>BAS_SF_MobileNumber}"/>
+					<Text text=""/>
+					<Label text="{i18n>BAS_SF_EmailId}"/>
+					<Text text=""/>
+					<Label text="{i18n>BAS_SF_NID}"/>
+					<Text id="countryText" text=""/>
+				</f:content>
+			</f:SimpleForm>
+		</content>
+	</Panel>
+	<Panel class="aljBoxStyle">
+		<headerToolbar>
+			<Toolbar class="BAS_HTB_SV_CSS">
+				<Label text="Select Vehicle" class="aljTitleClass"/>
+				<ToolbarSpacer/>
+				<Button text="+ Add Vehicle" class="aljLightGreyBtnStyle"/>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>
+			<FlexBox alignItems="End" justifyContent="End">
+				<items>
+					<Button text="Book without vehicle" class="aljLightGreyBtnStyle"/>
+				</items>
+			</FlexBox>
+		</content>
+	</Panel>
+	<Panel class="aljBoxStyleWhite">
+		<headerToolbar>
+			<Toolbar class="BAS_HTB_BI_CSS">
+				<Label text="Kilometer Reading" class="aljTitleClass"/>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<HBox alignItems="Center" justifyContent="Center">
+				<Input value="79000 km" class="BAS_KMR_CSS"/>
+			</HBox>
+		</content>
+	</Panel>
 </mvc:View>
