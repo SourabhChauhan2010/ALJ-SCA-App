@@ -1,0 +1,12 @@
+applications:
+  - name: alj-datalake-services
+memory: 2G
+path: target/alj-datalake-services.jar
+random-route: false
+
+services:
+  - aljdevdatalakestorage
+  - aljcrmzaljucmbpapp-hdialjdatalakednvNn1KozFH4G0X5E
+  
+
+  
