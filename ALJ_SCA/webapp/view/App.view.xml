@@ -5,9 +5,11 @@
 			<Page id="page" class="aljPageStyle">
 				<customHeader>
 					<Toolbar>
+						<Image src="image/user.png" visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}" height="37px" width="37px"/>
 						<ToolbarSpacer/>
 						<Label text="{oAppModel>/currentScreen}"/>
 						<ToolbarSpacer/>
+						<Image src="image/bell.png" visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}" height="37px" width="37px"/>
 					</Toolbar>
 				</customHeader>
 				<footer>
