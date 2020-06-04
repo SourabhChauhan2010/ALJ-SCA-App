@@ -12,11 +12,6 @@
     border: none;
 }
 
-svg {
-    width: 2rem;
-    height: auto;
-}
-
 .aljPageStyle {
     background: #fff;
 }
@@ -117,6 +112,7 @@ svg {
 
 /********General Styles - End*********/
 
+
 /********Footer Styles - Start*********/
 
 .aljFooterBarStyle {
@@ -125,7 +121,7 @@ svg {
     padding-top: 1.5rem !important;
 }
 
-.aljFooterBarStyle .sapMText{
+.aljFooterBarStyle .sapMText {
     margin-top: 0.35rem;
 }
 
@@ -137,11 +133,11 @@ svg {
     padding: 0;
 }
 
-.aljFooterBarStyle .sapMLIBActive{
+.aljFooterBarStyle .sapMLIBActive {
     background: transparent;
 }
 
-.aljFooterBarStyle .sapMLIB{
+.aljFooterBarStyle .sapMLIB {
     border: none;
     width: calc(100% / 5);
 }
@@ -164,16 +160,18 @@ svg {
     background: #fff;
 }
 
-.aljFooterSelectedStyle path, 
+.aljFooterSelectedStyle path,
 .aljFooterSelectedStyle circle {
-	fill: red;
+    fill: red;
 }
 
-.aljFooterSelectedStyle .sapMText{
-	color: red;
+.aljFooterSelectedStyle .sapMText {
+    color: red;
 }
+
 
 /********Footer Styles - End*********/
+
 
 /********My Services Styles - Start*********/
 
@@ -361,10 +359,70 @@ svg {
     width: 50%;
 }
 
+.BAS_ST_Desc_CSS {
+    border-radius: 1rem!important;
+    margin-left: 1rem;
+}
+
 .BAS_KMR_CSS .sapMInputBaseContentWrapper {
     border: .0625rem solid #0799b2;
     background: #fff;
     border-radius: 1rem;
+}
+
+.BAS_KMR_Text_CSS {
+    margin-left: 5rem;
+}
+
+.BAS_DescTitleClass {
+    color: #000000;
+    font-weight: bold;
+    font-size: 0.875rem;
+    padding-bottom: 0.25rem;
+    letter-spacing: 1.75px;
+}
+
+.BAS_SC_Sel_CSS.sapMSlt:not(.sapMSltIconOnly) {
+    border-bottom-color: #fce9ec!important;
+    border-top-color: #fff;
+    border-left-color: #FFf;
+    border-right-color: #fff;
+}
+
+.BAS_SC_Sel_CSS .sapMSltArrow {
+    color: #fce9ec!important;
+}
+
+.BAS_DT_CSS {
+    background-color: #ebebeb;
+    color: #ebebeb;
+}
+
+.BAS_DT_CSS .sapUiCalRowWeekNumber {
+    visibility: hidden;
+}
+
+.BAS_DT_CSS .sapUiCalItem.sapUiCalItemNow {
+    border-bottom: .125rem solid #c00;
+    border: .125rem solid #fff;
+}
+
+.BAS_DT_CSS .sapUiCalHead>button,
+.sapUiCalCancel {
+    color: #c00;
+}
+
+.BAS_DT_CSS .sapUiCalHead>.sapUiCalHeadB,
+.sapUiCalCancel,
+html.sap-desktop .sapUiCalHead>.sapUiCalHeadB:hover,
+html.sap-desktop .sapUiCalHead>.sapUiCalHeadB:focus {
+    color: #c00;
+}
+
+.aljBoxStyleWhite {
+    background: #fff;
+    /*  padding-top: 1rem;*/
+    border-top-left-radius: 1.5rem;
 }
 
 
