@@ -11,15 +11,22 @@
 					</Toolbar>
 				</customHeader>
 				<footer>
-					<Toolbar design="Transparent">
-						<SegmentedButton selectedKey="{oAppModel>/currentScreen}" width="100%" selectionChange="onChangeScreen">
-							<items>
-								<SegmentedButtonItem text="Home" key="Home"/>
-								<SegmentedButtonItem text="My Cars" key="MyCars"/>
-								<SegmentedButtonItem text="Products" key="Products"/>
-								<SegmentedButtonItem text="Bookings" key="BookAService"/>
-							</items>
-						</SegmentedButton>
+					<Toolbar design="Transparent" content="{oAppModel>/mainScreens}" class="aljFooterBarStyle">
+						<!--<SegmentedButton selectedKey="{oAppModel>/currentScreen}" width="100%" selectionChange="onChangeScreen">-->
+						<!--	<items>-->
+						<!--		<SegmentedButtonItem text="Home" key="Home"/>-->
+						<!--		<SegmentedButtonItem text="My Cars" key="MyCars"/>-->
+						<!--		<SegmentedButtonItem text="Products" key="Products"/>-->
+						<!--		<SegmentedButtonItem text="Bookings" key="BookAService"/>-->
+						<!--		<SegmentedButtonItem text="More" key="More"/>-->
+						<!--	</items>-->
+						<!--</SegmentedButton>-->
+						<CustomListItem type="Active" press="onChangeScreen"
+							visible="{parts: ['oAppModel>key', 'oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.setFooterStyle'}">
+							<!--<Image src="{oAppModel>svg}" decorative="true" width="2rem"/>-->
+							<core:HTML content="{path: 'oAppModel>svg', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.getSVGSource'}"/>
+							<Text text="{oAppModel>text}"/>
+						</CustomListItem>
 					</Toolbar>
 				</footer>
 			</Page>

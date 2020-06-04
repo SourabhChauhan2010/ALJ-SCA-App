@@ -1,5 +1,26 @@
 {
 	"currentScreen":"Home",
+	"mainScreens": [{
+		"text": "Home",
+		"key": "Home",
+		"svg": "image/home.svg"
+	},{
+		"text": "My Cars",
+		"key": "MyCars",
+		"svg": "image/mycar.svg"
+	},{
+		"text": "Products",
+		"key": "Products",
+		"svg": "image/products.svg"
+	},{
+		"text": "Booking",
+		"key": "BookAService",
+		"svg": "image/booking.svg"
+	},{
+		"text": "More",
+		"key": "More",
+		"svg": ""
+	}],
 	"services": [{
 		"soNumber": "21414",
 		"date": "21/05/2020",

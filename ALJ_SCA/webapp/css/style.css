@@ -12,6 +12,11 @@
     border: none;
 }
 
+svg {
+    width: 2rem;
+    height: auto;
+}
+
 .aljPageStyle {
     background: #fff;
 }
@@ -25,6 +30,10 @@
     top: 4rem;
 }
 
+.aljPageStyle.sapMPageWithFooter>section {
+    bottom: 4.75rem;
+}
+
 .aljPageStyle .sapMIBar-CTX .sapMLabel {
     color: #fff;
     font-size: 1.25rem;
@@ -33,10 +42,10 @@
 }
 
 .aljTitleClass {
-	color: #000000;
+    color: #000000;
     font-weight: bold;
     font-size: 0.875rem;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.35rem;
     border-bottom: solid 2px #e62f2d;
     letter-spacing: 1.75px;
 }
@@ -48,14 +57,14 @@
 }
 
 .aljTBStyle .sapMBtnInner {
-    border-color: #68696c;
+    border: #68696c 1px solid;
     color: #68696c;
     border-radius: 0.4rem;
 }
 
 .aljTBStyle .sapMToggleBtnPressed {
     background: #fff;
-    border-color: #e62f2d;
+    border: #e62f2d 1px solid;
 }
 
 .aljGrayBtnStyle .sapMBtnInner {
@@ -98,14 +107,73 @@
     padding-bottom: 2rem;
 }
 
-.aljWhiteBoxStyle{
-	background: #fff;
-	padding-top: 1rem;
+.aljWhiteBoxStyle {
+    background: #fff;
+    padding-top: 1rem;
     top: -1rem;
     border-top-left-radius: 1.5rem;
 }
 
+
 /********General Styles - End*********/
+
+/********Footer Styles - Start*********/
+
+.aljFooterBarStyle {
+    height: 6.25rem;
+    justify-content: space-around;
+    padding-top: 1.5rem !important;
+}
+
+.aljFooterBarStyle .sapMText{
+    margin-top: 0.35rem;
+}
+
+.aljFooterBarStyle.sapMIBar.sapMTB .sapMBarChild {
+    margin: 0;
+}
+
+.aljFooterBarStyle.sapMTB-Transparent-CTX.sapMTB {
+    padding: 0;
+}
+
+.aljFooterBarStyle .sapMLIBActive{
+    background: transparent;
+}
+
+.aljFooterBarStyle .sapMLIB{
+    border: none;
+    width: calc(100% / 5);
+}
+
+.aljFooterBarStyle .sapMLIBContent {
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.aljProductsStyle {
+    padding: 0.85rem;
+    margin-top: -1rem;
+    border-radius: 50%;
+    box-shadow: 0px -2px 16px #989898;
+    z-index: 3;
+    background: #fff;
+}
+
+.aljFooterSelectedStyle path, 
+.aljFooterSelectedStyle circle {
+	fill: red;
+}
+
+.aljFooterSelectedStyle .sapMText{
+	color: red;
+}
+
+/********Footer Styles - End*********/
 
 /********My Services Styles - Start*********/
 
@@ -198,9 +266,9 @@
     border: solid #e62f2d 1px;
 }
 
-.aljLastServiceDateStyle{
-	width: 8.5rem;
-	line-height: 2rem;
+.aljLastServiceDateStyle {
+    width: 8.5rem;
+    line-height: 2rem;
 }
 
 
@@ -269,6 +337,7 @@
     padding-left: 1rem;
 }
 
+
 /*book a service designs* - start */
 
 .BAS_SF_CSS1 .sapUiForm:not(.sapUiFormEdit) .sapMText {
@@ -300,4 +369,6 @@
 
 
 /*book a service designs* - end */
+
+
 /*home page designs*/

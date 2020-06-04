@@ -21,7 +21,8 @@ sap.ui.define([
 		},
 		
 		onChangeScreen: function(oEvent) {
-			var selectedKey = oEvent.getSource().getSelectedKey();
+			// var selectedKey = oEvent.getSource().getSelectedKey();
+			var selectedKey = oEvent.getSource().getBindingContext("oAppModel").getObject().key;
 			this.getRouter().navTo(selectedKey);
 		},
 
