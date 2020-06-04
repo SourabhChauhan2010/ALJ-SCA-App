@@ -13,7 +13,9 @@ sap.ui.define([
 		onInit: function () {
 			this.fnInitApp();
 			this.getRouter().attachRoutePatternMatched(function (oEvent) {
-				this.oAppModel.setProperty("/currentScreen", oEvent.getParameter("name"));
+				// var oAppModelData = this.oAppModel.getData();
+				// oAppModelData.currentScreen = oEvent.getParameter("name");
+				this.oAppModel.setProperty("/currentScreenTitle", this.getResourceText(oEvent.getParameter("name")));
 				if (oEvent.getParameter("name") === "App") {
 
 				}

@@ -7,7 +7,7 @@
 					<Toolbar>
 						<Image src="image/user.png" visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}" height="37px" width="37px"/>
 						<ToolbarSpacer/>
-						<Label text="{oAppModel>/currentScreen}"/>
+						<Label text="{oAppModel>/currentScreenTitle}"/>
 						<ToolbarSpacer/>
 						<Image src="image/bell.png" visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}" height="37px" width="37px"/>
 					</Toolbar>

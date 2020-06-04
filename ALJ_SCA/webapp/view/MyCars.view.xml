@@ -3,7 +3,7 @@
 	<VBox class="sapUiSmallMarginTop">
 		<HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom">
 			<Label text="{i18n>SelectVehicle}" class="aljTitleClass"/>
-			<Button text="{i18n>AddVehicle}" class="aljLightGreyBtnStyle" press="onAddVehiclePress"/>
+			<Button text="{i18n>AddVehicleBtn}" class="aljLightGreyBtnStyle" press="onAddVehiclePress"/>
 		</HBox>
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>
 		<VBox class="aljBoxStyle sapUiSmallMarginTop">

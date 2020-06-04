@@ -53,7 +53,7 @@ sap.ui.define([
 
 			//General model
 			var oAppModel = this.getOwnerComponent().getModel("oAppModel");
-			oAppModel.loadData("model/data.json");
+			oAppModel.loadData("model/data.json", null, false);
 			this.oAppModel = oAppModel;
 		},
 		
