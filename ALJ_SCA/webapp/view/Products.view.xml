@@ -22,7 +22,7 @@
 			</HBox>
 		</ScrollContainer>
 	</VBox>
-	<VBox class="styleProdServBox sapUiNoMarginTop">
+<!--	<VBox class="styleProdServBox sapUiNoMarginTop">
 		<Label text="General Job" class="aljTitleClass sapUiSmallMarginBegin"/>
 		<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
 			<HBox items="{oAppModel>/aRecommendationsHome}" class="sapUiSmallMarginBeginEnd">
@@ -39,5 +39,5 @@
 				</CustomListItem>
 			</HBox>
 		</ScrollContainer>
-	</VBox>
+	</VBox>-->
 </mvc:View>
