@@ -12,6 +12,7 @@ sap.ui.define([
 		 */
 		onInit: function () {
 			this.fnInitApp();
+			this.setSVGContents();
 			this.getRouter().attachRoutePatternMatched(function (oEvent) {
 				var oAppModelData = this.oAppModel.getData();
 				oAppModelData.currentScreen = oEvent.getParameter("name");
@@ -22,12 +23,39 @@ sap.ui.define([
 				}
 			}.bind(this));
 		},
-		
-		onChangeScreen: function(oEvent) {
+
+		setSVGContents: function () {
+			var aMainScreens = this.oAppModel.getData().mainScreens;
+			for (var i = 0; i < aMainScreens.length; i++) {
+				var file = aMainScreens[i].svg,
+					result = "";
+				if (file) {
+					var rawFile = new XMLHttpRequest();
+					rawFile.open("GET", file, false);
+					rawFile.onreadystatechange = function () {
+						if (rawFile.readyState === 4) {
+							if (rawFile.status === 200 || rawFile.status === 0) {
+								var allText = rawFile.responseText;
+								result = allText;
+							}
+						}
+					};
+					rawFile.send(null);
+				}
+				aMainScreens[i].svgContent = result;
+			}
+			this.oAppModel.refresh();
+		},
+
+		onChangeScreen: function (oEvent) {
 			// var selectedKey = oEvent.getSource().getSelectedKey();
 			var selectedKey = oEvent.getSource().getBindingContext("oAppModel").getObject().key;
 			this.getRouter().navTo(selectedKey);
 		},
+		
+		onOpenProfile: function() {
+			this.getRouter().navTo("Profile");
+		}
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

@@ -62,12 +62,19 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}],
-			"js": [{
-				"uri": "util/formatter.js"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				},
+				{
+					"uri": "css/font.css"
+				}
+			],
+			"js": [
+				{
+					"uri": "util/formatter.js"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -79,43 +86,57 @@
 				"controlId": "page",
 				"clearControlAggregation": true
 			},
-			"routes": [{
-				"name": "Home",
-				"pattern": "",
-				"target": [
-					"Home"
-				]
-			}, {
-				"name": "BookAService",
-				"pattern": "BookAService",
-				"target": [
-					"BookAService"
-				]
-			}, {
-				"name": "MyCars",
-				"pattern": "MyCars",
-				"target": [
-					"MyCars"
-				]
-			}, {
-				"name": "MyServices",
-				"pattern": "MyServices",
-				"target": [
-					"MyServices"
-				]
-			}, {
-				"name": "AddVehicle",
-				"pattern": "AddVehicle",
-				"target": [
-					"AddVehicle"
-				]
-			}, {
-				"name": "Products",
-				"pattern": "Products",
-				"target": [
-					"Products"
-				]
-			}],
+			"routes": [
+				{
+					"name": "Home",
+					"pattern": "",
+					"target": [
+						"Home"
+					]
+				},
+				{
+					"name": "BookAService",
+					"pattern": "BookAService",
+					"target": [
+						"BookAService"
+					]
+				},
+				{
+					"name": "MyCars",
+					"pattern": "MyCars",
+					"target": [
+						"MyCars"
+					]
+				},
+				{
+					"name": "MyServices",
+					"pattern": "MyServices",
+					"target": [
+						"MyServices"
+					]
+				},
+				{
+					"name": "AddVehicle",
+					"pattern": "AddVehicle",
+					"target": [
+						"AddVehicle"
+					]
+				},
+				{
+					"name": "Products",
+					"pattern": "Products",
+					"target": [
+						"Products"
+					]
+				},
+				{
+					"name": "Profile",
+					"pattern": "Profile",
+					"target": [
+						"Profile"
+					]
+				}
+			],
 			"targets": {
 				"App": {
 					"viewType": "XML",
@@ -144,6 +165,10 @@
 				"AddVehicle": {
 					"viewType": "XML",
 					"viewName": "AddVehicle"
+				},
+				"Profile": {
+					"viewType": "XML",
+					"viewName": "Profile"
 				}
 			}
 		}

@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Karbon';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Karbon-Regular'), local('Karbon Regular'), url(fonts/Karbon-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Karbon';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Karbon Semibold'), local('Karbon-Semibold'), url(fonts/Karbon-Semibold.otf) format('opentype');
+}

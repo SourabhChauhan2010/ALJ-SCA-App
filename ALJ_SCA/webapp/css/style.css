@@ -1,5 +1,17 @@
 /********General Styles - Start*********/
 
+.sapMTitle,
+.sapMLabel,
+.sapMText,
+.sapMSelectListItemBase,
+.sapMSlt>.sapMSltLabel,
+.sapMListTbl .sapMText,
+.sapMListTbl .sapMLabel,
+.sapMBtnContent,
+.sapMInputBaseInner {
+    font-family: 'Karbon' !important;
+}
+
 .sapMBtnContent {
     font-size: 1rem;
     letter-spacing: 2px;
@@ -32,7 +44,7 @@
 .aljPageStyle .sapMIBar-CTX .sapMLabel {
     color: #fff;
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: bold;
     letter-spacing: 2.5px;
 }
 
@@ -57,7 +69,8 @@
     border-radius: 0.4rem;
 }
 
-.aljTBStyle .sapMToggleBtnPressed {
+.aljTBStyle .sapMToggleBtnPressed, 
+.aljTBStyle .sapMToggleBtnPressed:not(.sapMBtnDisabled) {
     background: #fff;
     border: #e62f2d 1px solid;
 }
@@ -161,8 +174,7 @@
     height: 2rem;
 }
 
-.aljFooterSelectedStyle path,
-.aljFooterSelectedStyle circle {
+.aljFooterSelectedStyle {
     fill: red;
 }
 
