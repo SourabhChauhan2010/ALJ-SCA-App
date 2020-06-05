@@ -3,19 +3,19 @@
 		"text": "Home",
 		"key": "Home",
 		"svg": "image/home.svg"
-	},{
+	}, {
 		"text": "My Cars",
 		"key": "MyCars",
 		"svg": "image/mycar.svg"
-	},{
+	}, {
 		"text": "Products",
 		"key": "Products",
 		"svg": "image/products.svg"
-	},{
+	}, {
 		"text": "Booking",
 		"key": "BookAService",
 		"svg": "image/booking.svg"
-	},{
+	}, {
 		"text": "More",
 		"key": "More",
 		"svg": ""
@@ -99,5 +99,15 @@
 	}, {
 		"src": "image/myservice.png",
 		"name": "MY SERVICES"
+	}],
+	"aProdCatelogs": [{
+		"src": "image/campaign.png",
+		"name": "Campaign"
+	}, {
+		"src": "image/generaljobs.png",
+		"name": "General Jobs"
+	}, {
+		"src": "image/bodypaint.png",
+		"name": "Body & Paint"
 	}]
 }

@@ -335,6 +335,40 @@
     padding-top: 1rem;
     padding-left: 1rem;
 }
+/*home page designs*/
+/* Products design*/
+
+.styleVehicleBox {
+    background: #f8f8f8;
+}
+
+.styleProdServBox {
+    background: #f2f2f2;
+    padding-top: 1rem;
+    border-top-left-radius: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.styleProdCatBox {
+    background: #d9d9d9;
+    padding-top: 1rem;
+    border-top-left-radius: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.styleProdServBookBox {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem 0.75rem 1rem 0;
+    border: solid #f2f2f2 1px;
+    height: calc(100% - 1rem);
+    background: #ffffff;
+    letter-spacing: 1.5px;
+    width: 9rem;
+}
+
+
+/* Products design*/
 
 
 /*book a service designs* - start */
@@ -430,4 +464,3 @@ html.sap-desktop .sapUiCalHead>.sapUiCalHeadB:focus {
 /*book a service designs* - end */
 
 
-/*home page designs*/

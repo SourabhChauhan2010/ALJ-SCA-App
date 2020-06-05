@@ -1,10 +1,43 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.Products"
 	xmlns:html="http://www.w3.org/1999/xhtml">
-	<App>
-		<pages>
-			<Page title="Title">
-				<content></content>
-			</Page>
-		</pages>
-	</App>
+	<VBox class="styleVehicleBox">
+		<HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom">
+			<Label text="{i18n>SelectVehicle}" class="aljTitleClass"/>
+			<Button text="{i18n>AddVehicle}" class="aljLightGreyBtnStyle" press="onAddVehiclePress"/>
+		</HBox>
+		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>
+	</VBox>
+	<VBox class="styleProdCatBox">
+		<Label text="Product Catelog" class="aljTitleClass sapUiSmallMarginBegin"/>
+		<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
+			<HBox items="{oAppModel>/aProdCatelogs}" class="sapUiSmallMarginBeginEnd">
+				<CustomListItem class="styleProdServBookBox"
+					visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}" type="Active"
+					press="onSelectableItemPress">
+					<VBox alignItems="Center">
+						<Image src="{oAppModel>src}" width="6rem"/>
+						<Label text="{oAppModel>name}"/>
+					</VBox>
+				</CustomListItem>
+			</HBox>
+		</ScrollContainer>
+	</VBox>
+	<VBox class="styleProdServBox sapUiNoMarginTop">
+		<Label text="General Job" class="aljTitleClass sapUiSmallMarginBegin"/>
+		<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
+			<HBox items="{oAppModel>/aRecommendationsHome}" class="sapUiSmallMarginBeginEnd">
+				<CustomListItem class="styleProdServBookBox"
+					visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}" type="Active"
+					press="onSelectableItemPress">
+					<VBox alignItems="Center">
+						<Label text="{oAppModel>serviceType}" class="sapUiTinyMarginBottom styleServType"/>
+						<Image src="{oAppModel>src}" width="6rem"/>
+						<Label text="{oAppModel>sar2}" class="styleCAR2"/>
+						<Text text="{oAppModel>sar1}" class="sapUiTinyMarginBottom styleCAR1"/>
+						<Button text="Book" class="aljRedBtnStyle"/>
+					</VBox>
+				</CustomListItem>
+			</HBox>
+		</ScrollContainer>
+	</VBox>
 </mvc:View>
