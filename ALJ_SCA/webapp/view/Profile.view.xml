@@ -26,7 +26,7 @@
 		</content>
 	</Panel>
 	<VBox class="sapUiSmallMarginTop">
-		<Label text="{i18n>ServiceType}" class="aljTitleClass sapUiSmallMarginBegin"/>
+		<Label text="{i18n>Language}" class="aljTitleClass sapUiSmallMarginBegin"/>
 		<HBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
 			<ToggleButton text="{i18n>Arabic}" pressed="{= ${oAppModel>/language} === 'AR'}" class="aljTBStyle sapUiTinyMarginEnd"
 				press="onChangeLanguage"/>
