@@ -36,7 +36,14 @@
         "entryPath": "/test-resources"
       },
       "description": "SAPUI5 Test Resources"
-    }
+    },
+    {
+		"path": "/SBA_book_a_service",
+		"target": {
+			"type": "destination",
+			"name": "SBA_book_a_service"
+		}
+	}
   ],
   "sendWelcomeFileRedirect": true
 }
