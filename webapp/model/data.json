@@ -74,26 +74,48 @@
 		"status": "Oil & Filter Service"
 	},
 	"aRecommendationsHome": [{
-			"model": "image/camry.png",
-			"serviceType": "Brake service",
-			"sar2": "SAR 100",
-			"sar1": "SAR 150",
-			"src": "image/brake.png"
-		}, {
-			"model": "image/supra.png",
-			"serviceType": "Battery",
-			"sar2": "SAR 100",
-			"sar1": "",
-			"src": "image/battery.png"
-		}, {
-			"model": "image/camry.png",
-			"serviceType": "AC Service",
-			"sar2": "SAR 100",
-			"sar1": "SAR 150",
-			"src": "image/acservice.png"
-		}
-
-	],
+		"model": "image/camry.png",
+		"serviceType": "Brake service",
+		"sar2": "SAR 100",
+		"sar1": "SAR 150",
+		"src": "image/brake.png",
+		"desc": "At Toyota, every technician is self motivated to be the champion in giving the best service to your car. They learn more and more effective methods of vehicles maintenance that help our customers in cost cutting, vehicle efficiency and vehicle condition"
+	}, {
+		"model": "image/supra.png",
+		"serviceType": "Battery",
+		"sar2": "SAR 100",
+		"sar1": "",
+		"src": "image/battery.png",
+		"desc": "At Toyota, every technician is self motivated to be the champion in giving the best service to your car. They learn more and more effective methods of vehicles maintenance that help our customers in cost cutting, vehicle efficiency and vehicle condition"
+	}, {
+		"model": "image/camry.png",
+		"serviceType": "AC Service",
+		"sar2": "SAR 100",
+		"sar1": "SAR 150",
+		"src": "image/acservice.png",
+		"desc": "At Toyota, every technician is self motivated to be the champion in giving the best service to your car. They learn more and more effective methods of vehicles maintenance that help our customers in cost cutting, vehicle efficiency and vehicle condition"
+	}, {
+		"model": "image/camry.png",
+		"serviceType": "Brake service",
+		"sar2": "SAR 100",
+		"sar1": "SAR 150",
+		"src": "image/brake.png",
+		"desc": "At Toyota, every technician is self motivated to be the champion in giving the best service to your car. They learn more and more effective methods of vehicles maintenance that help our customers in cost cutting, vehicle efficiency and vehicle condition"
+	}, {
+		"model": "image/supra.png",
+		"serviceType": "Battery",
+		"sar2": "SAR 100",
+		"sar1": "",
+		"src": "image/battery.png",
+		"desc": "At Toyota, every technician is self motivated to be the champion in giving the best service to your car. They learn more and more effective methods of vehicles maintenance that help our customers in cost cutting, vehicle efficiency and vehicle condition"
+	}, {
+		"model": "image/camry.png",
+		"serviceType": "AC Service",
+		"sar2": "SAR 100",
+		"sar1": "SAR 150",
+		"src": "image/acservice.png",
+		"desc": "At Toyota, every technician is self motivated to be the champion in giving the best service to your car. They learn more and more effective methods of vehicles maintenance that help our customers in cost cutting, vehicle efficiency and vehicle condition"
+	}],
 	"aServices": [{
 		"src": "image/bookservice.png",
 		"name": "BOOK A SERVICE"
@@ -120,10 +142,10 @@
 		"priceBreakup": [{
 			"service": "80,000 Km Service",
 			"price": "SAR 100"
-		},{
+		}, {
 			"service": "Brake Service",
 			"price": "SAR 100"
-		},{
+		}, {
 			"service": "AC Service",
 			"price": "SAR 100"
 		}],
@@ -135,8 +157,9 @@
 	"safetyTips": [{
 		"title": "title 1",
 		"summary": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."
-	},{
+	}, {
 		"title": "title 2",
 		"summary": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."
-	}]
+	}],
+	"sSelectedCatelog": ""
 }

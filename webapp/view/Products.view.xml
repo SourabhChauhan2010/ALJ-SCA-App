@@ -3,7 +3,7 @@
 	<VBox class="styleVehicleBox">
 		<HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom">
 			<Label text="{i18n>SelectVehicle}" class="aljTitleClass"/>
-			<Button text="{i18n>AddVehicle}" class="aljLightGreyBtnStyle" press="onAddVehiclePress"/>
+			<Button text="{i18n>AddVehicleBtn}" class="aljLightGreyBtnStyle" press="onAddVehiclePress"/>
 		</HBox>
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>
 	</VBox>
@@ -11,9 +11,7 @@
 		<Label text="Product Catelog" class="aljTitleClass sapUiSmallMarginBegin"/>
 		<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
 			<HBox items="{oAppModel>/aProdCatelogs}" class="sapUiSmallMarginBeginEnd">
-				<CustomListItem class="styleProdServBookBox"
-					visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}" type="Active"
-					press="onSelectableItemPress">
+				<CustomListItem class="styleProdServBookBox" type="Active" press="onProdCatPress">
 					<VBox alignItems="Center">
 						<Image src="{oAppModel>src}" width="6rem"/>
 						<Label text="{oAppModel>name}"/>
@@ -22,18 +20,17 @@
 			</HBox>
 		</ScrollContainer>
 	</VBox>
-	<VBox class="styleProdServBox sapUiNoMarginTop">
-		<Label text="General Job" class="aljTitleClass sapUiSmallMarginBegin"/>
+	<VBox class="styleProdServBox sapUiNoMarginTop" visible="{= ${oAppModel>/sSelectedCatelog} ? true : false}">
+		<Label text="{oAppModel>/sSelectedCatelog}" class="aljTitleClass sapUiSmallMarginBegin"/>
 		<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
 			<HBox items="{oAppModel>/aRecommendationsHome}" class="sapUiSmallMarginBeginEnd">
-				<CustomListItem class="styleProdServBookBox"
-					visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}" type="Active">
+				<CustomListItem class="styleProdServBookBox" press="onProductDetail" type="Active">
 					<VBox alignItems="Center">
 						<Label text="{oAppModel>serviceType}" class="sapUiTinyMarginBottom styleServType"/>
 						<Image src="{oAppModel>src}" width="6rem"/>
 						<Label text="{oAppModel>sar2}" class="styleCAR2"/>
 						<Text text="{oAppModel>sar1}" class="sapUiTinyMarginBottom styleCAR1"/>
-						<Button text="Book" class="aljRedBtnStyle" press="BookAService"/>
+						<Button text="Book" class="aljRedBtnStyle" press="onBookService"/>
 					</VBox>
 				</CustomListItem>
 			</HBox>
