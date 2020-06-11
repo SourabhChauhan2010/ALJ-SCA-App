@@ -86,6 +86,10 @@ sap.ui.define([
 
 		},
 
+		onBookService: function () {
+			this.oRouter.navTo("BookAService");
+		},
+        
 		bookService: function (oEvent) {
 			this.getRouter().navTo("BookAService");
 		},

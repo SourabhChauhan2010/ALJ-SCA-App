@@ -11,10 +11,32 @@ sap.ui.define([
 		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.Products
 		 */
 		onInit: function () {
+			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 
 		},
-		onBookService: function () {
-			this.oRouter.navTo("BookAService");
+		onAddVehiclePress: function (oEvent) {
+			this.getRouter().navTo("AddVehicle");
+		},
+		onProdCatPress: function (oEvent) {
+
+			var sSelectedCatelog = oEvent.getSource().getAggregation("content")[0].getAggregation("items")[1].getProperty("text");
+			this.getModel("oAppModel").setProperty("/sSelectedCatelog", sSelectedCatelog);
+
+		},
+		onProductDetail: function (oEvent) {
+			var oAppModel = this.getModel("oAppModel");
+			var sSelectedProdService = oEvent.getSource().getAggregation("content")[0].getAggregation("items")[0].getProperty("text");
+			var aServices = oAppModel.getProperty("/aRecommendationsHome");
+			var oProductDetails = {};
+			for (var i = 0; i < aServices.length; i++) {
+				if (aServices[i].serviceType === sSelectedProdService) {
+					oProductDetails = aServices[i];
+					break;
+				}
+			}
+			oAppModel.setProperty("/oProductDetails", oProductDetails);
+
+			this.getRouter().navTo("ProductDetail");
 		}
 
 		/**
