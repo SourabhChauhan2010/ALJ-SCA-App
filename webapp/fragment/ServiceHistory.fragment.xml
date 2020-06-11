@@ -12,7 +12,7 @@
 						</HBox>
 						<Text text="{oAppModel>date}"/>
 					</VBox>
-					<Button text="{i18n>KnowMore}" class="aljGrayBtnStyle"/>
+					<Button text="{i18n>KnowMore}" class="aljGrayBtnStyle" press="showServiceStatus"/>
 				</HBox>
 			</commons:TimelineItem>
 		</commons:content>

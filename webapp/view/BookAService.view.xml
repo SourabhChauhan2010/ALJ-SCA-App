@@ -114,7 +114,7 @@ Comments:
 		</headerToolbar>
 		<u:CalendarDateInterval class="BAS_DT_CSS" width="100%"/>
 </Panel>
-			
+		<Button text="Confirm" press="showServiceStatus"/>	
 
 	
 </mvc:View>

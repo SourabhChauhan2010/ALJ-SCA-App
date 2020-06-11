@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="2rem" width="1.875rem" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-More">
+      <rect width="32" height="32"/>
+    </clipPath>
+  </defs>
+  <g id="More" clip-path="url(#clip-More)">
+    <rect width="32" height="32" fill="#fff"/>
+    <g id="Group_2393" data-name="Group 2393" transform="translate(2.141 2.141)">
+      <g id="right">
+        <g id="Group_2386" data-name="Group 2386">
+          <g id="Group_2385" data-name="Group 2385" transform="translate(0 0)">
+            <path id="Path_3391" data-name="Path 3391" d="M23.658,4.059a13.859,13.859,0,0,0-19.6,19.6,13.859,13.859,0,1,0,19.6-19.6Zm-9.8,22.034A12.235,12.235,0,1,1,26.093,13.859,12.248,12.248,0,0,1,13.859,26.093Z" transform="translate(0 0)"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_2394" data-name="Group 2394" transform="translate(1 1)">
+        <circle id="Ellipse_163" data-name="Ellipse 163" cx="1.5" cy="1.5" r="1.5" transform="translate(11.858 11.859)"/>
+        <circle id="Ellipse_165" data-name="Ellipse 165" cx="1.5" cy="1.5" r="1.5" transform="translate(5.858 11.859)"/>
+        <circle id="Ellipse_164" data-name="Ellipse 164" cx="1.5" cy="1.5" r="1.5" transform="translate(17.858 11.859)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -14,14 +14,22 @@ sap.ui.define([
 			this.fnInitApp();
 			this.setSVGContents();
 			this.getRouter().attachRoutePatternMatched(function (oEvent) {
-				var oAppModelData = this.oAppModel.getData();
-				oAppModelData.currentScreen = oEvent.getParameter("name");
-				oAppModelData.currentScreenTitle = this.getResourceText(oEvent.getParameter("name"));
-				this.oAppModel.refresh();
+				this.setScreenDetails(oEvent.getParameter("name"));
 				if (oEvent.getParameter("name") === "App") {
 
 				}
 			}.bind(this));
+		},
+
+		setScreenDetails: function (name) {
+			var oAppModelData = this.oAppModel.getData();
+			if (oAppModelData.currentScreen && (oAppModelData.currentScreen === "BookAService" && name === "ServiceStatus")) {
+				oAppModelData.currentScreenTitle = this.getResourceText("Confirmation");
+			} else {
+				oAppModelData.currentScreenTitle = this.getResourceText(name);
+			}
+			oAppModelData.currentScreen = name;
+			this.oAppModel.refresh();
 		},
 
 		setSVGContents: function () {
@@ -52,8 +60,8 @@ sap.ui.define([
 			var selectedKey = oEvent.getSource().getBindingContext("oAppModel").getObject().key;
 			this.getRouter().navTo(selectedKey);
 		},
-		
-		onOpenProfile: function() {
+
+		onOpenProfile: function () {
 			this.getRouter().navTo("Profile");
 		}
 

@@ -10,32 +10,27 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 		return true;
 	},
 
-	getSVGSource: function (file) {
-		var result = "";
-		// if (file) {
-		// 	var rawFile = new XMLHttpRequest();
-		// 	rawFile.open("GET", file, false);
-		// 	rawFile.onreadystatechange = function () {
-		// 		if (rawFile.readyState === 4) {
-		// 			if (rawFile.status === 200 || rawFile.status === 0) {
-		// 				var allText = rawFile.responseText;
-		// 				result = allText;
-		// 			}
-		// 		}
-		// 	};
-		// 	rawFile.send(null);
-		// }
-		// if (file.includes("Products")) {
-		// 	this.addStyleClass("aljProductsStyle");
-		// }
-		return result;
-	},
-	
-	setFooterStyle: function(key, currentPage) {
+	setFooterStyle: function (key, currentPage) {
 		this.removeStyleClass("aljFooterSelectedStyle");
 		if (key === currentPage) {
 			this.addStyleClass("aljFooterSelectedStyle");
 		}
 		return true;
+	},
+
+	showFooter: function (currentPage) {
+		var aScreensNoFooter = ["BookAService", "MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips"];
+		if (aScreensNoFooter.find(item => item === currentPage)) {
+			return false;
+		}
+		return true;
+	},
+	
+	showClose: function(currentPage) {
+		var aScreensWithClose = ["MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips"];
+		if (aScreensWithClose.find(item => item === currentPage)) {
+			return true;
+		}
+		return false;
 	}
 };

@@ -26,12 +26,18 @@
 		</content>
 	</Panel>
 	<VBox class="sapUiSmallMarginTop">
-		<Label text="{i18n>ServiceType}" class="aljTitleClass sapUiSmallMarginBegin"/>
-		<HBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
-			<ToggleButton text="{i18n>Arabic}" pressed="{= ${oAppModel>/language} === 'AR'}" class="aljTBStyle sapUiTinyMarginEnd"
-				press="onChangeLanguage"/>
-			<ToggleButton text="{i18n>English}" pressed="{= ${oAppModel>/language} === 'EN'}" class="aljTBStyle sapUiTinyMarginEnd"
-				press="onChangeLanguage"/>
-		</HBox>
+		<Label text="{i18n>SelectLanguage}" class="aljTitleClass sapUiSmallMarginBegin"/>
+		<!--<HBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">-->
+		<!--	<ToggleButton text="{i18n>Arabic}" pressed="{= ${oAppModel>/language} === 'AR'}" class="aljTBStyle sapUiTinyMarginEnd"-->
+		<!--		press="onChangeLanguage"/>-->
+		<!--	<ToggleButton text="{i18n>English}" pressed="{= ${oAppModel>/language} === 'EN'}" class="aljTBStyle sapUiTinyMarginEnd"-->
+		<!--		press="onChangeLanguage"/>-->
+		<!--</HBox>-->
+		<List mode="SingleSelect" class="aljLangListStyle">
+			<items>
+				<StandardListItem title="{i18n>Arabic}"/>
+				<StandardListItem title="{i18n>English}"/>
+			</items>
+		</List>
 	</VBox>
 </mvc:View>

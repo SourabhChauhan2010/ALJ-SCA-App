@@ -2,10 +2,12 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App id="app">
 		<pages>
-			<Page id="page" class="aljPageStyle">
+			<Page id="page" class="aljPageStyle" showFooter="{parts: ['oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.showFooter'}">
 				<customHeader>
 					<Toolbar>
 						<VBox width="2.25rem">
+							<Image src="image/back.svg" visible="{= ${oAppModel>/currentScreen} === 'BookAService'? true: false}" width="1.25rem"
+								press="onNavBack"/>
 							<Image src="image/user.png" visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}" height="37px" width="37px"
 								press="onOpenProfile"/>
 						</VBox>
@@ -14,8 +16,8 @@
 						<ToolbarSpacer/>
 						<VBox width="2.25rem">
 							<Image src="image/bell.png" visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}" height="37px" width="37px"/>
-							<core:Icon src="sap-icon://decline" width="2.5rem" press="onNavBack" color="#ffffff"
-								visible="{= ${oAppModel>/currentScreen} !== 'Home'? true: false}"/>
+							<core:Icon src="sap-icon://decline" width="2.5rem" press="onCloseScreen" color="#ffffff"
+								visible="{parts: ['oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.showClose'}"/>
 							<!--<Image src="image/bell.png" height="37px" width="37px"-->
 							<!--	press="onNavBack"/>-->
 						</VBox>

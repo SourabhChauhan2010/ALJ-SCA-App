@@ -11,7 +11,7 @@
 	}, {
 		"text": "Products",
 		"key": "Products",
-		"svg": "image/products.svg"
+		"svg": "image/product.svg"
 	}, {
 		"text": "Booking",
 		"key": "BookAService",
@@ -19,7 +19,7 @@
 	}, {
 		"text": "More",
 		"key": "More",
-		"svg": ""
+		"svg": "image/more.svg"
 	}],
 	"services": [{
 		"soNumber": "21414",
@@ -138,5 +138,6 @@
 	},{
 		"title": "title 2",
 		"summary": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."
-	}]
+	}],
+	"lastServiceRemarks": "Excellent service, left my car with them early morning and was driving it again early evening of the same day. Will be using in the future."
 }
