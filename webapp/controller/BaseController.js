@@ -34,18 +34,18 @@ sap.ui.define([
 		getResourceText: function (text) {
 			return this.getOwnerComponent().getModel("i18n").getResourceBundle().getText(text);
 		},
-		
+
 		getModel: function (oModel) {
 			return this.getView().getModel(oModel);
 		},
-		
+
 		/**
 		 * Event handler  for navigating back.
 		 * It checks if there is a history entry. If yes, history.go(-1) will happen.
 		 * If not, it will replace the current entry of the browser history with the master route.
 		 * @public
 		 */
-		onNavBack: function() {
+		onNavBack: function () {
 			var sPreviousHash = History.getInstance().getPreviousHash();
 
 			if (sPreviousHash !== undefined) {
@@ -75,17 +75,19 @@ sap.ui.define([
 			oAppModel.loadData("model/data.json", null, false);
 			this.oAppModel = oAppModel;
 		},
-		
-		onSelectableItemPress: function(oEvent) {
+
+		onSelectableItemPress: function (oEvent) {
 			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
 			currObj.isSelected = !currObj.isSelected;
 			this.getModel("oAppModel").refresh();
 		},
-		
-		onPressScan: function(oEvent) {
-			
+
+		onPressScan: function (oEvent) {
+
+		},
+		onBookService: function () {
+			this.oRouter.navTo("BookAService");
 		}
-		
 
 	});
 });

@@ -10,7 +10,7 @@ Comments:
 	<VBox>
 		<Carousel id="offersCarousel" pages="{oAppModel>/aOffers}" loop="true">
 			<pages>
-				<Image press="onOfferPress" height="{= ${device>/system/phone} ? '200px' : '364px'}" width="100%" src="{oAppModel>imageSource}"/>
+				<Image press="onOfferPress" height="{= ${device>/system/phone} ? '200px' : '64px'}" width="100%" src="{oAppModel>imageSource}"/>
 			</pages>
 		</Carousel>
 	</VBox>

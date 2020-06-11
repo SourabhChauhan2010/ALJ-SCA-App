@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (BaseController) {
 	"use strict";
 
-	return BaseController.extend("com.sap.alj.sca.ALJ_SCA.controller.Profile", {
+	return BaseController.extend("com.sap.alj.sca.ALJ_SCA.controller.ProductDetail", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.

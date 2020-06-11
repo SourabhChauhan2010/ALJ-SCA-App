@@ -13,7 +13,10 @@
 	<HBox justifyContent="Center">
 		<Image src="image/arrow.png" width="0.5rem"/>
 		<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
-		<Text text="{oAppModel>/oProductDetails/desc}" width="8rem" wrapping="true"></Text>
+			<Text text="{oAppModel>/oProductDetails/desc}" width="8rem" wrapping="true"></Text>
 		</ScrollContainer>
 	</HBox>
+	<VBox alignItems="Center">
+		<Button text="Book" class="styleProdBookBtnStyle" press="onBookService"/>
+	</VBox>
 </mvc:View>

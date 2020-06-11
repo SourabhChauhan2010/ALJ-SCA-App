@@ -14,9 +14,6 @@ sap.ui.define([
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 
 		},
-		onBookService: function () {
-			this.oRouter.navTo("BookAService");
-		},
 		onAddVehiclePress: function (oEvent) {
 			this.getRouter().navTo("AddVehicle");
 		},
