@@ -122,6 +122,13 @@
     border-top-left-radius: 1.5rem;
 }
 
+.aljNormTextStyle .sapMText,
+.aljNormTextStyle .sapMLabel{
+	font-size: 1rem;
+	letter-spacing: 2px;
+	color: #37383b;
+}
+
 
 /********General Styles - End*********/
 
@@ -268,8 +275,19 @@
     width: 9rem;
 }
 
+.aljMoreTilesStyle .sapMLIB{
+    border-radius: 1rem;
+    border: solid #f2f2f2 1px;
+    background: #f2f2f2;
+    letter-spacing: 1.5px;
+    width: 11rem;
+    height: 11rem;
+    padding: 1rem;
+}
+
 .aljReccListStyle.sapMLIB.sapMLIBActive,
-.aljVehicleListHorStyle.sapMLIB.sapMLIBActive {
+.aljVehicleListHorStyle.sapMLIB.sapMLIBActive,
+.aljMoreTilesStyle .sapMLIB.sapMLIBActive{
     background: #d9d9d9;
 }
 
@@ -475,4 +493,18 @@ html.sap-desktop .sapUiCalHead>.sapUiCalHeadB:focus {
 
 /*book a service designs* - end */
 
+/********Service Status Styles - Start*********/
 
+.aljSuccessStripStyle {
+	color: #00d1ce;
+	font-size: 1rem;
+	letter-spacing: 2px;
+}
+
+.aljPriceBreakupBoxStyle{
+	padding: 2rem 2rem 1.5rem 1.5rem;
+	background: #fff;
+    border-radius: 1.5rem;
+}
+
+/********Service Status Styles - End*********/

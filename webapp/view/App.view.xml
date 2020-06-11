@@ -5,12 +5,20 @@
 			<Page id="page" class="aljPageStyle">
 				<customHeader>
 					<Toolbar>
-						<Image src="image/user.png" visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}" height="37px" width="37px"
-							press="onOpenProfile"/>
+						<VBox width="2.25rem">
+							<Image src="image/user.png" visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}" height="37px" width="37px"
+								press="onOpenProfile"/>
+						</VBox>
 						<ToolbarSpacer/>
 						<Label text="{= ${oAppModel>/currentScreenTitle}.toUpperCase()}"/>
 						<ToolbarSpacer/>
-						<Image src="image/bell.png" visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}" height="37px" width="37px"/>
+						<VBox width="2.25rem">
+							<Image src="image/bell.png" visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}" height="37px" width="37px"/>
+							<core:Icon src="sap-icon://decline" width="2.5rem" press="onNavBack" color="#ffffff"
+								visible="{= ${oAppModel>/currentScreen} !== 'Home'? true: false}"/>
+							<!--<Image src="image/bell.png" height="37px" width="37px"-->
+							<!--	press="onNavBack"/>-->
+						</VBox>
 					</Toolbar>
 				</customHeader>
 				<footer>

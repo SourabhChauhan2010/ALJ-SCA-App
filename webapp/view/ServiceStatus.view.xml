@@ -1,0 +1,56 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="com.sap.alj.sca.ALJ_SCA.controller.ServiceStatus" xmlns:html="http://www.w3.org/1999/xhtml">
+	<VBox alignItems="Center">
+		<Text text="{i18n>appointmentBooked}" class="aljSuccessStripStyle sapUiTinyMarginTop"/>
+		<Image src=""/>
+	</VBox>
+	<VBox binding="{oAppModel>/appointmentDetails}" alignItems="Center" class="aljNormTextStyle">
+		<HBox>
+			<VBox alignItems="Center">
+				<Text text="{i18n>appointmentReceipt}"/>
+				<Text text="{i18n>appointmentNo}: {oAppModel>appointmentNo}" class="aljTitleClass sapUiSmallMarginTop"/>
+			</VBox>
+		</HBox>
+		<VBox>
+			<HBox class="sapUiSmallMarginTop">
+				<Text text="{oAppModel>vehicle}"/>
+			</HBox>
+			<HBox class="sapUiSmallMarginTop">
+				<Text text="{oAppModel>serviceDateTime}"/>
+			</HBox>
+			<HBox class="sapUiSmallMarginTop">
+				<Text text="{oAppModel>pickupDateTime}"/>
+			</HBox>
+			<HBox class="sapUiSmallMarginTop">
+				<Text text="{oAppModel>location}"/>
+			</HBox>
+		</VBox>
+		<VBox class="sapUiSmallMarginTop">
+			<Button text="{i18n>copyToCal}" class="aljWhiteBtnClass" width="15rem"/>
+			<Button text="{i18n>Reschedule}" class="aljWhiteBtnClass" width="15rem"/>
+			<Button text="{i18n>CancelAppointment}" class="aljWhiteBtnClass" width="15rem"/>
+		</VBox>
+		<VBox class="aljBoxStyle sapUiSmallMarginTop" width="100%">
+			<Text text="{i18n>PriceBreakup}" class="aljTitleClass sapUiSmallMarginBegin"/>
+			<VBox class="sapUiSmallMargin aljPriceBreakupBoxStyle">
+				<VBox items="{oAppModel>priceBreakup}">
+					<HBox>
+						<core:Icon src="sap-icon://feeder-arrow" color="#eb0a1e" size="0.75rem" class="sapUiSmallMarginEnd sapUiSmallMarginBottom"/>
+						<HBox width="100%" justifyContent="SpaceBetween">
+							<Text text="{oAppModel>service}"/>
+							<Text text="{oAppModel>price}"/>
+						</HBox>
+					</HBox>
+				</VBox>
+				<HBox width="100%" justifyContent="SpaceBetween" class="sapUiSmallMarginTop">
+					<Label design="Bold" text="{i18n>TotalPrice}"/>
+					<Label design="Bold" text="{oAppModel>totalPrice}"/>
+				</HBox>
+				<HBox width="100%" justifyContent="SpaceBetween">
+					<Label design="Bold" text="{i18n>PaymentStatus}"/>
+					<Label design="Bold" text="{oAppModel>paymentStatus}"/>
+				</HBox>
+			</VBox>
+		</VBox>
+	</VBox>
+</mvc:View>

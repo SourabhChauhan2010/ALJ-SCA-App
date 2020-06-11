@@ -48,6 +48,10 @@ sap.ui.define([
 
 		onBookService: function () {
 			this.oRouter.navTo("BookAService");
+		},
+		
+		onClickServiceStatus: function() {
+			this.oRouter.navTo("ServiceStatus");
 		}
 
 	});

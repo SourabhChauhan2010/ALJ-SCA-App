@@ -110,5 +110,33 @@
 	}, {
 		"src": "image/bodypaint.png",
 		"name": "Body & Paint"
+	}],
+	"appointmentDetails": {
+		"appointmentNo": "987548265",
+		"vehicle": "Fortuner 2018",
+		"serviceDateTime": "30 May 09:00 AM - 10:00 AM",
+		"pickupDateTime": "30 May 08:00 AM",
+		"location": "Madina Mun Center",
+		"priceBreakup": [{
+			"service": "80,000 Km Service",
+			"price": "SAR 100"
+		},{
+			"service": "Brake Service",
+			"price": "SAR 100"
+		},{
+			"service": "AC Service",
+			"price": "SAR 100"
+		}],
+		"totalPrice": "SAR 300",
+		"paymentStatus": "Pending",
+		"serviceAdvisor": "Muhammed Ahmed",
+		"contact": "8376794927"
+	},
+	"safetyTips": [{
+		"title": "title 1",
+		"summary": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."
+	},{
+		"title": "title 2",
+		"summary": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."
 	}]
 }

@@ -10,7 +10,7 @@
 			<Label text="{i18n>Recommended}" class="aljTitleClass sapUiSmallMarginBegin"/>
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
 		</VBox>
-		<VBox class="aljWhiteBoxStyle" visible="false">
+		<VBox class="aljWhiteBoxStyle">
 			<Label text="{i18n>VehicleInformatics}" class="aljTitleClass sapUiSmallMarginBegin"/>
 			<HBox class="sapUiSmallMarginBeginEnd" items="{oAppModel>/vehicleInfo}">
 				<CustomListItem class="aljReccListStyle"
@@ -23,7 +23,7 @@
 				</CustomListItem>
 			</HBox>
 		</VBox>
-		<VBox class="aljBoxStyle sapUiSmallMarginTop" visible="false">
+		<VBox class="aljBoxStyle sapUiSmallMarginTop">
 			<Label text="{i18n>ServiceHistory}" class="aljTitleClass sapUiSmallMarginBegin"/>
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceHistory" type="XML"/>
 		</VBox>
