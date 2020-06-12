@@ -9,7 +9,7 @@ sap.ui.define([
 		},
 		createAppointment:function(evt){
 			//do mandatory checks
-			this.oRouter.navTo("AppointmentReceipt");
+			this.oRouter.navTo("Confirmation");
 			
 		}
 

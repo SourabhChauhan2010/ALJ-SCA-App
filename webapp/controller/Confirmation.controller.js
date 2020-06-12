@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (BaseController) {
 	"use strict";
 
-	return BaseController.extend("com.sap.alj.sca.ALJ_SCA.controller.AppointmentReceipt", {
+	return BaseController.extend("com.sap.alj.sca.ALJ_SCA.controller.Confirmation", {
 		onInit: function () {},
 		
 

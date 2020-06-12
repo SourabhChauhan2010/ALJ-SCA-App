@@ -143,6 +143,12 @@
 	},{
 		"type":"Pick Up & Deliver"
 	}],
+	"UserInformation":[{
+		"UserName":"John Doe",
+		"MobileNumber":"553789324",
+		"emailId":"johnDoe@gmail.com",
+		"NationalId":"2345543212"
+	}],
 	"appointmentDetails": {
 		"appointmentNo": "987548265",
 		"vehicle": "Fortuner 2018",

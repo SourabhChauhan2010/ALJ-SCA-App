@@ -143,10 +143,10 @@
 				]
 			},
 			 {
-				"name": "AppointmentReceipt",
-				"pattern": "AppointmentReceipt",
+				"name": "Confirmation",
+				"pattern": "Confirmation",
 				"target": [
-					"AppointmentReceipt"
+					"Confirmation"
 				]
 			},{
 				"name": "SafetyTips",
@@ -196,9 +196,9 @@
 					"viewType": "XML",
 					"viewName": "ServiceStatus"
 				},
-				"AppointmentReceipt": {
+				"Confirmation": {
 					"viewType": "XML",
-					"viewName": "AppointmentReceipt"
+					"viewName": "Confirmation"
 				},
 				"More": {
 					"viewType": "XML",

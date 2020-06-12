@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-Kilometer">
+      <rect width="32" height="32"/>
+    </clipPath>
+  </defs>
+  <g id="Kilometer" clip-path="url(#clip-Kilometer)">
+    <rect width="32" height="32" fill="#fff"/>
+    <image id="icons8-odometer-100" width="25" height="14" transform="translate(4 9)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAA4CAYAAAALrl3YAAAAAXNSR0IArs4c6QAABPlJREFUeAHtXCusFTEQ5fcgQRAMgm+CwKExKCRIJAISFAQMAoHBoTFYHBLFAwyOhE/4OiQJgQTNg4SE8JtTbi/Taafb9na39yZt0td2eubMdGbv3u3e3bdp0/+ynbqXqT6n+o3qn15HjQFi/IzqJaqIvVP20egN1Z6ENjF4TbHfazOC7PRktEkE/wC8ojysbaU/F6mep9pL2wjgLPUZLuA7g2fqHo0xOVXhttGfuqTaT8VZ/4fw+wm4TpXjnkL5qxACOGXhDqE/dUm1n4qz/qfgDxCY4zY2zwSWBC1kUxY4xMuy2s/1MxXv4LbwSPR++wj0hLTPgeNBT4gTjvaDkoQM7eijO9AKS25tv8IS4hT4UuE1hs7d0Ts7UIWY23a+4AL4lvZz/ITrqXgP5wkCgYCodEdvdqAKJ8SrYj/VT7vUVLyH8wSWUbS48SixqWPcDdCK5NBwre2n+mn9T8V7OE9gGUUrd/T3aT60icRm5wFVzmt2oILPDjkOfa20tr9BjnFfsU6tHKQJjoWuVjjOrN8TKJpyRz+aQ0tqXx4QOOhCMUAyHlLlcc06ILmiyZASkFScVU/F18aNZR+/W0hfU8cXrFOBVnJ4RgI6RuQpasCZPBVfG2fdqs2LixpcNUreofEL0lmzTgVaqe8ZCOgYkaeoAWfyVHxtnHVrDF78iISrRsmtjV8Sdv7Dk3VMtFLXIxf4+dBTnM+EO6n42jjrzVi8ONpx1fiEqvxehU3IMIfTVOyTQdOmOH7m3O2FIi9Dd2VT8bVx1sexeC1/rdbxs+TWSS1HOk8gAj0hgaC0FPWEtIx+wHZPSCAoLUU9IS2jH7DdExIISktRT0jL6Ads94QEgqKIsF8oqR9J76TC6Yn7xvBfkHlgtA2vs4HjCgl9JOWQgnN4e0KmSQhykZTofspSDttW4m2tDK+gXe0I15binIo0kJT3T4iMSJ3xzlKanpDSyMX1zorpT2IcHcpLOQ2cirP6qfjauLHsW96hFqe2d1T5um5ElDgOfUfRCBRlT1HBWXEqvjZuLPuWd6g9RQC+ph80Dj0MYXk4Fn1H2QgsUrSeopiXw1R8bZz1Yyxey6+1j2iC276jAWdyjkXfUTYChcBTVHBWnIqvjRvLvuWNtUdp8jdVvqZjMQWBhZ6jbAQKATcSw1n1VHxt3Fj2LW+svU2TfD2PY+DZHMej7xAYgUIy2ZN7S2pfcWsu3kO971R5gE/PZ/UOx2clZLIn9xTfW9tX3JqLr1OPB/c9jfGW81DhOlkJmezJPWUFre0rbhnxDvqLV5p5cK/EFNgc18lKyGRP7jFnebe1fe6L7J8jAQ/sFxrvkiBlzPWyEgK+SZ7cUxxfBvuaa29pggf2pgYMyLledkLAh6fxRntyL+CwFLW2L/05QQIe1J80PixBkTHXLUpIhLtoynOoiKVcaVH762Sac9zNdIXrou+QGUEm4aJwz6FFCTP1F7F/hGz9oso5ji9qn5OhP3VZZfu3KFjcfzwZn1u4vom/J8hlXBC/qvZ307rl0+9nCmLhrV/uwEPvDRbYSVbxHErWrAMstX+VzHNd/OaBC46cgrvAnMO8iyh3wPiSmjIp3CH0py4l9vHT9weqXPdapuNIBl6c5RzmXcRFdsCcrPfd4JbEAy/5mH8IUPLuXInBrqMnzXkXMXcH3gOrB7YkNsF3EYd2wCWGuo6euOC7iH8BxfvbC2AKrLgAAAAASUVORK5CYII="/>
+  </g>
+</svg>
