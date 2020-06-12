@@ -4,7 +4,14 @@ sap.ui.define([
 	"use strict";
 
 	return BaseController.extend("com.sap.alj.sca.ALJ_SCA.controller.BookAService", {
-		onInit: function () {}
+		onInit: function () {
+			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+		},
+		createAppointment:function(evt){
+			//do mandatory checks
+			this.oRouter.navTo("Confirmation");
+			
+		}
 
 	});
 });

@@ -6,37 +6,42 @@ Comments:
 -->
 <!-- DM-001 start of code -->
 <mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.BookAService" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
-	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" 	xmlns:u="sap.ui.unified">
-<!-- Basic Information Panel -->
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:u="sap.ui.unified">
+	<!-- Basic Information Panel -->
 	<Panel expanded="true" class="BAS_PNL_BI_CSS">
+		
 		<headerToolbar>
 			<Toolbar class="BAS_HTB_BI_CSS">
+				<Image src="image/BasicInfo.svg"/>
 				<Label text="{i18n>BAS_BI_PNL_HEADER}" class="aljTitleClass"/>
 				<ToolbarSpacer/>
-				<Button text="Edit"/>
+				<Button text="Edit" visible="false"/>
 			</Toolbar>
 		</headerToolbar>
 		<content>
-			<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12"
-				adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+		<VBox  binding="{oAppModel>/UserInformation/0}">
+			<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="4"
+				adjustLabelSpan="false" emptySpanXL="2" emptySpanL="2" emptySpanM="2" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
 				singleContainerFullSize="false" class="BAS_SF_CSS1">
 				<f:content>
 					<Label text="{i18n>BAS_SF_Name}"/>
-					<Text text=""/>
+					<Text text="{oAppModel>UserName}"/>
 					<Label text="{i18n>BAS_SF_MobileNumber}"/>
-					<Text text=""/>
+					<Text text="{oAppModel>MobileNumber}"/>
 					<Label text="{i18n>BAS_SF_EmailId}"/>
-					<Text text=""/>
+					<Text text="{oAppModel>emailId}"/>
 					<Label text="{i18n>BAS_SF_NID}"/>
-					<Text text=""/>
+					<Text text="{oAppModel>NationalId}"/>
 				</f:content>
 			</f:SimpleForm>
+		</VBox>
 		</content>
 	</Panel>
-<!-- Vehicle Selection Panel -->
+	<!-- Vehicle Selection Panel -->
 	<Panel class="aljBoxStyle">
 		<headerToolbar>
 			<Toolbar class="BAS_HTB_SV_CSS">
+				<Image src="image/BASmycar.svg"/>
 				<Label text="{i18n>BAS_SV_PNL_HEADER}" class="aljTitleClass"/>
 				<ToolbarSpacer/>
 				<Button text="{i18n>Bas_Sv_Btn_AddVehicle}" class="aljLightGreyBtnStyle"/>
@@ -50,11 +55,12 @@ Comments:
 				</items>
 			</FlexBox>
 		</content>
-		</Panel>
-<!-- KM Reading Panel -->
-	<Panel class="aljBoxStyleWhite" >
+	</Panel>
+	<!-- KM Reading Panel -->
+	<Panel class="aljBoxStyleWhite">
 		<headerToolbar>
 			<Toolbar class="BAS_HTB_BI_CSS">
+				<Image src="image/Kilometer.svg"/>
 				<Label text="{i18n>Bas_km_pnl_header}" class="aljTitleClass"/>
 			</Toolbar>
 		</headerToolbar>
@@ -65,57 +71,89 @@ Comments:
 			</VBox>
 		</content>
 	</Panel>
-<!-- Service type Panel -->
-<Panel class="aljBoxStyle">
-	<headerToolbar>
+	<!-- Service type Panel -->
+	<Panel class="aljBoxStyle">
+		<headerToolbar>
 			<Toolbar class="BAS_HTB_SV_CSS">
+				<Image src="image/BASproduct.svg"/>
 				<Label text="{i18n>BAS_ST_PNL_HEADER}" class="aljTitleClass"/>
 				<ToolbarSpacer/>
 				<Button text="{i18n>Bas_St_Btn_AddProduct}" class="aljLightGreyBtnStyle"/>
 			</Toolbar>
 		</headerToolbar>
-			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
-				<FlexBox alignItems="End" justifyContent="End">
-				<items>
-					<Button text="{i18n>Bas_Sv_Btn_AddWProduct}" class="aljLightGreyBtnStyle"/>
-				</items>
-			</FlexBox>
-			<VBox>
+		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
+		<FlexBox alignItems="End" justifyContent="End">
+			<items>
+				<Button text="{i18n>Bas_Sv_Btn_AddWProduct}" class="aljLightGreyBtnStyle"/>
+			</items>
+		</FlexBox>
+		<VBox>
 			<items>
 				<Label text="{i18n>Bas_Sv_Lbl_Description}" class="BAS_DescTitleClass"/>
 				<Input value="" placeholder="Add Service Description" class="BAS_KMR_CSS"/>
-			</items>	
-			</VBox>
-			</Panel>
-<!--Service Centre Panel-->
-<Panel class="aljBoxStyleWhite">
-	<headerToolbar>
+			</items>
+		</VBox>
+	</Panel>
+	<!--Service Centre Panel-->
+	<Panel class="aljBoxStyleWhite">
+		<headerToolbar>
 			<Toolbar class="BAS_HTB_BI_CSS">
+				<Image src="image/Location.svg"/>
 				<Label text="{i18n>BAS_SC_PNL_HEADER}" class="aljTitleClass"/>
 			</Toolbar>
 		</headerToolbar>
 		<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="5" labelSpanM="5" labelSpanS="12"
-				adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
-				singleContainerFullSize="false" class="BAS_SF_CSS1">
-				<f:content>
-					<Label text="{i18n>BAS_SC_Region}"/>
-					<Select class="BAS_SC_Sel_CSS"/>
-					<Label text="{i18n>BAS_SC_PNL_HEADER}"/>
-					<Select class="BAS_SC_Sel_CSS" />
-				</f:content>
-			</f:SimpleForm>
-</Panel>
-<!-- Date and Time Panel -->
-<Panel class="aljBoxStyle">
-	<headerToolbar>
+			adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+			singleContainerFullSize="false" class="BAS_SF_CSS1">
+			<f:content>
+				<Label text="{i18n>BAS_SC_Region}"/>
+				<Select class="BAS_SC_Sel_CSS"/>
+				<Label text="{i18n>BAS_SC_PNL_HEADER}"/>
+				<Select class="BAS_SC_Sel_CSS"/>
+			</f:content>
+		</f:SimpleForm>
+	</Panel>
+	<!-- Date and Time Panel -->
+	<Panel class="aljBoxStyle">
+		<headerToolbar>
 			<Toolbar class="BAS_HTB_SV_CSS">
+				<Image src="image/Calendar.svg"/>
 				<Label text="{i18n>BAS_DNT_PNL_HEADER}" class="aljTitleClass"/>
 			</Toolbar>
 		</headerToolbar>
 		<u:CalendarDateInterval class="BAS_DT_CSS" width="100%"/>
-</Panel>
-		<Button text="Confirm" press="showServiceStatus"/>	
-
-	
+	</Panel>
+	<!-- self drive/pick up panel-->
+	<Panel class="aljBoxStyleWhite">
+		<headerToolbar>
+			<Toolbar class="BAS_HTB_SV_CSS">
+				<Image src="image/SelfDrive1.svg"/>
+				<Label text="{i18n>BAS_DNT_PNL_HEADER}" class="aljTitleClass"/>
+			</Toolbar>
+		</headerToolbar>
+		<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
+			<HBox items="{oAppModel>/VechicleDelivery}" class="sapUiSmallMarginBeginEnd">
+				<CustomListItem class="aljVehicleListHorStyle"
+					visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}" type="Active"
+					press="onSelectableItemPress">
+					<HBox alignItems="Center">
+						<Image src="{oAppModel>src}" width="6rem"/>
+						<Text text="{oAppModel>type}" class="aljLastServiceDateStyle"/>
+					</HBox>
+				</CustomListItem>
+			</HBox>
+		</ScrollContainer>
+	</Panel>
+	<!-- Pick up Date & Time Panel -->
+	<Panel class="aljBoxStyle">
+		<headerToolbar>
+			<Toolbar class="BAS_HTB_SV_CSS">
+				<Image src="image/BASpickup.svg"/>
+				<Label text="{i18n>BAS_PDNT_PNL_HEADER}" class="aljTitleClass"/>
+			</Toolbar>
+		</headerToolbar>
+		<u:CalendarDateInterval class="BAS_DT_CSS" width="100%"/>
+	</Panel>
+	<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.receipt" type="XML" visible="false"/>
 </mvc:View>
 <!-- DM-001 end of code -->
