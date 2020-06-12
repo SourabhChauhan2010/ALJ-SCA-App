@@ -141,14 +141,7 @@
 				"target": [
 					"More"
 				]
-			},
-			 {
-				"name": "Confirmation",
-				"pattern": "Confirmation",
-				"target": [
-					"Confirmation"
-				]
-			},{
+			}, {
 				"name": "SafetyTips",
 				"pattern": "SafetyTips",
 				"target": [
@@ -195,10 +188,6 @@
 				"ServiceStatus": {
 					"viewType": "XML",
 					"viewName": "ServiceStatus"
-				},
-				"Confirmation": {
-					"viewType": "XML",
-					"viewName": "Confirmation"
 				},
 				"More": {
 					"viewType": "XML",

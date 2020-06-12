@@ -17,9 +17,14 @@ sap.ui.define([
 		onChangeLanguage: function (oEvent) {
 			// var lang = sap.ui.getCore().getConfiguration().getLanguage();
 			// sap.ui.getCore().getConfiguration().setLanguage(lang === "AR"? "EN": "AR");
+			debugger
 			var lang = oEvent.getSource().getText();
 			this.getModel("oAppModel").setProperty("/language", lang === "Arabic"? "AR": "EN");
 			sap.ui.getCore().getConfiguration().setLanguage(lang === "Arabic"? "AR": "EN");
+		},
+		
+		setSelectedLanguage: function(slanguage) {
+			
 		}
 
 		/**

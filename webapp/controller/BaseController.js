@@ -76,7 +76,13 @@ sap.ui.define([
 			this.oAppModel = oAppModel;
 		},
 
-		onSelectableItemPress: function (oEvent) {
+		onVehicleItemPress: function (oEvent) {
+			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
+			currObj.isSelected = !currObj.isSelected;
+			this.getModel("oAppModel").refresh();
+		},
+		
+		onServiceItemPress: function (oEvent) {
 			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
 			currObj.isSelected = !currObj.isSelected;
 			this.getModel("oAppModel").refresh();

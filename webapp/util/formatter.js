@@ -19,7 +19,7 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 	},
 
 	showFooter: function (currentPage) {
-		var aScreensNoFooter = ["BookAService", "MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips"];
+		var aScreensNoFooter = ["BookAService", "MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips", "ProductDetail"];
 		if (aScreensNoFooter.find(item => item === currentPage)) {
 			return false;
 		}
@@ -27,7 +27,7 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 	},
 	
 	showClose: function(currentPage) {
-		var aScreensWithClose = ["MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips"];
+		var aScreensWithClose = ["MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips", "ProductDetail"];
 		if (aScreensWithClose.find(item => item === currentPage)) {
 			return true;
 		}

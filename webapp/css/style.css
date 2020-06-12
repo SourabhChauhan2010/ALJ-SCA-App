@@ -215,6 +215,11 @@
     fill: red;
 }
 
+.aljFooterSelectedStyle .aljMyCarLogoStyle path,
+.aljFooterSelectedStyle .aljMyCarLogoStyle circle{
+    stroke: red;
+}
+
 .aljFooterSelectedStyle .sapMText {
     color: red;
 }

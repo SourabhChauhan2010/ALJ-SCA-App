@@ -154,6 +154,6 @@ Comments:
 		</headerToolbar>
 		<u:CalendarDateInterval class="BAS_DT_CSS" width="100%"/>
 	</Panel>
-	<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.receipt" type="XML" visible="false"/>
+	<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.receipt" type="XML"/>
 </mvc:View>
 <!-- DM-001 end of code -->

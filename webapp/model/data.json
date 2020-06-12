@@ -47,7 +47,11 @@
 		"model": "Camry",
 		"year": "2020",
 		"lastServiceDate": "23/04/2020",
-		"src": "image/camry.png"
+		"src": "image/camry.png",
+		"vin": "5336499986",
+		"plateNo": "TN99",
+		"vehicleType": "Pickup",
+		"warranty": "06/02/2020 to 06/02/2021"
 	}],
 	"recommendations": [{
 		"serviceType": "Brake service",

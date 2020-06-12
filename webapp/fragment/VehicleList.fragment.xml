@@ -2,7 +2,7 @@
 	<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
 		<HBox items="{oAppModel>/vehicles}" class="sapUiSmallMarginBeginEnd">
 			<CustomListItem class="aljVehicleListHorStyle" visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}"
-				type="Active" press="onSelectableItemPress">
+				type="Active" press="onVehicleItemPress">
 				<VBox alignItems="Center">
 					<Text text="{oAppModel>model}"/>
 					<Text text="{oAppModel>year}" class="sapUiTinyMarginBottom"/>
