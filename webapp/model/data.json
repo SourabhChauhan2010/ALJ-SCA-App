@@ -22,17 +22,17 @@
 		"svg": "image/more.svg"
 	}],
 	"services": [{
-		"soNumber": "21414",
-		"date": "21/05/2020",
-		"pm": "40k"
+		"pickup": "pickup",
+		"date": "30 May 2020, 09:00 AM - 10:00 AM",
+		"service": "Brake Service",
+		"vin": "98975161892375",
+		"src": "image/supra.png"
 	}, {
-		"soNumber": "21414",
-		"date": "21/05/2020",
-		"pm": "40k"
-	}, {
-		"soNumber": "21414",
-		"date": "21/05/2020",
-		"pm": "40k"
+		"pickup": "pickup",
+		"date": "30 May 2020, 09:00 AM - 10:00 AM",
+		"service": "Brake Service",
+		"vin": "98975161892375",
+		"src": "image/supra.png"
 	}],
 	"vehicles": [{
 		"model": "Supra",
@@ -140,8 +140,8 @@
 	"appointmentDetails": {
 		"appointmentNo": "987548265",
 		"vehicle": "Fortuner 2018",
-		"serviceDateTime": "30 May 09:00 AM - 10:00 AM",
-		"pickupDateTime": "30 May 08:00 AM",
+		"serviceDateTime": "30 May 2020, 09:00 AM - 10:00 AM",
+		"pickupDateTime": "30 May 2020, 08:00 AM",
 		"location": "Madina Mun Center",
 		"priceBreakup": [{
 			"service": "80,000 Km Service",

@@ -8,7 +8,7 @@
 			<ToggleButton text="{i18n>Upcoming}" class="aljTBStyle" pressed="true"/>
 		</HBox>
 		<VBox class="aljBoxStyle">
-			<Label text="{i18n>UpcomingServices}" class="aljTitleClass sapUiSmallMarginBegin"/>
+			<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBegin"/>
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceHistory" type="XML"/>
 		</VBox>
 	</VBox>

@@ -4,6 +4,9 @@
 		<Text text="{i18n>appointmentBooked}" class="aljSuccessStripStyle sapUiTinyMarginTop"/>
 		<Image src=""/>
 	</VBox>
+	<HBox width="100%" justifyContent="Center" visible="{= ${oAppModel>/currentScreenTitle} === ${i18n>Confirmation}}">
+		<Image src="image/confirm.png" width="5rem"/>
+	</HBox>
 	<VBox binding="{oAppModel>/appointmentDetails}" alignItems="Center" class="aljNormTextStyle sapUiTinyMarginTop">
 		<HBox justifyContent="SpaceBetween" width="100%">
 			<Image src="image/receipt.svg" width="1.65rem" class="sapUiTinyMarginBegin"/>
@@ -19,9 +22,16 @@
 		<Image src="image/readyForDelivery.svg" width="100%" class="sapUiSmallMarginTop"
 			visible="{= ${oAppModel>/currentScreenTitle} !== ${i18n>Confirmation}}"/>
 		<VBox>
-			<HBox class="sapUiSmallMarginTop">
-				<Image src="image/mycar.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
-				<Text text="{oAppModel>vehicle}"/>
+			<HBox class="sapUiSmallMarginTop" justifyContent="SpaceBetween">
+				<HBox>
+					<Image src="image/mycar.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
+					<Text text="{oAppModel>vehicle}"/>
+				</HBox>
+				<HBox class="aljInOutSwitch sapUiTinyMarginBegin" visible="{= ${oAppModel>/currentScreenTitle} !== ${i18n>Confirmation}}">
+					<Text text="{i18n>IN}"/>
+					<Switch state="true" customTextOn=" " customTextOff=" "/>
+					<Text text="{i18n>OUT}"/>
+				</HBox>
 			</HBox>
 			<HBox class="sapUiSmallMarginTop">
 				<Image src="image/pickup.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
@@ -36,7 +46,7 @@
 					<Image src="image/location.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
 					<Text text="{oAppModel>location}"/>
 				</HBox>
-				<Image src="image/googleMaps.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
+				<Image src="image/googleMaps.svg" width="1.65rem"/>
 			</HBox>
 			<HBox class="sapUiSmallMarginTop" visible="{= ${oAppModel>/currentScreenTitle} !== ${i18n>Confirmation}}">
 				<Image src="image/user.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
@@ -47,7 +57,7 @@
 					<Image src="image/mobile.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
 					<Text text="{oAppModel>contact}"/>
 				</HBox>
-				<Image src="image/call.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
+				<Image src="image/call.svg" width="1.65rem"/>
 			</HBox>
 		</VBox>
 		<VBox class="sapUiSmallMarginTop" visible="{= ${oAppModel>/currentScreenTitle} === ${i18n>Confirmation}}">
