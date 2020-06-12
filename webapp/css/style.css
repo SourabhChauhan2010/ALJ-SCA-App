@@ -466,9 +466,15 @@
 .BAS_SF_CSS1 .sapUiForm:not(.sapUiFormEdit) .sapMText {
     min-height: 0.001rem;
 }
+.BAS_aljLastServiceDateStyle {
+	margin-left:0.5rem;
+    width: 9rem;
+    line-height: 4rem;
+    text-align:center;
+}
 
 .BAS_HTB_SV_CSS {
-    border-bottom: solid .0625rem #ebebeb;
+    border-bottom: solid .0625rem #d9d9d9;
 }
 
 .BAS_PNL_BI_CSS .sapMPanelContent:not(.sapMPanelBGTransparent) {
@@ -519,12 +525,21 @@
 }
 
 .BAS_DT_CSS {
-    background-color: #ebebeb;
-    color: #ebebeb;
+    background-color: #d9d9d9;
+    color: #d9d9d9;
 }
 
 .BAS_DT_CSS .sapUiCalRowWeekNumber {
     visibility: hidden;
+}
+.BAS_DT_CSS .sapUiCalHead {
+	background-color: #d9d9d9;
+}
+.BAS_DT_CSS .sapUiCalMonthView, .sapUiCalMonthPicker, .sapUiCalYearPicker, .sapUiCalRow{
+background-color: #d9d9d9;	
+}
+.BAS_DT_CSS .sapUiCalWH, .sapUiCalItem {
+    border: .0625rem solid #d9d9d9;
 }
 
 .BAS_DT_CSS .sapUiCalItem.sapUiCalItemNow {
@@ -537,11 +552,10 @@
     color: #c00;
 }
 
-.BAS_DT_CSS .sapUiCalHead>.sapUiCalHeadB,
-.sapUiCalCancel,
-html.sap-desktop .sapUiCalHead>.sapUiCalHeadB:hover,
-html.sap-desktop .sapUiCalHead>.sapUiCalHeadB:focus {
-    color: #c00;
+
+.BAS_DT_CSS .sapUiCalItem {
+    background-color: #d9d9d9;
+    border-radius: 0.25rem;
 }
 
 .aljBoxStyleWhite {

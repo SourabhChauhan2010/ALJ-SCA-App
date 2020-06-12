@@ -137,17 +137,63 @@
 		"src": "image/bodypaint.png",
 		"name": "Body & Paint"
 	}],
-	"VechicleDelivery":[{
-		"type":"Self Drive"
-	
-	},{
-		"type":"Pick Up & Deliver"
+	"VechicleDelivery": [{
+		"type": "Self Drive",
+		"src": "image/SelfDrive1.svg"
+
+	}, {
+		"type": "Pick Up & Deliver",
+		"src": "image/pickup.svg"
+
 	}],
-	"UserInformation":[{
-		"UserName":"John Doe",
-		"MobileNumber":"553789324",
-		"emailId":"johnDoe@gmail.com",
-		"NationalId":"2345543212"
+	"region": [{
+		"key": "Jeddah",
+		"text": "Jeddah"
+	}, {
+		"key": "Riyadh",
+		"text": "Riyadh"
+	}, {
+		"key": "Dammam",
+		"text": "Dammam"
+	}, {
+		"key": "Al Khubar",
+		"text": "Al Khubar"
+	}, {
+		"key": "Buraydah",
+		"text": "Buraydah"
+	}],
+
+	"serviceCenter": [{
+		"key": "Riyadh",
+		"text": "Rawabi Showroom"
+	}, {
+		"key": "Dammam",
+		"text": "Mega Kalidiyah Center"
+	}, {
+		"key": "Buraydah",
+		"text": "Buraidah-2 Center"
+	}, {
+		"key": "Al Khubar",
+		"text": "Khobar-1 Center"
+	}, {
+		"key": "Jeddah",
+		"text": "Tahlia Showroom"
+	}, {
+		"key": "Jeddah",
+		"text": "Madina Road Center"
+	}, {
+		"key": "Jeddah",
+		"text": "Prince Sultan Road Center"
+	}, {
+		"key": "Jeddah",
+		"text": "Safa Showroom"
+	}],
+
+	"UserInformation": [{
+		"UserName": "Jane Doe",
+		"MobileNumber": "553789324",
+		"emailId": "Janedoe@gmail.com",
+		"NationalId": "2345543212"
 	}],
 	"appointmentDetails": {
 		"appointmentNo": "987548265",
@@ -178,5 +224,5 @@
 		"summary": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."
 	}],
 	"sSelectedCatelog": "",
-    "lastServiceRemarks": "Excellent service, left my car with them early morning and was driving it again early evening of the same day. Will be using in the future."
+	"lastServiceRemarks": "Excellent service, left my car with them early morning and was driving it again early evening of the same day. Will be using in the future."
 }
