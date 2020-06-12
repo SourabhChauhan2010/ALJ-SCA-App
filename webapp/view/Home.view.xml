@@ -33,7 +33,7 @@ Comments:
 			</ScrollContainer>
 			<!--<FlexBox direction="{= ${device>/system/phone} ? 'Column' : 'Row'}" width>-->
 			<l:Grid defaultSpan="XL6 L6 M12 S12" class="sapUiSmallMarginTop sapUiNoMarginBegin">
-				<CustomListItem press="onBookService" class="styleStatusBox" type="Active">
+				<CustomListItem press="showServiceStatus" class="styleStatusBox" type="Active">
 					<HBox justifyContent="SpaceBetween">
 						<VBox binding="{oAppModel>/oServiceStatus}" class="sapUiSmallMarginBegin">
 							<Text text="Service Status" class="styleStatusTitle sapUiTinyMarginBottom sapUiTinyMarginTop"/>

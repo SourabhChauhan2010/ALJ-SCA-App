@@ -6,42 +6,51 @@
 	</VBox>
 	<VBox binding="{oAppModel>/appointmentDetails}" alignItems="Center" class="aljNormTextStyle sapUiTinyMarginTop">
 		<HBox justifyContent="SpaceBetween" width="100%">
-			<Image src="image/mycar.svg" width="1.65rem" class="sapUiTinyMarginBegin"/>
+			<Image src="image/receipt.svg" width="1.65rem" class="sapUiTinyMarginBegin"/>
 			<VBox alignItems="Center">
-				<Text text="{i18n>appointmentReceipt}" visible="{= ${oAppModel>/currentScreenTitle} === ${i18n>Confirmation}}" class="sapUiSmallMarginTop"/>
+				<Text text="{i18n>appointmentReceipt}" visible="{= ${oAppModel>/currentScreenTitle} === ${i18n>Confirmation}}"
+					class="sapUiSmallMarginBottom"/>
 				<Text
 					text="{= ${oAppModel>/currentScreenTitle} === ${i18n>Confirmation} ? ${i18n>appointmentNo} : ${i18n>ServiceOrderNumber}}: {oAppModel>appointmentNo}"
 					class="aljTitleClass"/>
 			</VBox>
-			<Image src="image/mycar.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
+			<Image src="image/pickup.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
 		</HBox>
+		<Image src="image/readyForDelivery.svg" width="100%" class="sapUiSmallMarginTop"
+			visible="{= ${oAppModel>/currentScreenTitle} !== ${i18n>Confirmation}}"/>
 		<VBox>
 			<HBox class="sapUiSmallMarginTop">
 				<Image src="image/mycar.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
 				<Text text="{oAppModel>vehicle}"/>
 			</HBox>
 			<HBox class="sapUiSmallMarginTop">
-				<Image src="image/mycar.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
+				<Image src="image/pickup.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
 				<Text text="{oAppModel>serviceDateTime}"/>
 			</HBox>
 			<HBox class="sapUiSmallMarginTop">
 				<Image src="image/mycar.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
 				<Text text="{oAppModel>pickupDateTime}"/>
 			</HBox>
-			<HBox class="sapUiSmallMarginTop">
-				<Image src="image/mycar.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
-				<Text text="{oAppModel>location}"/>
+			<HBox class="sapUiSmallMarginTop" justifyContent="SpaceBetween">
+				<HBox>
+					<Image src="image/location.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
+					<Text text="{oAppModel>location}"/>
+				</HBox>
+				<Image src="image/googleMaps.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
 			</HBox>
 			<HBox class="sapUiSmallMarginTop" visible="{= ${oAppModel>/currentScreenTitle} !== ${i18n>Confirmation}}">
-				<Image src="image/mycar.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
+				<Image src="image/user.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
 				<Text text="{oAppModel>serviceAdvisor}"/>
 			</HBox>
-			<HBox class="sapUiSmallMarginTop" visible="{= ${oAppModel>/currentScreenTitle} !== ${i18n>Confirmation}}">
-				<Image src="image/mycar.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
-				<Text text="{oAppModel>contact}"/>
+			<HBox class="sapUiSmallMarginTop" visible="{= ${oAppModel>/currentScreenTitle} !== ${i18n>Confirmation}}" justifyContent="SpaceBetween">
+				<HBox>
+					<Image src="image/mobile.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
+					<Text text="{oAppModel>contact}"/>
+				</HBox>
+				<Image src="image/call.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
 			</HBox>
 		</VBox>
-		<VBox class="sapUiSmallMarginTop">
+		<VBox class="sapUiSmallMarginTop" visible="{= ${oAppModel>/currentScreenTitle} === ${i18n>Confirmation}}">
 			<Button text="{i18n>copyToCal}" class="aljWhiteBtnClass" width="15rem"/>
 			<Button text="{i18n>Reschedule}" class="aljWhiteBtnClass" width="15rem"/>
 			<Button text="{i18n>CancelAppointment}" class="aljWhiteBtnClass" width="15rem"/>

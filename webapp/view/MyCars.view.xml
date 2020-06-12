@@ -18,24 +18,24 @@
 			<!--		</VBox>-->
 			<!--	</CustomListItem>-->
 			<!--</HBox>-->
-			<VBox class="aljVehicleInfoBoxStyle">
+			<VBox class="aljVehicleInfoBoxStyle" binding="{oAppModel>/vehicles/0}">
 				<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="5"
 					adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0">
 					<f:content>
 						<Label text="{i18n>VehicleModel}"/>
-						<Text text=""/>
+						<Text text="{oAppModel>model}"/>
 						<Label text="{i18n>ModelYear}"/>
-						<Text text=""/>
+						<Text text="{oAppModel>year}"/>
 						<Label text="{i18n>VIN}"/>
-						<Text text=""/>
+						<Text text="{oAppModel>vin}"/>
 						<Label text="{i18n>PlateNumber}"/>
-						<Text text=""/>
+						<Text text="{oAppModel>plateNo}"/>
 						<Label text="{i18n>LastServiceDone}"/>
-						<Text text=""/>
+						<Text text="{oAppModel>lastServiceDate}"/>
 						<Label text="{i18n>VehicleType}"/>
-						<Text text=""/>
+						<Text text="{oAppModel>vehicleType}"/>
 						<Label text="{i18n>Warranty}"/>
-						<Text text=""/>
+						<Text text="{oAppModel>warranty}"/>
 					</f:content>
 				</f:SimpleForm>
 			</VBox>

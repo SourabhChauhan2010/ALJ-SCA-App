@@ -344,6 +344,10 @@
     text-align: start !important;
 }
 
+.aljVehicleInfoBoxStyle .sapMText{
+	font-weight: bold;	
+}
+
 
 /********My Cars Styles - End*********/
 

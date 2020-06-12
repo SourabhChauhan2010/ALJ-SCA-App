@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="351" height="185" viewBox="0 0 351 185">
+  <defs>
+    <clipPath id="clip-Ready_forDelivery">
+      <rect width="351" height="185"/>
+    </clipPath>
+  </defs>
+  <g id="Ready_forDelivery" data-name="Ready forDelivery" clip-path="url(#clip-Ready_forDelivery)">
+    <rect width="351" height="185" fill="#fff"/>
+    <g id="Group_2413" data-name="Group 2413" transform="translate(88.12 19.56)">
+      <g id="Group_2" data-name="Group 2" transform="translate(-4 -1)">
+        <g id="Group_20" data-name="Group 20">
+          <g id="Group_4" data-name="Group 4">
+            <path id="Path_12" data-name="Path 12" d="M48,0,94,36,76.056,93.36h-57.7L0,37Z" transform="translate(32 28)" fill="#15918f"/>
+            <path id="Line_2" data-name="Line 2" d="M.74.5l36,28" transform="translate(78.76 38)" fill="none"/>
+            <path id="Line_3" data-name="Line 3" d="M16.32.95.96,46.57" transform="translate(99.36 64.8)" fill="none"/>
+            <path id="Line_6" data-name="Line 6" d="M16.32,46.57.96.95" transform="translate(40.32 64.8)" fill="none"/>
+            <path id="Line_7" data-name="Line 7" d="M.96,29.3,39.36.945" transform="translate(40.32 37.44)" fill="none"/>
+            <path id="Line_5" data-name="Line 5" d="M45.78,1.06.93,1.44" transform="translate(54.72 109.44)" fill="none"/>
+          </g>
+          <g id="Group_16" data-name="Group 16" transform="translate(3.88 1.44)">
+            <path id="Path_14" data-name="Path 14" d="M0,0V27.36L46.08,61.92l28.8-5.76Z" transform="translate(76.32)" fill="#00d1ce" stroke="#979797" stroke-miterlimit="10" stroke-width="1.44"/>
+            <path id="Path_16" data-name="Path 16" d="M47.52,0,18.72,5.76,0,63.36,16.44,89.4Z" transform="translate(103.68 56.16)" fill="#00d1ce" stroke="#979797" stroke-miterlimit="10" stroke-width="1.44"/>
+            <path id="Path_17" data-name="Path 17" d="M89.28,25.92H0L15.84,0h57.6Z" transform="translate(30.24 119.52)" fill="#00cfcd" stroke="#979797" stroke-miterlimit="10" stroke-width="1.44"/>
+            <path id="Path_18" data-name="Path 18" d="M30.24,87.84,46.08,61.92,27.36,5.76,0,0Z" transform="translate(0 57.6)" fill="#00d1ce" stroke="#979797" stroke-miterlimit="10" stroke-width="1.44"/>
+            <path id="Path_19" data-name="Path 19" d="M76.2,0V25.92L27.24,63.36,0,57.56Z" transform="translate(0.12)" fill="#00d1ce" stroke="#979797" stroke-miterlimit="10" stroke-width="1.44"/>
+          </g>
+        </g>
+      </g>
+      <g id="right" transform="translate(54 52)">
+        <g id="Group_2386" data-name="Group 2386" transform="translate(0 0)">
+          <g id="Group_2385" data-name="Group 2385" transform="translate(0 0)">
+            <path id="Path_3391" data-name="Path 3391" d="M37.3,6.4A21.848,21.848,0,0,0,6.4,37.3,21.848,21.848,0,1,0,37.3,6.4ZM21.848,41.135A19.288,19.288,0,1,1,41.135,21.848,19.309,19.309,0,0,1,21.848,41.135Z" transform="translate(0 0)" fill="#fff"/>
+          </g>
+        </g>
+        <g id="Group_2388" data-name="Group 2388" transform="translate(11.035 14.463)">
+          <g id="Group_2387" data-name="Group 2387">
+            <path id="Path_3392" data-name="Path 3392" d="M150.551,169.842a1.28,1.28,0,0,0-1.81,0l-11.3,11.3-5.951-5.951a1.28,1.28,0,1,0-1.81,1.81l6.856,6.856a1.28,1.28,0,0,0,1.81,0l12.21-12.21A1.28,1.28,0,0,0,150.551,169.842Z" transform="translate(-129.3 -169.467)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_7" data-name="Group 7" transform="translate(-52)">
+      <g id="Group_6" data-name="Group 6">
+        <text id="Order_created" data-name="Order created" transform="translate(170 10)" fill="#00d1ce" font-size="14" font-family="Karbon-Semibold, Karbon" font-weight="600" letter-spacing="0.125em"><tspan x="0" y="0">Order created</tspan></text>
+        <text id="Car_received" data-name="Car received" transform="translate(300 84)" fill="#00d1ce" font-size="16" font-family="Karbon-Semibold, Karbon" font-weight="600" letter-spacing="0.125em"><tspan x="0" y="0">Car received</tspan></text>
+        <text id="Quality_Inspection" data-name="Quality Inspection" transform="translate(112.5 161)" fill="#00d1ce" font-size="16" font-family="Karbon-Semibold, Karbon" font-weight="600" letter-spacing="0.125em"><tspan x="-33.592" y="0">Quality </tspan><tspan y="0" font-family="LucidaGrande-Bold, Lucida Grande" font-weight="700"></tspan><tspan x="-43.632" y="19">Inspection</tspan></text>
+        <text id="Ready_for_Delivery" data-name="Ready for Delivery" transform="translate(92 84)" fill="#00d1ce" font-size="16" font-family="Karbon-Semibold, Karbon" font-weight="600" letter-spacing="0.125em"><tspan x="-40.144" y="0">Ready for</tspan><tspan y="0" font-family="LucidaGrande-Bold, Lucida Grande" font-weight="700"></tspan><tspan x="-34.464" y="19">Delivery</tspan></text>
+        <text id="Service_done" data-name="Service done" transform="translate(276 171)" fill="#00d1ce" font-size="16" font-family="Karbon-Semibold, Karbon" font-weight="600" letter-spacing="0.125em"><tspan x="0" y="0">Service done</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

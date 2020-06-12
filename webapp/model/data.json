@@ -38,7 +38,11 @@
 		"model": "Supra",
 		"year": "2020",
 		"lastServiceDate": "23/04/2020",
-		"src": "image/supra.png"
+		"src": "image/supra.png",
+		"vin": "9236483754",
+		"plateNo": "NY99",
+		"vehicleType": "Own",
+		"warranty": "06/02/2020 to 06/02/2021"
 	}, {
 		"model": "Camry",
 		"year": "2020",
