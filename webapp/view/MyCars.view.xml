@@ -6,7 +6,7 @@
 			<Button text="{i18n>AddVehicleBtn}" class="aljLightGreyBtnStyle" press="onAddVehiclePress"/>
 		</HBox>
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>
-		<VBox class="aljBoxStyle sapUiSmallMarginTop">
+		<VBox class="aljBoxStyle sapUiSmallMarginTop" visible="{= ${oAppModel>/selectedVehicle} ? true : false}">
 			<Label text="{i18n>VehicleInformatics}" class="aljTitleClass sapUiSmallMarginBegin"/>
 			<!--<HBox class="sapUiSmallMarginBeginEnd" items="{oAppModel>/vehicleInfo}">-->
 			<!--	<CustomListItem class="aljReccListStyle"-->
@@ -18,7 +18,7 @@
 			<!--		</VBox>-->
 			<!--	</CustomListItem>-->
 			<!--</HBox>-->
-			<VBox class="aljVehicleInfoBoxStyle" binding="{oAppModel>/vehicles/0}">
+			<VBox class="aljVehicleInfoBoxStyle" binding="{oAppModel>/selectedVehicle}" >
 				<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="5"
 					adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0">
 					<f:content>
@@ -40,11 +40,11 @@
 				</f:SimpleForm>
 			</VBox>
 		</VBox>
-		<VBox class="aljWhiteBoxStyle sapUiSmallMarginTop">
+		<VBox class="aljWhiteBoxStyle sapUiSmallMarginTop" visible="{= ${oAppModel>/selectedVehicle} ? true : false}">
 			<Label text="{i18n>Recommended}" class="aljTitleClass sapUiSmallMarginBegin"/>
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
 		</VBox>
-		<VBox class="aljBoxStyle sapUiSmallMarginTop">
+		<VBox class="aljBoxStyle sapUiSmallMarginTop" visible="{= ${oAppModel>/selectedVehicle} ? true : false}">
 			<Label text="{i18n>ServiceHistory}" class="aljTitleClass sapUiSmallMarginBegin"/>
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceHistory" type="XML"/>
 		</VBox>

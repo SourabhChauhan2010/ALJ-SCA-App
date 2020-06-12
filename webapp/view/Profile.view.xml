@@ -9,18 +9,17 @@
 			</Toolbar>
 		</headerToolbar>
 		<content>
-			<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12"
-				adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
-				singleContainerFullSize="false" class="BAS_SF_CSS1">
+			<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="4"
+				binding="{oAppModel>/UserInformation/0}">
 				<f:content>
 					<Label text="{i18n>BAS_SF_Name}"/>
-					<Text text=""/>
+					<Text text="{oAppModel>UserName}"/>
 					<Label text="{i18n>BAS_SF_MobileNumber}"/>
-					<Text text=""/>
+					<Text text="{oAppModel>MobileNumber}"/>
 					<Label text="{i18n>BAS_SF_EmailId}"/>
-					<Text text=""/>
+					<Text text="{oAppModel>emailId}"/>
 					<Label text="{i18n>BAS_SF_NID}"/>
-					<Text text=""/>
+					<Text text="{oAppModel>NationalId}"/>
 				</f:content>
 			</f:SimpleForm>
 		</content>
@@ -33,7 +32,7 @@
 		<!--	<ToggleButton text="{i18n>English}" pressed="{= ${oAppModel>/language} === 'EN'}" class="aljTBStyle sapUiTinyMarginEnd"-->
 		<!--		press="onChangeLanguage"/>-->
 		<!--</HBox>-->
-		<List mode="SingleSelect" class="aljLangListStyle">
+		<List mode="SingleSelect" class="aljLangListStyle" selectionChange="onChangeLanguage" visible="{parts: ['oAppModel>/language'], formatter:'.setSelectedLanguage'}">
 			<items>
 				<StandardListItem title="{i18n>Arabic}"/>
 				<StandardListItem title="{i18n>English}"/>

@@ -13,10 +13,29 @@ sap.ui.define([
 		onInit: function () {
 
 		},
-		
-		onAddVehiclePress: function(oEvent) {
+
+		onAddVehiclePress: function (oEvent) {
 			this.getRouter().navTo("AddVehicle");
-		}
+		},
+
+		onVehicleItemPress: function (oEvent) {
+			var oAppModel = this.getModel("oAppModel");
+			var aVehicles = oAppModel.getProperty("/vehicles");
+			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
+			var isSelected = currObj.isSelected;
+			for (var i = 0; i < aVehicles.length; i++) {
+				aVehicles[i].isSelected = false;
+			}
+			currObj.isSelected = !isSelected;
+			oAppModel.setProperty("/selectedVehicle", isSelected ? false: currObj);
+			oAppModel.refresh();
+		},
+		
+		onServiceItemPress: function (oEvent) {
+			// var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
+			// currObj.isSelected = !currObj.isSelected;
+			// this.getModel("oAppModel").refresh();
+		},
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

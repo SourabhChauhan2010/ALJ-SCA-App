@@ -215,6 +215,11 @@
     fill: red;
 }
 
+.aljFooterSelectedStyle .aljMyCarLogoStyle path,
+.aljFooterSelectedStyle .aljMyCarLogoStyle circle{
+    stroke: red;
+}
+
 .aljFooterSelectedStyle .sapMText {
     color: red;
 }
@@ -344,8 +349,8 @@
     text-align: start !important;
 }
 
-.aljVehicleInfoBoxStyle .sapMText{
-	font-weight: bold;	
+.aljVehicleInfoBoxStyle .sapMText {
+    font-weight: bold;
 }
 
 
@@ -588,5 +593,27 @@ background-color: #d9d9d9;
     border: solid 1px #979797;
     border-radius: 0.75rem;
 }
+
+.aljInOutSwitch .sapMSwtCont {
+    padding: 0;
+    margin: 0 0.5rem;
+    width: 3rem;
+}
+
+.aljInOutSwitch .sapMSwtOn .sapMSwtHandle,
+.aljInOutSwitch .sapMSwtOff .sapMSwtHandle {
+    height: 1rem;
+    width: 1rem;
+}
+
+.aljInOutSwitch .sapMSwt.sapMSwtNoLabel {
+    width: 2.65rem;
+    height: 1.25rem;
+}
+
+.aljInOutSwitch .sapMSwtOff .sapMSwtHandle {
+    left: 2.15rem;
+}
+
 
 /********Service Status Styles - End*********/
