@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:commons="sap.suite.ui.commons">
+<VBox alignItems="End" class="sapUiSmallMarginEnd">
+		<Label text=""/>
+	<Button text="Confirm" press="createAppointment" class="aljRedBtnStyle"/>
+	</VBox>
+</core:FragmentDefinition>

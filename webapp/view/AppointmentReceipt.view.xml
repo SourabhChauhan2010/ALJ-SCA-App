@@ -1,0 +1,15 @@
+<!-- Development Marker
+Developer:
+Development Date:
+Requirement:
+Comments:
+-->
+<!-- DM-001 start of code -->
+<mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.AppointmentReceipt" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" 	xmlns:u="sap.ui.unified">
+<!-- Basic Information Panel -->
+		<Label text="Appointment Booked Successfully!"/>
+
+	
+</mvc:View>
+<!-- DM-001 end of code -->

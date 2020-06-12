@@ -137,6 +137,12 @@
 		"src": "image/bodypaint.png",
 		"name": "Body & Paint"
 	}],
+	"VechicleDelivery":[{
+		"type":"Self Drive"
+	
+	},{
+		"type":"Pick Up & Deliver"
+	}],
 	"appointmentDetails": {
 		"appointmentNo": "987548265",
 		"vehicle": "Fortuner 2018",

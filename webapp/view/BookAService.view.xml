@@ -37,6 +37,7 @@ Comments:
 	<Panel class="aljBoxStyle">
 		<headerToolbar>
 			<Toolbar class="BAS_HTB_SV_CSS">
+				<Image src="image/BASmycar.svg"/>
 				<Label text="{i18n>BAS_SV_PNL_HEADER}" class="aljTitleClass"/>
 				<ToolbarSpacer/>
 				<Button text="{i18n>Bas_Sv_Btn_AddVehicle}" class="aljLightGreyBtnStyle"/>
@@ -69,6 +70,7 @@ Comments:
 <Panel class="aljBoxStyle">
 	<headerToolbar>
 			<Toolbar class="BAS_HTB_SV_CSS">
+					<Image src="image/BASproduct.svg"/>
 				<Label text="{i18n>BAS_ST_PNL_HEADER}" class="aljTitleClass"/>
 				<ToolbarSpacer/>
 				<Button text="{i18n>Bas_St_Btn_AddProduct}" class="aljLightGreyBtnStyle"/>
@@ -91,6 +93,7 @@ Comments:
 <Panel class="aljBoxStyleWhite">
 	<headerToolbar>
 			<Toolbar class="BAS_HTB_BI_CSS">
+				<Image src="image/Location.svg"/>
 				<Label text="{i18n>BAS_SC_PNL_HEADER}" class="aljTitleClass"/>
 			</Toolbar>
 		</headerToolbar>
@@ -114,7 +117,33 @@ Comments:
 		</headerToolbar>
 		<u:CalendarDateInterval class="BAS_DT_CSS" width="100%"/>
 </Panel>
-		<Button text="Confirm" press="showServiceStatus"/>	
+	<!-- self drive/pick up panel-->
+	<Panel class="sapUiSmallMargin">
+		<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
+		<HBox items="{oAppModel>/VechicleDelivery}" class="sapUiSmallMarginBeginEnd">
+			<CustomListItem class="aljVehicleListHorStyle" visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}"
+				type="Active" press="onSelectableItemPress">
+				<HBox alignItems="Center">
+					<Image src="{oAppModel>src}" width="6rem"/>
+					<Text text="{oAppModel>type}" class="aljLastServiceDateStyle"/>
+				</HBox>
+			</CustomListItem>
+		</HBox>
+	</ScrollContainer>
+	</Panel>
+		<!-- Pick up Date & Time Panel -->
+	<Panel class="aljBoxStyleWhite">
+		<headerToolbar>
+			<Toolbar class="BAS_HTB_SV_CSS">
+				<Label text="{i18n>BAS_PDNT_PNL_HEADER}" class="aljTitleClass"/>
+			</Toolbar>
+		</headerToolbar>
+		<u:CalendarDateInterval class="BAS_DT_CSS" width="100%"/>
+	</Panel>
+
+
+	<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.confirmation" type="XML" visible="false"/>	
+		
 
 	
 </mvc:View>

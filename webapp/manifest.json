@@ -141,7 +141,14 @@
 				"target": [
 					"More"
 				]
-			}, {
+			},
+			 {
+				"name": "AppointmentReceipt",
+				"pattern": "AppointmentReceipt",
+				"target": [
+					"AppointmentReceipt"
+				]
+			},{
 				"name": "SafetyTips",
 				"pattern": "SafetyTips",
 				"target": [
@@ -188,6 +195,10 @@
 				"ServiceStatus": {
 					"viewType": "XML",
 					"viewName": "ServiceStatus"
+				},
+				"AppointmentReceipt": {
+					"viewType": "XML",
+					"viewName": "AppointmentReceipt"
 				},
 				"More": {
 					"viewType": "XML",
