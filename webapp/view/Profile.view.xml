@@ -32,7 +32,8 @@
 		<!--	<ToggleButton text="{i18n>English}" pressed="{= ${oAppModel>/language} === 'EN'}" class="aljTBStyle sapUiTinyMarginEnd"-->
 		<!--		press="onChangeLanguage"/>-->
 		<!--</HBox>-->
-		<List mode="SingleSelect" class="aljLangListStyle" selectionChange="onChangeLanguage" visible="{parts: ['oAppModel>/language'], formatter:'.setSelectedLanguage'}">
+		<List mode="SingleSelect" class="aljLangListStyle" selectionChange="onChangeLanguage"
+			id="idLanguageList">
 			<items>
 				<StandardListItem title="{i18n>Arabic}"/>
 				<StandardListItem title="{i18n>English}"/>

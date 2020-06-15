@@ -11,8 +11,16 @@ sap.ui.define([
 		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.MyServices
 		 */
 		onInit: function () {
-
+			this.getRouter().attachRoutePatternMatched(function (oEvent) {
+				if (oEvent.getParameter("name") === "MyServices") {
+					this.getModel("oAppModel").setProperty("/selectedServiceListType", this.getResourceText("Ongoing"));
+				}
+			}.bind(this));
 		},
+
+		onPressServiceType: function (oEvent) {
+			this.getModel("oAppModel").setProperty("/selectedServiceListType", oEvent.getSource().getText());
+		}
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

@@ -11,7 +11,16 @@ sap.ui.define([
 		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.MyCars
 		 */
 		onInit: function () {
-
+			this.getRouter().attachRoutePatternMatched(function (oEvent) {
+				if (oEvent.getParameter("name") === "MyCars") {
+					var oAppModelData = this.getModel("oAppModel").getData();
+					// if (!oAppModelData.selectedVehicle) {
+					oAppModelData.vehicles[0].isSelected = true;
+					oAppModelData.selectedVehicle = oAppModelData.vehicles[0];
+					this.getModel("oAppModel").refresh();
+					// }
+				}
+			}.bind(this));
 		},
 
 		onAddVehiclePress: function (oEvent) {
@@ -22,15 +31,15 @@ sap.ui.define([
 			var oAppModel = this.getModel("oAppModel");
 			var aVehicles = oAppModel.getProperty("/vehicles");
 			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
-			var isSelected = currObj.isSelected;
+			// var isSelected = currObj.isSelected;
 			for (var i = 0; i < aVehicles.length; i++) {
 				aVehicles[i].isSelected = false;
 			}
-			currObj.isSelected = !isSelected;
-			oAppModel.setProperty("/selectedVehicle", isSelected ? false: currObj);
+			currObj.isSelected = true;//!isSelected
+			oAppModel.setProperty("/selectedVehicle", currObj);//isSelected ? false : currObj
 			oAppModel.refresh();
 		},
-		
+
 		onServiceItemPress: function (oEvent) {
 			// var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
 			// currObj.isSelected = !currObj.isSelected;
