@@ -9,6 +9,16 @@
 		},
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
+		"dataSources": {
+			"mainService": {
+				"uri": "/sap/opu/odata/iwbep/GWSAMPLE_BASIC/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
 		"sourceTemplate": {
 			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
 			"version": "1.40.12"
@@ -55,6 +65,15 @@
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
 					"bundleName": "com.sap.alj.sca.ALJ_SCA.i18n.i18n"
+				}
+			},
+			"oERPDataModel": {
+				"dataSource": "mainService",
+				"settings": {
+					"metadataUrlParams": {
+						"sap-documentation": "heading"
+					},
+					"useBatch": true
 				}
 			},
 			"oAppModel": {
