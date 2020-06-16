@@ -75,13 +75,55 @@ sap.ui.define([
 			oAppModel.loadData("model/data.json", null, false);
 			this.oAppModel = oAppModel;
 		},
+		
+		/** 
+		 * 
+		 * @constructor 
+		 * @param sMsg
+		 */
+		_showToastMessage: function (sMsg) {
+			MessageToast.show(sMsg, {
+				duration: 9000
+			});
+		},
+
+		/**
+		 * Event handler  for doing an HTTP request (Non Odata).
+		 * @public 
+		 * @params 
+		 * sUrl 	- api URL - {string}
+		 * sMethod  - the method -GET or POST or PUT or DELETE (PUT,DELETE -be careful about browser compatibility) -{string}
+		 * oData - null if method is GET or the Request Body -{object}
+		 * rSuccess - Success callback {function}
+		 * rErrror - Error callback {function}
+		 * @returns {object} the response data receieved through callback
+		 */
+		doAjax: function (sUrl, sMethod, oData, rSuccess, rError) {
+			if (oData) {
+				oData = JSON.stringify(oData);
+			}
+			$.ajax({
+				url: sUrl,
+				data: oData,
+				async: true,
+				dataType: "json",
+				contentType: "application/json; charset=utf-8",
+				error: function (err) {
+					rError(err);
+				},
+				success: function (data) {
+					rSuccess(data);
+				},
+				type: sMethod
+			});
+		},
 
 		onVehicleItemPress: function (oEvent) {
 			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
 			currObj.isSelected = !currObj.isSelected;
 			this.getModel("oAppModel").refresh();
 		},
-		
+
 		onServiceItemPress: function (oEvent) {
 			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
 			currObj.isSelected = !currObj.isSelected;
@@ -95,7 +137,7 @@ sap.ui.define([
 		onBookService: function () {
 			this.oRouter.navTo("BookAService");
 		},
-        
+
 		bookService: function (oEvent) {
 			this.getRouter().navTo("BookAService");
 		},

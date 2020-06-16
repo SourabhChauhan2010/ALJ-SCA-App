@@ -81,14 +81,19 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}, {
-				"uri": "css/font.css"
-			}],
-			"js": [{
-				"uri": "util/formatter.js"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				},
+				{
+					"uri": "css/font.css"
+				}
+			],
+			"js": [
+				{
+					"uri": "util/formatter.js"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -100,73 +105,92 @@
 				"controlId": "page",
 				"clearControlAggregation": true
 			},
-			"routes": [{
-				"name": "Home",
-				"pattern": "",
-				"target": [
-					"Home"
-				]
-			}, {
-				"name": "BookAService",
-				"pattern": "BookAService",
-				"target": [
-					"BookAService"
-				]
-			}, {
-				"name": "MyCars",
-				"pattern": "MyCars",
-				"target": [
-					"MyCars"
-				]
-			}, {
-				"name": "MyServices",
-				"pattern": "MyServices",
-				"target": [
-					"MyServices"
-				]
-			}, {
-				"name": "AddVehicle",
-				"pattern": "AddVehicle",
-				"target": [
-					"AddVehicle"
-				]
-			}, {
-				"name": "Products",
-				"pattern": "Products",
-				"target": [
-					"Products"
-				]
-			}, {
-				"name": "ProductDetail",
-				"pattern": "ProductDetail",
-				"target": [
-					"ProductDetail"
-				]
-			}, {
-				"name": "Profile",
-				"pattern": "Profile",
-				"target": [
-					"Profile"
-				]
-			}, {
-				"name": "ServiceStatus",
-				"pattern": "ServiceStatus",
-				"target": [
-					"ServiceStatus"
-				]
-			}, {
-				"name": "More",
-				"pattern": "More",
-				"target": [
-					"More"
-				]
-			}, {
-				"name": "SafetyTips",
-				"pattern": "SafetyTips",
-				"target": [
-					"SafetyTips"
-				]
-			}],
+			"routes": [
+				{
+					"name": "Home",
+					"pattern": "",
+					"target": [
+						"Home"
+					]
+				},
+				{
+					"name": "BookAService",
+					"pattern": "BookAService",
+					"target": [
+						"BookAService"
+					]
+				},
+				{
+					"name": "MyCars",
+					"pattern": "MyCars",
+					"target": [
+						"MyCars"
+					]
+				},
+				{
+					"name": "MyServices",
+					"pattern": "MyServices",
+					"target": [
+						"MyServices"
+					]
+				},
+				{
+					"name": "AddVehicle",
+					"pattern": "AddVehicle",
+					"target": [
+						"AddVehicle"
+					]
+				},
+				{
+					"name": "Products",
+					"pattern": "Products",
+					"target": [
+						"Products"
+					]
+				},
+				{
+					"name": "ProductDetail",
+					"pattern": "ProductDetail",
+					"target": [
+						"ProductDetail"
+					]
+				},
+				{
+					"name": "Profile",
+					"pattern": "Profile",
+					"target": [
+						"Profile"
+					]
+				},
+				{
+					"name": "ServiceStatus",
+					"pattern": "ServiceStatus",
+					"target": [
+						"ServiceStatus"
+					]
+				},
+				{
+					"name": "More",
+					"pattern": "More",
+					"target": [
+						"More"
+					]
+				},
+				{
+					"name": "SafetyTips",
+					"pattern": "SafetyTips",
+					"target": [
+						"SafetyTips"
+					]
+				},
+				{
+					"name": "AddNID",
+					"pattern": "AddNID",
+					"target": [
+						"AddNID"
+					]
+				}
+			],
 			"targets": {
 				"App": {
 					"viewType": "XML",
@@ -215,6 +239,10 @@
 				"SafetyTips": {
 					"viewType": "XML",
 					"viewName": "SafetyTips"
+				},
+				"AddNID": {
+					"viewType": "XML",
+					"viewName": "AddNID"
 				}
 			}
 		}

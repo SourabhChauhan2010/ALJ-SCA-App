@@ -6,9 +6,9 @@
 		<Label text="{i18n>OR}" class="sapUiSmallMarginBottom"/>
 		<Text text="{i18n>EnterManually}" class="sapUiSmallMarginBottom"/>
 		<VBox width="100%">
-			<Text text="{i18n>EnterVIN}"  class="aljHeadingTextStyle sapUiTinyMarginBottom"/>
-			<Input class="aljInputStyle sapUiTinyMarginBottom"/>
-			<Button text="{i18n>Add}" class="aljWhiteBtnClass"/>
+			<Text text="{i18n>EnterVIN}" class="aljHeadingTextStyle sapUiTinyMarginBottom"/>
+			<Input value="{oAppModel>/enteredVIN}" class="aljInputStyle sapUiTinyMarginBottom"/>
+			<Button text="{i18n>Add}" press="onPressAddVehicle" class="aljWhiteBtnClass"/>
 		</VBox>
 	</VBox>
 </mvc:View>

@@ -19,7 +19,7 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 	},
 
 	showFooter: function (currentPage) {
-		var aScreensNoFooter = ["BookAService", "MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips", "ProductDetail"];
+		var aScreensNoFooter = ["BookAService", "MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips", "ProductDetail", "AddNID"];
 		if (aScreensNoFooter.find(item => item === currentPage)) {
 			return false;
 		}
