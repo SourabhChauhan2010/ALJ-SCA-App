@@ -6,6 +6,10 @@ sap.ui.define([
 	return BaseController.extend("com.sap.alj.sca.ALJ_SCA.controller.BookAService", {
 		onInit: function () {
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			
+		},
+		onBeforeRendering:function(){
+			var oAppModelData = this.getModel("oAppModel").getData();	
 		},
 		createAppointment:function(evt){
 			//do mandatory checks

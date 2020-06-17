@@ -7,7 +7,10 @@ sap.ui.define([
 		onInit: function () {
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 
+		},
+		onAfterRendering: function () {
 			var jsonModel = new sap.ui.model.json.JSONModel();
+			var oAppModelData = this.getModel("oAppModel");
 			var oPayload = {
 				"plant": "Bangalore",
 				"screenStatus": "CALIBRATION",
@@ -20,6 +23,10 @@ sap.ui.define([
 			jsonModel.loadData(sUrl, null, true, "GET", false, false, oHeader);
 
 			jsonModel.attachRequestCompleted(function (oData) {
+				var userdata = oData.getSource().getData();
+				var aData = oAppModelData.getProperty("/UserInformation");
+				aData[0]= userdata;
+				oAppModelData.setProperty("/UserInformation", aData);
 				sap.m.MessageToast.show("Success");
 			});
 
@@ -27,11 +34,6 @@ sap.ui.define([
 				sap.m.MessageToast.show("Error");
 			});
 
-		},
-		onAfterRendering: function () {
-			/*	this.byId("idVBServiceListItems").attachBrowserEvent("click", function(oEvent) {
-					this.NavtoServices();
-				});*/
 		},
 		onBack: function (evt) {
 			this.oRouter.navTo("Launchpad");
@@ -49,8 +51,8 @@ sap.ui.define([
 		onBookService: function () {
 			this.oRouter.navTo("BookAService");
 		},
-		
-		onClickServiceStatus: function() {
+
+		onClickServiceStatus: function () {
 			this.oRouter.navTo("ServiceStatus");
 		}
 

@@ -13,13 +13,13 @@
 				binding="{oAppModel>/UserInformation/0}">
 				<f:content>
 					<Label text="{i18n>BAS_SF_Name}"/>
-					<Text text="{oAppModel>UserName}"/>
+					<Text text="{oAppModel>nickName}"/>
 					<Label text="{i18n>BAS_SF_MobileNumber}"/>
-					<Text text="{oAppModel>MobileNumber}"/>
+					<Text text="{oAppModel>mobile2}"/>
 					<Label text="{i18n>BAS_SF_EmailId}"/>
 					<Text text="{oAppModel>emailId}"/>
 					<Label text="{i18n>BAS_SF_NID}"/>
-					<Text text="{oAppModel>NationalId}"/>
+					<Text text="{oAppModel>idNumber}"/>
 				</f:content>
 			</f:SimpleForm>
 		</content>
