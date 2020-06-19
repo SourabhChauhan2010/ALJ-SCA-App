@@ -11,12 +11,7 @@ sap.ui.define([
 		onAfterRendering: function () {
 			var jsonModel = new sap.ui.model.json.JSONModel();
 			var oAppModelData = this.getModel("oAppModel");
-			var oPayload = {
-				"plant": "Bangalore",
-				"screenStatus": "CALIBRATION",
-				"identifier": "38"
-			};
-			var oHeader = {
+			/*var oHeader = {
 				"Content-Type": "application/json;charset=utf-8"
 			};
 			var sUrl = "/SBA_book_a_service/alj/profile/userId/001/1000052113/2201739097";
@@ -25,14 +20,27 @@ sap.ui.define([
 			jsonModel.attachRequestCompleted(function (oData) {
 				var userdata = oData.getSource().getData();
 				var aData = oAppModelData.getProperty("/UserInformation");
-				aData[0]= userdata;
+				aData[0] = userdata;
 				oAppModelData.setProperty("/UserInformation", aData);
-				sap.m.MessageToast.show("Success");
+				//	this._showToastMessage("Success");
 			});
 
 			jsonModel.attachRequestFailed(function (oResponse) {
-				sap.m.MessageToast.show("Error");
-			});
+				//	this._showToastMessage("Error");
+			});*/
+
+			var sUrl = "/SBA_book_a_service/alj/profile/userId/001/1000052113/2201739097";
+			this.doAjax(sUrl, "GET", null, function (oEvent) {
+				//Success block
+				if (oEvent) {
+
+					var aData = oAppModelData.getProperty("/UserInformation");
+					aData[0] = oEvent;
+					oAppModelData.setProperty("/UserInformation", aData);
+				} else {
+					oAppModelData.setProperty("/UserInformation", {});
+				}
+			}.bind(this), function (oEvent) {});
 
 		},
 		onBack: function (evt) {
