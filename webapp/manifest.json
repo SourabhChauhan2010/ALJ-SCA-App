@@ -189,6 +189,13 @@
 					"target": [
 						"AddNID"
 					]
+				},
+				{
+					"name": "EditProfile",
+					"pattern": "EditProfile",
+					"target": [
+						"EditProfile"
+					]
 				}
 			],
 			"targets": {
@@ -243,6 +250,10 @@
 				"AddNID": {
 					"viewType": "XML",
 					"viewName": "AddNID"
+				},
+				"EditProfile": {
+					"viewType": "XML",
+					"viewName": "EditProfile"
 				}
 			}
 		}

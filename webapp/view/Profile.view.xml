@@ -5,7 +5,7 @@
 			<Toolbar class="BAS_HTB_BI_CSS">
 				<Label text="{i18n>BAS_BI_PNL_HEADER}" class="aljTitleClass"/>
 				<ToolbarSpacer/>
-				<Button text="Edit"/>
+				<Button text="Edit" press="onPressEdit"/>
 			</Toolbar>
 		</headerToolbar>
 		<content>

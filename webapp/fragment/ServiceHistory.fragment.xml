@@ -1,6 +1,6 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:commons="sap.suite.ui.commons">
 	<commons:Timeline showHeaderBar="false" showIcons="false" content="{oAppModel>/services}" enableScroll="false"
-		class="aljTimelineStyle sapUiSmallMarginTopBottom">
+		class="aljTimelineStyle sapUiSmallMarginTopBottom" axisOrientation="{= ${device>/system/desktop} ? 'Horizontal': 'Vertical'}">
 		<commons:content>
 			<commons:TimelineItem>
 				<VBox>

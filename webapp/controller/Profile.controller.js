@@ -37,6 +37,10 @@ sap.ui.define([
 					}
 				}
 			}
+		},
+		
+		onPressEdit: function() {
+			this.getRouter().navTo("EditProfile");
 		}
 
 		/**

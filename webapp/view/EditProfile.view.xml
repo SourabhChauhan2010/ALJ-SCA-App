@@ -1,0 +1,30 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.EditProfile"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form">
+	<Panel expanded="true" class="BAS_PNL_BI_CSS">
+		<headerToolbar>
+			<Toolbar class="BAS_HTB_BI_CSS">
+				<Label text="{i18n>BAS_BI_PNL_HEADER}" class="aljTitleClass"/>
+				<ToolbarSpacer/>
+				<!--<Button text="Edit" press="onPressEdit"/>-->
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12"
+				binding="{oAppModel>/UserInformation/0}">
+				<f:content>
+					<Label text="{i18n>FirstAndMiddleName}"/>
+					<Input value="" class="aljInputStyle"/>
+					<Label text="{i18n>LastName}"/>
+					<Input value="" class="aljInputStyle"/>
+					<Label text="{i18n>MobileNumber}"/>
+					<Input value="" class="aljInputStyle"/>
+					<Label text="{i18n>BAS_SF_EmailId}"/>
+					<Input value="" class="aljInputStyle"/>
+					<Label text="{i18n>NationalId}"/>
+					<Input value="" class="aljInputStyle"/>
+				</f:content>
+			</f:SimpleForm>
+			<Button text="{i18n>Confirm}" width="15rem" type="Default" class="aljWhiteBtnClass sapUiLargeMarginTop sapUiLargeMarginBegin"></Button>
+		</content>
+	</Panel>
+</mvc:View>

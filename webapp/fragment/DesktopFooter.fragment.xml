@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<HBox class="aljFooterBarDesktopStyle" renderType="Bare">
+		<l:Grid class="aljGridContentStyle" hSpacing="2" defaultSpan="L3 M3 S6" visible="{device>/system/desktop}">
+			<l:content>
+				<Text text="About Us" class="aljFooterFontStyle aljFooterContentMarginTop aljFooterContentMarginLeft"></Text>
+				<Text text="Career" class="aljFooterFontStyle aljFooterContentMarginTop"></Text>
+				<Text text="Support" class="aljFooterFontStyle aljFooterContentMarginTop"></Text>
+				<Text text="About Us" class="aljFooterFontStyle aljFooterContentMarginTop"></Text>
+				<Text text="Career" class="aljFooterFontStyle aljFooterContentMarginLeft"></Text>
+				<Text text="Support" class="aljFooterFontStyle"></Text>
+				<Text text="About Us" class="aljFooterFontStyle"></Text>
+				<Text text="Career" class="aljFooterFontStyle"></Text>
+				<Text text="Support" class="aljFooterFontStyle aljFooterContentMarginLeft"></Text>
+				<Text text="About Us" class="aljFooterFontStyle"></Text>
+				<Text text="Career" class="aljFooterFontStyle"></Text>
+				<Text text="Support" class="aljFooterFontStyle"></Text>
+			</l:content>
+		</l:Grid>
+	</HBox>
+</core:FragmentDefinition>

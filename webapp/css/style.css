@@ -13,6 +13,7 @@
 .sapMSLITitleOnly {
     font-family: 'Karbon' !important;
 }
+
 .sapMBtnContent {
     font-size: 1rem;
     letter-spacing: 2px;
@@ -49,6 +50,33 @@
     letter-spacing: 2.5px;
 }
 
+.aljPageStyle .sapMPageSubHeader .sapMITBContainerContent {
+    height: 0;
+}
+
+.aljPageStyle.sapMPage>.sapMPageHeader+.sapMPageSubHeader+section {
+    top: 6.5rem;
+}
+
+.aljPageStyle .sapMPageSubHeader .sapMITBSelected .sapMITBContentArrow::after {
+    background: #e62f2d;
+}
+
+.aljPageStyle .sapMPageSubHeader .sapMITBTextOnly .sapMITBFilterDefault.sapMITBSelected .sapMITBText {
+    color: #e62f2d;
+}
+
+.aljPageStyle .sapMPageSubHeader .sapMITBTextOnly .sapMITBFilterDefault .sapMITBText{
+    color: #535354;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.aljPageStyle .sapMPageSubHeader .sapMITBTextOnly .sapMITBFilter {
+    padding: 0 2rem;
+}
+
 .aljTitleClass {
     color: #000000;
     font-weight: bold;
@@ -64,7 +92,8 @@
     font-size: 1rem;
 }
 
-.aljTBStyle .sapMBtnInner {
+.aljTBStyle .sapMBtnInner,
+.aljTBStyle.sapMBtn:hover>.sapMBtnHoverable{
     border: #68696c 1px solid;
     color: #68696c;
     border-radius: 0.4rem;
@@ -76,12 +105,14 @@
     border: #e62f2d 1px solid;
 }
 
-.aljGrayBtnStyle .sapMBtnInner {
+.aljGrayBtnStyle .sapMBtnInner,
+.aljGrayBtnStyle.sapMBtn:hover>.sapMBtnHoverable{
     color: #fff;
     background: #68696c;
 }
 
-.aljRedBtnStyle .sapMBtnInner {
+.aljRedBtnStyle .sapMBtnInner,
+.aljRedBtnStyle.sapMBtn:hover>.sapMBtnHoverable{
     color: #fff;
     background: #e62f2d;
     min-width: 6rem;
@@ -91,12 +122,14 @@
     color: #e62f2d;
 }
 
-.aljLightGreyBtnStyle .sapMBtnInner {
+.aljLightGreyBtnStyle .sapMBtnInner,
+.aljLightGreyBtnStyle.sapMBtn:hover>.sapMBtnHoverable{
     color: #000;
     background: #d8d8d8;
 }
 
-.aljWhiteBtnClass .sapMBtnInner {
+.aljWhiteBtnClass .sapMBtnInner
+.aljWhiteBtnClass.sapMBtn:hover>.sapMBtnHoverable{
     min-width: 5rem;
     border: 1px solid #eb0a1e;
     color: #000;
@@ -158,6 +191,16 @@
     border-bottom: 1px solid #c7c7c7;
 }
 
+@media only screen and (min-width: 1024px) {
+    .aljBoxContentStyle {
+        align-items: center;
+    }
+    .aljBoxContentStyle>div {
+        max-width: 70rem;
+        width: 100%;
+    }
+}
+
 
 /********General Styles - End*********/
 
@@ -215,12 +258,29 @@
 }
 
 .aljFooterSelectedStyle .aljMyCarLogoStyle path,
-.aljFooterSelectedStyle .aljMyCarLogoStyle circle{
+.aljFooterSelectedStyle .aljMyCarLogoStyle circle {
     stroke: red;
 }
 
 .aljFooterSelectedStyle .sapMText {
     color: red;
+}
+
+.aljFooterBarDesktopStyle {
+    background-color: #6D7278;
+    opacity: 1;
+    justify-content: center;
+}
+
+.aljFooterBarDesktopStyle .sapUiRespGrid.sapUiRespGridHSpace2 {
+    max-width: 70rem;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.aljFooterFontStyle {
+    font-size: 18px;
+    color: #ffffff;
 }
 
 
@@ -283,6 +343,16 @@
     padding-bottom: 0.8rem;
 }
 
+.aljTimelineStyle .sapSuiteUiCommonsTimelineHorizontalMiddleLine {
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 1024px) {
+    .aljTimelineStyle {
+        margin: 0 1rem;
+    }
+}
+
 
 /********My Services Styles - End*********/
 
@@ -341,15 +411,22 @@
     margin: 1rem 2rem;
 }
 
-.aljVehicleInfoBoxStyle .sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanS12)>.sapMLabel,
-.aljVehicleInfoBoxStyle .sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanM12)>.sapMLabel,
-.aljVehicleInfoBoxStyle .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanL12)>.sapMLabel,
-.aljVehicleInfoBoxStyle .sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanXL12)>.sapMLabel {
-    text-align: start !important;
-}
-
 .aljVehicleInfoBoxStyle .sapMText {
     font-weight: bold;
+}
+
+.aljVehicleInfoBoxStyle .sapUiFormCLElement {
+    display: flex;
+}
+
+@media only screen and (min-width: 1024px) {
+    .aljVehicleInfoBoxStyle .sapUiFormCLSmallColumns .sapUiFormCLElement>.sapUiFormCLCellsS12 {
+        width: auto;
+    }
+    .aljVehicleInfoBoxStyle .sapUiFormCLMedia-Std-Tablet>.sapUiFormCLContainerM2>.sapUiFormCLContainerCont,
+    .aljVehicleInfoBoxStyle .sapUiFormCLMedia-Std-Tablet>.sapUiFormCLContent>.sapUiFormCLContainerM2>.sapUiFormCLContainerCont {
+        column-count: 3
+    }
 }
 
 
@@ -454,7 +531,8 @@
     width: 9rem;
 }
 
-.styleProdBookBtnStyle .sapMBtnInner {
+.styleProdBookBtnStyle .sapMBtnInner
+.sapMBtn:hover>.sapMBtnHoverable{
     color: #fff;
     background: #e62f2d;
     width: 16rem;
@@ -470,11 +548,12 @@
 .BAS_SF_CSS1 .sapUiForm:not(.sapUiFormEdit) .sapMText {
     min-height: 0.001rem;
 }
+
 .BAS_aljLastServiceDateStyle {
-	margin-left:0.5rem;
+    margin-left: 0.5rem;
     width: 9rem;
     line-height: 4rem;
-    text-align:center;
+    text-align: center;
 }
 
 .BAS_HTB_SV_CSS {
@@ -536,13 +615,20 @@
 .BAS_DT_CSS .sapUiCalRowWeekNumber {
     visibility: hidden;
 }
+
 .BAS_DT_CSS .sapUiCalHead {
-	background-color: #d9d9d9;
+    background-color: #d9d9d9;
 }
-.BAS_DT_CSS .sapUiCalMonthView, .sapUiCalMonthPicker, .sapUiCalYearPicker, .sapUiCalRow{
-background-color: #d9d9d9;	
+
+.BAS_DT_CSS .sapUiCalMonthView,
+.sapUiCalMonthPicker,
+.sapUiCalYearPicker,
+.sapUiCalRow {
+    background-color: #d9d9d9;
 }
-.BAS_DT_CSS .sapUiCalWH, .sapUiCalItem {
+
+.BAS_DT_CSS .sapUiCalWH,
+.sapUiCalItem {
     border: .0625rem solid #d9d9d9;
 }
 
@@ -555,7 +641,6 @@ background-color: #d9d9d9;
 .sapUiCalCancel {
     color: #c00;
 }
-
 
 .BAS_DT_CSS .sapUiCalItem {
     background-color: #d9d9d9;

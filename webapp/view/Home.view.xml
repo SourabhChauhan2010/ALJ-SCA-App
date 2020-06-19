@@ -67,4 +67,5 @@ Comments:
 			<!--</FlexBox>-->
 		</VBox>
 	</VBox>
+	<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.DesktopFooter" type="XML"/>
 </mvc:View>
