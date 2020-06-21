@@ -66,7 +66,7 @@
     color: #e62f2d;
 }
 
-.aljPageStyle .sapMPageSubHeader .sapMITBTextOnly .sapMITBFilterDefault .sapMITBText{
+.aljPageStyle .sapMPageSubHeader .sapMITBTextOnly .sapMITBFilterDefault .sapMITBText {
     color: #535354;
     font-weight: bold;
     font-size: 0.9rem;
@@ -93,7 +93,7 @@
 }
 
 .aljTBStyle .sapMBtnInner,
-.aljTBStyle.sapMBtn:hover>.sapMBtnHoverable{
+.aljTBStyle.sapMBtn:hover>.sapMBtnHoverable {
     border: #68696c 1px solid;
     color: #68696c;
     border-radius: 0.4rem;
@@ -106,13 +106,13 @@
 }
 
 .aljGrayBtnStyle .sapMBtnInner,
-.aljGrayBtnStyle.sapMBtn:hover>.sapMBtnHoverable{
+.aljGrayBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
     color: #fff;
     background: #68696c;
 }
 
 .aljRedBtnStyle .sapMBtnInner,
-.aljRedBtnStyle.sapMBtn:hover>.sapMBtnHoverable{
+.aljRedBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
     color: #fff;
     background: #e62f2d;
     min-width: 6rem;
@@ -123,13 +123,12 @@
 }
 
 .aljLightGreyBtnStyle .sapMBtnInner,
-.aljLightGreyBtnStyle.sapMBtn:hover>.sapMBtnHoverable{
+.aljLightGreyBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
     color: #000;
     background: #d8d8d8;
 }
 
-.aljWhiteBtnClass .sapMBtnInner
-.aljWhiteBtnClass.sapMBtn:hover>.sapMBtnHoverable{
+.aljWhiteBtnClass .sapMBtnInner .aljWhiteBtnClass.sapMBtn:hover>.sapMBtnHoverable {
     min-width: 5rem;
     border: 1px solid #eb0a1e;
     color: #000;
@@ -503,13 +502,13 @@
 /* Products design*/
 
 .styleVehicleBox {
-    background: #f8f8f8;
+    background: #ffffff;
 }
 
 .styleProdServBox {
-    background: #f2f2f2;
+    background: #ffffff;
     padding-top: 1rem;
-    border-top-left-radius: 1.5rem;
+    /*border-top-left-radius: 1.5rem;*/
     padding-bottom: 2rem;
 }
 
@@ -531,8 +530,7 @@
     width: 9rem;
 }
 
-.styleProdBookBtnStyle .sapMBtnInner
-.sapMBtn:hover>.sapMBtnHoverable{
+.styleProdBookBtnStyle .sapMBtnInner .sapMBtn:hover>.sapMBtnHoverable {
     color: #fff;
     background: #e62f2d;
     width: 16rem;
