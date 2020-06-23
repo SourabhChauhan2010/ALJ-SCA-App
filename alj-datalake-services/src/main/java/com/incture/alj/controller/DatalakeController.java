@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.incture.datalakeDtos.ZaljUcmBpDto;
 import com.incture.datalakequeries.DatalakeQueries;
 
 @RestController
@@ -96,5 +97,20 @@ public class DatalakeController {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
 		}
 	}
+	
+	//Send param in request body instead of sending in Url - GetMapping to PostMapping
+
+		@PostMapping("/profile/userId")
+		public ResponseEntity<?> getProfileByUserId(@RequestBody ZaljUcmBpDto zaljUcmbpDto){
+
+
+			try {
+				return ResponseEntity.ok(query.getProfileByUserID(zaljUcmbpDto.getClient(), zaljUcmbpDto.getBpNumber(), zaljUcmbpDto.getIdNumber()));
+			} 
+			catch (ClassNotFoundException | SQLException e) {
+
+				return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+			}
+		}
 
 }
