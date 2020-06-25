@@ -7,9 +7,10 @@ sap.ui.define([
 		onInit: function () {
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 		},
-		onAfterRendering:function(){
-				this.servicelist=[];
+		onAfterRendering: function () {
+			this.servicelist = [];
 		},
+		//Vehicle selection code
 		onVehicleItemPress: function (oEvent) {
 			var oAppModel = this.getModel("oAppModel");
 			var aVehicles = oAppModel.getProperty("/vehicles");
@@ -20,21 +21,38 @@ sap.ui.define([
 			currObj.isSelected = true; //!isSelected
 			oAppModel.setProperty("/selectedVehicle", currObj); //isSelected ? false : currObj
 			oAppModel.refresh();
-			
+
 			//setting text in the receipt fragment
 			this.getView().getContent()[8].getItems()[0].getItems()[0].getItems()[1].setText(currObj.model + " " + currObj.year);
-			/*this.getView().byId("idBtnAddVeh").setVisible(false);
+
+			//changes to vehicle panel
+			this.getView().byId("idPnVehInfo").setExpanded(false);
 			this.getView().byId("idPnHeaderVehInfo").setVisible(true);
-			this.getView().byId("idPnHeaderVehInfo").setText(currObj.model + " " + currObj.year);*/
+			this.getView().byId("idPnHeaderVehInfo").setText(currObj.model + " " + currObj.year);
+			this.getView().byId("idBtnAddVeh").setVisible(false);
+
 		},
-		onServiceItemPress:function(oEvent){
+		onExpVehiclePanel:function(){
+			this.getView().byId("idPnHeaderVehInfo").setText("");
+			this.getView().byId("idBtnAddVeh").setVisible(true);
+			this.getView().byId("idPnHeaderVehInfo").setVisible(false);
+		},
+		onPressAddWVehicle:function(){
+		this.getView().getContent()[8].getItems()[0].getItems()[0].getItems()[1].setText(this.getView().getModel("i18n").getResourceBundle().getText("noVehicleSelection"));	
+		this.getView().byId("idPnVehInfo").setExpanded(false);
+			this.getView().byId("idPnHeaderVehInfo").setVisible(true);
+			this.getView().byId("idPnHeaderVehInfo").setText(this.getView().getModel("i18n").getResourceBundle().getText("noVehicleSelection"));
+			this.getView().byId("idBtnAddVeh").setVisible(false);
+		},
+
+		//Service Type Selection
+		onServiceItemPress: function (oEvent) {
 			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
 			//setting text in the receipt fragment
-	
+
 			this.servicelist.push(currObj.serviceType);
 			this.getView().getContent()[8].getItems()[0].getItems()[1].getItems()[1].setText(this.servicelist);
-		
-			
+
 		},
 		onBeforeRendering: function () {
 			var oAppModelData = this.getModel("oAppModel").getData();

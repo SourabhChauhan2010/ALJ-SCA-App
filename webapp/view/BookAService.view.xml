@@ -37,7 +37,7 @@ Comments:
 		</content>
 	</Panel>
 	<!-- Vehicle Selection Panel -->
-	<Panel class="aljBoxStyle" id="idPnVehInfo" expandable="true" expanded="true">
+	<Panel class="aljBoxStyle" id="idPnVehInfo" expandable="true" expanded="true" expand="onExpVehiclePanel">
 		<headerToolbar>
 			<Toolbar class="BAS_HTB_SV_CSS">
 				<Image src="image/BASmycar.svg"/>
@@ -51,7 +51,7 @@ Comments:
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>
 			<FlexBox alignItems="End" justifyContent="End">
 				<items>
-					<Button text="{i18n>Bas_Sv_Btn_AddWVehicle}" class="basLightGreyBtnStyle"/>
+					<Button text="{i18n>Bas_Sv_Btn_AddWVehicle}" class="basLightGreyBtnStyle" press="onPressAddWVehicle"/>
 				</items>
 			</FlexBox>
 		</content>
