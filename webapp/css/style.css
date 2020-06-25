@@ -566,6 +566,10 @@
     border-bottom: solid .0625rem #ffff;
 }
 
+.pnReceiptCSS{
+	position:fixed;
+}
+
 .BAS_KMR_CSS {
     border-radius: 1rem!important;
     width: 50%;
@@ -632,7 +636,7 @@
 
 .BAS_DT_CSS .sapUiCalItem.sapUiCalItemNow {
     border-bottom: .125rem solid #c00;
-    border: .125rem solid #fff;
+    border: .125rem solid #d9d9d9;
 }
 
 .BAS_DT_CSS .sapUiCalHead>button,
@@ -650,7 +654,11 @@
     /*  padding-top: 1rem;*/
     border-top-left-radius: 1.5rem;
 }
-
+.basLightGreyBtnStyle .sapMBtnInner,
+.basLightGreyBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
+    color: #000;
+    background: #e5e5e5;
+}
 
 /*book a service designs* - end */
 
