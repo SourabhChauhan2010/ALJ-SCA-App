@@ -117,7 +117,7 @@ public class DatalakeController {
 
 		try {
 			List<ZCrmVehMasterDto> list =  query.getAvailableVehiclesByUserID(zcrmvehmasterdto.getOwnerId());
-			
+
 			return  list!=null ? ResponseEntity.ok(query.getAvailableVehiclesByUserID(zcrmvehmasterdto.getOwnerId())):ResponseEntity.ok("Owner Id is not valid");
 		} 
 		catch (ClassNotFoundException | SQLException e) {
@@ -154,4 +154,21 @@ public class DatalakeController {
 
 	}
 
+	@PostMapping("validate/vin")
+	public ResponseEntity<?> validateVIN(@RequestBody ZCrmVehMasterDto zCrmVehMasterDto){
+
+		ResponseEntity<Boolean> response  = null;
+
+		try {
+			response =  ResponseEntity.ok(query.validateVIN(zCrmVehMasterDto.getVin()));
+		} catch (ClassNotFoundException | SQLException e) {
+
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+		}
+		return response;
+
+	}
+
+
 }
+
