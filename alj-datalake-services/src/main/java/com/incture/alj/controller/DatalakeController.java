@@ -1,17 +1,13 @@
 package com.incture.alj.controller;
 
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
-import javax.sql.DataSource;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.annotation.Transactional;
 /*
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.GenericMessage;
@@ -23,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.incture.datalakeDtos.ZCrmVehMasterDto;
+import com.incture.datalakeDtos.ZVehSalesHistoryDto;
 import com.incture.datalakeDtos.ZaljUcmBpDto;
 import com.incture.datalakequeries.DatalakeQueries;
 
@@ -33,6 +31,7 @@ public class DatalakeController {
 
 	@Autowired
 	private DatalakeQueries query;
+	private Logger log = LoggerFactory.getLogger(DatalakeController.class);
 
 	@GetMapping(path = "profile/userId/{client}/{bpnumber}/{idnumber}")
 	public ResponseEntity<?> getProfileByUserId(@PathVariable("client") String client,
@@ -97,20 +96,63 @@ public class DatalakeController {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
 		}
 	}
-	
+
 	//Send param in request body instead of sending in Url - GetMapping to PostMapping
 
-		@PostMapping("/profile/userId")
-		public ResponseEntity<?> getProfileByUserId(@RequestBody ZaljUcmBpDto zaljUcmbpDto){
+	@PostMapping("/profile/userId")
+	public ResponseEntity<?> getProfileByUserId(@RequestBody ZaljUcmBpDto zaljUcmbpDto) {
+		log .info("enter in getProfileByUserId::::" + zaljUcmbpDto);
+		try {
+			return ResponseEntity.ok(query.getProfileByUserID(zaljUcmbpDto.getClient(), zaljUcmbpDto.getBpNumber(),
+					zaljUcmbpDto.getIdNumber()));
+		} catch (ClassNotFoundException | SQLException e) {
 
-
-			try {
-				return ResponseEntity.ok(query.getProfileByUserID(zaljUcmbpDto.getClient(), zaljUcmbpDto.getBpNumber(), zaljUcmbpDto.getIdNumber()));
-			} 
-			catch (ClassNotFoundException | SQLException e) {
-
-				return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
-			}
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
 		}
+	}
+	@PostMapping("vehicles")
+	public ResponseEntity<?> getAvailableVehiclesByUserID(@RequestBody ZCrmVehMasterDto zcrmvehmasterdto ){
+
+		ResponseEntity<List<ZCrmVehMasterDto>> resp = null;
+
+		try {
+
+			resp = ResponseEntity.ok(query.getAvailableVehiclesByUserID(zcrmvehmasterdto.getOwnerId()));
+		} 
+		catch (ClassNotFoundException | SQLException e) {
+
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+		}
+
+		return resp;
+	}
+
+	@PostMapping("vehicle/history")
+	public ResponseEntity<?> getUserVehicleHistory(@RequestBody ZVehSalesHistoryDto zvehsaleshistorydto ){
+
+		ResponseEntity<List<ZVehSalesHistoryDto>> response = null;
+
+		try {
+			response = ResponseEntity.ok(query.getUserVehicleHistory(zvehsaleshistorydto.getVin(),zvehsaleshistorydto.getCustomerId()));
+		}
+		catch (ClassNotFoundException | SQLException e) {
+
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+		}
+		return 	response;	
+	}
+
+	@PostMapping("validate/mobile")
+	public ResponseEntity<?> validateMobileNumber(@RequestBody ZaljUcmBpDto zaljucmbpdto) {
+		ResponseEntity<Boolean> resp  = null;
+		try {
+			resp =  ResponseEntity.ok(query.validateMobileNumber(zaljucmbpdto.getMobile2()));
+		} catch (ClassNotFoundException | SQLException e) {
+
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+		}
+		return resp;
+
+	}
 
 }
