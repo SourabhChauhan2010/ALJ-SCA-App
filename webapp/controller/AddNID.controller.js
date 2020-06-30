@@ -21,8 +21,11 @@ sap.ui.define([
 				this._showToastMessage("Enter valid NID");
 				return;
 			}
-			var sUrl = "/SBA_book_a_service/alj/validate/nid/" + sNID;
-			this.doAjax(sUrl, "GET", null, function (oData) {
+			var sUrl = "/SBA_book_a_service/alj/validate/nid";
+			var oPayload = {
+				"natio": sNID
+			};
+			this.doAjax(sUrl, "POST", oPayload, function (oData) {
 				//Success block
 				if (oData) {
 					this._showToastMessage("National ID verified successfully");

@@ -21,8 +21,11 @@ sap.ui.define([
 				this._showToastMessage("Enter valid VIN");
 				return;
 			}
-			var sUrl = "/SBA_book_a_service/alj/validate/vin/" + sVIN;
-			this.doAjax(sUrl, "GET", null, function (oData) {
+			var sUrl = "/SBA_book_a_service/alj/validate/vin";
+			var oPayload = {
+				"vin": sVIN
+			};
+			this.doAjax(sUrl, "POST", oPayload, function (oData) {
 				//Success block
 				if (oData) {
 					this._showToastMessage("VIN verified successfully");

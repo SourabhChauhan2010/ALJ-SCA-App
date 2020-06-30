@@ -130,7 +130,7 @@
 
 .aljWhiteBtnClass .sapMBtnInner,
 .aljWhiteBtnClass.sapMBtn:hover>.sapMBtnHoverable {
-    min-width: 5rem;
+    min-width: 7rem;
     border: 1px solid #eb0a1e;
     color: #000;
     background: #ffffff;

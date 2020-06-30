@@ -61,7 +61,7 @@
 			</HBox>
 		</VBox>
 		<VBox class="sapUiSmallMarginTop" visible="{= ${oAppModel>/currentScreenTitle} === ${i18n>Confirmation}}">
-			<Button text="{i18n>copyToCal}" class="aljWhiteBtnClass" width="15rem"/>
+			<Button text="{i18n>copyToCal}" class="aljWhiteBtnClass" width="15rem" press="onCopyToCal"/>
 			<Button text="{i18n>Reschedule}" class="aljWhiteBtnClass" width="15rem"/>
 			<Button text="{i18n>CancelAppointment}" class="aljWhiteBtnClass" width="15rem"/>
 		</VBox>

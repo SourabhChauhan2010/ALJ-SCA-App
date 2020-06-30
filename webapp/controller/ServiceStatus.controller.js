@@ -66,6 +66,23 @@ sap.ui.define([
 
 			// this.generateMap();
 		},
+		
+		onCopyToCal: function () {
+			var oModelData = this.getModel("oAppModel").getData().appointmentDetails;
+			var startDate = new Date(oModelData.pickupDateTime);
+			var endDate = new Date(oModelData.pickupDateTime);
+			var title = oModelData.vehicle + " service";
+			var mylocation = oModelData.location;
+			var notes = "Pickup " + oModelData.vehicle + " for service on " + oModelData.serviceDateTime;
+			var success = function (message) {
+				sap.m.MessageToast.show("Event Created Successfully!");
+			};
+			var error = function (message) {
+				sap.m.MessageToast.show("Something went wrong!");
+			};
+
+			window.plugins.calendar.createEvent(title, mylocation, notes, startDate, endDate, success, error);
+		},
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
