@@ -11,7 +11,60 @@ sap.ui.define([
 		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.ServiceStatus
 		 */
 		onInit: function () {
+			this.initiateMap();
+		},
 
+		initiateMap: function () {
+			var apiKey = "AIzaSyA1Nf0APVaaIp1o5lTJLEQ88ki5mVJT6ls"; //POD's
+			// var apiKey = "AIzaSyBagLydOrvYMN9R7LB9r4TGQyHtsmN3REQ"; //Kiru's
+			var googleApi =
+				"https://maps.googleapis.com/maps/api/js?key=" + apiKey + "&avoid=TOLLS&libraries=places&callback=initMap";
+			_gmaps.loadApi(googleApi);
+			var oMapLocations = new sap.ui.model.json.JSONModel();
+			oMapLocations.loadData("model/mapLocations.json");
+			this.getView().setModel(oMapLocations, "oMapLocations");
+			this.marker = [];
+		},
+
+		makeCall: function (oEvent) {
+			sap.m.URLHelper.triggerTel(oEvent.getSource().getBindingContext("oAppModel").getObject().contact);
+		},
+
+		showGMaps: function (oEvent) {
+			var location = oEvent.getSource().getBindingContext("oAppModel").getObject().location;
+			this.home = {
+				"lat": 9.947050,
+				"lng": 78.132690,
+				"maptype": "ROADMAP",
+				"zoom": 8,
+				"id": 0,
+				"title": "Tamilnadu",
+			};
+			if (!this.gMaps) {
+				this.gMaps = sap.ui.xmlfragment("com.sap.alj.sca.ALJ_SCA.fragment.GMaps", this);
+				this.getView().addDependent(this.gMaps);
+			}
+			this.gMaps.open();
+			this.loadMap();
+		},
+		
+		onCloseGMaps: function(){
+			this.gMaps.close();
+		},
+
+		loadMap: function () {
+			var that = this;
+			// this.googleMap();
+			setTimeout(function () {
+				var oOptions = that.home;
+				_gmaps.loadMap(that, "map_canvas", oOptions);
+				setTimeout(function () {
+					var info = "Current Location";
+					that.marker = _gmaps.addMarker(that, oOptions, info);
+				}, 1000);
+			}, 1000);
+
+			// this.generateMap();
 		},
 
 		/**

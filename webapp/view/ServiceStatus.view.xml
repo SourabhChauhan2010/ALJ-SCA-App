@@ -46,7 +46,7 @@
 					<Image src="image/location.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
 					<Text text="{oAppModel>location}"/>
 				</HBox>
-				<Image src="image/googleMaps.svg" width="1.65rem"/>
+				<Image src="image/googleMaps.svg" width="1.65rem" press="showGMaps"/>
 			</HBox>
 			<HBox class="sapUiSmallMarginTop" visible="{= ${oAppModel>/currentScreenTitle} !== ${i18n>Confirmation}}">
 				<Image src="image/user.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
@@ -57,7 +57,7 @@
 					<Image src="image/mobile.svg" width="1.65rem" class="sapUiTinyMarginEnd"/>
 					<Text text="{oAppModel>contact}"/>
 				</HBox>
-				<Image src="image/call.svg" width="1.65rem"/>
+				<Image src="image/call.svg" width="1.65rem" press="makeCall"/>
 			</HBox>
 		</VBox>
 		<VBox class="sapUiSmallMarginTop" visible="{= ${oAppModel>/currentScreenTitle} === ${i18n>Confirmation}}">

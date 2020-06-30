@@ -17,7 +17,7 @@
 					<Label text="{i18n>BAS_SF_MobileNumber}"/>
 					<Text text="{oAppModel>mobile2}"/>
 					<Label text="{i18n>BAS_SF_EmailId}"/>
-					<Text text="{oAppModel>emailId}"/>
+					<Text text="{oAppModel>email1}"/>
 					<Label text="{i18n>BAS_SF_NID}"/>
 					<Text text="{oAppModel>idNumber}"/>
 				</f:content>
@@ -32,12 +32,14 @@
 		<!--	<ToggleButton text="{i18n>English}" pressed="{= ${oAppModel>/language} === 'EN'}" class="aljTBStyle sapUiTinyMarginEnd"-->
 		<!--		press="onChangeLanguage"/>-->
 		<!--</HBox>-->
-		<List mode="SingleSelect" class="aljLangListStyle" selectionChange="onChangeLanguage"
-			id="idLanguageList">
+		<List mode="SingleSelect" class="aljLangListStyle" selectionChange="onChangeLanguage" id="idLanguageList">
 			<items>
 				<StandardListItem title="{i18n>Arabic}"/>
 				<StandardListItem title="{i18n>English}"/>
 			</items>
 		</List>
 	</VBox>
+	<HBox class="aljFooterBtnBoxStyle">
+		<Button text="{i18n>Logout}" class="aljWhiteBtnClass"></Button>
+	</HBox>
 </mvc:View>

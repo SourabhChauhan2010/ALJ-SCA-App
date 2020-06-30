@@ -39,7 +39,8 @@
 		"year": "2020",
 		"lastServiceDate": "23/04/2020",
 		"src": "image/supra.png",
-		"vin": "9236483754",
+		"vin": "4T1BF1FK9GU973045",
+		"customerId": "NID12345678",
 		"plateNo": "NY99",
 		"vehicleType": "Own",
 		"warranty": "06/02/2020 to 06/02/2021"
@@ -49,6 +50,7 @@
 		"lastServiceDate": "23/04/2020",
 		"src": "image/camry.png",
 		"vin": "5336499986",
+		"customerId": "NID12345678",
 		"plateNo": "TN99",
 		"vehicleType": "Pickup",
 		"warranty": "06/02/2020 to 06/02/2021"

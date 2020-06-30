@@ -22,15 +22,15 @@ sap.ui.define([
 				return;
 			}
 			var sUrl = "/SBA_book_a_service/alj/validate/nid/" + sNID;
-			this.doAjax(sUrl, "GET", null, function (oEvent) {
+			this.doAjax(sUrl, "GET", null, function (oData) {
 				//Success block
-				if (oEvent) {
+				if (oData) {
 					this._showToastMessage("National ID verified successfully");
 					this.getRouter().navTo("Home");
 				} else {
 					this._showToastMessage("Enter valid NID");
 				}
-			}.bind(this), function (oEvent) {});
+			}.bind(this), function (oData) {});
 		}
 
 		/**

@@ -13,6 +13,8 @@ sap.ui.define([
 		onInit: function () {
 			this.fnInitApp();
 			this.setSVGContents();
+			this.getUserInformation();
+			this.getVehicles();
 			this.getRouter().attachRoutePatternMatched(function (oEvent) {
 				this.setScreenDetails(oEvent.getParameter("name"));
 				if (oEvent.getParameter("name") === "App") {
@@ -59,7 +61,7 @@ sap.ui.define([
 			var selectedKey;
 			if (this.getModel("device").getProperty("/system/desktop")) {
 				selectedKey = oEvent.getSource().getSelectedKey();
-			} else{
+			} else {
 				selectedKey = oEvent.getSource().getBindingContext("oAppModel").getObject().key;
 			}
 			this.getRouter().navTo(selectedKey);

@@ -13,18 +13,20 @@
 				binding="{oAppModel>/UserInformation/0}">
 				<f:content>
 					<Label text="{i18n>FirstAndMiddleName}"/>
-					<Input value="" class="aljInputStyle"/>
+					<Input value="{oAppModel>nameFirst}" class="aljInputStyle"/>
 					<Label text="{i18n>LastName}"/>
-					<Input value="" class="aljInputStyle"/>
+					<Input value="{oAppModel>nameLast}" class="aljInputStyle"/>
 					<Label text="{i18n>MobileNumber}"/>
-					<Input value="" class="aljInputStyle"/>
+					<Input value="{oAppModel>mobile2}" class="aljInputStyle"/>
 					<Label text="{i18n>BAS_SF_EmailId}"/>
-					<Input value="" class="aljInputStyle"/>
+					<Input value="{oAppModel>email1}" class="aljInputStyle"/>
 					<Label text="{i18n>NationalId}"/>
-					<Input value="" class="aljInputStyle"/>
+					<Input value="{oAppModel>idNumber}" class="aljInputStyle"/>
 				</f:content>
 			</f:SimpleForm>
-			<Button text="{i18n>Confirm}" width="15rem" type="Default" class="aljWhiteBtnClass sapUiLargeMarginTop sapUiLargeMarginBegin"></Button>
+			<HBox class="aljFooterBtnBoxStyle">
+				<Button text="{i18n>Confirm}" class="aljWhiteBtnClass" press="onConfirmEditProfile"/>
+			</HBox>
 		</content>
 	</Panel>
 </mvc:View>

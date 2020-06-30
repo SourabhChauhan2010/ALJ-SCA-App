@@ -153,7 +153,40 @@ sap.ui.define([
 			} else {
 				this.onNavBack();
 			}
-		}
+		},
+		
+		getUserInformation: function () {
+			var oAppModelData = this.getModel("oAppModel");
+			var sUrl = "/SBA_book_a_service/alj/profile/userId";
+			var oPayload = {
+				"client": "001",
+				"bpNumber": "1000052113",
+				"idNumber": "2201739097"
+			};
+			this.doAjax(sUrl, "POST", oPayload, function (oEvent) {
+				if (oEvent) {
+					var aData = oAppModelData.getProperty("/UserInformation");
+					aData[0] = oEvent;
+					oAppModelData.setProperty("/UserInformation", aData);
+				} else {
+					oAppModelData.setProperty("/UserInformation", {});
+				}
+			}.bind(this), function (oEvent) {});
+		},
+
+		getVehicles: function (ownerId) {
+			var oAppModel = this.getModel("oAppModel");
+			var sUrl = "/SBA_book_a_service/alj/vehicles";
+			var oPayload = {
+				"ownerId": "4332"//ownerId
+			};
+			this.doAjax(sUrl, "POST", oPayload, function (aData) {
+				//Success block
+				// oAppModel.setProperty("/vehicles", aData);
+			}.bind(this), function (oData) {
+
+			});
+		},
 
 	});
 });

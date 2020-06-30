@@ -22,14 +22,14 @@ sap.ui.define([
 				return;
 			}
 			var sUrl = "/SBA_book_a_service/alj/validate/vin/" + sVIN;
-			this.doAjax(sUrl, "GET", null, function (oEvent) {
+			this.doAjax(sUrl, "GET", null, function (oData) {
 				//Success block
-				if (oEvent) {
+				if (oData) {
 					this._showToastMessage("VIN verified successfully");
 				} else {
 					this._showToastMessage("Enter valid VIN");
 				}
-			}.bind(this), function (oEvent) {});
+			}.bind(this), function (oData) {});
 		}
 
 		/**

@@ -128,7 +128,8 @@
     background: #d8d8d8;
 }
 
-.aljWhiteBtnClass .sapMBtnInner .aljWhiteBtnClass.sapMBtn:hover>.sapMBtnHoverable {
+.aljWhiteBtnClass .sapMBtnInner,
+.aljWhiteBtnClass.sapMBtn:hover>.sapMBtnHoverable {
     min-width: 5rem;
     border: 1px solid #eb0a1e;
     color: #000;
@@ -566,8 +567,8 @@
     border-bottom: solid .0625rem #ffff;
 }
 
-.pnReceiptCSS{
-	position:fixed;
+.pnReceiptCSS {
+    position: fixed;
 }
 
 .BAS_KMR_CSS {
@@ -654,11 +655,13 @@
     /*  padding-top: 1rem;*/
     border-top-left-radius: 1.5rem;
 }
+
 .basLightGreyBtnStyle .sapMBtnInner,
 .basLightGreyBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
     color: #000;
     background: #e5e5e5;
 }
+
 
 /*book a service designs* - end */
 
@@ -705,5 +708,25 @@
     left: 2.15rem;
 }
 
+.aljMapDialogStyle .sapMDialogScroll {
+    height: 100%;
+}
+
+.aljMapDialogStyle.sapMDialog.sapMPopup-CTX>header .sapMHeader-CTX {
+    background-color: red;
+    padding: 0 0.5rem;
+}
+
 
 /********Service Status Styles - End*********/
+
+/********Profile Styles - Start*********/
+.aljFooterBtnBoxStyle{
+    position: fixed;
+    bottom: 0;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+}
+/********Profile Styles - End*********/

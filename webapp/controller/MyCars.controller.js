@@ -14,11 +14,9 @@ sap.ui.define([
 			this.getRouter().attachRoutePatternMatched(function (oEvent) {
 				if (oEvent.getParameter("name") === "MyCars") {
 					var oAppModelData = this.getModel("oAppModel").getData();
-					// if (!oAppModelData.selectedVehicle) {
-					oAppModelData.vehicles[0].isSelected = true;
-					oAppModelData.selectedVehicle = oAppModelData.vehicles[0];
-					this.getModel("oAppModel").refresh();
-					// }
+					if (oAppModelData.vehicles.length > 0) {
+						this.getVehicleHistory(oAppModelData.vehicles[0]);
+					}
 				}
 			}.bind(this));
 		},
@@ -31,13 +29,25 @@ sap.ui.define([
 			var oAppModel = this.getModel("oAppModel");
 			var aVehicles = oAppModel.getProperty("/vehicles");
 			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
-			// var isSelected = currObj.isSelected;
 			for (var i = 0; i < aVehicles.length; i++) {
 				aVehicles[i].isSelected = false;
 			}
-			currObj.isSelected = true;//!isSelected
-			oAppModel.setProperty("/selectedVehicle", currObj);//isSelected ? false : currObj
+			this.getVehicleHistory(currObj);
+		},
+
+		getVehicleHistory: function (currObj) {
+			var oAppModel = this.getModel("oAppModel");
+			currObj.isSelected = true;
+			oAppModel.setProperty("/selectedVehicle", currObj);
 			oAppModel.refresh();
+			var sUrl = "/SBA_book_a_service/alj/vehicle/history";
+			var oPayload = {
+				"vin": currObj.vin,
+				"customerId": currObj.customerId
+			};
+			this.doAjax(sUrl, "POST", oPayload, function (oData) {
+				
+			}.bind(this), function (oData) {});
 		},
 
 		onServiceItemPress: function (oEvent) {

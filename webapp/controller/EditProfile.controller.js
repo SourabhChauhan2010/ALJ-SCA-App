@@ -14,6 +14,25 @@ sap.ui.define([
 
 		},
 
+		onConfirmEditProfile: function (oEvent) {
+			var oAppModel = this.getModel("oAppModel");
+			var sUrl = "/SBA_book_a_service/alj/validate/mobile";
+			var oPayload = {
+				"mobile2": oAppModel.getProperty("/UserInformation/0/mobile2")
+			};
+			this.doAjax(sUrl, "POST", oPayload, function (oData) {
+				if (oData) {
+					this._showToastMessage("Mobile Number verified successfully");
+					this.getRouter().navTo("Profile");
+				} else {
+					this._showToastMessage("Enter valid Mobile Number");
+				}
+				this.getUserInformation();
+			}.bind(this), function (oData) {
+
+			});
+		},
+
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 		 * (NOT before the first rendering! onInit() is used for that one!).
