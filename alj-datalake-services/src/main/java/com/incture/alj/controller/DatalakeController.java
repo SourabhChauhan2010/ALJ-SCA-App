@@ -169,6 +169,21 @@ public class DatalakeController {
 
 	}
 
+	@PostMapping("validate/nid")
+	public ResponseEntity<?> validateNID(@RequestBody ZaljUcmBpDto zaljUcmBpDto ){
+		
+		ResponseEntity<Boolean> response  = null;
+		
+		try {
+			response = ResponseEntity.ok(query.validateNID(zaljUcmBpDto.getNatio()));
+		}
+		catch (ClassNotFoundException | SQLException e) {
 
-}
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+		}
+		return 	response;	
+	}
+		
+	}
+
 
