@@ -32,17 +32,23 @@ sap.ui.define([
 			this.getView().byId("idBtnAddVeh").setVisible(false);
 
 		},
-		onExpVehiclePanel:function(){
+		onExpVehiclePanel: function () {
 			this.getView().byId("idPnHeaderVehInfo").setText("");
 			this.getView().byId("idBtnAddVeh").setVisible(true);
 			this.getView().byId("idPnHeaderVehInfo").setVisible(false);
 		},
-		onPressAddWVehicle:function(){
-		this.getView().getContent()[8].getItems()[0].getItems()[0].getItems()[1].setText(this.getView().getModel("i18n").getResourceBundle().getText("noVehicleSelection"));	
-		this.getView().byId("idPnVehInfo").setExpanded(false);
+		onPressAddWVehicle: function () {
+			this.getView().getContent()[8].getItems()[0].getItems()[0].getItems()[1].setText(this.getView().getModel("i18n").getResourceBundle()
+				.getText("noVehicleSelection"));
+			this.getView().byId("idPnVehInfo").setExpanded(false);
 			this.getView().byId("idPnHeaderVehInfo").setVisible(true);
 			this.getView().byId("idPnHeaderVehInfo").setText(this.getView().getModel("i18n").getResourceBundle().getText("noVehicleSelection"));
 			this.getView().byId("idBtnAddVeh").setVisible(false);
+		},
+		onAddVehiclePress: function () {
+
+			this.getRouter().navTo("AddVehicle");
+
 		},
 
 		//Service Type Selection

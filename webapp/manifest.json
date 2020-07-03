@@ -11,7 +11,7 @@
 		"description": "{{appDescription}}",
 		"dataSources": {
 			"mainService": {
-				"uri": "/sap/opu/odata/iwbep/GWSAMPLE_BASIC/",
+				"uri": "/sap/opu/odata/sap/zsrw_int_out_package_srv/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
