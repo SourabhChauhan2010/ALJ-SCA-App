@@ -69,7 +69,11 @@ sap.ui.define([
 
 		onOpenProfile: function () {
 			this.getRouter().navTo("Profile");
-		}
+		},
+		
+		openNotification: function () {
+			this.getRouter().navTo("Notification");
+		},
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

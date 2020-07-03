@@ -15,7 +15,8 @@
 						<Label text="{= ${oAppModel>/currentScreenTitle}.toUpperCase()}"/>
 						<ToolbarSpacer/>
 						<VBox width="2.25rem">
-							<Image src="image/bell.png" visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}" height="37px" width="37px"/>
+							<Image src="image/bell.png" visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}" height="37px" width="37px"
+								press="openNotification"/>
 							<core:Icon src="sap-icon://decline" width="2.5rem" press="onCloseScreen" color="#ffffff"
 								visible="{parts: ['oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.showClose'}"/>
 							<!--<Image src="image/bell.png" height="37px" width="37px"-->

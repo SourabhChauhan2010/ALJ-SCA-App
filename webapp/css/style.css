@@ -720,7 +720,7 @@
 
 /********Service Status Styles - End*********/
 
-/********Profile Styles - Start*********/
+/********Profile, Notification Styles - Start*********/
 .aljFooterBtnBoxStyle{
     position: fixed;
     bottom: 0;
@@ -729,4 +729,12 @@
     align-items:center;
     width: 100%;
 }
-/********Profile Styles - End*********/
+
+.aljNotificationList .sapFAvatarColorAccent6 {
+    background-color: transparent;
+}
+
+.aljNotificationList .sapFAvatarIcon {
+    color: #e62f2d;
+}
+/********Profile, Notification Styles - End*********/

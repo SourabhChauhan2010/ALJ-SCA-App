@@ -81,16 +81,22 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}, {
-				"uri": "css/font.css"
-			}],
-			"js": [{
-				"uri": "util/formatter.js"
-			}, {
-				"uri": "util/gMaps.js"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				},
+				{
+					"uri": "css/font.css"
+				}
+			],
+			"js": [
+				{
+					"uri": "util/formatter.js"
+				},
+				{
+					"uri": "util/gMaps.js"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -102,85 +108,106 @@
 				"controlId": "page",
 				"clearControlAggregation": true
 			},
-			"routes": [{
-				"name": "Home",
-				"pattern": "",
-				"target": [
-					"Home"
-				]
-			}, {
-				"name": "BookAService",
-				"pattern": "BookAService",
-				"target": [
-					"BookAService"
-				]
-			}, {
-				"name": "MyCars",
-				"pattern": "MyCars",
-				"target": [
-					"MyCars"
-				]
-			}, {
-				"name": "MyServices",
-				"pattern": "MyServices",
-				"target": [
-					"MyServices"
-				]
-			}, {
-				"name": "AddVehicle",
-				"pattern": "AddVehicle",
-				"target": [
-					"AddVehicle"
-				]
-			}, {
-				"name": "Products",
-				"pattern": "Products",
-				"target": [
-					"Products"
-				]
-			}, {
-				"name": "ProductDetail",
-				"pattern": "ProductDetail",
-				"target": [
-					"ProductDetail"
-				]
-			}, {
-				"name": "Profile",
-				"pattern": "Profile",
-				"target": [
-					"Profile"
-				]
-			}, {
-				"name": "ServiceStatus",
-				"pattern": "ServiceStatus",
-				"target": [
-					"ServiceStatus"
-				]
-			}, {
-				"name": "More",
-				"pattern": "More",
-				"target": [
-					"More"
-				]
-			}, {
-				"name": "SafetyTips",
-				"pattern": "SafetyTips",
-				"target": [
-					"SafetyTips"
-				]
-			}, {
-				"name": "AddNID",
-				"pattern": "AddNID",
-				"target": [
-					"AddNID"
-				]
-			}, {
-				"name": "EditProfile",
-				"pattern": "EditProfile",
-				"target": [
-					"EditProfile"
-				]
-			}],
+			"routes": [
+				{
+					"name": "Home",
+					"pattern": "",
+					"target": [
+						"Home"
+					]
+				},
+				{
+					"name": "BookAService",
+					"pattern": "BookAService",
+					"target": [
+						"BookAService"
+					]
+				},
+				{
+					"name": "MyCars",
+					"pattern": "MyCars",
+					"target": [
+						"MyCars"
+					]
+				},
+				{
+					"name": "MyServices",
+					"pattern": "MyServices",
+					"target": [
+						"MyServices"
+					]
+				},
+				{
+					"name": "AddVehicle",
+					"pattern": "AddVehicle",
+					"target": [
+						"AddVehicle"
+					]
+				},
+				{
+					"name": "Products",
+					"pattern": "Products",
+					"target": [
+						"Products"
+					]
+				},
+				{
+					"name": "ProductDetail",
+					"pattern": "ProductDetail",
+					"target": [
+						"ProductDetail"
+					]
+				},
+				{
+					"name": "Profile",
+					"pattern": "Profile",
+					"target": [
+						"Profile"
+					]
+				},
+				{
+					"name": "ServiceStatus",
+					"pattern": "ServiceStatus",
+					"target": [
+						"ServiceStatus"
+					]
+				},
+				{
+					"name": "More",
+					"pattern": "More",
+					"target": [
+						"More"
+					]
+				},
+				{
+					"name": "SafetyTips",
+					"pattern": "SafetyTips",
+					"target": [
+						"SafetyTips"
+					]
+				},
+				{
+					"name": "AddNID",
+					"pattern": "AddNID",
+					"target": [
+						"AddNID"
+					]
+				},
+				{
+					"name": "EditProfile",
+					"pattern": "EditProfile",
+					"target": [
+						"EditProfile"
+					]
+				},
+				{
+					"name": "Notification",
+					"pattern": "Notification",
+					"target": [
+						"Notification"
+					]
+				}
+			],
 			"targets": {
 				"App": {
 					"viewType": "XML",
@@ -237,6 +264,10 @@
 				"EditProfile": {
 					"viewType": "XML",
 					"viewName": "EditProfile"
+				},
+				"Notification": {
+					"viewType": "XML",
+					"viewName": "Notification"
 				}
 			}
 		}

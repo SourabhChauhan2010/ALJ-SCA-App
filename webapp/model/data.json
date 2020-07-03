@@ -230,5 +230,26 @@
 		"summary": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."
 	}],
 	"sSelectedCatelog": "",
-	"lastServiceRemarks": "Excellent service, left my car with them early morning and was driving it again early evening of the same day. Will be using in the future."
+	"lastServiceRemarks": "Excellent service, left my car with them early morning and was driving it again early evening of the same day. Will be using in the future.",
+	"aNotificationList": [{
+		"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, turpis vel scelerisque pharetra, tellus odio vehicula dolor, nec elementum lectus turpis at nunc.",
+		"datetime": "Now",
+		"unread": true
+	},{
+		"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, turpis vel scelerisque pharetra, tellus odio vehicula dolor, nec elementum lectus turpis at nunc.",
+		"datetime": "1 day",
+		"unread": false
+	},{
+		"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, turpis vel scelerisque pharetra, tellus odio vehicula dolor, nec elementum lectus turpis at nunc.",
+		"datetime": "2 days",
+		"unread": false
+	},{
+		"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, turpis vel scelerisque pharetra, tellus odio vehicula dolor, nec elementum lectus turpis at nunc.",
+		"datetime": "1 week",
+		"unread": true
+	}]
 }
