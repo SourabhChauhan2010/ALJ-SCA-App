@@ -3,8 +3,8 @@
 	<App id="app">
 		<pages>
 			<Page id="page" class="aljPageStyle" 
-				showFooter="{parts: ['oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.showFooter'}">
-				<!-- showSubHeader="{parts: ['oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.showSubHeader'}" -->
+				showFooter="{parts: ['oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.showFooter'}"
+				showSubHeader="{parts: ['oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.showSubHeader'}">
 				<customHeader>
 					<Toolbar>
 						<ToolbarSpacer/>
@@ -12,6 +12,16 @@
 						<ToolbarSpacer/>
 					</Toolbar>
 				</customHeader>
+				<subHeader>
+					<Toolbar>
+						<IconTabBar expandable="false" class="sapUiResponsiveContentPadding"
+							select="onChangeScreen" items="{oAppModel>/mainScreens}" selectedKey="{oAppModel>/currentScreen}">
+							<items class="sapUiLargeMarginBegin">
+								<IconTabFilter text="{oAppModel>text}" key="{oAppModel>key}"/>
+							</items>
+						</IconTabBar>
+					</Toolbar>
+				</subHeader>
 				<footer>
 					<Toolbar design="Transparent" content="{oAppModel>/mainScreens}" class="aljFooterBarStyle">
 						<CustomListItem type="Active" press="onChangeScreen"

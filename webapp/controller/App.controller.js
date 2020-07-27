@@ -59,11 +59,11 @@ sap.ui.define([
 
 		onChangeScreen: function (oEvent) {
 			var selectedKey;
-			// if (this.getModel("device").getProperty("/system/desktop")) {
-			// 	selectedKey = oEvent.getSource().getSelectedKey();
-			// } else {
-			selectedKey = oEvent.getSource().getBindingContext("oAppModel").getObject().key;
-			// }
+			if (this.getModel("device").getProperty("/system/desktop")) {
+				selectedKey = oEvent.getSource().getSelectedKey();
+			} else {
+				selectedKey = oEvent.getSource().getBindingContext("oAppModel").getObject().key;
+			}
 			this.getRouter().navTo(selectedKey);
 		},
 
