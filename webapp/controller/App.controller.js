@@ -25,11 +25,11 @@ sap.ui.define([
 
 		setScreenDetails: function (name) {
 			var oAppModelData = this.oAppModel.getData();
-			if (oAppModelData.currentScreen && (oAppModelData.currentScreen === "BookAService" && name === "ServiceStatus")) {
-				oAppModelData.currentScreenTitle = this.getResourceText("Confirmation");
-			} else {
-				oAppModelData.currentScreenTitle = this.getResourceText(name);
-			}
+			// if (oAppModelData.currentScreen && (oAppModelData.currentScreen === "BookAService" && name === "ServiceStatus")) {
+			// 	oAppModelData.currentScreenTitle = this.getResourceText("Confirmation");
+			// } else {
+			oAppModelData.currentScreenTitle = this.getResourceText(name);
+			// }
 			oAppModelData.currentScreen = name;
 			this.oAppModel.refresh();
 		},
@@ -59,18 +59,18 @@ sap.ui.define([
 
 		onChangeScreen: function (oEvent) {
 			var selectedKey;
-			if (this.getModel("device").getProperty("/system/desktop")) {
-				selectedKey = oEvent.getSource().getSelectedKey();
-			} else {
-				selectedKey = oEvent.getSource().getBindingContext("oAppModel").getObject().key;
-			}
+			// if (this.getModel("device").getProperty("/system/desktop")) {
+			// 	selectedKey = oEvent.getSource().getSelectedKey();
+			// } else {
+			selectedKey = oEvent.getSource().getBindingContext("oAppModel").getObject().key;
+			// }
 			this.getRouter().navTo(selectedKey);
 		},
 
 		onOpenProfile: function () {
 			this.getRouter().navTo("Profile");
 		},
-		
+
 		openNotification: function () {
 			this.getRouter().navTo("Notification");
 		},
