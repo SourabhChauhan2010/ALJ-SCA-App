@@ -25,11 +25,11 @@ sap.ui.define([
 
 		setScreenDetails: function (name) {
 			var oAppModelData = this.oAppModel.getData();
-			// if (oAppModelData.currentScreen && (oAppModelData.currentScreen === "BookAService" && name === "ServiceStatus")) {
-			// 	oAppModelData.currentScreenTitle = this.getResourceText("Confirmation");
-			// } else {
-			oAppModelData.currentScreenTitle = this.getResourceText(name);
-			// }
+			if (oAppModelData.currentScreen && (oAppModelData.currentScreen === "BookAService" && name === "ServiceStatus")) {
+				oAppModelData.currentScreenTitle = this.getResourceText("Confirmation");
+			} else {
+				oAppModelData.currentScreenTitle = this.getResourceText(name);
+			}
 			oAppModelData.currentScreen = name;
 			this.oAppModel.refresh();
 		},
@@ -70,7 +70,7 @@ sap.ui.define([
 		onOpenProfile: function () {
 			this.getRouter().navTo("Profile");
 		},
-
+		
 		openNotification: function () {
 			this.getRouter().navTo("Notification");
 		},

@@ -118,6 +118,34 @@ sap.ui.define([
 			});
 		},
 
+		onVehicleItemPress: function (oEvent) {
+			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
+			currObj.isSelected = !currObj.isSelected;
+			this.getModel("oAppModel").refresh();
+		},
+
+		onServiceItemPress: function (oEvent) {
+			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
+			currObj.isSelected = !currObj.isSelected;
+			this.getModel("oAppModel").refresh();
+		},
+
+		onPressScan: function (oEvent) {
+
+		},
+
+		onBookService: function () {
+			this.oRouter.navTo("BookAService");
+		},
+
+		bookService: function (oEvent) {
+			this.getRouter().navTo("BookAService");
+		},
+
+		showServiceStatus: function (oEvent) {
+			this.getRouter().navTo("ServiceStatus");
+		},
+
 		onCloseScreen: function (oEvent) {
 			var oAppModelData = this.oAppModel.getData();
 			if (oAppModelData.currentScreenTitle === this.getResourceText("Confirmation")) {
@@ -158,83 +186,6 @@ sap.ui.define([
 			}.bind(this), function (oData) {
 
 			});
-		},
-		
-		onPressAddNID: function () {
-			var oAppModelData = this.getModel("oAppModel").getData();
-			var sNID = oAppModelData.enteredNID;
-			if (!sNID) {
-				this._showToastMessage("Enter valid NID");
-				return;
-			}
-			var sUrl = "/SBA_book_a_service/alj/validate/nid";
-			var oPayload = {
-				"natio": sNID
-			};
-			this.doAjax(sUrl, "POST", oPayload, function (oData) {
-				//Success block
-				if (oData) {
-					this._showToastMessage("National ID verified successfully");
-					this.getRouter().navTo("Home");
-				} else {
-					this._showToastMessage("Enter valid NID");
-				}
-			}.bind(this), function (oData) {});
-		},
-		
-		onPressAddVehicle: function () {
-			var oAppModelData = this.getModel("oAppModel").getData();
-			var sVIN = oAppModelData.enteredVIN;
-			if (!sVIN) {
-				this._showToastMessage("Enter valid VIN");
-				return;
-			}
-			var sUrl = "/SBA_book_a_service/alj/validate/vin";
-			var oPayload = {
-				"vin": sVIN
-			};
-			this.doAjax(sUrl, "POST", oPayload, function (oData) {
-				//Success block
-				if (oData) {
-					this._showToastMessage("VIN verified successfully");
-				} else {
-					this._showToastMessage("Enter valid VIN");
-				}
-			}.bind(this), function (oData) {});
-		},
-		
-		onConfirmEditProfile: function (oEvent) {
-			var oAppModel = this.getModel("oAppModel");
-			var sUrl = "/SBA_book_a_service/alj/validate/mobile";
-			var oPayload = {
-				"mobile2": oAppModel.getProperty("/UserInformation/0/mobile2")
-			};
-			this.doAjax(sUrl, "POST", oPayload, function (oData) {
-				if (oData) {
-					this._showToastMessage("Mobile Number verified successfully");
-					this.getRouter().navTo("Profile");
-				} else {
-					this._showToastMessage("Enter valid Mobile Number");
-				}
-				this.getUserInformation();
-			}.bind(this), function (oData) {
-
-			});
-		},
-		
-		getVehicleHistory: function (currObj) {
-			var oAppModel = this.getModel("oAppModel");
-			currObj.isSelected = true;
-			oAppModel.setProperty("/selectedVehicle", currObj);
-			oAppModel.refresh();
-			var sUrl = "/SBA_book_a_service/alj/vehicle/history";
-			var oPayload = {
-				"vin": currObj.vin,
-				"customerId": currObj.customerId
-			};
-			this.doAjax(sUrl, "POST", oPayload, function (oData) {
-				
-			}.bind(this), function (oData) {});
 		},
 
 	});

@@ -251,5 +251,19 @@
 		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, turpis vel scelerisque pharetra, tellus odio vehicula dolor, nec elementum lectus turpis at nunc.",
 		"datetime": "1 week",
 		"unread": true
-	}]
+	}],
+	"aServiceStatusList": [{
+		"status": "Order Created"
+	},{
+		"status": "Car Received"
+	},{
+		"status": "Service Done"
+	},{
+		"status": "Quality Inspection"
+	},{
+		"status": "Payment Done"
+	},{
+		"status": "Ready for Delivery"
+	}],
+	"currServiceStatus": "Car Received"
 }

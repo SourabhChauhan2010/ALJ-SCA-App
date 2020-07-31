@@ -39,4 +39,23 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 		// }
 		return true;
 	},
+	
+	setStatusImage: function(status, currServiceStatus) {
+		if (status) {
+			this.removeStyleClass("aljSSIGreenStyle");
+			this.addStyleClass("aljSSIRedStyle");
+			if (status === "Order Created" || status === "Car Received") {
+				this.addStyleClass("aljSSIGreenStyle");
+				this.removeStyleClass("aljSSIRedStyle");
+			}
+		}
+		return true;
+	},
+	
+	setStatusCarPosition: function(currServiceStatus) {
+		if (currServiceStatus) {
+			debugger;
+		}
+		return true;
+	},
 };

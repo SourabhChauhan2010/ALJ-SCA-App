@@ -1,0 +1,28 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:commons="sap.suite.ui.commons">
+	<HBox alignItems="End" class="sapUiSmallMarginEnd" justifyContent="SpaceBetween">
+		<VBox class="sapUiMediumMargin">
+			<HBox class="sapUiSmallMarginTop">
+				<Image src="image/mycar.svg" width="1.3rem" class="sapUiTinyMarginEnd"/>
+				<Text text="" id="idCarModel"/>
+			</HBox>
+			<HBox class="sapUiSmallMarginTop">
+				<Image src="image/pickup.svg" width="1.3rem" class="sapUiTinyMarginEnd"/>
+				<Text text=""/>
+			</HBox>
+			<HBox class="sapUiSmallMarginTop">
+				<Image src="image/mycar.svg" width="1.3rem" class="sapUiTinyMarginEnd"/>
+				<Text text=""/>
+			</HBox>
+			<HBox class="sapUiSmallMarginTop" justifyContent="SpaceBetween">
+				<HBox>
+					<Image src="image/product.svg" width="1.3rem" class="sapUiTinyMarginEnd"/>
+					<Text text=""/>
+				</HBox>
+			</HBox>
+		</VBox>
+		<VBox >
+			<Label text="SAR 200" class="sapUiSmallMargin"/>
+			<Button text="Confirm" press="createAppointment" class="aljRedBtnStyle"/>
+		</VBox>
+	</HBox>
+</core:FragmentDefinition>

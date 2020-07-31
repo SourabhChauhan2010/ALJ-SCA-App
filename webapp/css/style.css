@@ -22,7 +22,7 @@
 
 .sapMBtnInner {
     height: 2.25rem;
-    border-radius: 0.875rem;
+    border-radius: 0.3rem;
     border: none;
 }
 
@@ -31,12 +31,17 @@
 }
 
 .aljPageStyle .sapMIBar.sapMHeader-CTX {
-    background-color: #f00;
-    height: 4rem;
+    background-color: #ba283a;
+    height: 6rem;
+    padding: 0;
+}
+
+.aljPageStyle .sapMIBar.sapMTB .sapMBarChild:first-child {
+    margin-left: 0;
 }
 
 .aljPageStyle.sapMPage>.sapMPageHeader+section {
-    top: 4rem;
+    top: 6rem;
 }
 
 .aljPageStyle.sapMPageWithFooter>section {
@@ -59,11 +64,11 @@
 }
 
 .aljPageStyle .sapMPageSubHeader .sapMITBSelected .sapMITBContentArrow::after {
-    background: #e62f2d;
+    background: #ba283a;
 }
 
 .aljPageStyle .sapMPageSubHeader .sapMITBTextOnly .sapMITBFilterDefault.sapMITBSelected .sapMITBText {
-    color: #e62f2d;
+    color: #ba283a;
 }
 
 .aljPageStyle .sapMPageSubHeader .sapMITBTextOnly .sapMITBFilterDefault .sapMITBText {
@@ -76,6 +81,131 @@
 .aljPageStyle .sapMPageSubHeader .sapMITBTextOnly .sapMITBFilter {
     padding: 0 2rem;
 }
+
+.aljTitleClass {
+    color: #000000;
+    font-weight: bold;
+    font-size: 0.875rem;
+    padding-bottom: 0.35rem;
+    border-bottom: solid 2px #ba283a;
+    letter-spacing: 1.75px;
+}
+
+.aljHeadingTextStyle {
+    color: #37383b;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.aljTBStyle .sapMBtnInner,
+.aljTBStyle.sapMBtn:hover>.sapMBtnHoverable {
+    border: #68696c 1px solid;
+    color: #68696c;
+    border-radius: 0.4rem;
+}
+
+.aljTBStyle .sapMToggleBtnPressed,
+.aljTBStyle .sapMToggleBtnPressed:not(.sapMBtnDisabled) {
+    background: #fff;
+    border: #ba283a 1px solid;
+}
+
+.aljGrayBtnStyle .sapMBtnInner,
+.aljGrayBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
+    color: #fff;
+    background: #68696c;
+}
+
+.aljRedBtnStyle .sapMBtnInner,
+.aljRedBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
+    color: #fff;
+    background: #ba283a;
+    min-width: 6rem;
+}
+
+.aljRedColorStyle {
+    color: #ba283a;
+}
+
+.aljLightGreyBtnStyle .sapMBtnInner,
+.aljLightGreyBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
+    color: #000;
+    background: #d8d8d8;
+}
+
+.aljWhiteBtnClass .sapMBtnInner,
+.aljWhiteBtnClass.sapMBtn:hover>.sapMBtnHoverable {
+    min-width: 7rem;
+    border: 1px solid #eb0a1e;
+    color: #000;
+    background: #ffffff;
+    border-radius: 0.875rem;
+}
+
+.aljInputStyle .sapMInputBaseContentWrapper {
+    border: none;
+    border-bottom: 2px solid #BBBFC0;
+}
+
+.aljBoxStyle {
+    background: #d9d9d9;
+    padding-top: 1rem;
+    border-top-left-radius: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.aljWhiteBoxStyle {
+    background: #fff;
+    padding-top: 1rem;
+    top: -1rem;
+    border-top-left-radius: 1.5rem;
+}
+
+.aljNormTextStyle .sapMText,
+.aljNormTextStyle .sapMLabel {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #37383b;
+}
+
+.aljLangListStyle {
+    width: calc(100% - 2rem) !important;
+    margin: 1rem;
+}
+
+.aljLangListStyle .sapMLIB {
+    background: transparent !important;
+}
+
+.aljLangListStyle .sapMListUl {
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0 0 6px 1px #5f5f5f4d;
+}
+
+.aljLangListStyle .sapMRbSel .sapMRbBInn {
+    fill: #ba283a;
+}
+
+.aljLangListStyle .sapMRbSel.sapMRb .sapMRbB .sapMRbBOut {
+    stroke: #ba283a;
+}
+
+.aljLangListStyle .sapMLIB.sapMLIBSelected,
+.aljLangListStyle .sapMLIB {
+    border-bottom: 1px solid #c7c7c7;
+}
+
+@media only screen and (min-width: 1024px) {
+    .aljBoxContentStyle {
+        align-items: center;
+    }
+    .aljBoxContentStyle>div {
+        max-width: 70rem;
+        width: 100%;
+    }
+}
+
 
 /********General Styles - End*********/
 
@@ -129,16 +259,16 @@
 }
 
 .aljFooterSelectedStyle {
-    fill: red;
+    fill: #ba283a;
 }
 
 .aljFooterSelectedStyle .aljMyCarLogoStyle path,
 .aljFooterSelectedStyle .aljMyCarLogoStyle circle {
-    stroke: red;
+    stroke: #ba283a;
 }
 
 .aljFooterSelectedStyle .sapMText {
-    color: red;
+    color: #ba283a;
 }
 
 .aljFooterBarDesktopStyle {
@@ -160,3 +290,521 @@
 
 
 /********Footer Styles - End*********/
+
+
+/********My Services Styles - Start*********/
+
+.aljTimelineStyle.sapSuiteUiCommonsTimeline {
+    max-width: none;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemArrow {
+    display: none;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemBubble {
+    padding-left: 0px;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemBarV {
+    left: calc(50% - 1px);
+    width: 0.5px;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemNoIcon {
+    border: 0.5rem solid #68696c;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemBarNoIcon.sapSuiteUiCommonsTimelineItemBarV {
+    top: 35px;
+    height: calc(100% - 5px);
+    height: webkit-calc(100% - 5px);
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemBox {
+    border-radius: 1rem;
+    border-color: transparent;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemShell {
+    padding: 0.5rem 0.75rem 0.5rem 1rem;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemShellBody {
+    padding: 0;
+}
+
+.aljTimelineStyle .sapMLabel,
+.aljTimelineStyle .sapMText {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineItemBarWrapperV {
+    margin-right: 0.45rem;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineScroll .sapSuiteUiCommonsTimelineItem {
+    padding-bottom: 0.8rem;
+}
+
+.aljTimelineStyle .sapSuiteUiCommonsTimelineHorizontalMiddleLine {
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 1024px) {
+    .aljTimelineStyle {
+        margin: 0 1rem;
+    }
+}
+
+
+/********My Services Styles - End*********/
+
+
+/********My Cars Styles - Start*********/
+
+.aljVehicleListHorStyle {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin: 0.5rem 0.75rem 1rem 0;
+    border: solid #c1c1c1 1px;
+    height: calc(100% - 1rem);
+    letter-spacing: 1.5px;
+}
+
+.aljReccListStyle {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem 0.75rem 1rem 0;
+    border: solid #f2f2f2 1px;
+    height: calc(100% - 1rem);
+    background: #f2f2f2;
+    letter-spacing: 1.5px;
+    width: 9rem;
+}
+
+.aljMoreTilesStyle .sapMLIB {
+    border-radius: 1rem;
+    border: solid #f2f2f2 1px;
+    background: #f2f2f2;
+    letter-spacing: 1.5px;
+    width: 11rem;
+    height: 11rem;
+    padding: 1rem;
+}
+
+.aljReccListStyle.sapMLIB.sapMLIBActive,
+.aljVehicleListHorStyle.sapMLIB.sapMLIBActive,
+.aljMoreTilesStyle .sapMLIB.sapMLIBActive {
+    background: #d9d9d9;
+}
+
+.aljSelectedItemStyle {
+    border: solid #ba283a 1px;
+}
+
+.aljLastServiceDateStyle {
+    width: 8.5rem;
+    line-height: 2rem;
+}
+
+.aljVehicleInfoBoxStyle {
+    padding: 0.25rem 0.75rem;
+    background: #fff;
+    border-radius: 1.5rem;
+    margin: 1rem 2rem;
+}
+
+.aljVehicleInfoBoxStyle .sapMText {
+    font-weight: bold;
+}
+
+.aljVehicleInfoBoxStyle .sapUiFormCLElement {
+    display: flex;
+}
+
+@media only screen and (min-width: 1024px) {
+    .aljVehicleInfoBoxStyle .sapUiFormCLSmallColumns .sapUiFormCLElement>.sapUiFormCLCellsS12 {
+        width: auto;
+    }
+    .aljVehicleInfoBoxStyle .sapUiFormCLMedia-Std-Tablet>.sapUiFormCLContainerM2>.sapUiFormCLContainerCont,
+    .aljVehicleInfoBoxStyle .sapUiFormCLMedia-Std-Tablet>.sapUiFormCLContent>.sapUiFormCLContainerM2>.sapUiFormCLContainerCont {
+        column-count: 3
+    }
+}
+
+
+/********My Cars Styles - End*********/
+
+
+/*home page designs*/
+
+.styleStatusBox {
+    background: #f2f2f2;
+    height: 170px;
+}
+
+.styleServiceBox {
+    background: #f2f2f2;
+    height: 65px;
+    border-radius: 10px;
+}
+
+.styleStatusTitle {
+    font-size: 17px;
+    font-family: Karbon-Semibold;
+    color: #000000;
+    font-weight: bold;
+    border-bottom: solid 2px #eb0a1e;
+}
+
+.styleRecommendedBox {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background: #f2f2f2;
+    margin: 0.5rem 0.75rem 1rem 0;
+    height: calc(100% - 1rem);
+}
+
+.styleServType {
+    font-size: 12px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.styleLabel {
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.styleCAR2 {
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.styleCAR1 {
+    font-size: 12px;
+    color: #000000;
+    text-decoration: line-through;
+    font-family: Karbon-Regular;
+}
+
+.styleArrowBox {
+    background: #c1c1c1;
+    height: 65px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+
+/*home page designs*/
+
+
+/* Products design*/
+
+.styleVehicleBox {
+    background: #ffffff;
+}
+
+.styleProdServBox {
+    background: #ffffff;
+    padding-top: 1rem;
+    /*border-top-left-radius: 1.5rem;*/
+    padding-bottom: 2rem;
+}
+
+.styleProdCatBox {
+    background: #d9d9d9;
+    padding-top: 1rem;
+    border-top-left-radius: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.styleProdServBookBox {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem 0.75rem 1rem 0;
+    border: solid #f2f2f2 1px;
+    height: calc(100% - 1rem);
+    background: #ffffff;
+    letter-spacing: 1.5px;
+    width: 9rem;
+}
+
+.styleProdBookBtnStyle .sapMBtnInner .sapMBtn:hover>.sapMBtnHoverable {
+    color: #fff;
+    background: #ba283a;
+    width: 16rem;
+    margin-top: 30%;
+}
+
+
+/* Products design*/
+
+
+/*book a service designs* - start */
+
+.BAS_SF_CSS1 .sapUiForm:not(.sapUiFormEdit) .sapMText {
+    min-height: 0.001rem;
+}
+
+.BAS_aljLastServiceDateStyle {
+    margin-left: 0.5rem;
+    width: 9rem;
+    line-height: 4rem;
+    text-align: center;
+}
+
+.BAS_HTB_SV_CSS {
+    border-bottom: solid .0625rem #d9d9d9;
+}
+
+.BAS_PNL_BI_CSS .sapMPanelContent:not(.sapMPanelBGTransparent) {
+    border-bottom: .0625rem solid #fff;
+}
+
+.BAS_HTB_BI_CSS {
+    border-bottom: solid .0625rem #ffff;
+}
+
+.pnReceiptCSS {
+    position: fixed;
+}
+
+.BAS_KMR_CSS {
+    border-radius: 1rem!important;
+    width: 50%;
+}
+
+.BAS_ST_Desc_CSS {
+    border-radius: 1rem!important;
+    margin-left: 1rem;
+}
+
+.BAS_KMR_CSS .sapMInputBaseContentWrapper {
+    border: .0625rem solid #0799b2;
+    background: #fff;
+    border-radius: 1rem;
+}
+
+.BAS_KMR_Text_CSS {
+    margin-left: 5rem;
+}
+
+.BAS_DescTitleClass {
+    color: #000000;
+    font-weight: bold;
+    font-size: 0.875rem;
+    padding-bottom: 0.25rem;
+    letter-spacing: 1.75px;
+}
+
+.BAS_SC_Sel_CSS.sapMSlt:not(.sapMSltIconOnly) {
+    border-bottom-color: #fce9ec!important;
+    border-top-color: #fff;
+    border-left-color: #FFf;
+    border-right-color: #fff;
+}
+
+.BAS_SC_Sel_CSS .sapMSltArrow {
+    color: #fce9ec!important;
+}
+
+.BAS_DT_CSS {
+    background-color: #d9d9d9;
+    color: #d9d9d9;
+}
+
+.BAS_DT_CSS .sapUiCalRowWeekNumber {
+    visibility: hidden;
+}
+
+.BAS_DT_CSS .sapUiCalHead {
+    background-color: #d9d9d9;
+}
+
+.BAS_DT_CSS .sapUiCalMonthView,
+.sapUiCalMonthPicker,
+.sapUiCalYearPicker,
+.sapUiCalRow {
+    background-color: #d9d9d9;
+}
+
+.BAS_DT_CSS .sapUiCalWH,
+.sapUiCalItem {
+    border: .0625rem solid #d9d9d9;
+}
+
+.BAS_DT_CSS .sapUiCalItem.sapUiCalItemNow {
+    border-bottom: .125rem solid #c00;
+    border: .125rem solid #d9d9d9;
+}
+
+.BAS_DT_CSS .sapUiCalHead>button,
+.sapUiCalCancel {
+    color: #c00;
+}
+
+.BAS_DT_CSS .sapUiCalItem {
+    background-color: #d9d9d9;
+    border-radius: 0.25rem;
+}
+
+.aljBoxStyleWhite {
+    background: #fff;
+    /*  padding-top: 1rem;*/
+    border-top-left-radius: 1.5rem;
+}
+
+.basLightGreyBtnStyle .sapMBtnInner,
+.basLightGreyBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
+    color: #000;
+    background: #e5e5e5;
+}
+
+
+/*book a service designs* - end */
+
+
+/********Service Status Styles - Start*********/
+
+.aljSuccessStripStyle {
+    color: #00d1ce;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.aljPriceBreakupBoxStyle {
+    padding: 2rem 2rem 1.5rem 1.5rem;
+    background: #fff;
+    border-radius: 1.5rem;
+}
+
+.aljLastRemarkStyle {
+    margin: 2rem 1.5rem;
+    padding: 0.875rem 1rem;
+    border: solid 1px #979797;
+    border-radius: 0.75rem;
+}
+
+.aljInOutSwitch .sapMSwtCont {
+    padding: 0;
+    margin: 0 0.5rem;
+    width: 3rem;
+}
+
+.aljInOutSwitch .sapMSwtOn .sapMSwtHandle,
+.aljInOutSwitch .sapMSwtOff .sapMSwtHandle {
+    height: 1rem;
+    width: 1rem;
+}
+
+.aljInOutSwitch .sapMSwt.sapMSwtNoLabel {
+    width: 2.65rem;
+    height: 1.25rem;
+}
+
+.aljInOutSwitch .sapMSwtOff .sapMSwtHandle {
+    left: 2.15rem;
+}
+
+.aljMapDialogStyle .sapMDialogScroll {
+    height: 100%;
+}
+
+.aljMapDialogStyle.sapMDialog.sapMPopup-CTX>header .sapMHeader-CTX {
+    background-color: #ba283a;
+    padding: 0 0.5rem;
+}
+
+
+/********Service Status Styles - End*********/
+
+/********Profile, Notification Styles - Start*********/
+.aljFooterBtnBoxStyle{
+    position: fixed;
+    bottom: 0;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+}
+
+.aljNotificationList .sapFAvatarColorAccent6 {
+    background-color: transparent;
+}
+
+.aljNotificationList .sapFAvatarIcon {
+    color: #ba283a;
+}
+/********Profile, Notification Styles - End*********/
+
+.aljScannerStyle{
+	width: 100%;
+	height: 5rem;
+	border: dotted 1px grey;
+	border-radius: 0.2rem;
+}
+
+.aljVINInputStyle .sapMInputBaseContentWrapper{
+	border: dotted 1px grey;
+}
+
+.aljAddVehicleBoxStyle{
+	padding: 2rem;
+}
+
+.aljScanPHStyle{
+    text-align: center !important;
+    width: 100%;
+    font-style: italic;
+}
+
+/********New Styles - Start*********/
+.aljSSIBoxStyle {
+    height: 5rem;
+    width: calc(100% / 6);
+    /*border: solid 1px #000;*/
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: 1;
+}
+
+.aljSSIBoxStyle .sapMText {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    text-align: right !important;
+    font-size: 0.57rem;
+}
+
+.aljSSIRedStyle {
+    background-image: url(../image/StatusRed.png);
+}
+
+.aljSSIGreenStyle {
+    background-image: url(../image/StatusGreen.png);
+}
+
+.aljSSIBoxBottomStyle {
+    width: 100%;
+    height: 0.5rem;
+    background: #000;
+    margin-top: -0.7rem;
+}
+
+.aljSSCarStyle{
+    height: 0;
+    top: -1.6rem;
+}
+
+.aljSSCarStyle .sapMImg{
+    height: 0.8rem;
+    margin-left: calc(100% / 6 * 1);
+}
+
+/********New Styles - End*********/

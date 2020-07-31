@@ -112,6 +112,97 @@
 					"target": [
 						"Home"
 					]
+				},
+				{
+					"name": "BookAService",
+					"pattern": "BookAService",
+					"target": [
+						"BookAService"
+					]
+				},
+				{
+					"name": "MyCars",
+					"pattern": "MyCars",
+					"target": [
+						"MyCars"
+					]
+				},
+				{
+					"name": "MyServices",
+					"pattern": "MyServices",
+					"target": [
+						"MyServices"
+					]
+				},
+				{
+					"name": "AddVehicle",
+					"pattern": "AddVehicle",
+					"target": [
+						"AddVehicle"
+					]
+				},
+				{
+					"name": "Products",
+					"pattern": "Products",
+					"target": [
+						"Products"
+					]
+				},
+				{
+					"name": "ProductDetail",
+					"pattern": "ProductDetail",
+					"target": [
+						"ProductDetail"
+					]
+				},
+				{
+					"name": "Profile",
+					"pattern": "Profile",
+					"target": [
+						"Profile"
+					]
+				},
+				{
+					"name": "ServiceStatus",
+					"pattern": "ServiceStatus",
+					"target": [
+						"ServiceStatus"
+					]
+				},
+				{
+					"name": "More",
+					"pattern": "More",
+					"target": [
+						"More"
+					]
+				},
+				{
+					"name": "SafetyTips",
+					"pattern": "SafetyTips",
+					"target": [
+						"SafetyTips"
+					]
+				},
+				{
+					"name": "AddNID",
+					"pattern": "AddNID",
+					"target": [
+						"AddNID"
+					]
+				},
+				{
+					"name": "EditProfile",
+					"pattern": "EditProfile",
+					"target": [
+						"EditProfile"
+					]
+				},
+				{
+					"name": "Notification",
+					"pattern": "Notification",
+					"target": [
+						"Notification"
+					]
 				}
 			],
 			"targets": {
@@ -122,6 +213,58 @@
 				"Home": {
 					"viewType": "XML",
 					"viewName": "Home"
+				},
+				"BookAService": {
+					"viewType": "XML",
+					"viewName": "BookAService"
+				},
+				"MyCars": {
+					"viewType": "XML",
+					"viewName": "MyCars"
+				},
+				"MyServices": {
+					"viewType": "XML",
+					"viewName": "MyServices"
+				},
+				"Products": {
+					"viewType": "XML",
+					"viewName": "Products"
+				},
+				"ProductDetail": {
+					"viewType": "XML",
+					"viewName": "ProductDetail"
+				},
+				"AddVehicle": {
+					"viewType": "XML",
+					"viewName": "AddVehicle"
+				},
+				"Profile": {
+					"viewType": "XML",
+					"viewName": "Profile"
+				},
+				"ServiceStatus": {
+					"viewType": "XML",
+					"viewName": "ServiceStatus"
+				},
+				"More": {
+					"viewType": "XML",
+					"viewName": "More"
+				},
+				"SafetyTips": {
+					"viewType": "XML",
+					"viewName": "SafetyTips"
+				},
+				"AddNID": {
+					"viewType": "XML",
+					"viewName": "AddNID"
+				},
+				"EditProfile": {
+					"viewType": "XML",
+					"viewName": "EditProfile"
+				},
+				"Notification": {
+					"viewType": "XML",
+					"viewName": "Notification"
 				}
 			}
 		}

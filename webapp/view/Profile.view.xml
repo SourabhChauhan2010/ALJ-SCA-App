@@ -1,0 +1,45 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.Profile"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form">
+	<Panel expanded="true" class="BAS_PNL_BI_CSS">
+		<headerToolbar>
+			<Toolbar class="BAS_HTB_BI_CSS">
+				<Label text="{i18n>BAS_BI_PNL_HEADER}" class="aljTitleClass"/>
+				<ToolbarSpacer/>
+				<Button text="Edit" press="onPressEdit"/>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="4"
+				binding="{oAppModel>/UserInformation/0}">
+				<f:content>
+					<Label text="{i18n>BAS_SF_Name}"/>
+					<Text text="{oAppModel>nickName}"/>
+					<Label text="{i18n>BAS_SF_MobileNumber}"/>
+					<Text text="{oAppModel>mobile2}"/>
+					<Label text="{i18n>BAS_SF_EmailId}"/>
+					<Text text="{oAppModel>email1}"/>
+					<Label text="{i18n>BAS_SF_NID}"/>
+					<Text text="{oAppModel>idNumber}"/>
+				</f:content>
+			</f:SimpleForm>
+		</content>
+	</Panel>
+	<VBox class="sapUiSmallMarginTop">
+		<Label text="{i18n>SelectLanguage}" class="aljTitleClass sapUiSmallMarginBegin"/>
+		<!--<HBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">-->
+		<!--	<ToggleButton text="{i18n>Arabic}" pressed="{= ${oAppModel>/language} === 'AR'}" class="aljTBStyle sapUiTinyMarginEnd"-->
+		<!--		press="onChangeLanguage"/>-->
+		<!--	<ToggleButton text="{i18n>English}" pressed="{= ${oAppModel>/language} === 'EN'}" class="aljTBStyle sapUiTinyMarginEnd"-->
+		<!--		press="onChangeLanguage"/>-->
+		<!--</HBox>-->
+		<List mode="SingleSelect" class="aljLangListStyle" selectionChange="onChangeLanguage" id="idLanguageList">
+			<items>
+				<StandardListItem title="{i18n>Arabic}"/>
+				<StandardListItem title="{i18n>English}"/>
+			</items>
+		</List>
+	</VBox>
+	<HBox class="aljFooterBtnBoxStyle">
+		<Button text="{i18n>Logout}" class="aljWhiteBtnClass"></Button>
+	</HBox>
+</mvc:View>

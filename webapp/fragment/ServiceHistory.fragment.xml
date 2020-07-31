@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:commons="sap.suite.ui.commons">
+	<commons:Timeline showHeaderBar="false" showIcons="false" content="{oAppModel>/services}" enableScroll="false"
+		class="aljTimelineStyle sapUiSmallMarginTopBottom" axisOrientation="{= ${device>/system/desktop} ? 'Horizontal': 'Vertical'}">
+		<commons:content>
+			<commons:TimelineItem>
+				<VBox>
+					<HBox justifyContent="SpaceBetween" alignItems="Center" width="100%">
+						<VBox>
+							<Image src="{oAppModel>src}" width="6rem"/>
+							<Text text="{i18n>VIN}: {oAppModel>vin}" class="sapUiTinyMarginEnd"/>
+							<Text text="{oAppModel>service}"/>
+						</VBox>
+						<Button text="{i18n>KnowMore}" class="aljGrayBtnStyle" press="showServiceStatus"/>
+					</HBox>
+					<HBox>
+						<Image src="image/pickup.svg" width="1.5rem" class="sapUiTinyMarginEnd"/>
+						<Text text="{oAppModel>date}" class="sapUiTinyMarginTop"/>
+					</HBox>
+				</VBox>
+			</commons:TimelineItem>
+		</commons:content>
+	</commons:Timeline>
+</core:FragmentDefinition>
