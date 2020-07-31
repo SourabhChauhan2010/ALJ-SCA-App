@@ -807,4 +807,31 @@
     margin-left: calc(100% / 6 * 1);
 }
 
+.aljDetailLinkStyle.sapMLnk{
+    font-size: 0.65rem;
+    color: #808080;
+    font-weight: bold;
+}
+
+.aljServiceBtnStyle .sapMBtnInner,
+.aljServiceBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
+    color: #fff;
+    background: #ba283a;
+    width: 7rem;
+    height: 1.25rem;
+}
+
+.aljServiceBtnStyle .sapMBtnContent {
+    font-size: 0.6rem;
+    line-height: 1.25rem;
+}
+
+.aljServiceBtnStyle.sapMBtn {
+    height: 1.75rem;
+}
+
+.aljHomeServiceBoxStyle>div:first-child{
+	border-right: #d6d6d6 solid 1px;
+}
+
 /********New Styles - End*********/

@@ -54,7 +54,7 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 	
 	setStatusCarPosition: function(currServiceStatus) {
 		if (currServiceStatus) {
-			debugger;
+			// debugger;
 		}
 		return true;
 	},
