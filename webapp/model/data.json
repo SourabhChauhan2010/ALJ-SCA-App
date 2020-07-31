@@ -56,14 +56,42 @@
 		"warranty": "06/02/2020 to 06/02/2021"
 	}],
 	"recommendations": [{
-		"serviceType": "Brake service",
-		"sar": "SAR 100",
-		"src": "image/brake.png"
+		"serviceType": "Land Cruiser",
+		"sar": "Change Oil ",
+		"src": "image/lubricants-fluids.png",
+		"textBelow":"SR 300"
 	}, {
-		"serviceType": "Battery",
-		"sar": "SAR 100",
-		"src": "image/battery.png"
-	}],
+		"serviceType": "Land Cruiser",
+		"sar": "Transmission",
+		"src": "image/transmission-parts.png",
+		"textBelow":"SR 300"
+	},
+	 {
+		"serviceType": "Land Cruiser",
+		"sar": "Break Pad",
+		"src": "image/engine-parts-trans.png",
+		"textBelow":"SR 300"
+	},
+	 {
+		"serviceType": "Land Cruiser",
+		"sar": "Wiper",
+		"src": "image/major-service.png",
+		"textBelow":"SR 300"
+	}
+	],
+	"ServiceOffer": [{
+		
+		"src": "image/home1.png"
+		
+	}, {
+	
+		"src": "image/home2.png"
+	},
+	 {
+	
+		"src": "image/home2.png"
+	}
+	],
 	"vehicleInfo": [{
 		"type": "Warranty Details",
 		"src": "image/warranty.png"

@@ -8,6 +8,7 @@
 					<Label text="{oAppModel>serviceType}" class="sapUiTinyMarginBottom"/>
 					<Image src="{oAppModel>src}" width="6rem" class="sapUiTinyMarginBottom"/>
 					<Label text="{oAppModel>sar}" design="Bold" class="sapUiTinyMarginBottom"/>
+					<Label text="{oAppModel>textBelow}" design="Bold" class="sapUiTinyMarginBottom classRedFont" />
 					<Button text="{i18n>Book}" class="aljRedBtnStyle" press="bookService" visible="{= ${oAppModel>/currentScreen} !== 'BookAService'? true: false}"/>
 				</VBox>
 			</CustomListItem>
