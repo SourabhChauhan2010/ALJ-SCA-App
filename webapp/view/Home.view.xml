@@ -28,4 +28,5 @@ Comments:
 		</VBox>
 	</HBox>
 	<!-- Service Section - End-->
+		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.DesktopFooter" type="XML"/>
 </mvc:View>

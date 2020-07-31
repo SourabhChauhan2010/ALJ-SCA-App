@@ -1,8 +1,8 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
 	<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
-		<HBox items="{oAppModel>/vehicles}" class="sapUiSmallMarginBeginEnd">
+	<!--	<HBox items="{oAppModel>/vehicles}" class="sapUiSmallMarginBeginEnd">
 			<CustomListItem class="aljVehicleListHorStyle" visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}"
-				type="Active" press="onVehicleItemPress">
+				type="Active" press="onSelectableItemPress">
 				<VBox alignItems="Center">
 					<Text text="{oAppModel>model}"/>
 					<Text text="{oAppModel>year}" class="sapUiTinyMarginBottom"/>
@@ -10,6 +10,22 @@
 					<Text text="{i18n>LastServiceDate} {oAppModel>lastServiceDate}" class="aljLastServiceDateStyle"/>
 				</VBox>
 			</CustomListItem>
-		</HBox>
+		</HBox>-->
+			<List headerText="Vehicle Information" items="{oAppModel>/vehicles}" class="VehicleListItemCSS UserInfoHeaderAlign" press="onPressListItem">
+		<CustomListItem>
+			<HBox class="VehicleListVBCSS sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom">
+				<VBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginTopBottom vehiclListAlignCSS" >
+					<Image src="{oAppModel>src}" width="6rem"/>
+					<Text text="{oAppModel>model} {oAppModel>year}"/>
+					<Text text="{oAppModel>vin}" />
+					<Text text="{i18n>LastServiceDate} {oAppModel>lastServiceDate}" />
+				</VBox>
+				<VBox class="sapUiSmallMarginTop sapUiSmallMarginBegin">
+					<core:Icon src="sap-icon://edit" width="2rem"/>
+					<Button text="Make" class="aljRedBtnStyle"/>
+				</VBox>
+			</HBox>
+		</CustomListItem>
+	</List>
 	</ScrollContainer>
 </core:FragmentDefinition>

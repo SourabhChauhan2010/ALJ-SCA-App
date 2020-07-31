@@ -834,4 +834,32 @@
 	border-right: #d6d6d6 solid 1px;
 }
 
+.UserInfoHeaderAlign{
+	text-align:center;
+	margin-bottom:0.5rem;
+}
+.UserInfoVBoxCSS{
+/*	text-align:left;
+    justify-content: center;*/
+    text-align:left;
+	border-bottom:1px solid #d9d9d9;
+    justify-content: space-evenly!important;
+}
+
+.VehicleListItemCSS .sapMLIB {
+    border-bottom: 1px solid #fff;
+    
+}
+.VehicleListVBCSS{
+	border: 1px solid #d9d9d9;
+    border-radius: 1rem;
+    height:6rem;
+}
+.vehiclListAlignCSS{
+	text-align:left;
+}
+.UserInfoHeaderAlign .sapMListHdrText{
+	border-bottom: 1px solid #fff!important;
+}
+
 /********New Styles - End*********/
