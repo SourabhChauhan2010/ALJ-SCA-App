@@ -1,15 +1,60 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.Profile"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form">
-	<Panel expanded="true" class="BAS_PNL_BI_CSS">
-		<headerToolbar>
-			<Toolbar class="BAS_HTB_BI_CSS">
-				<Label text="{i18n>BAS_BI_PNL_HEADER}" class="aljTitleClass"/>
-				<ToolbarSpacer/>
-				<Button text="Edit" press="onPressEdit"/>
-			</Toolbar>
-		</headerToolbar>
-		<content>
-			<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="4"
+
+				<List headerText="Profile Information" items="" class="UserInfoHeaderAlign">
+		<CustomListItem >
+			<VBox alignItems="Center">
+				<Avatar displaySize="M" src="sap-icon://Customer" class="sapUiSmallMarginTopBottom"/>
+				<Link text="Edit" class="sapUiSmallMarginTopBottom" press="editProfile"/>
+			</VBox>
+			<HBox class="UserInfoVBoxCSS">
+				<core:Icon size="1.5rem" src="sap-icon://attachment-photo" class=" sapUiSmallMarginTopBottom"/>
+				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom ">
+					<Label text="Name"/>
+					<Text text="Mohammed"/>
+				</VBox>
+				<core:Icon size="1rem" src="sap-icon://edit" class=" sapUiMediumMarginTopBottom"/>
+			</HBox>
+			<HBox class="UserInfoVBoxCSS">
+				<core:Icon size="1.5rem" src="sap-icon://call" class=" sapUiSmallMarginTopBottom"/>
+				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom ">
+					<Label text="Mobile Number"/>
+					<Text text="982743789" id="idTextPhoneNumber"/>
+				
+				</VBox>
+				<core:Icon size="1rem" src="sap-icon://edit" class=" sapUiMediumMarginTopBottom"/>
+			</HBox>
+			<HBox class="UserInfoVBoxCSS">
+				<core:Icon size="1.5rem" src="sap-icon://email" class=" sapUiSmallMarginTopBottom"/>
+				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom ">
+					<Label text="Email ID"/>
+					<Text text="test@alj.com"/>
+				</VBox>
+				<core:Icon size="1rem" src="sap-icon://edit" class=" sapUiMediumMarginTopBottom"/>
+			</HBox>
+			<HBox class="UserInfoVBoxCSS">
+				<core:Icon size="1.5rem" src="sap-icon://business-card" class=" sapUiSmallMarginTopBottom"/>
+				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom ">
+					<Label text="National ID"/>
+					<Text text="7823987348"/>
+				</VBox>
+				<core:Icon size="1rem" src="sap-icon://edit" class=" sapUiMediumMarginTopBottom"/>
+			</HBox>
+			<HBox class="UserInfoVBoxCSS">
+				<core:Icon size="1.5rem" src="sap-icon://locked" class=" sapUiSmallMarginTopBottom"/>
+				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom ">
+					<Label text="Password"/>
+					<Text text="7823987348"/>
+				</VBox>
+				<core:Icon size="1rem" src="sap-icon://edit" class=" sapUiMediumMarginTopBottom"/>
+			</HBox>
+		</CustomListItem>
+	</List>
+	<FlexBox alignItems="Center" justifyContent="Center">
+		<Button text="Next" class="aljRedBtnStyle"/>
+	</FlexBox>
+			
+			<!--<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="4"
 				binding="{oAppModel>/UserInformation/0}">
 				<f:content>
 					<Label text="{i18n>BAS_SF_Name}"/>
@@ -21,18 +66,17 @@
 					<Label text="{i18n>BAS_SF_NID}"/>
 					<Text text="{oAppModel>idNumber}"/>
 				</f:content>
-			</f:SimpleForm>
-		</content>
-	</Panel>
-	<VBox class="sapUiSmallMarginTop">
-		<Label text="{i18n>SelectLanguage}" class="aljTitleClass sapUiSmallMarginBegin"/>
+			</f:SimpleForm>-->
+	
+	<!--<VBox class="sapUiSmallMarginTop">-->
+	<!--	<Label text="{i18n>SelectLanguage}" class="aljTitleClass sapUiSmallMarginBegin"/>-->
 		<!--<HBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">-->
 		<!--	<ToggleButton text="{i18n>Arabic}" pressed="{= ${oAppModel>/language} === 'AR'}" class="aljTBStyle sapUiTinyMarginEnd"-->
 		<!--		press="onChangeLanguage"/>-->
 		<!--	<ToggleButton text="{i18n>English}" pressed="{= ${oAppModel>/language} === 'EN'}" class="aljTBStyle sapUiTinyMarginEnd"-->
 		<!--		press="onChangeLanguage"/>-->
 		<!--</HBox>-->
-		<List mode="SingleSelect" class="aljLangListStyle" selectionChange="onChangeLanguage" id="idLanguageList">
+	<!--	<List mode="SingleSelect" class="aljLangListStyle" selectionChange="onChangeLanguage" id="idLanguageList">
 			<items>
 				<StandardListItem title="{i18n>Arabic}"/>
 				<StandardListItem title="{i18n>English}"/>
@@ -41,5 +85,5 @@
 	</VBox>
 	<HBox class="aljFooterBtnBoxStyle">
 		<Button text="{i18n>Logout}" class="aljWhiteBtnClass"></Button>
-	</HBox>
+	</HBox>-->
 </mvc:View>
