@@ -7,8 +7,11 @@
 				<VBox alignItems="Center">
 					<Label text="{oAppModel>serviceType}" class="sapUiTinyMarginBottom"/>
 					<Image src="{oAppModel>src}" width="6rem" class="sapUiTinyMarginBottom"/>
-					<Label text="{oAppModel>sar}" design="Bold" class="sapUiTinyMarginBottom"/>
-					<Label text="{oAppModel>textBelow}" design="Bold" class="sapUiTinyMarginBottom classRedFont" />
+					<Label text="{oAppModel>sar}" design="Bold" class="sapUiTinyMarginBottom classRedFont"/>
+					<HBox class="sapUiTinyMargin">
+					<Label text="{oAppModel>textBelowLeft}" design="Bold" class="sapUiTinyMargin classStrike" />
+					<Label text="{oAppModel>textBelow}" design="Bold" class="sapUiTinyMargin" />
+					</HBox>
 					<Button text="{i18n>Book}" class="aljRedBtnStyle" press="bookService" visible="{= ${oAppModel>/currentScreen} !== 'BookAService'? true: false}"/>
 				</VBox>
 			</CustomListItem>

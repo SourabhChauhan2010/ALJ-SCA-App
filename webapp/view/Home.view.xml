@@ -7,7 +7,8 @@ Comments:
 *****************************************************************-->
 <mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.Home" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
 	xmlns="sap.m" xmlns:l="sap.ui.layout">
-	      <HBox  class="sapUiSmallMarginBeginEnd" justifyContent="SpaceBetween" alignItems="Center" >
+	<VBox class="sapUiSmallMargin" >
+	      <HBox  class="sapUiSmallMargin sapUiMediumMarginTop" justifyContent="SpaceBetween" alignItems="Center" >
 				<VBox alignItems="Start" class="aljTitleClass">
 					<Text text="Welcome"/>
 					<Text text="Mohammed" class="sapUiTinyMarginBottom classRedFont"/>
@@ -25,9 +26,13 @@ Comments:
 	
 	<Text text="Service Offers" class="aljTitleClass"/>
 	
-    	<ScrollContainer class="sapUiContentPadding" horizontal="true" vertical="false">
+    	<ScrollContainer  horizontal="true" vertical="false">
     	<HBox items="{oAppModel>/ServiceOffer}" class="sapUiSmallMarginBeginEnd sapUiContentPadding scrollCnt">	
-		<Image src="{oAppModel>src}" width="10rem" height="10rem" class="sapUiTinyMarginBottom sapUiContentPadding scrollCnt"/>
+    		<CustomListItem class="aljReccListStyle">
+				
+				<Image src="{oAppModel>src}" height="10rem" class="sapUiTinyMarginBottom sapUiContentPadding scrollCnt"/>	
+			</CustomListItem>
+	
 		
 		</HBox>
 	</ScrollContainer>
@@ -65,4 +70,5 @@ Comments:
 	</HBox>
 	<!-- Service Section - End-->
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.DesktopFooter" type="XML"/>
+		</VBox>
 </mvc:View>

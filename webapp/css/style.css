@@ -887,5 +887,8 @@ border-bottom: solid 1px ;
 .scrollCnt{
 	scroll-padding: 50px 20px 20px 50px;
 }
-
+.classStrike{
+	text-decoration-line: line-through !important;
+	text-decoration-color: Red !important;
+}
 /****top home page**/

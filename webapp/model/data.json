@@ -59,24 +59,28 @@
 		"serviceType": "Land Cruiser",
 		"sar": "Change Oil ",
 		"src": "image/lubricants-fluids.png",
-		"textBelow":"SR 300"
+		"textBelow":"SR 300",
+		"textBelowLeft":"SR 500"
 	}, {
 		"serviceType": "Land Cruiser",
 		"sar": "Transmission",
 		"src": "image/transmission-parts.png",
-		"textBelow":"SR 300"
+		"textBelow":"SR 300",
+		"textBelowLeft":"SR 500"
 	},
 	 {
 		"serviceType": "Land Cruiser",
 		"sar": "Break Pad",
 		"src": "image/engine-parts-trans.png",
-		"textBelow":"SR 300"
+		"textBelow":"SR 300",
+		"textBelowLeft":"SR 500"
 	},
 	 {
 		"serviceType": "Land Cruiser",
 		"sar": "Wiper",
 		"src": "image/major-service.png",
-		"textBelow":"SR 300"
+		"textBelow":"SR 300",
+		"textBelowLeft":"SR 500"
 	}
 	],
 	"ServiceOffer": [{
