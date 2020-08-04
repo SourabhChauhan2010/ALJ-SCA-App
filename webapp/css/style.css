@@ -90,6 +90,12 @@
     border-bottom: solid 2px #ba283a;
     letter-spacing: 1.75px;
 }
+.aljTitleClassHome{
+color: #000000;
+    font-weight: bold;
+    font-size: 0.875rem;
+    padding-bottom: 0.35rem;	
+}
 
 .aljHeadingTextStyle {
     color: #37383b;
@@ -921,5 +927,11 @@ border-bottom: solid 1px ;
 .classStrike{
 	text-decoration-line: line-through !important;
 	text-decoration-color: Red !important;
+}
+.aljHomeTextCSS{
+	font-size:1rem;
+}
+.aljHomeTextCSS1{
+	font-size:1.2rem;
 }
 /****top home page**/
