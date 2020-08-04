@@ -1,32 +1,41 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.EditProfile"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form">
-	<Panel expanded="true" class="BAS_PNL_BI_CSS">
-		<headerToolbar>
-			<Toolbar class="BAS_HTB_BI_CSS">
-				<Label text="{i18n>BAS_BI_PNL_HEADER}" class="aljTitleClass"/>
-				<ToolbarSpacer/>
-				<!--<Button text="Edit" press="onPressEdit"/>-->
-			</Toolbar>
-		</headerToolbar>
-		<content>
-			<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12"
-				binding="{oAppModel>/UserInformation/0}">
-				<f:content>
-					<Label text="{i18n>FirstAndMiddleName}"/>
-					<Input value="{oAppModel>nameFirst}" class="aljInputStyle"/>
-					<Label text="{i18n>LastName}"/>
-					<Input value="{oAppModel>nameLast}" class="aljInputStyle"/>
-					<Label text="{i18n>MobileNumber}"/>
-					<Input value="{oAppModel>mobile2}" class="aljInputStyle"/>
-					<Label text="{i18n>BAS_SF_EmailId}"/>
-					<Input value="{oAppModel>email1}" class="aljInputStyle"/>
-					<Label text="{i18n>NationalId}"/>
-					<Input value="{oAppModel>idNumber}" class="aljInputStyle"/>
-				</f:content>
-			</f:SimpleForm>
-			<HBox class="aljFooterBtnBoxStyle">
-				<Button text="{i18n>Confirm}" class="aljWhiteBtnClass" press="onConfirmEditProfile"/>
-			</HBox>
-		</content>
-	</Panel>
+	<VBox justifyContent="Center" alignItems="Center" class="sapUiSmallMargin" renderType="Bare">
+		<!--<Text text="{i18n>SignUpLabel}" class="aljSignUpLabelStyle"/>-->
+		<HBox class="aljAddProfPicStyle"/>
+		<Text text="{i18n>AddProfilePic}" class="sapUiTinyMarginBottom"/>
+		<HBox class="aljEPInputStyle">
+			<Image src="image/FullName.png"/>
+			<Input placeholder="{i18n>FirstName}"/>
+		</HBox>
+		<HBox class="aljEPInputStyle">
+			<Image src="image/FullName.png"/>
+			<Input placeholder="{i18n>MiddleName}"/>
+		</HBox>
+		<HBox class="aljEPInputStyle">
+			<Image src="image/FullName.png"/>
+			<Input placeholder="{i18n>LastName}"/>
+		</HBox>
+		<HBox class="aljEPInputStyle">
+			<Image src="image/NID.png"/>
+			<Input placeholder="{i18n>NID}"/>
+		</HBox>
+		<HBox class="aljEPInputStyle">
+			<Image src="image/Mobile.png"/>
+			<Input placeholder="{i18n>Mobile}"/>
+		</HBox>
+		<HBox class="aljEPInputStyle">
+			<Image src="image/Email.png"/>
+			<Input placeholder="{i18n>Email}"/>
+		</HBox>
+		<HBox class="aljEPInputStyle">
+			<Image src="image/Password.png"/>
+			<Input placeholder="{i18n>Password}"/>
+		</HBox>
+		<HBox class="aljEPInputStyle">
+			<Image src="image/Password.png"/>
+			<Input placeholder="{i18n>RetypePassword}"/>
+		</HBox>
+		<Button text="{i18n>Update}" press="" class="aljRedBtnStyle sapUiTinyMarginTop"/>
+	</VBox>
 </mvc:View>

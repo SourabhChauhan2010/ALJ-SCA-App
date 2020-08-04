@@ -834,6 +834,37 @@
 	border-right: #d6d6d6 solid 1px;
 }
 
+.aljEPInputStyle .sapMInputBaseContentWrapper{
+	border: none;
+}
+
+.aljEPInputStyle{
+	border: solid 1px #ababab;
+	border-radius: 0.4rem;
+	margin: 0.5rem 2rem;
+	max-width: 50rem;
+	min-width: 18rem;
+	align-items: center;
+}
+
+.aljEPInputStyle .sapMImg{
+    width: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.aljEPInputStyle ::placeholder{
+    color: #848484;
+    font-style: normal;
+}
+
+.aljAddProfPicStyle {
+	border: dotted #ddd 1px;
+	border-radius: 50%;
+	width: 5rem;
+	height: 5rem;
+	margin: 1rem 0;
+}
+
 .UserInfoHeaderAlign{
 	text-align:center;
 	margin-bottom:0.5rem;

@@ -22,7 +22,7 @@ sap.ui.define([
 			// var lang = sap.ui.getCore().getConfiguration().getLanguage();
 			// sap.ui.getCore().getConfiguration().setLanguage(lang === "AR"? "EN": "AR");
 			var lang = oEvent.getParameter("listItem").getTitle();
-			this.setSelectedLanguage(lang === "Arabic" ? "AR" : "EN");
+			// this.setSelectedLanguage(lang === "Arabic" ? "AR" : "EN");
 		},
 
 		setSelectedLanguage: function (slanguage, setSelection) {
