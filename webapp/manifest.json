@@ -265,6 +265,10 @@
 				"Notification": {
 					"viewType": "XML",
 					"viewName": "Notification"
+				},
+				"SplashScreen": {
+					"viewType": "XML",
+					"viewName": "SplashScreen"
 				}
 			}
 		}

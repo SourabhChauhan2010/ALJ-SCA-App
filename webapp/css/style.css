@@ -90,11 +90,12 @@
     border-bottom: solid 2px #ba283a;
     letter-spacing: 1.75px;
 }
-.aljTitleClassHome{
-color: #000000;
+
+.aljTitleClassHome {
+    color: #000000;
     font-weight: bold;
     font-size: 0.875rem;
-    padding-bottom: 0.35rem;	
+    padding-bottom: 0.35rem;
 }
 
 .aljHeadingTextStyle {
@@ -380,14 +381,45 @@ color: #000000;
 }
 
 .aljReccListStyle {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0rem;
     border-radius: 1rem;
-    margin: 0.5rem 0.75rem 1rem 0;
+    margin: 0.5rem 0.75rem 0 0;
     border: solid #f2f2f2 1px;
     height: calc(100% - 1rem);
     background: #f2f2f2;
     letter-spacing: 1.5px;
-    width: 9rem;
+    width: 8rem;
+}
+
+.aljServiceOffBox {
+    background: #f2f2f2;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    z-index: 1;
+    width: 100%;
+    padding-left: 0.75rem;
+    padding-bottom: 0.25rem;
+}
+
+.aljBookBtnFill {
+    width: 100%;
+    border-radius: 1rem;
+    top: -1.5rem;
+}
+
+.aljBookBtnFill.sapMBtn {
+    height: 1.5rem;
+}
+
+.aljBookBtnFill .sapMBtnInner {
+    width: 100%;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    height: 3.25rem;
+}
+
+.aljBookBtnFill .sapMBtnContent {
+    margin-top: 1rem;
 }
 
 .aljMoreTilesStyle .sapMLIB {
@@ -731,13 +763,15 @@ color: #000000;
 
 /********Service Status Styles - End*********/
 
+
 /********Profile, Notification Styles - Start*********/
-.aljFooterBtnBoxStyle{
+
+.aljFooterBtnBoxStyle {
     position: fixed;
     bottom: 0;
     padding: 0.5rem;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     width: 100%;
 }
 
@@ -748,30 +782,34 @@ color: #000000;
 .aljNotificationList .sapFAvatarIcon {
     color: #ba283a;
 }
+
+
 /********Profile, Notification Styles - End*********/
 
-.aljScannerStyle{
-	width: 100%;
-	height: 5rem;
-	border: dotted 1px grey;
-	border-radius: 0.2rem;
+.aljScannerStyle {
+    width: 100%;
+    height: 5rem;
+    border: dotted 1px grey;
+    border-radius: 0.2rem;
 }
 
-.aljVINInputStyle .sapMInputBaseContentWrapper{
-	border: dotted 1px grey;
+.aljVINInputStyle .sapMInputBaseContentWrapper {
+    border: dotted 1px grey;
 }
 
-.aljAddVehicleBoxStyle{
-	padding: 2rem;
+.aljAddVehicleBoxStyle {
+    padding: 2rem;
 }
 
-.aljScanPHStyle{
+.aljScanPHStyle {
     text-align: center !important;
     width: 100%;
     font-style: italic;
 }
 
+
 /********New Styles - Start*********/
+
 .aljSSIBoxStyle {
     height: 5rem;
     width: calc(100% / 6);
@@ -803,17 +841,17 @@ color: #000000;
     margin-top: -0.7rem;
 }
 
-.aljSSCarStyle{
+.aljSSCarStyle {
     height: 0;
     top: -1.6rem;
 }
 
-.aljSSCarStyle .sapMImg{
+.aljSSCarStyle .sapMImg {
     height: 0.8rem;
     margin-left: calc(100% / 6 * 1);
 }
 
-.aljDetailLinkStyle.sapMLnk{
+.aljDetailLinkStyle.sapMLnk {
     font-size: 0.65rem;
     color: #808080;
     font-weight: bold;
@@ -836,102 +874,120 @@ color: #000000;
     height: 1.75rem;
 }
 
-.aljHomeServiceBoxStyle>div:first-child{
-	border-right: #d6d6d6 solid 1px;
+.aljHomeServiceBoxStyle>div:first-child {
+    border-right: #d6d6d6 solid 1px;
 }
 
-.aljEPInputStyle .sapMInputBaseContentWrapper{
-	border: none;
+.aljEPInputStyle .sapMInputBaseContentWrapper {
+    border: none;
 }
 
-.aljEPInputStyle{
-	border: solid 1px #ababab;
-	border-radius: 0.4rem;
-	margin: 0.5rem 2rem;
-	max-width: 50rem;
-	min-width: 18rem;
-	align-items: center;
+.aljEPInputStyle {
+    border: solid 1px #ababab;
+    border-radius: 0.4rem;
+    margin: 0.5rem 2rem;
+    max-width: 50rem;
+    min-width: 18rem;
+    align-items: center;
 }
 
-.aljEPInputStyle .sapMImg{
+.aljEPInputStyle .sapMImg {
     width: 0.8rem;
     margin-left: 0.5rem;
 }
 
-.aljEPInputStyle ::placeholder{
+.aljEPInputStyle::placeholder {
     color: #848484;
     font-style: normal;
 }
 
 .aljAddProfPicStyle {
-	border: dotted #ddd 1px;
-	border-radius: 50%;
-	width: 5rem;
-	height: 5rem;
-	margin: 1rem 0;
+    border: dotted #ddd 1px;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0;
 }
 
-.UserInfoHeaderAlign{
-	text-align:center;
-	margin-bottom:0.5rem;
+.UserInfoHeaderAlign {
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
-.UserInfoVBoxCSS{
-/*	text-align:left;
+
+.UserInfoVBoxCSS {
+    /*	text-align:left;
     justify-content: center;*/
-    text-align:left;
-	border-bottom:1px solid #d9d9d9;
+    text-align: left;
+    border-bottom: 1px solid #d9d9d9;
     justify-content: space-evenly!important;
 }
 
 .VehicleListItemCSS .sapMLIB {
     border-bottom: 1px solid #fff;
-    
-}
-.VehicleListVBCSS{
-	border: 1px solid #d9d9d9;
-    border-radius: 1rem;
-    height:6rem;
-}
-.vehiclListAlignCSS{
-	text-align:left;
-}
-.UserInfoHeaderAlign .sapMListHdrText{
-	border-bottom: 1px solid #fff!important;
 }
 
+.VehicleListVBCSS {
+    border: 1px solid #d9d9d9;
+    border-radius: 1rem;
+    height: 6rem;
+}
+
+.vehiclListAlignCSS {
+    text-align: left;
+}
+
+.UserInfoHeaderAlign .sapMListHdrText {
+    border-bottom: 1px solid #fff!important;
+}
+
+
 /********New Styles - End*********/
+
+
 /****top home page**/
-.classRedFont{
-	color: Red;
+
+.classRedFont {
+    color: Red;
 }
-.boldFontCls{
-font-weight: bold;
-font-size:2rem;
+
+.boldFontCls {
+    font-weight: bold;
+    font-size: 2rem;
 }
-.underLineCls{
-border-bottom: solid 2px ;	
+
+.underLineCls {
+    border-bottom: solid 2px;
 }
+
 .classBckGrndClr.sapUiBody {
-	background-color: #FF0000 !important;
-	color: White;
+    background-color: #FF0000 !important;
+    color: White;
 }
-#__button0-inner{
-background-color: #FF0000 !important;	
+
+#__button0-inner {
+    background-color: #FF0000 !important;
 }
-.underLineSmlCls{
-border-bottom: solid 1px ;	
+
+.underLineSmlCls {
+    border-bottom: solid 1px;
 }
-.scrollCnt{
-	scroll-padding: 50px 20px 20px 50px;
+
+.scrollCnt {
+    scroll-padding: 50px 20px 20px 50px;
 }
-.classStrike{
-	text-decoration-line: line-through !important;
-	text-decoration-color: Red !important;
+
+.classStrike .sapMLabelTextWrapper {
+    text-decoration-line: line-through !important;
+    text-decoration-color: Red !important;
 }
-.aljHomeTextCSS{
-	font-size:1rem;
+
+.aljHomeTextCSS {
+    font-size: 1rem;
 }
-.aljHomeTextCSS1{
-	font-size:1.2rem;
+
+.aljHomeTextCSS1 {
+    font-size: 1.2rem;
 }
+
+
 /****top home page**/

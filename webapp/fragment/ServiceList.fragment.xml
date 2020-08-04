@@ -4,15 +4,16 @@
 			<CustomListItem class="aljReccListStyle"
 				visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}" type="Active"
 				press="onServiceItemPress">
-				<VBox alignItems="Center">
-					<Label text="{oAppModel>serviceType}" class="sapUiTinyMarginBottom"/>
-					<Image src="{oAppModel>src}" width="6rem" class="sapUiTinyMarginBottom"/>
-					<Label text="{oAppModel>sar}" design="Bold" class="sapUiTinyMarginBottom classRedFont"/>
-					<HBox class="sapUiTinyMargin">
-					<Label text="{oAppModel>textBelowLeft}" design="Bold" class="sapUiTinyMargin classStrike" />
-					<Label text="{oAppModel>textBelow}" design="Bold" class="sapUiTinyMargin" />
+				<VBox alignItems="Center" renderType="Bare">
+					<Label text="{oAppModel>serviceType}" class="sapUiTinyMarginTop"/>
+					<Image src="{oAppModel>src}" width="6rem"/>
+					<Label text="{oAppModel>sar}" design="Bold" class="classRedFont"/>
+					<HBox class="aljServiceOffBox">
+						<Label text="{oAppModel>textBelowLeft}" design="Bold" class="classStrike"/>
+						<Label text="{oAppModel>textBelow}" design="Bold" class="sapUiTinyMarginBegin"/>
 					</HBox>
-					<Button text="{i18n>Book}" class="aljRedBtnStyle" press="bookService" visible="{= ${oAppModel>/currentScreen} !== 'BookAService'? true: false}"/>
+					<Button text="{i18n>Book}" class="aljRedBtnStyle aljBookBtnFill" press="bookService"
+						visible="{= ${oAppModel>/currentScreen} !== 'BookAService'? true: false}"/>
 				</VBox>
 			</CustomListItem>
 		</HBox>
