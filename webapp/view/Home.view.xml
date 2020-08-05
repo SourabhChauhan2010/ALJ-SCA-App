@@ -29,7 +29,7 @@ Comments:
 				<Image src="{oAppModel>src}" height="9rem" class="sapUiTinyMarginBottom sapUiContentPadding sapUiTinyMarginBeginEnd "/>
 			</HBox>
 		</ScrollContainer>
-		<HBox class="sapUiSmallMarginBeginEnd" alignItems="Center" justifyContent="SpaceBetween">
+		<HBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom" alignItems="Center" justifyContent="SpaceBetween">
 			<Text text="Recommended For You" class=" aljTitleClass"/>
 			<!--
 				<ToolbarSpacer/>
@@ -38,7 +38,7 @@ Comments:
 		</HBox>
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
 		<!-- Service Status Section - Start-->
-		<HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBeginEnd">
+		<HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom">
 			<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
 			<Link text="{i18n>ViewDetails} >" class="aljDetailLinkStyle"/>
 		</HBox>
@@ -46,7 +46,7 @@ Comments:
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatus" type="XML"/>
 		<!-- Service Status Section - End-->
 		<!-- Service Section - Start-->
-		<Label text="{i18n>ServiceStatus}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiTinyMarginBottom"/>
+		<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiTinyMarginBottom"/>
 		<HBox class="aljHomeServiceBoxStyle sapUiSmallMarginBeginEnd">
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
 				<Image src="image/BookService.png" height="3rem"/>

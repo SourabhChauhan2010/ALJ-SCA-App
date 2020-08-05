@@ -8,45 +8,46 @@
 				<Link text="Edit" class="sapUiSmallMarginTopBottom" press="editProfile"/>
 			</VBox>
 			<HBox class="UserInfoVBoxCSS">
-				<core:Icon size="1.5rem" src="sap-icon://attachment-photo" class=" sapUiSmallMarginTopBottom"/>
+				<Image src="image/FullName.png" class="sapUiSmallMarginTopBottom"/>
 				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom ">
 					<Label text="Name"/>
 					<Text text="Mohammed"/>
 				</VBox>
-				<core:Icon size="1rem" src="sap-icon://edit" class=" sapUiMediumMarginTopBottom"/>
+					<Image src="image/Edit.png" class="sapUiSmallMarginTopBottom"/>
+				<!--<core:Icon size="1rem" src="sap-icon://edit" class=" sapUiMediumMarginTopBottom"/>-->
 			</HBox>
 			<HBox class="UserInfoVBoxCSS">
-				<core:Icon size="1.5rem" src="sap-icon://call" class=" sapUiSmallMarginTopBottom"/>
+				<Image src="image/Mobile.png" class="sapUiSmallMarginTopBottom"/>
 				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom ">
 					<Label text="Mobile Number"/>
 					<Text text="982743789" id="idTextPhoneNumber"/>
 				
 				</VBox>
-				<core:Icon size="1rem" src="sap-icon://edit" class=" sapUiMediumMarginTopBottom"/>
+				<Image src="image/Edit.png" class="sapUiSmallMarginTopBottom"/>
 			</HBox>
 			<HBox class="UserInfoVBoxCSS">
-				<core:Icon size="1.5rem" src="sap-icon://email" class=" sapUiSmallMarginTopBottom"/>
+				<Image src="image/Email.png" class="sapUiSmallMarginTopBottom"/>
 				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom ">
 					<Label text="Email ID"/>
 					<Text text="test@alj.com"/>
 				</VBox>
-				<core:Icon size="1rem" src="sap-icon://edit" class=" sapUiMediumMarginTopBottom"/>
+				<Image src="image/Edit.png" class="sapUiSmallMarginTopBottom"/>
 			</HBox>
 			<HBox class="UserInfoVBoxCSS">
-				<core:Icon size="1.5rem" src="sap-icon://business-card" class=" sapUiSmallMarginTopBottom"/>
+				<Image src="image/NID.png" class="sapUiSmallMarginTopBottom"/>
 				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom ">
 					<Label text="National ID"/>
 					<Text text="7823987348"/>
 				</VBox>
-				<core:Icon size="1rem" src="sap-icon://edit" class=" sapUiMediumMarginTopBottom"/>
+				<Image src="image/Edit.png" class="sapUiSmallMarginTopBottom"/>
 			</HBox>
 			<HBox class="UserInfoVBoxCSS">
-				<core:Icon size="1.5rem" src="sap-icon://locked" class=" sapUiSmallMarginTopBottom"/>
+				<Image src="image/Password.png" class="sapUiSmallMarginTopBottom"/>
 				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom ">
 					<Label text="Password"/>
-					<Text text="7823987348"/>
+					<Input enabled="false" width="5rem" 	type="Password"  value="7823987348"/>
 				</VBox>
-				<core:Icon size="1rem" src="sap-icon://edit" class=" sapUiMediumMarginTopBottom"/>
+				<Image src="image/Edit.png" class="sapUiSmallMarginTopBottom"/>
 			</HBox>
 		</CustomListItem>
 	</List>
