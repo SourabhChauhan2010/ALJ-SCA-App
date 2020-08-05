@@ -20,6 +20,9 @@ sap.ui.define([
 			var sVIN = oAppModelData.enteredVIN;
 			if (!sVIN) {
 				this._showToastMessage("Enter valid VIN");
+				// this._createConfirmationMessage(this.getResourceText("ErrorFindingVIN"),"Yes","Cancel",true, function(oEvent){
+				// 	debugger;
+				// });
 				return;
 			}
 			var sUrl = "/SBA_book_a_service/alj/validate/vin";
@@ -33,6 +36,9 @@ sap.ui.define([
 				} else {
 					this._showToastMessage("Enter valid VIN");
 				}
+				// this._createConfirmationMessage(this.getResourceText("ErrorFindingVIN"),"Yes","Cancel",true, function(oEvent){
+				// 	debugger;
+				// });
 			}.bind(this), function (oData) {});
 		}
 

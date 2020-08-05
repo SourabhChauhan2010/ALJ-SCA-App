@@ -9,7 +9,7 @@
 					<Toolbar>
 						<VBox height="6rem" width="100%">
 							<HBox height="3rem" width="100%" justifyContent="Center" alignItems="Center" class="aljPageStyle">
-								<Image src="image/Logo.png" width="6.5rem" class="sapUiTinyMarginTop"/>
+								<Image src="image/Logo.png" width="6.5rem" class="sapUiTinyMarginTop" press="goToHome"/>
 							</HBox>
 							<HBox height="3rem" width="100%" justifyContent="SpaceBetween" alignItems="Center" visible="{= ${oAppModel>/currentScreen} === 'SplashScreen'? false: true}">
 								<VBox width="2.25rem" class="sapUiSmallMarginBegin">

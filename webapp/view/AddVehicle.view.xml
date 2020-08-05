@@ -9,7 +9,7 @@
 		<Label text="VIN number is mandatory for service records." class="sapUiSmallMarginBottom"/>
 		<Text text="Scan will auto fill the VIN number" class="aljScanPHStyle sapUiSmallMarginBottom"/>
 		<HBox class="aljScannerStyle sapUiSmallMarginBottom"/>
-		<Text text="VIN Number" class="aljHeadingTextStyle sapUiTinyMarginBottom"/>
+		<Label text="VIN Number" design="Bold" class=" sapUiTinyMarginBottom"/>
 		<Input value="{oAppModel>/enteredVIN}" class="aljVINInputStyle sapUiTinyMarginBottom"/>
 		<VBox width="100%" alignItems="Center" justifyContent="Center">
 			<Text text="The VIN number contains 17 characters, you can find it on your car registration or on front windscreen at the bottom left side"
