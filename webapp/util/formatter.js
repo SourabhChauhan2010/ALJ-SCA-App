@@ -22,25 +22,29 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 		if (this.getModel("device").getProperty("/system/desktop")) {
 			return false;
 		}
-		// var aScreensNoFooter = ["BookAService", "MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips", "ProductDetail", "AddNID", "EditProfile", "Notification"];
-		// if (aScreensNoFooter.find(item => item === currentPage)) {
-		// 	return false;
-		// }
+		var aScreensNoFooter = ["SplashScreen", "BookAService", "MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips",
+			"ProductDetail", "AddNID", "EditProfile", "Notification"
+		];
+		if (aScreensNoFooter.find(item => item === currentPage)) {
+			return false;
+		}
 		return true;
 	},
-	
+
 	showSubHeader: function (currentPage) {
 		if (!this.getModel("device").getProperty("/system/desktop")) {
 			return false;
 		}
-		// var aScreensNoFooter = ["BookAService", "MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips", "ProductDetail", "AddNID", "EditProfile", "Notification"];
-		// if (aScreensNoFooter.find(item => item === currentPage)) {
-		// 	return false;
-		// }
+		var aScreensNoFooter = ["SplashScreen", "BookAService", "MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips",
+			"ProductDetail", "AddNID", "EditProfile", "Notification"
+		];
+		if (aScreensNoFooter.find(item => item === currentPage)) {
+			return false;
+		}
 		return true;
 	},
-	
-	setStatusImage: function(status, currServiceStatus) {
+
+	setStatusImage: function (status, currServiceStatus) {
 		if (status) {
 			this.removeStyleClass("aljSSIGreenStyle");
 			this.addStyleClass("aljSSIRedStyle");
@@ -51,8 +55,8 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 		}
 		return true;
 	},
-	
-	setStatusCarPosition: function(currServiceStatus) {
+
+	setStatusCarPosition: function (currServiceStatus) {
 		if (currServiceStatus) {
 			// debugger;
 		}

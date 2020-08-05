@@ -1,4 +1,26 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
 	controllerName="com.sap.alj.sca.ALJ_SCA.controller.SplashScreen" xmlns:html="http://www.w3.org/1999/xhtml">
-	
+	<VBox class="aljSplashScreenStyle" renderType="Bare">
+		<VBox class="aljSSWhiteBoxStyle"></VBox>
+		<Carousel class="aljSSCarlStyle">
+			<VBox>
+				<Text text="{i18n>Splash1Text}"/>
+				<Image width="100%" src="image/Splash1.png"/>
+			</VBox>
+			<VBox>
+				<Text text="{i18n>Splash2Text}"/>
+				<Image width="100%" src="image/Splash2.png"/>
+			</VBox>
+			<VBox>
+				<Text text="{i18n>Splash3Text}"/>
+				<Image width="100%" src="image/Splash3.png"/>
+			</VBox>
+		</Carousel>
+	</VBox>
+	<HBox justifyContent="Center">
+		<Button text="SKIP" press="onSkipPress" class="aljSSSkipBtnStyle"/>
+	</HBox>
+	<HBox justifyContent="Center" class="aljSSFooterStyle" renderType="Bare">
+		<Text text="{i18n>TakeOnTom}"/>
+	</HBox>
 </mvc:View>

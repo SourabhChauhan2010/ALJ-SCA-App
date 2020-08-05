@@ -13,6 +13,10 @@ sap.ui.define([
 		onInit: function () {
 
 		},
+		
+		onSkipPress: function() {
+			this.getRouter().navTo("Home");
+		}
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

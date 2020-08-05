@@ -14,7 +14,7 @@ Comments:
 				<Text text="Mohammed" class="classRedFont aljHomeTextCSS1"/>
 				<Text text="2019 Land Cruiser" class="aljHomeTextCSS"/>
 				<Text text="30,000 KM" class="aljHomeTextCSS sapUiTinyMarginBottom"/>
-				<Button text="Update KM" class="sapUiTinyMarginBottom classBckGrndClr" type="Emphasized" press="onPressupdateKM"/>
+				<Button text="Update KM" class="sapUiTinyMarginBottom aljRedBtnStyle"/>
 			</VBox>
 			<!--	<ToolbarSpacer/>
 		<FlexBox  width="150px" height="250px" justifyContent="End"/>-->

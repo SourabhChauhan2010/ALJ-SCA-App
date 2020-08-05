@@ -9,9 +9,9 @@
 					<Toolbar>
 						<VBox height="6rem" width="100%">
 							<HBox height="3rem" width="100%" justifyContent="Center" alignItems="Center" class="aljPageStyle">
-								<Image src="image/Logo.png" width="6.5rem" class="sapUiTinyMarginTop"/>
+								<Image src="image/Logo.png" width="6.5rem" class="sapUiTinyMarginTop" press="goToHome"/>
 							</HBox>
-							<HBox height="3rem" width="100%" justifyContent="SpaceBetween" alignItems="Center">
+							<HBox height="3rem" width="100%" justifyContent="SpaceBetween" alignItems="Center" visible="{= ${oAppModel>/currentScreen} === 'SplashScreen'? false: true}">
 								<VBox width="2.25rem" class="sapUiSmallMarginBegin">
 									<Image src="image/back.svg" visible="{= ${oAppModel>/currentScreen} === 'BookAService'? true: false}" width="1.25rem" press="onNavBack"/>
 									<Image src="image/user.png" height="30px" width="30px" press="onOpenProfile"/><!--visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}"-->

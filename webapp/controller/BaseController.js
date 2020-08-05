@@ -6,8 +6,11 @@ sap.ui.define([
 	"sap/m/BusyDialog",
 	"sap/ui/core/routing/History",
 	"sap/ui/model/Filter",
-	"sap/m/MessageToast"
-], function (Controller, DateFormat, JSONModel, MessageBox, BusyDialog, History, Filter, MessageToast) {
+	"sap/m/MessageToast",
+	"sap/m/Dialog",
+	"sap/m/Button",
+	"sap/m/Text"
+], function (Controller, DateFormat, JSONModel, MessageBox, BusyDialog, History, Filter, MessageToast, Dialog, Button, Text) {
 	"use strict";
 
 	return Controller.extend("com.sap.alj.sca.ALJ_SCA.controller.BaseController", {
@@ -116,6 +119,54 @@ sap.ui.define([
 				},
 				type: sMethod
 			});
+		},
+		
+		/**
+		 * Method to create a dialog of different states.
+		 * @public 
+		 * @params 
+		 * confirmTitle  {string}
+		 * confirmMsg  -{string}
+		 * sState -  state of the dialog --Error,Success..etc {string}
+		 * confirmYesBtn -  {string}
+		 * confirmNoBtn - {string}
+		 * actionButtonVisible  decides whethr the begin button should be visible or not {boolian}
+		 * closehandler - callback for begin button press -{function}
+		 * @returns {object} the response data receieved through callback
+		 */
+		_createConfirmationMessage: function(confirmMsg, confirmYesBtn, confirmNoBtn, actionButtonVisible, closehandler) {
+			this.closehandler = closehandler;
+			this.oConfirmDialog = new Dialog({
+				title: "",
+				type: 'Message',
+				state: "None",
+				showHeader: false,
+				content: new Text({
+					text: confirmMsg,
+					textAlign: "Center"
+				}),
+				beginButton: new Button({
+					text: confirmYesBtn,
+					visible: actionButtonVisible,
+					press: function() {
+						if (closehandler !== null) {
+							this.closehandler();
+						}
+						this.oConfirmDialog.close();
+					}.bind(this)
+				}),
+				endButton: new Button({
+					text: confirmNoBtn,
+					press: function() {
+						this.oConfirmDialog.close();
+					}.bind(this)
+				}),
+				afterClose: function() {
+					this.oConfirmDialog.destroy();
+					this.oConfirmDialog = undefined;
+				}.bind(this)
+			}).addStyleClass("aljMessageDialogStyle");
+			this.oConfirmDialog.open();
 		},
 
 		onVehicleItemPress: function (oEvent) {
