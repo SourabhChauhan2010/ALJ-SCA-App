@@ -18,15 +18,15 @@
 		</HBox>
 		<HBox class="aljEPInputStyle">
 			<Image src="image/NID.png"/>
-			<Input placeholder="{i18n>NID}"/>
+			<Input placeholder="{i18n>NID}" 	maxLength="10" change="validateNID"/>
 		</HBox>
 		<HBox class="aljEPInputStyle">
 			<Image src="image/Mobile.png"/>
-			<Input placeholder="{i18n>Mobile}"/>
+			<Input placeholder="{i18n>Mobile}"  maxLength="10"  change="onConfirmEditProfile"/>
 		</HBox>
 		<HBox class="aljEPInputStyle">
 			<Image src="image/Email.png"/>
-			<Input placeholder="{i18n>Email}"/>
+			<Input placeholder="{i18n>Email}"  type="Email" change="validEmailValidation" />
 		</HBox>
 		<HBox class="aljEPInputStyle">
 			<Image src="image/Password.png"/>

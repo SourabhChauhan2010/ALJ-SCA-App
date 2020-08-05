@@ -25,7 +25,7 @@ sap.ui.define([
 			// this.setSelectedLanguage(lang === "Arabic" ? "AR" : "EN");
 		},
 
-		setSelectedLanguage: function (slanguage, setSelection) {
+		setSelectedLanguage: function (slanguage, setSelection) {/*
 			this.getModel("oAppModel").setProperty("/language", slanguage);
 			sap.ui.getCore().getConfiguration().setLanguage(slanguage);
 			if (setSelection) {
@@ -37,9 +37,9 @@ sap.ui.define([
 					}
 				}
 			}
-		},
+		*/},
 		
-		onPressEdit: function() {
+		editProfile: function() {
 			this.getRouter().navTo("EditProfile");
 		}
 

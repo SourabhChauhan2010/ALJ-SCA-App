@@ -20,6 +20,11 @@ sap.ui.define([
 				}
 			}.bind(this));
 		},
+		onMakeDefaultCar:function(evt){
+		evt.getSource().setText("Primary Car");
+		evt.getSource().removeStyleClass("aljRedBtnStyleRev");
+		evt.getSource().addStyleClass("aljRedBtnStyle");
+		},
 
 		onAddVehiclePress: function (oEvent) {
 			this.getRouter().navTo("AddVehicle");
