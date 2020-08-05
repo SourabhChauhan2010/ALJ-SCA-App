@@ -13,6 +13,15 @@ sap.ui.define([
 		onInit: function () {
 
 		},
+		validEmailValidation:function(evt){
+			var value=evt.getSource();
+			var rexMail = /^\w+[\w-+\.]*\@\w+([-\.]\w+)*\.[a-zA-Z]{2,}$/;
+				if (!value.getValue().match(rexMail)) {
+				sap.m.MessageToast.show("is not a valid e-mail address");
+				value.setValue("");
+				}
+			
+		},
 
 		onConfirmEditProfile: function (oEvent) {
 			var oAppModel = this.getModel("oAppModel");
