@@ -13,6 +13,7 @@ sap.ui.define([
 		onInit: function () {
 
 		},
+		
 
 		onPressAddVehicle: function () {
 			var oAppModelData = this.getModel("oAppModel").getData();

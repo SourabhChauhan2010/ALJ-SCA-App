@@ -130,6 +130,14 @@
     min-width: 6rem;
 }
 
+.aljRedBtnStyleRev .sapMBtnInner,
+.aljRedBtnStyleRev.sapMBtn:hover>.sapMBtnHoverable {
+    color: #ba283a;
+    background: #fff;
+    min-width: 6rem;
+    border: 1px solid #d8d8d8
+}
+
 .aljRedColorStyle {
     color: #ba283a;
 }
