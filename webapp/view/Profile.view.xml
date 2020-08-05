@@ -1,7 +1,6 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.Profile"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form">
-
-				<List headerText="Profile Information" items="" class="UserInfoHeaderAlign">
+	<List headerText="Profile Information" items="" class="UserInfoHeaderAlign">
 		<CustomListItem >
 			<VBox alignItems="Center">
 				<Avatar displaySize="M" src="sap-icon://Customer" class="sapUiSmallMarginTopBottom"/>
@@ -13,7 +12,7 @@
 					<Label text="Name"/>
 					<Text text="Mohammed"/>
 				</VBox>
-					<Image src="image/Edit.png" class="sapUiSmallMarginTopBottom"/>
+				<Image src="image/Edit.png" class="sapUiSmallMarginTopBottom"/>
 				<!--<core:Icon size="1rem" src="sap-icon://edit" class=" sapUiMediumMarginTopBottom"/>-->
 			</HBox>
 			<HBox class="UserInfoVBoxCSS">
@@ -21,7 +20,6 @@
 				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom ">
 					<Label text="Mobile Number"/>
 					<Text text="982743789" id="idTextPhoneNumber"/>
-				
 				</VBox>
 				<Image src="image/Edit.png" class="sapUiSmallMarginTopBottom"/>
 			</HBox>
@@ -45,7 +43,7 @@
 				<Image src="image/Password.png" class="sapUiSmallMarginTopBottom"/>
 				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom ">
 					<Label text="Password"/>
-					<Input enabled="false" width="5rem" 	type="Password"  value="7823987348"/>
+					<Input enabled="false" width="5rem" type="Password" value="7823987348"/>
 				</VBox>
 				<Image src="image/Edit.png" class="sapUiSmallMarginTopBottom"/>
 			</HBox>
@@ -54,8 +52,7 @@
 	<FlexBox alignItems="Center" justifyContent="Center">
 		<Button text="Next" class="aljRedBtnStyle"/>
 	</FlexBox>
-			
-			<!--<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="4"
+	<!--<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="4"
 				binding="{oAppModel>/UserInformation/0}">
 				<f:content>
 					<Label text="{i18n>BAS_SF_Name}"/>
@@ -68,15 +65,14 @@
 					<Text text="{oAppModel>idNumber}"/>
 				</f:content>
 			</f:SimpleForm>-->
-	
 	<!--<VBox class="sapUiSmallMarginTop">-->
 	<!--	<Label text="{i18n>SelectLanguage}" class="aljTitleClass sapUiSmallMarginBegin"/>-->
-		<!--<HBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">-->
-		<!--	<ToggleButton text="{i18n>Arabic}" pressed="{= ${oAppModel>/language} === 'AR'}" class="aljTBStyle sapUiTinyMarginEnd"-->
-		<!--		press="onChangeLanguage"/>-->
-		<!--	<ToggleButton text="{i18n>English}" pressed="{= ${oAppModel>/language} === 'EN'}" class="aljTBStyle sapUiTinyMarginEnd"-->
-		<!--		press="onChangeLanguage"/>-->
-		<!--</HBox>-->
+	<!--<HBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">-->
+	<!--	<ToggleButton text="{i18n>Arabic}" pressed="{= ${oAppModel>/language} === 'AR'}" class="aljTBStyle sapUiTinyMarginEnd"-->
+	<!--		press="onChangeLanguage"/>-->
+	<!--	<ToggleButton text="{i18n>English}" pressed="{= ${oAppModel>/language} === 'EN'}" class="aljTBStyle sapUiTinyMarginEnd"-->
+	<!--		press="onChangeLanguage"/>-->
+	<!--</HBox>-->
 	<!--	<List mode="SingleSelect" class="aljLangListStyle" selectionChange="onChangeLanguage" id="idLanguageList">
 			<items>
 				<StandardListItem title="{i18n>Arabic}"/>

@@ -21,7 +21,7 @@
 					<Text text="{i18n>LastServiceDate} {oAppModel>lastServiceDate}" />
 				</VBox>
 				<VBox class="sapUiSmallMarginTop sapUiSmallMarginBegin">
-					<core:Icon src="sap-icon://edit" width="2rem"/>
+					<Image src="image/Edit.png" />
 					<Button text="Make" class="aljRedBtnStyle"/>
 				</VBox>
 			</HBox>
