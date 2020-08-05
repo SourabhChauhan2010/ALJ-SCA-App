@@ -107,8 +107,15 @@
 			},
 			"routes": [
 				{
-					"name": "Home",
+					"name": "SplashScreen",
 					"pattern": "",
+					"target": [
+						"SplashScreen"
+					]
+				},
+				{
+					"name": "Home",
+					"pattern": "Home",
 					"target": [
 						"Home"
 					]
