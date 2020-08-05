@@ -2,10 +2,12 @@
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form">
 	<VBox class="aljBoxContentStyle">
 		<VBox class="sapUiSmallMarginTop">
-	
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>
-		</VBox>	
 		</VBox>
-		
+		<VBox alignItems="Center" justifyContent="Center">
+			<Button text="Add Another" class="aljRedBtnStyleRev" width="18rem" height="3.5rem" press="onAddVehiclePress"/>
+			<Button text="Next" class="aljRedBtnStyle" width="18rem" height="3.5rem"/>
+		</VBox>
+	</VBox>
 	<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.DesktopFooter" type="XML"/>
 </mvc:View>

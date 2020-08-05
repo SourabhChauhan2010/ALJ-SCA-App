@@ -1,4 +1,12 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	
+			<Bar class="sapUiSmallMarginBottom vehicleListBarCSS">
+				<contentMiddle>
+					<Image src="image/vehicleInfo.png" />
+						<Text text="Vehicle Information" class="aljHomeTextCSS1" />
+				</contentMiddle>
+			</Bar>
+	
 	<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
 	<!--	<HBox items="{oAppModel>/vehicles}" class="sapUiSmallMarginBeginEnd">
 			<CustomListItem class="aljVehicleListHorStyle" visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}"
@@ -11,7 +19,8 @@
 				</VBox>
 			</CustomListItem>
 		</HBox>-->
-			<List headerText="Vehicle Information" items="{oAppModel>/vehicles}" class="VehicleListItemCSS UserInfoHeaderAlign" press="onSelectableItemPress">
+		
+			<List src="image/BookService.png"  items="{oAppModel>/vehicles}" class="VehicleListItemCSS UserInfoHeaderAlign" press="onSelectableItemPress">
 		<CustomListItem>
 			<HBox class="VehicleListVBCSS sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom" >
 				<VBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginTopBottom vehiclListAlignCSS" >
