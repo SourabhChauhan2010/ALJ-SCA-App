@@ -11,7 +11,7 @@
 				</VBox>
 			</CustomListItem>
 		</HBox>-->
-			<List headerText="Vehicle Information" items="{oAppModel>/vehicles}" class="VehicleListItemCSS UserInfoHeaderAlign" press="onPressListItem">
+			<List headerText="Vehicle Information" items="{oAppModel>/vehicles}" class="VehicleListItemCSS UserInfoHeaderAlign" press="onSelectableItemPress">
 		<CustomListItem>
 			<HBox class="VehicleListVBCSS sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom" >
 				<VBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginTopBottom vehiclListAlignCSS" >

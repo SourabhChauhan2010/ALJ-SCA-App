@@ -20,6 +20,9 @@ sap.ui.define([
 				}
 			}.bind(this));
 		},
+		onSelectableItemPress:function(evt){
+			evt;
+		}
 		onMakeDefaultCar:function(evt){
 		evt.getSource().setText("Primary Car");
 		evt.getSource().removeStyleClass("aljRedBtnStyleRev");
