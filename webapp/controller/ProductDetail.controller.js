@@ -11,7 +11,11 @@ sap.ui.define([
 		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.Profile
 		 */
 		onInit: function () {
-
+			this.getRouter().attachRoutePatternMatched(function (oEvent) {
+				if (oEvent.getParameter("name") === "ProductDetail") {
+					//
+				}
+			}.bind(this));
 		}
 
 	});

@@ -78,7 +78,7 @@ sap.ui.define([
 			oAppModel.loadData("model/data.json", null, false);
 			this.oAppModel = oAppModel;
 		},
-		
+
 		/** 
 		 * 
 		 * @constructor 
@@ -101,14 +101,14 @@ sap.ui.define([
 		 * rErrror - Error callback {function}
 		 * @returns {object} the response data receieved through callback
 		 */
-		doAjax: function (sUrl, sMethod, oData, rSuccess, rError) {
+		doAjax: function (sUrl, sMethod, oData, rSuccess, rError, bSync) {
 			if (oData) {
 				oData = JSON.stringify(oData);
 			}
 			$.ajax({
 				url: sUrl,
 				data: oData,
-				async: true,
+				async: !bSync,
 				dataType: "json",
 				contentType: "application/json; charset=utf-8",
 				error: function (err) {
@@ -120,7 +120,7 @@ sap.ui.define([
 				type: sMethod
 			});
 		},
-		
+
 		/**
 		 * Method to create a dialog of different states.
 		 * @public 
@@ -134,34 +134,40 @@ sap.ui.define([
 		 * closehandler - callback for begin button press -{function}
 		 * @returns {object} the response data receieved through callback
 		 */
-		_createConfirmationMessage: function(confirmMsg, confirmYesBtn, confirmNoBtn, actionButtonVisible, closehandler) {
+		_createConfirmationMessage: function (confirmMsg, confirmYesBtn, confirmNoBtn, actionButtonVisible, closehandler) {
 			this.closehandler = closehandler;
 			this.oConfirmDialog = new Dialog({
 				title: "",
 				type: 'Message',
 				state: "None",
 				showHeader: false,
-				content: new Text({
-					text: confirmMsg,
-					textAlign: "Center"
-				}),
-				beginButton: new Button({
-					text: confirmYesBtn,
-					visible: actionButtonVisible,
-					press: function() {
-						if (closehandler !== null) {
-							this.closehandler();
-						}
-						this.oConfirmDialog.close();
-					}.bind(this)
-				}),
-				endButton: new Button({
-					text: confirmNoBtn,
-					press: function() {
-						this.oConfirmDialog.close();
-					}.bind(this)
-				}),
-				afterClose: function() {
+				contentWidth: "20rem",
+				content: new sap.m.VBox({
+					alignItems: "Center",
+					items: [new Text({
+						text: confirmMsg,
+						textAlign: "Center"
+					}).addStyleClass("sapUiSmallMarginBottom"), new sap.m.HBox({
+						width: "100%",
+						justifyContent: "Center",
+						items: [new Button({
+							text: confirmNoBtn,
+							press: function () {
+								this.oConfirmDialog.close();
+							}.bind(this)
+						}).addStyleClass("aljRedBtnStyleRev sapUiTinyMarginEnd"), new Button({
+							text: confirmYesBtn,
+							visible: actionButtonVisible,
+							press: function () {
+								if (closehandler !== null) {
+									this.closehandler();
+								}
+								this.oConfirmDialog.close();
+							}.bind(this)
+						}).addStyleClass("aljRedBtnStyle")]
+					})]
+				}).addStyleClass("sapUiTinyMargin"),
+				afterClose: function () {
 					this.oConfirmDialog.destroy();
 					this.oConfirmDialog = undefined;
 				}.bind(this)
@@ -205,7 +211,7 @@ sap.ui.define([
 				this.onNavBack();
 			}
 		},
-		
+
 		getUserInformation: function () {
 			var oAppModelData = this.getModel("oAppModel");
 			var sUrl = "/SBA_book_a_service/alj/profile/userId";
@@ -216,11 +222,11 @@ sap.ui.define([
 			};
 			this.doAjax(sUrl, "POST", oPayload, function (oEvent) {
 				if (oEvent) {
-					var aData = oAppModelData.getProperty("/UserInformation");
-					aData[0] = oEvent;
-					oAppModelData.setProperty("/UserInformation", aData);
+					// var aData = oAppModelData.getProperty("/UserInformation");
+					// aData[0] = oEvent;
+					// oAppModelData.setProperty("/UserInformation", aData);
 				} else {
-					oAppModelData.setProperty("/UserInformation", {});
+					// oAppModelData.setProperty("/UserInformation", {});
 				}
 			}.bind(this), function (oEvent) {});
 		},
@@ -229,7 +235,7 @@ sap.ui.define([
 			var oAppModel = this.getModel("oAppModel");
 			var sUrl = "/SBA_book_a_service/alj/vehicles";
 			var oPayload = {
-				"ownerId": "4332"//ownerId
+				"ownerId": "4332" //ownerId
 			};
 			this.doAjax(sUrl, "POST", oPayload, function (aData) {
 				//Success block

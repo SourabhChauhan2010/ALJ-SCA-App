@@ -26,7 +26,8 @@ Comments:
 		<Text text="Service Offers" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiTinyMarginBottom"/>
 		<ScrollContainer horizontal="true" vertical="false">
 			<HBox items="{oAppModel>/ServiceOffer}"  justifyContent="SpaceBetween" class="sapUiSmallMarginBeginEnd sapUiContentPadding scrollCnt">
-				<Image src="{oAppModel>src}" height="9rem" class="sapUiTinyMarginBottom sapUiContentPadding sapUiTinyMarginBeginEnd "/>
+				<Image src="{oAppModel>src}" height="9rem" class="sapUiTinyMarginBottom sapUiContentPadding sapUiTinyMarginBeginEnd "
+					press="onServiceOfferPress"/>
 			</HBox>
 		</ScrollContainer>
 		<HBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom" alignItems="Center" justifyContent="SpaceBetween">

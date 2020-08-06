@@ -40,6 +40,8 @@ sap.ui.define([
 		*/},
 		
 		editProfile: function() {
+			var oAppModel = this.getModel("oAppModel");
+			oAppModel.setProperty("/oldProfileInfo", JSON.parse(JSON.stringify(oAppModel.getProperty("/UserInformation"))));
 			this.getRouter().navTo("EditProfile");
 		}
 

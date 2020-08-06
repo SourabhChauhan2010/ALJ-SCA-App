@@ -28,6 +28,17 @@ sap.ui.define([
 
 		onClickServiceStatus: function () {
 			this.oRouter.navTo("ServiceStatus");
+		},
+		
+		onServiceOfferPress: function(oEvent){
+			var currOffer = oEvent.getSource().getBindingContext("oAppModel").getObject();
+			this._showToastMessage("Service Offer Pressed");
+		},
+		
+		onServiceItemPress: function(oEvent){
+			var currService = oEvent.getSource().getBindingContext("oAppModel").getObject();
+			this.getModel("oAppModel").setProperty("/oProductDetails", currService);
+			this.oRouter.navTo("ProductDetail");
 		}
 
 	});

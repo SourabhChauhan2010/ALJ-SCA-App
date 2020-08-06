@@ -11,36 +11,124 @@ sap.ui.define([
 		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.EditProfile
 		 */
 		onInit: function () {
-
-		},
-		validEmailValidation:function(evt){
-			var value=evt.getSource();
-			var rexMail = /^\w+[\w-+\.]*\@\w+([-\.]\w+)*\.[a-zA-Z]{2,}$/;
-				if (!value.getValue().match(rexMail)) {
-				sap.m.MessageToast.show("is not a valid e-mail address");
-				value.setValue("");
+			this.getRouter().attachRoutePatternMatched(function (oEvent) {
+				if (oEvent.getParameter("name") === "EditProfile") {
+					this.getModel("oAppModel").setProperty("/editProfileInvalidFields", {});
 				}
-			
+			}.bind(this));
 		},
 
-		onConfirmEditProfile: function (oEvent) {
+		validateEmail: function (evt) {
 			var oAppModel = this.getModel("oAppModel");
+			var value = oAppModel.getProperty("/UserInformation/email");
+			var rexMail = /^\w+[\w-+\.]*\@\w+([-\.]\w+)*\.[a-zA-Z]{2,}$/;
+			if (!value.match(rexMail)) {
+				// sap.m.MessageToast.show("is not a valid e-mail address");
+				oAppModel.setProperty("/editProfileInvalidFields/email", true);
+				// value.setValue("");
+			} else {
+				oAppModel.setProperty("/editProfileInvalidFields/email", false);
+			}
+		},
+
+		validateMobile: function (oEvent) {
+			var oAppModel = this.getModel("oAppModel");
+			var mobile = oAppModel.getProperty("/UserInformation/mobile2");
+			if (!mobile) {
+				return;
+			}
 			var sUrl = "/SBA_book_a_service/alj/validate/mobile";
 			var oPayload = {
-				"mobile2": oAppModel.getProperty("/UserInformation/0/mobile2")
+				"mobile2": mobile
 			};
 			this.doAjax(sUrl, "POST", oPayload, function (oData) {
 				if (oData) {
-					this._showToastMessage("Mobile Number verified successfully");
-					this.getRouter().navTo("Profile");
+					// this._showToastMessage("Mobile Number verified successfully");
+					oAppModel.setProperty("/editProfileInvalidFields/mobile", false);
 				} else {
-					this._showToastMessage("Enter valid Mobile Number");
+					// this._showToastMessage("Enter valid Mobile Number");
+					oAppModel.setProperty("/editProfileInvalidFields/mobile", true);
 				}
 				this.getUserInformation();
 			}.bind(this), function (oData) {
 
-			});
+			}, true);
 		},
+
+		validateNID: function () {
+			var oAppModel = this.getModel("oAppModel");
+			var sNID = oAppModel.getProperty("/UserInformation/NID");
+			if (!sNID) {
+				// this._showToastMessage("Enter valid NID");
+				return;
+			}
+			var sUrl = "/SBA_book_a_service/alj/validate/nid";
+			var oPayload = {
+				"natio": sNID
+			};
+			this.doAjax(sUrl, "POST", oPayload, function (oData) {
+				//Success block
+				if (oData) {
+					// this._showToastMessage("National ID verified successfully");
+					oAppModel.setProperty("/editProfileInvalidFields/NID", false);
+				} else {
+					// this._showToastMessage("Enter valid NID");
+					oAppModel.setProperty("/editProfileInvalidFields/NID", true);
+				}
+			}.bind(this), function (oData) {}, true);
+		},
+
+		onSavePress: function () {
+			var oAppModel = this.getModel("oAppModel");
+			var editProfileInvalidFields = oAppModel.getProperty("/editProfileInvalidFields");
+			var UserInformation = oAppModel.getProperty("/UserInformation");
+			var errorMsg = "",
+				emptyFields = [];
+			this.validateEmail();
+			this.validateMobile();
+			this.validateNID();
+			if (JSON.stringify(oAppModel.getData().UserInformation) !== JSON.stringify(oAppModel.getData().oldProfileInfo)) {
+				if (!UserInformation.nameFirst) {
+					emptyFields.push("First Name");
+				}
+				if (!UserInformation.nameLast) {
+					emptyFields.push("Last Name");
+				}
+				if (!UserInformation.NID) {
+					emptyFields.push("National ID");
+				} else if (editProfileInvalidFields.NID) {
+					errorMsg += "\nNational ID could not be found in the database.";
+				}
+				if (!UserInformation.email) {
+					emptyFields.push("Email ID");
+				} else if (editProfileInvalidFields.email) {
+					errorMsg += "\nEmail ID is not valid.";
+				}
+				if (!UserInformation.mobile2) {
+					emptyFields.push("Mobile Number");
+				} else if (editProfileInvalidFields.mobile) {
+					errorMsg += "\nMobile Number could not be found in the database.";
+				}
+				// if (UserInformation.EnterPassword != UserInformation.ReenterPassword) {
+				// 	errorMsg += "\nPasswords should match";
+				// }
+			}
+			if (!errorMsg && emptyFields.length === 0) {
+				oAppModel.setProperty("/editProfileInvalidFields", {});
+				oAppModel.setProperty("/oldProfileInfo", JSON.parse(JSON.stringify(oAppModel.getProperty("/UserInformation"))));
+				this._createConfirmationMessage(this.getResourceText("SuccessEditProfileSave"), "OK", "Close", true, function (oEvent) {
+					this.getRouter().navTo("Profile");
+				}.bind(this));
+			} else {
+				if (emptyFields.length) {
+					errorMsg = "The following fields cannot be empty.\n" + emptyFields.join(", ") + errorMsg;
+				}
+				this._createConfirmationMessage(errorMsg, "", "OK", false, function (oEvent) {
+					// this.getRouter().navTo("Profile");
+				}.bind(this));
+			}
+
+		}
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

@@ -22,9 +22,7 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 		if (this.getModel("device").getProperty("/system/desktop")) {
 			return false;
 		}
-		var aScreensNoFooter = ["SplashScreen", "BookAService", "MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips",
-			"ProductDetail", "AddNID", "EditProfile", "Notification"
-		];
+		var aScreensNoFooter = ["SplashScreen"];
 		if (aScreensNoFooter.find(item => item === currentPage)) {
 			return false;
 		}
@@ -35,9 +33,7 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 		if (!this.getModel("device").getProperty("/system/desktop")) {
 			return false;
 		}
-		var aScreensNoFooter = ["SplashScreen", "BookAService", "MyServices", "AddVehicle", "Profile", "ServiceStatus", "SafetyTips",
-			"ProductDetail", "AddNID", "EditProfile", "Notification"
-		];
+		var aScreensNoFooter = ["SplashScreen"];
 		if (aScreensNoFooter.find(item => item === currentPage)) {
 			return false;
 		}

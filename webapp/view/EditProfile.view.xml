@@ -4,38 +4,38 @@
 		<!--<Text text="{i18n>SignUpLabel}" class="aljSignUpLabelStyle"/>-->
 		<HBox class="aljAddProfPicStyle"/>
 		<Text text="{i18n>AddProfilePic}" class="sapUiTinyMarginBottom"/>
-		<HBox class="aljEPInputStyle">
+		<HBox class="aljEPInputStyle" renderType="Bare">
 			<Image src="image/FullName.png"/>
-			<Input placeholder="{i18n>FirstName}"/>
+			<Input width="100%" placeholder="{i18n>FirstName}" value="{oAppModel>/UserInformation/nameFirst}"/>
 		</HBox>
-		<HBox class="aljEPInputStyle">
+		<HBox class="aljEPInputStyle" renderType="Bare">
 			<Image src="image/FullName.png"/>
-			<Input placeholder="{i18n>MiddleName}"/>
+			<Input width="100%" placeholder="{i18n>MiddleName}" value="{oAppModel>/UserInformation/nameMiddle}"/>
 		</HBox>
-		<HBox class="aljEPInputStyle">
+		<HBox class="aljEPInputStyle" renderType="Bare">
 			<Image src="image/FullName.png"/>
-			<Input placeholder="{i18n>LastName}"/>
+			<Input width="100%" placeholder="{i18n>LastName}" value="{oAppModel>/UserInformation/nameLast}"/>
 		</HBox>
-		<HBox class="aljEPInputStyle">
+		<HBox class="aljEPInputStyle" renderType="Bare">
 			<Image src="image/NID.png"/>
-			<Input placeholder="{i18n>NID}" 	maxLength="10" change="validateNID"/>
+			<Input width="100%" placeholder="{i18n>NID}" maxLength="10" value="{oAppModel>/UserInformation/NID}"/>
 		</HBox>
-		<HBox class="aljEPInputStyle">
+		<HBox class="aljEPInputStyle" renderType="Bare">
 			<Image src="image/Mobile.png"/>
-			<Input placeholder="{i18n>Mobile}"  maxLength="10"  change="onConfirmEditProfile"/>
+			<Input width="100%" placeholder="{i18n>Mobile}" maxLength="10" value="{oAppModel>/UserInformation/mobile2}"/>
 		</HBox>
-		<HBox class="aljEPInputStyle">
+		<HBox class="aljEPInputStyle" renderType="Bare">
 			<Image src="image/Email.png"/>
-			<Input placeholder="{i18n>Email}"  type="Email" change="validEmailValidation" />
+			<Input width="100%" placeholder="{i18n>Email}" type="Email" value="{oAppModel>/UserInformation/email}"/>
 		</HBox>
-		<HBox class="aljEPInputStyle">
-			<Image src="image/Password.png"/>
-			<Input placeholder="{i18n>Password}"/>
-		</HBox>
-		<HBox class="aljEPInputStyle">
-			<Image src="image/Password.png"/>
-			<Input placeholder="{i18n>RetypePassword}"/>
-		</HBox>
-		<Button text="{i18n>Update}" press="" class="aljRedBtnStyle sapUiTinyMarginTop"/>
+		<!--<HBox class="aljEPInputStyle" renderType="Bare">-->
+		<!--	<Image src="image/Password.png"/>-->
+		<!--	<Input width="100%" placeholder="{i18n>Password}" value="{oAppModel>/UserInformation/EnterPassword}"/>-->
+		<!--</HBox>-->
+		<!--<HBox class="aljEPInputStyle" renderType="Bare">-->
+		<!--	<Image src="image/Password.png"/>-->
+		<!--	<Input width="100%" placeholder="{i18n>RetypePassword}" value="{oAppModel>/UserInformation/ReenterPassword}"/>-->
+		<!--</HBox>-->
+		<Button text="{i18n>Save}" press="onSavePress" class="aljRedBtnStyle sapUiTinyMarginTop"/>
 	</VBox>
 </mvc:View>

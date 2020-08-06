@@ -13,16 +13,12 @@ sap.ui.define([
 		onInit: function () {
 
 		},
-		
 
 		onPressAddVehicle: function () {
 			var oAppModelData = this.getModel("oAppModel").getData();
 			var sVIN = oAppModelData.enteredVIN;
 			if (!sVIN) {
-				this._showToastMessage("Enter valid VIN");
-				// this._createConfirmationMessage(this.getResourceText("ErrorFindingVIN"),"Yes","Cancel",true, function(oEvent){
-				// 	debugger;
-				// });
+				this._createConfirmationMessage(this.getResourceText("ErrorEnterVIN"), "", "OK", false, function (oEvent) {});
 				return;
 			}
 			var sUrl = "/SBA_book_a_service/alj/validate/vin";
@@ -34,11 +30,11 @@ sap.ui.define([
 				if (oData) {
 					this._showToastMessage("VIN verified successfully");
 				} else {
-					this._showToastMessage("Enter valid VIN");
+					this._createConfirmationMessage(this.getResourceText("ErrorFindingVIN"), "Yes", "Cancel", true, function (oEvent) {
+						//What to do if yes?
+					});
 				}
-				// this._createConfirmationMessage(this.getResourceText("ErrorFindingVIN"),"Yes","Cancel",true, function(oEvent){
-				// 	debugger;
-				// });
+
 			}.bind(this), function (oData) {});
 		}
 
