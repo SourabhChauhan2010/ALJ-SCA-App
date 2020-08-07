@@ -43,7 +43,8 @@
 		"customerId": "NID12345678",
 		"plateNo": "NY99",
 		"vehicleType": "Own",
-		"warranty": "06/02/2020 to 06/02/2021"
+		"warranty": "06/02/2020 to 06/02/2021",
+		"isDefault": true
 	}, {
 		"model": "Camry",
 		"year": "2020",
@@ -53,7 +54,8 @@
 		"customerId": "NID12345678",
 		"plateNo": "TN99",
 		"vehicleType": "Pickup",
-		"warranty": "06/02/2020 to 06/02/2021"
+		"warranty": "06/02/2020 to 06/02/2021",
+		"isDefault": false
 	}],
 	"recommendations": [{
 		"model": "Land Cruiser",

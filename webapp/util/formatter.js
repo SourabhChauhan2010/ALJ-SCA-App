@@ -58,4 +58,24 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 		}
 		return true;
 	},
+	
+	getDefaultVBtnText: function(isDefault) {
+		this.removeStyleClass("aljRedBtnStyleRev");
+		this.removeStyleClass("aljRedBtnStyle");
+		if (isDefault) {
+			this.addStyleClass("aljRedBtnStyle");
+			return "Primary Car";
+		} else {
+			this.addStyleClass("aljRedBtnStyleRev");
+			return "Make";
+		}
+	},
+	
+	setDefaultVehicleStyle: function(isDefault) {
+		this.removeStyleClass("VehicleListVBRedCSS");
+		if (isDefault) {
+			this.addStyleClass("VehicleListVBRedCSS");
+		} 
+		return true;
+	}
 };

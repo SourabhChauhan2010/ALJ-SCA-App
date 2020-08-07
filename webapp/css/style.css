@@ -31,7 +31,7 @@
 }
 
 .aljPageStyle .sapMIBar.sapMHeader-CTX {
-    background-color: #ba283a;
+    background-color: #CE0E2D;
     height: 6rem;
     padding: 0;
 }
@@ -64,11 +64,11 @@
 }
 
 .aljPageStyle .sapMPageSubHeader .sapMITBSelected .sapMITBContentArrow::after {
-    background: #ba283a;
+    background: #CE0E2D;
 }
 
 .aljPageStyle .sapMPageSubHeader .sapMITBTextOnly .sapMITBFilterDefault.sapMITBSelected .sapMITBText {
-    color: #ba283a;
+    color: #CE0E2D;
 }
 
 .aljPageStyle .sapMPageSubHeader .sapMITBTextOnly .sapMITBFilterDefault .sapMITBText {
@@ -91,7 +91,7 @@
     font-weight: bold;
     font-size: 0.875rem;
     padding-bottom: 0.35rem;
-    border-bottom: solid 2px #ba283a;
+    border-bottom: solid 2px #CE0E2D;
     letter-spacing: 1.75px;
 }
 
@@ -118,7 +118,7 @@
 .aljTBStyle .sapMToggleBtnPressed,
 .aljTBStyle .sapMToggleBtnPressed:not(.sapMBtnDisabled) {
     background: #fff;
-    border: #ba283a 1px solid;
+    border: #CE0E2D 1px solid;
 }
 
 .aljGrayBtnStyle .sapMBtnInner,
@@ -130,7 +130,7 @@
 .aljRedBtnStyle .sapMBtnInner,
 .aljRedBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
     color: #fff;
-    background: #ba283a;
+    background: #CE0E2D;
     min-width: 6rem;
 }
 
@@ -140,14 +140,14 @@
 
 .aljRedBtnStyleRev .sapMBtnInner,
 .aljRedBtnStyleRev.sapMBtn:hover>.sapMBtnHoverable {
-    color: #ba283a;
+    color: #CE0E2D;
     background: #fff;
     min-width: 6rem;
     border: 1px solid #d8d8d8
 }
 
 .aljRedColorStyle {
-    color: #ba283a;
+    color: #CE0E2D;
 }
 
 .aljLightGreyBtnStyle .sapMBtnInner,
@@ -207,11 +207,11 @@
 }
 
 .aljLangListStyle .sapMRbSel .sapMRbBInn {
-    fill: #ba283a;
+    fill: #CE0E2D;
 }
 
 .aljLangListStyle .sapMRbSel.sapMRb .sapMRbB .sapMRbBOut {
-    stroke: #ba283a;
+    stroke: #CE0E2D;
 }
 
 .aljLangListStyle .sapMLIB.sapMLIBSelected,
@@ -282,16 +282,16 @@
 }
 
 .aljFooterSelectedStyle {
-    fill: #ba283a;
+    fill: #CE0E2D;
 }
 
 .aljFooterSelectedStyle .aljMyCarLogoStyle path,
 .aljFooterSelectedStyle .aljMyCarLogoStyle circle {
-    stroke: #ba283a;
+    stroke: #CE0E2D;
 }
 
 .aljFooterSelectedStyle .sapMText {
-    color: #ba283a;
+    color: #CE0E2D;
 }
 
 .aljFooterBarDesktopStyle {
@@ -455,7 +455,7 @@
 }
 
 .aljSelectedItemStyle {
-    border: solid #ba283a 1px;
+    border: solid #CE0E2D 1px;
 }
 
 .aljLastServiceDateStyle {
@@ -592,7 +592,7 @@
 
 .styleProdBookBtnStyle .sapMBtnInner .sapMBtn:hover>.sapMBtnHoverable {
     color: #fff;
-    background: #ba283a;
+    background: #CE0E2D;
     width: 16rem;
     margin-top: 30%;
 }
@@ -772,7 +772,7 @@
 }
 
 .aljMapDialogStyle.sapMDialog.sapMPopup-CTX>header .sapMHeader-CTX {
-    background-color: #ba283a;
+    background-color: #CE0E2D;
     padding: 0 0.5rem;
 }
 
@@ -796,7 +796,7 @@
 }
 
 .aljNotificationList .sapFAvatarIcon {
-    color: #ba283a;
+    color: #CE0E2D;
 }
 
 
@@ -876,7 +876,7 @@
 .aljServiceBtnStyle .sapMBtnInner,
 .aljServiceBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
     color: #fff;
-    background: #ba283a;
+    background: #CE0E2D;
     width: 7rem;
     height: 1.25rem;
 }
@@ -926,7 +926,7 @@
 }
 
 .aljSplashScreenStyle {
-    background: #ba283a;
+    background: #CE0E2D;
 }
 
 .aljSSWhiteBoxStyle {
@@ -971,7 +971,7 @@
 }
 
 .aljSSCarlStyle .sapMCrslBulleted>span.sapMCrslActive {
-    background-color: #ba283a;
+    background-color: #CE0E2D;
     border: 1px solid #000000;
     width: .55rem;
     height: .55rem;
@@ -993,7 +993,7 @@
 
 .aljSSFooterStyle {
     justify-content: start;
-    background: #ba283a;
+    background: #CE0E2D;
     margin-top: 5rem;
 }
 
@@ -1020,6 +1020,10 @@
     justify-content: space-evenly!important;
 }
 
+.UserInfoVBoxCSS .sapMVBox{
+    width: 10rem;
+}
+
 .VehicleListItemCSS .sapMLIB {
     border-bottom: 1px solid #fff;
 }
@@ -1028,6 +1032,10 @@
     border: 1px solid #d9d9d9;
     border-radius: 1rem;
     height: 6rem;
+}
+
+.VehicleListVBRedCSS {
+    border: 1px solid #CE0E2D;
 }
 
 .vehiclListAlignCSS {
@@ -1045,7 +1053,7 @@
 /****top home page**/
 
 .classRedFont {
-    color: Red;
+    color: #CE0E2D;
 }
 
 .boldFontCls {
@@ -1067,7 +1075,7 @@
 
 .classStrike .sapMLabelTextWrapper {
     text-decoration-line: line-through !important;
-    text-decoration-color: Red !important;
+    text-decoration-color: #CE0E2D !important;
 }
 
 .aljHomeTextCSS {

@@ -21,12 +21,22 @@ sap.ui.define([
 			}.bind(this));
 		},
 		onSelectableItemPress:function(evt){
-			evt;
+			// evt;
 		},
-		onMakeDefaultCar:function(evt){
-		evt.getSource().setText("Primary Car");
-		evt.getSource().removeStyleClass("aljRedBtnStyleRev");
-		evt.getSource().addStyleClass("aljRedBtnStyle");
+		onMakeDefaultCar:function(oEvent){
+			if (oEvent.getSource().getText() !== "Make") {
+				return;
+			}
+			var sIndex = oEvent.getSource().getBindingContext("oAppModel").getPath().split("/").pop();
+			var vehicles = this.getModel("oAppModel").getData().vehicles;
+			for (var i = 0; i < vehicles.length; i++) {
+				if (i == sIndex) {
+					vehicles[i].isDefault = true;
+				} else {
+					vehicles[i].isDefault = false;
+				}
+			}
+			this.getModel("oAppModel").refresh();
 		},
 
 		onAddVehiclePress: function (oEvent) {

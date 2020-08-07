@@ -22,16 +22,17 @@
 		
 			<List src="image/BookService.png"  items="{oAppModel>/vehicles}" class="VehicleListItemCSS UserInfoHeaderAlign" press="onSelectableItemPress">
 		<CustomListItem>
-			<HBox class="VehicleListVBCSS sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom" >
+			<HBox class="VehicleListVBCSS sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom" justifyContent="SpaceBetween"
+				visible="{parts: ['oAppModel>isDefault'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.setDefaultVehicleStyle'}">
 				<VBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginTopBottom vehiclListAlignCSS" >
 					<Image src="{oAppModel>src}" width="6rem"/>
 					<Text text="{oAppModel>model} {oAppModel>year}"/>
 					<Text text="{oAppModel>vin}" />
 					<Text text="{i18n>LastServiceDate} {oAppModel>lastServiceDate}" />
 				</VBox>
-				<VBox class="sapUiSmallMarginTop sapUiSmallMarginBegin" >
+				<VBox class="sapUiSmallMarginTop sapUiSmallMarginBeginEnd" >
 					<Image src="image/Edit.png" />
-					<Button text="Make" class="aljRedBtnStyleRev" press="onMakeDefaultCar"/>
+					<Button text="{parts: ['oAppModel>isDefault'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.getDefaultVBtnText'}" press="onMakeDefaultCar"/>
 				</VBox>
 			</HBox>
 		</CustomListItem>
