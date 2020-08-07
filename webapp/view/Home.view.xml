@@ -43,7 +43,7 @@ Comments:
 			<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
 			<Link text="{i18n>ViewDetails} >" class="aljDetailLinkStyle"/>
 		</HBox>
-		<Text text="2019 Land Cruser" class="sapUiSmallMarginBeginEnd"/>
+		<Text text="2019 Land Cruiser" class="sapUiSmallMarginBeginEnd"/>
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatus" type="XML"/>
 		<!-- Service Status Section - End-->
 		<!-- Service Section - Start-->

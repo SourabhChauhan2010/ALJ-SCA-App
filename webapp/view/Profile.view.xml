@@ -39,14 +39,14 @@
 				</VBox>
 				<Image src="image/Edit.png" class="sapUiSmallMarginTopBottom"/>
 			</HBox>
-			<HBox class="UserInfoVBoxCSS">
+		<!--	<HBox class="UserInfoVBoxCSS">
 				<Image src="image/Password.png" class="sapUiSmallMarginTopBottom"/>
 				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom ">
 					<Label text="Password"/>
 					<Input enabled="false" width="5rem" type="Password" value="7823987348"/>
 				</VBox>
 				<Image src="image/Edit.png" class="sapUiSmallMarginTopBottom"/>
-			</HBox>
+			</HBox>-->
 		</CustomListItem>
 	</List>
 	<FlexBox alignItems="Center" justifyContent="Center">
