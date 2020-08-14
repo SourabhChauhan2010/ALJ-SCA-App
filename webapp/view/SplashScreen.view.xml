@@ -5,22 +5,27 @@
 		<Carousel class="aljSSCarlStyle">
 			<VBox>
 				<Text text="{i18n>Splash1Text}"/>
-				<Image width="100%" src="image/Splash1.png"/>
+				<Image class="aljCarouselImage-1" width="100%" src="image/Splash1.png"/>
 			</VBox>
 			<VBox>
 				<Text text="{i18n>Splash2Text}"/>
-				<Image width="100%" src="image/Splash2.png"/>
+				<Image class="aljCarouselImage-2" width="100%" src="image/Splash2.png"/>
 			</VBox>
 			<VBox>
 				<Text text="{i18n>Splash3Text}"/>
-				<Image width="100%" src="image/Splash3.png"/>
+				<Image class="aljCarouselImage-3" width="100%" src="image/Splash3.png"/>
 			</VBox>
 		</Carousel>
 	</VBox>
-	<HBox justifyContent="Center">
+	<HBox class="aljSkipBtnBox" justifyContent="Center">
 		<Button text="SKIP" press="onSkipPress" class="aljSSSkipBtnStyle"/>
 	</HBox>
-	<HBox justifyContent="Center" class="aljSSFooterStyle" renderType="Bare">
-		<Text text="{i18n>TakeOnTom}"/>
+	<HBox width="100%" class="aljSSFooterBox">
+		<HBox width="40%" justifyContent="Center" renderType="Bare">
+			<Text text="{i18n>TakeOnTom}"/>
+		</HBox>
+		<HBox width="60%" justifyContent="Center" class="aljSSFooterStyle" renderType="Bare">
+			<!--<Text text="{i18n>TakeOnTom}"/>-->
+		</HBox>
 	</HBox>
 </mvc:View>

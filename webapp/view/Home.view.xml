@@ -24,14 +24,18 @@ Comments:
 			</VBox>
 		</HBox>
 		<Text text="Service Offers" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiTinyMarginBottom"/>
+		<VBox class="aljBorderLine"></VBox>
 		<ScrollContainer horizontal="true" vertical="false">
-			<HBox items="{oAppModel>/ServiceOffer}"  justifyContent="SpaceBetween" class="sapUiSmallMarginBeginEnd sapUiContentPadding scrollCnt">
+			<HBox items="{oAppModel>/ServiceOffer}" justifyContent="SpaceBetween" class="sapUiSmallMarginBeginEnd sapUiContentPadding scrollCnt">
 				<Image src="{oAppModel>src}" height="9rem" class="sapUiTinyMarginBottom sapUiContentPadding sapUiTinyMarginBeginEnd "
 					press="onServiceOfferPress"/>
 			</HBox>
 		</ScrollContainer>
 		<HBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom" alignItems="Center" justifyContent="SpaceBetween">
-			<Text text="Recommended For You" class=" aljTitleClass"/>
+			<VBox>
+				<Text text="Recommended For You" class="aljTitleClass"/>
+				<VBox class="aljBorderLine"></VBox>
+			</VBox>
 			<!--
 				<ToolbarSpacer/>
 		<FlexBox  width="150px" height="250px" justifyContent="End"/>-->
@@ -40,7 +44,10 @@ Comments:
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
 		<!-- Service Status Section - Start-->
 		<HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom">
-			<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
+			<VBox>
+				<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
+				<VBox class="aljBorderLine"></VBox>
+			</VBox>
 			<Link text="{i18n>ViewDetails} >" class="aljDetailLinkStyle"/>
 		</HBox>
 		<Text text="2019 Land Cruiser" class="sapUiSmallMarginBeginEnd"/>
@@ -48,6 +55,7 @@ Comments:
 		<!-- Service Status Section - End-->
 		<!-- Service Section - Start-->
 		<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiTinyMarginBottom"/>
+		<VBox class="aljBorderLine"></VBox>
 		<HBox class="aljHomeServiceBoxStyle sapUiSmallMarginBeginEnd">
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
 				<Image src="image/BookService.png" height="3rem"/>

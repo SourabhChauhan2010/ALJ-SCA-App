@@ -61,43 +61,39 @@
 		"model": "Land Cruiser",
 		"serviceType": "Change Oil ",
 		"src": "image/lubricants-fluids.png",
-		"sar1":"SR 300",
-		"sar2":"SR 500"
+		"sar1": "SR 300",
+		"sar2": "SR 500"
 	}, {
 		"model": "Land Cruiser",
 		"serviceType": "Transmission",
 		"src": "image/transmission-parts.png",
-		"sar1":"SR 300",
-		"sar2":"SR 500"
-	},
-	 {
+		"sar1": "SR 300",
+		"sar2": "SR 500"
+	}, {
 		"model": "Land Cruiser",
 		"serviceType": "Break Pad",
 		"src": "image/engine-parts-trans.png",
-		"sar1":"SR 300",
-		"sar2":"SR 500"
-	},
-	 {
+		"sar1": "SR 300",
+		"sar2": "SR 500"
+	}, {
+		"model": "Land Cruiser",
 		"serviceType": "Land Cruiser",
 		"sar": "Wiper",
 		"src": "image/major-service.png",
-		"sar1":"SR 300",
-		"sar2":"SR 500"
-	}
-	],
+		"sar1": "SR 300",
+		"sar2": "SR 500"
+	}],
 	"ServiceOffer": [{
-		
+
 		"src": "image/home1.png"
-		
+
 	}, {
-	
+
 		"src": "image/home2.png"
-	},
-	 {
-	
+	}, {
+
 		"src": "image/home2.png"
-	}
-	],
+	}],
 	"vehicleInfo": [{
 		"type": "Warranty Details",
 		"src": "image/warranty.png"
@@ -272,17 +268,17 @@
 		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, turpis vel scelerisque pharetra, tellus odio vehicula dolor, nec elementum lectus turpis at nunc.",
 		"datetime": "Now",
 		"unread": true
-	},{
+	}, {
 		"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, turpis vel scelerisque pharetra, tellus odio vehicula dolor, nec elementum lectus turpis at nunc.",
 		"datetime": "1 day",
 		"unread": false
-	},{
+	}, {
 		"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, turpis vel scelerisque pharetra, tellus odio vehicula dolor, nec elementum lectus turpis at nunc.",
 		"datetime": "2 days",
 		"unread": false
-	},{
+	}, {
 		"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, turpis vel scelerisque pharetra, tellus odio vehicula dolor, nec elementum lectus turpis at nunc.",
 		"datetime": "1 week",
@@ -290,15 +286,15 @@
 	}],
 	"aServiceStatusList": [{
 		"status": "Order Created"
-	},{
+	}, {
 		"status": "Car Received"
-	},{
+	}, {
 		"status": "Service Done"
-	},{
+	}, {
 		"status": "Quality Inspection"
-	},{
+	}, {
 		"status": "Payment Done"
-	},{
+	}, {
 		"status": "Ready for Delivery"
 	}],
 	"currServiceStatus": "Car Received"

@@ -5,9 +5,11 @@
 				visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}" type="Active"
 				press="onServiceItemPress">
 				<VBox alignItems="Center" renderType="Bare">
-					<Label text="{oAppModel>model}" class="sapUiTinyMarginTop"/>
+					<Text text="{oAppModel>model}" class="aljModelTextStyle sapUiTinyMarginTop"/>
 					<Image src="{oAppModel>src}" width="6rem"/>
-					<Label text="{oAppModel>serviceType}" design="Bold" class="classRedFont"/>
+					<VBox class="sapUiTinyMarginBegin" alignItems="Start" width="100%">
+						<Label text="{oAppModel>serviceType}" design="Bold" class="classRedFont sapUiTinyMarginBegin"/>
+					</VBox>
 					<HBox class="aljServiceOffBox">
 						<Label text="{oAppModel>sar2}" design="Bold" class="classStrike"/>
 						<Label text="{oAppModel>sar1}" design="Bold" class="sapUiTinyMarginBegin"/>

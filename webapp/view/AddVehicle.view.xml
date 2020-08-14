@@ -3,12 +3,16 @@
 	<VBox class="aljAddVehicleBoxStyle" width="100%">
 		<HBox alignItems="Center" justifyContent="Center" width="100%" class="sapUiSmallMarginBottom">
 			<Image src="image/vehicleInfo.png" width="2.25rem" class="sapUiTinyMarginEnd"/>
-			<Text text="+Add Vehicle" />
+			<Text text="+Add Vehicle"/>
 		</HBox>
 		<Text text="{i18n>ScanIshthimara}" class="aljHeadingTextStyle sapUiTinyMarginBottom"/>
 		<Label text="VIN number is mandatory for service records." class="sapUiSmallMarginBottom"/>
 		<Text text="Scan will auto fill the VIN number" class="aljScanPHStyle sapUiSmallMarginBottom"/>
-		<HBox class="aljScannerStyle sapUiSmallMarginBottom"/>
+		<HBox alignItems="Center" justifyContent="Center" class="aljScannerStyle sapUiSmallMarginBottom">
+			<VBox alignItems="Center" justifyContent="Center" class="aljAddVehCameraRound">
+				<core:Icon src="sap-icon://camera" color="#8B8B8B" size="2rem"></core:Icon>
+			</VBox>
+		</HBox>
 		<Label text="VIN Number" design="Bold" class=" sapUiTinyMarginBottom"/>
 		<Input value="{oAppModel>/enteredVIN}" class="aljVINInputStyle sapUiTinyMarginBottom"/>
 		<VBox width="100%" alignItems="Center" justifyContent="Center">
