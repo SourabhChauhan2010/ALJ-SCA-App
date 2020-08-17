@@ -19,7 +19,7 @@
 		</HBox>-->
 		<List src="image/BookService.png" items="{oAppModel>/vehicles}" class="VehicleListItemCSS UserInfoHeaderAlign" press="onSelectableItemPress">
 			<CustomListItem>
-				<HBox class="VehicleListVBCSS sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom" justifyContent="SpaceBetween"
+				<HBox class="VehicleListVBCSS sapUiTinyMarginBeginEnd sapUiSmallMarginTopBottom" justifyContent="SpaceBetween"
 					visible="{parts: ['oAppModel>isDefault'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.setDefaultVehicleStyle'}">
 					<VBox class="sapUiSmallMarginBegin sapUiTinyMarginTopBottom vehiclListAlignCSS">
 						<Image src="{oAppModel>src}" width="6rem"/>

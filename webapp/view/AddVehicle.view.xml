@@ -6,8 +6,8 @@
 			<Text text="+Add Vehicle"/>
 		</HBox>
 		<Text text="{i18n>ScanIshthimara}" class="aljHeadingTextStyle sapUiTinyMarginBottom"/>
-		<Label text="VIN number is mandatory for service records." class="sapUiSmallMarginBottom"/>
-		<Text text="Scan will auto fill the VIN number" class="aljScanPHStyle sapUiSmallMarginBottom"/>
+		<Label text="VIN number is mandatory for service records."/>
+		<Text text="Scan will auto fill the VIN number" class="aljScanPHStyle sapUiSmallMarginTopBottom"/>
 		<HBox alignItems="Center" justifyContent="Center" class="aljScannerStyle sapUiSmallMarginBottom">
 			<VBox alignItems="Center" justifyContent="Center" class="aljAddVehCameraRound">
 				<core:Icon src="sap-icon://camera" color="#8B8B8B" size="2rem"></core:Icon>
@@ -18,8 +18,8 @@
 		<VBox width="100%" alignItems="Center" justifyContent="Center">
 			<Text text="The VIN number contains 17 characters, you can find it on your car registration or on front windscreen at the bottom left side"
 				class="sapUiTinyMarginBottom" textAlign="Center"/>
-			<Button text="SHOW WHERE TO FIND VIN" class="aljLightGreyBtnStyle"/>
-			<Button text="Next" press="onPressAddVehicle" class="aljRedBtnStyle"/>
+			<Button text="SHOW WHERE TO FIND VIN" class="aljLightGreyBtnStyle sapUiSmallMarginBottom"/>
+			<Button text="Next" press="onPressAddVehicle" class="aljRedBtnStyle sapUiSmallMarginTopBottom"/>
 		</VBox>
 	</VBox>
 </mvc:View>
