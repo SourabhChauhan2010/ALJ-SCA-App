@@ -28,7 +28,7 @@ sap.ui.define([
 			this.doAjax(sUrl, "POST", oPayload, function (oData) {
 				//Success block
 				if (oData) {
-					this._showToastMessage("VIN verified successfully");
+					this._showToastMessage(this.getResourceText("SuccssVIDMsg"));
 				} else {
 					this._createConfirmationMessage(this.getResourceText("ErrorFindingVIN"), "Yes", "Cancel", true, function (oEvent) {
 						//What to do if yes?

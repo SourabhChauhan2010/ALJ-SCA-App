@@ -10,20 +10,20 @@ Comments:
 	<VBox >
 		<HBox class="sapUiSmallMargin sapUiMediumMarginTop" justifyContent="SpaceBetween" alignItems="Center">
 			<VBox alignItems="Start" class="aljTitleClassHome">
-				<Text text="Welcome" class="aljHomeTextCSS"/>
+				<Text text="{i18n>Welcome}" class="aljHomeTextCSS"/>
 				<Text text="Mohammed" class="classRedFont aljHomeTextCSS1"/>
 				<Text text="2019 Land Cruiser" class="aljHomeTextCSS"/>
 				<Text text="30,000 KM" class="aljHomeTextCSS sapUiTinyMarginBottom"/>
-				<Button text="Update KM" class="sapUiTinyMarginBottom aljRedBtnStyle"/>
+				<Button text="{i18n>UpdateKM}" class="sapUiTinyMarginBottom aljRedBtnStyle"/>
 			</VBox>
 			<!--	<ToolbarSpacer/>
 		<FlexBox  width="150px" height="250px" justifyContent="End"/>-->
 			<VBox alignItems="Center">
 				<Text text="Land Cruiser" class="boldFontCls"/>
-				<Text text="+Switch Car" class="aljLightGreyBtnStyle underLineCls"/>
+				<Text text="{i18n>SwitchCar}" class="aljLightGreyBtnStyle underLineCls"/>
 			</VBox>
 		</HBox>
-		<Text text="Service Offers" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiTinyMarginBottom"/>
+		<Text text="{i18n>ServiceOffers}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiTinyMarginBottom"/>
 		<VBox class="aljBorderLine"></VBox>
 		<ScrollContainer horizontal="true" vertical="false">
 			<HBox items="{oAppModel>/ServiceOffer}" justifyContent="SpaceBetween" class="sapUiSmallMarginBeginEnd sapUiContentPadding scrollCnt">
@@ -33,13 +33,13 @@ Comments:
 		</ScrollContainer>
 		<HBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom" alignItems="Center" justifyContent="SpaceBetween">
 			<VBox>
-				<Text text="Recommended For You" class="aljTitleClass"/>
+				<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>
 				<VBox class="aljBorderLine"></VBox>
 			</VBox>
 			<!--
 				<ToolbarSpacer/>
 		<FlexBox  width="150px" height="250px" justifyContent="End"/>-->
-			<Text text="Show All >"/>
+			<Text text="{i18n>ShowAll}"/>
 		</HBox>
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
 		<!-- Service Status Section - Start-->

@@ -17,6 +17,6 @@
 		</ScrollContainer>
 	</HBox>
 	<VBox alignItems="Center">
-		<Button text="Book" class="styleProdBookBtnStyle" press="onBookService"/>
+		<Button text="{i18n>Book}" class="styleProdBookBtnStyle" press="onBookService"/>
 	</VBox>
 </mvc:View>

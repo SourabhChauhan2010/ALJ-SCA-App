@@ -8,7 +8,7 @@ sap.ui.define([
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 
 		},
-		
+
 		onBack: function (evt) {
 			this.oRouter.navTo("Launchpad");
 
@@ -29,13 +29,13 @@ sap.ui.define([
 		onClickServiceStatus: function () {
 			this.oRouter.navTo("ServiceStatus");
 		},
-		
-		onServiceOfferPress: function(oEvent){
+
+		onServiceOfferPress: function (oEvent) {
 			var currOffer = oEvent.getSource().getBindingContext("oAppModel").getObject();
-			this._showToastMessage("Service Offer Pressed");
+			this._showToastMessage(this.getResourceText("ServiceOfferPressed"));
 		},
-		
-		onServiceItemPress: function(oEvent){
+
+		onServiceItemPress: function (oEvent) {
 			var currService = oEvent.getSource().getBindingContext("oAppModel").getObject();
 			this.getModel("oAppModel").setProperty("/oProductDetails", currService);
 			this.oRouter.navTo("ProductDetail");

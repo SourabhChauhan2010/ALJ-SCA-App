@@ -13,12 +13,12 @@ sap.ui.define([
 		onInit: function () {
 
 		},
-		
+
 		onPressAddNID: function () {
 			var oAppModelData = this.getModel("oAppModel").getData();
 			var sNID = oAppModelData.enteredNID;
 			if (!sNID) {
-				this._showToastMessage("Enter valid NID");
+				this._showToastMessage(this.getResourceText("EntervalidNID"));
 				return;
 			}
 			var sUrl = "/SBA_book_a_service/alj/validate/nid";
@@ -28,10 +28,10 @@ sap.ui.define([
 			this.doAjax(sUrl, "POST", oPayload, function (oData) {
 				//Success block
 				if (oData) {
-					this._showToastMessage("National ID verified successfully");
+					this._showToastMessage(this.getResourceText("NID_Verified_Msg"));
 					this.getRouter().navTo("Home");
 				} else {
-					this._showToastMessage("Enter valid NID");
+					this._showToastMessage(this.getResourceText("EntervalidNID"));
 				}
 			}.bind(this), function (oData) {});
 		}

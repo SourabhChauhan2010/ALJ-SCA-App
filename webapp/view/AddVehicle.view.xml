@@ -3,23 +3,23 @@
 	<VBox class="aljAddVehicleBoxStyle" width="100%">
 		<HBox alignItems="Center" justifyContent="Center" width="100%" class="sapUiSmallMarginBottom">
 			<Image src="image/vehicleInfo.png" width="2.25rem" class="sapUiTinyMarginEnd"/>
-			<Text text="+Add Vehicle"/>
+			<Text text="{i18n>AddVehicle}"/>
 		</HBox>
 		<Text text="{i18n>ScanIshthimara}" class="aljHeadingTextStyle sapUiTinyMarginBottom"/>
-		<Label text="VIN number is mandatory for service records." class="sapUiSmallMarginBottom"/>
-		<Text text="Scan will auto fill the VIN number" class="aljScanPHStyle sapUiSmallMarginBottom"/>
+		<Label text="{i18n>VINMatedoryMsg}" class="sapUiSmallMarginBottom"/>
+		<Text text="{i18n>ScanVINText}" class="aljScanPHStyle sapUiSmallMarginBottom"/>
 		<HBox alignItems="Center" justifyContent="Center" class="aljScannerStyle sapUiSmallMarginBottom">
 			<VBox alignItems="Center" justifyContent="Center" class="aljAddVehCameraRound">
 				<core:Icon src="sap-icon://camera" color="#8B8B8B" size="2rem"></core:Icon>
 			</VBox>
 		</HBox>
-		<Label text="VIN Number" design="Bold" class=" sapUiTinyMarginBottom"/>
+		<Label text="{i18n>VINNUMBER}" design="Bold" class=" sapUiTinyMarginBottom"/>
 		<Input value="{oAppModel>/enteredVIN}" class="aljVINInputStyle sapUiTinyMarginBottom"/>
 		<VBox width="100%" alignItems="Center" justifyContent="Center">
-			<Text text="The VIN number contains 17 characters, you can find it on your car registration or on front windscreen at the bottom left side"
+			<Text text="{i18n>VINValidationMgs}"
 				class="sapUiTinyMarginBottom" textAlign="Center"/>
-			<Button text="SHOW WHERE TO FIND VIN" class="aljLightGreyBtnStyle"/>
-			<Button text="Next" press="onPressAddVehicle" class="aljRedBtnStyle"/>
+			<Button text="{i18n>ShowWherFindVIN}" class="aljLightGreyBtnStyle"/>
+			<Button text="{i18n>Next}" press="onPressAddVehicle" class="aljRedBtnStyle"/>
 		</VBox>
 	</VBox>
 </mvc:View>

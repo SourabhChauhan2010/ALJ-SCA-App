@@ -97,17 +97,17 @@ sap.ui.define([
 				if (!UserInformation.NID) {
 					emptyFields.push("National ID");
 				} else if (editProfileInvalidFields.NID) {
-					errorMsg += "\nNational ID could not be found in the database.";
+					errorMsg += "\n" + this.getResourceText("ErrorNID");
 				}
 				if (!UserInformation.email) {
 					emptyFields.push("Email ID");
 				} else if (editProfileInvalidFields.email) {
-					errorMsg += "\nEmail ID is not valid.";
+					errorMsg += "\n" + this.getResourceText("ErrorEmailID");
 				}
 				if (!UserInformation.mobile2) {
 					emptyFields.push("Mobile Number");
 				} else if (editProfileInvalidFields.mobile) {
-					errorMsg += "\nMobile Number could not be found in the database.";
+					errorMsg += "\n" + this.getResourceText("ErrorMobileNo");
 				}
 				// if (UserInformation.EnterPassword != UserInformation.ReenterPassword) {
 				// 	errorMsg += "\nPasswords should match";
@@ -121,7 +121,7 @@ sap.ui.define([
 				}.bind(this));
 			} else {
 				if (emptyFields.length) {
-					errorMsg = "The following fields cannot be empty.\n" + emptyFields.join(", ") + errorMsg;
+					errorMsg = this.getResourceText("ErrorEmptyFields") + ".\n" + emptyFields.join(", ") + errorMsg;
 				}
 				this._createConfirmationMessage(errorMsg, "", "OK", false, function (oEvent) {
 					// this.getRouter().navTo("Profile");

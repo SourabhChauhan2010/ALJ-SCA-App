@@ -3,13 +3,13 @@
 	<VBox class="aljBoxContentStyle sapUiSmallMarginTop">
 		<VBox class="styleVehicleBox">
 			<HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom">
-				<Label text="{i18n>SelectVehicle}" class="aljTitleClass"/>
-				<Button text="{i18n>AddVehicleBtn}" class="aljLightGreyBtnStyle" press="onAddVehiclePress"/>
+				<Label text="{i18n>SelectVehicle{i18n>SelectVehicle}}" class="aljTitleClass"/>
+				<Button text="{i18n>AddVehicle}" class="aljLightGreyBtnStyle" press="onAddVehiclePress"/>
 			</HBox>
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>
 		</VBox>
 		<VBox class="styleProdCatBox">
-			<Label text="Product Catelog" class="aljTitleClass sapUiSmallMarginBegin"/>
+			<Label text="{i18n>ProductCatalog}" class="aljTitleClass sapUiSmallMarginBegin"/>
 			<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
 				<HBox items="{oAppModel>/aProdCatelogs}" class="sapUiSmallMarginBeginEnd">
 					<CustomListItem class="styleProdServBookBox" type="Active" press="onProdCatPress">
@@ -31,7 +31,7 @@
 							<Image src="{oAppModel>src}" width="6rem"/>
 							<Label text="{oAppModel>sar2}" class="styleCAR2"/>
 							<Text text="{oAppModel>sar1}" class="sapUiTinyMarginBottom styleCAR1"/>
-							<Button text="Book" class="aljRedBtnStyle" press="onBookService"/>
+							<Button text="{i18n>Book}" class="aljRedBtnStyle" press="onBookService"/>
 						</VBox>
 					</CustomListItem>
 				</HBox>

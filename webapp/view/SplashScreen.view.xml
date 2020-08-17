@@ -18,7 +18,7 @@
 		</Carousel>
 	</VBox>
 	<HBox class="aljSkipBtnBox" justifyContent="Center">
-		<Button text="SKIP" press="onSkipPress" class="aljSSSkipBtnStyle"/>
+		<Button text="{i18n>SKIP}" press="onSkipPress" class="aljSSSkipBtnStyle"/>
 	</HBox>
 	<HBox width="100%" class="aljSSFooterBox">
 		<HBox width="40%" justifyContent="Center" renderType="Bare">
