@@ -11,7 +11,7 @@
 		"description": "{{appDescription}}",
 		"dataSources": {
 			"mainService": {
-				"uri": "/sap/opu/odata/sap/zsrw_int_out_package_srv/",
+				"uri": "/sap/opu/odata/sap/ZGW_SRW_SAA_APP_001_SRV/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
