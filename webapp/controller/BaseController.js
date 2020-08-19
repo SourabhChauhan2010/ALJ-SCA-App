@@ -77,6 +77,10 @@ sap.ui.define([
 			var oAppModel = this.getOwnerComponent().getModel("oAppModel");
 			oAppModel.loadData("model/data.json", null, false);
 			this.oAppModel = oAppModel;
+			
+			//ODataModel holding metadata of Application's ODATA services
+			var oERPDataModel = this.getOwnerComponent().getModel("oERPDataModel");
+			this.oERPDataModel = oERPDataModel;
 		},
 
 		/** 
