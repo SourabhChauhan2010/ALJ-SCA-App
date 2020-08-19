@@ -9,9 +9,10 @@
 		<Label text="{i18n>VINMatedoryMsg}" class="sapUiSmallMarginBottom"/>
 		<Text text="{i18n>ScanVINText}" class="aljScanPHStyle sapUiSmallMarginBottom"/>
 		<HBox alignItems="Center" justifyContent="Center" class="aljScannerStyle sapUiSmallMarginBottom">
-			<VBox alignItems="Center" justifyContent="Center" class="aljAddVehCameraRound">
-				<core:Icon src="sap-icon://camera" color="#8B8B8B" size="2rem"></core:Icon>
-			</VBox>
+			<!--<VBox alignItems="Center" justifyContent="Center" class="aljAddVehCameraRound">-->
+			<!--	<core:Icon src="sap-icon://camera" color="#8B8B8B" size="2rem"></core:Icon>-->
+			<!--</VBox>-->
+			<Image src="image/Scan.svg" height="20rem" width="30rem" press="onOpenProfile"/>
 		</HBox>
 		<Label text="{i18n>VINNUMBER}" design="Bold" class=" sapUiTinyMarginBottom"/>
 		<Input value="{oAppModel>/enteredVIN}" class="aljVINInputStyle sapUiTinyMarginBottom"/>
