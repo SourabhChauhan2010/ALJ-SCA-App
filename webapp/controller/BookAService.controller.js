@@ -1,15 +1,18 @@
 sap.ui.define([
-	"com/sap/alj/sca/ALJ_SCA/controller/BaseController"
-], function (BaseController) {
+	"com/sap/alj/sca/ALJ_SCA/controller/BaseController",
+	"sap/ui/model/Filter"
+], function (BaseController, Filter) {
 	"use strict";
 
 	return BaseController.extend("com.sap.alj.sca.ALJ_SCA.controller.BookAService", {
 		onInit: function () {
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 		},
+		
 		onAfterRendering: function () {
 			this.servicelist = [];
 		},
+		
 		//Vehicle selection code
 		onVehicleItemPress: function (oEvent) {
 			var oAppModel = this.getModel("oAppModel");
@@ -32,11 +35,13 @@ sap.ui.define([
 			this.getView().byId("idBtnAddVeh").setVisible(false);
 
 		},
+		
 		onExpVehiclePanel: function () {
 			this.getView().byId("idPnHeaderVehInfo").setText("");
 			this.getView().byId("idBtnAddVeh").setVisible(true);
 			this.getView().byId("idPnHeaderVehInfo").setVisible(false);
 		},
+		
 		onPressAddWVehicle: function () {
 			this.getView().getContent()[8].getItems()[0].getItems()[0].getItems()[1].setText(this.getView().getModel("i18n").getResourceBundle()
 				.getText("noVehicleSelection"));
@@ -45,6 +50,7 @@ sap.ui.define([
 			this.getView().byId("idPnHeaderVehInfo").setText(this.getView().getModel("i18n").getResourceBundle().getText("noVehicleSelection"));
 			this.getView().byId("idBtnAddVeh").setVisible(false);
 		},
+		
 		onAddVehiclePress: function () {
 
 			this.getRouter().navTo("AddVehicle");
@@ -58,15 +64,33 @@ sap.ui.define([
 
 			this.servicelist.push(currObj.serviceType);
 			this.getView().getContent()[8].getItems()[0].getItems()[1].getItems()[1].setText(this.servicelist);
-
+			this.getServiceType();
 		},
+		
 		onBeforeRendering: function () {
 			var oAppModelData = this.getModel("oAppModel").getData();
 		},
+		
 		createAppointment: function (evt) {
 			//do mandatory checks
 			this.oRouter.navTo("ServiceStatus");
 
+		},
+
+		getServiceType: function () {
+			var sUrl = "/Plant_and_Service_typeSet";
+			var oERPDataModel = this.getModel("oERPDataModel");
+			var oAppModel = this.getModel("oAppModel");
+			var oFilter = [];
+			oFilter.push(new Filter("SrvType", "EQ", 'MC'));
+			oFilter.push(new Filter("Werks", "EQ", '7030'));
+			oERPDataModel.read(sUrl, {
+				filters: oFilter,
+				success: function (oData) {
+					oAppModel.setProperty("/serviceTypeSet", oData.results);
+				},
+				error: function (oData) {}
+			});
 		}
 
 	});

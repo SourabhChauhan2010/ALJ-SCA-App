@@ -96,6 +96,13 @@
         margin: 0rem 1rem !important;
     }
     
+    /*.aljTitleClass::after {*/
+    /*    content: '-';*/
+    /*    background: #CE0E2D;*/
+    /*    display:block;*/
+    /*    clip-path: polygon(0px 5px, 15px 5px, 15px 6px, 0px 6px);*/
+    /*}*/
+    
     .aljTitleClassHome {
         color: #000000;
         font-weight: bold;
