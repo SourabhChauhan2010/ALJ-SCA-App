@@ -18,7 +18,7 @@
 								</VBox>
 								<Label text="{i18n>SERVICE}"/><!--text="{= ${oAppModel>/currentScreenTitle}.toUpperCase()}"-->
 								<VBox width="2.25rem" class="sapUiSmallMarginEnd">
-									<Image src="image/bell.png" height="30px" width="30px" press="openNotification"/><!--visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}"--><!--<core:Icon src="sap-icon://decline" width="2.5rem" press="onCloseScreen" color="#ffffff"--><!--	visible="{parts: ['oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.showClose'}"/>--><!--<Image src="image/bell.png" height="37px" width="37px"--><!--	press="onNavBack"/>-->
+									<Image src="image/Notification-plain.svg" height="30px" width="30px" press="openNotification"/><!--visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}"--><!--<core:Icon src="sap-icon://decline" width="2.5rem" press="onCloseScreen" color="#ffffff"--><!--	visible="{parts: ['oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.showClose'}"/>--><!--<Image src="image/bell.png" height="37px" width="37px"--><!--	press="onNavBack"/>-->
 								</VBox>
 							</HBox>
 						</VBox>

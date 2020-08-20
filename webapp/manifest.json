@@ -73,7 +73,7 @@
 					"metadataUrlParams": {
 						"sap-documentation": "heading"
 					},
-					"useBatch": true
+					"useBatch": false
 				}
 			},
 			"oAppModel": {
