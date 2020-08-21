@@ -12,13 +12,13 @@
 								<Image src="image/Logo.png" width="6.5rem" class="sapUiTinyMarginTop" press="goToHome"/>
 							</HBox>
 							<HBox height="3rem" width="100%" justifyContent="SpaceBetween" alignItems="Center" visible="{= ${oAppModel>/currentScreen} === 'SplashScreen'? false: true}">
-								<VBox width="2.25rem" class="sapUiSmallMarginBegin">
+								<VBox class="sapUiSmallMarginBegin">
 									<Image src="image/back.svg" visible="{= ${oAppModel>/currentScreen} === 'BookAService'? true: false}" width="1.25rem" press="onNavBack"/>
-									<Image src="image/user.png" height="30px" width="30px" press="onOpenProfile"/><!--visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}"-->
+									<Image src="image/user.png" height="1.875rem" width="1.875rem" press="onOpenProfile"/><!--visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}"-->
 								</VBox>
 								<Label text="{i18n>SERVICE}"/><!--text="{= ${oAppModel>/currentScreenTitle}.toUpperCase()}"-->
-								<VBox width="2.25rem" class="sapUiSmallMarginEnd">
-									<Image src="image/Notification-plain.svg" height="30px" width="30px" press="openNotification"/><!--visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}"--><!--<core:Icon src="sap-icon://decline" width="2.5rem" press="onCloseScreen" color="#ffffff"--><!--	visible="{parts: ['oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.showClose'}"/>--><!--<Image src="image/bell.png" height="37px" width="37px"--><!--	press="onNavBack"/>-->
+								<VBox class="sapUiSmallMarginEnd">
+									<Image src="image/Notification-plain.svg" height="1.375rem" width="1.375rem" press="openNotification"/><!--visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}"--><!--<core:Icon src="sap-icon://decline" width="2.5rem" press="onCloseScreen" color="#ffffff"--><!--	visible="{parts: ['oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.showClose'}"/>--><!--<Image src="image/bell.png" height="37px" width="37px"--><!--	press="onNavBack"/>-->
 								</VBox>
 							</HBox>
 						</VBox>
