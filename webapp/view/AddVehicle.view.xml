@@ -18,8 +18,8 @@
 		<Input value="{oAppModel>/enteredVIN}" class="aljVINInputStyle sapUiTinyMarginBottom"/>
 		<VBox width="100%" alignItems="Center" justifyContent="Center">
 			<Text text="{i18n>VINValidationMgs}" class="aljAddVehicleSamllText sapUiTinyMarginBottom" textAlign="Center"/>
-			<Button text="{i18n>ShowWherFindVIN}" class="sapUiSmallMarginTop sapUiMediumMarginBottom aljLightGreyBtnStyle"/>
-			<Button text="{i18n>Next}" press="onPressAddVehicle" class="aljRedBtnStyle"/>
+			<Button text="{i18n>ShowWherFindVIN}" class="aljLargeBtnStyle sapUiSmallMarginTop sapUiMediumMarginBottom aljLightGreyBtnStyle"/>
+			<Button text="{i18n>Next}" press="onPressAddVehicle" class="aljLargeBtnStyle aljRedBtnStyle"/>
 		</VBox>
 	</VBox>
 </mvc:View>

@@ -159,7 +159,7 @@
 
 .aljLargeBtnStyle .sapMBtnInner{
 	height: 3rem;
-	width: 10rem;
+	min-width: 10rem;
 }
 
 .aljLargeBtnStyle .sapMBtnContent{
