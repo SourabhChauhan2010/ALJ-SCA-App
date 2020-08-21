@@ -116,8 +116,9 @@
 
 .aljHeadingTextStyle {
     color: #37383b;
-    font-weight: bold;
-    font-size: 2rem;
+    font-weight: normal;
+    font-size: 1.56rem;
+    font-family: 'UniversNextPro';
 }
 
 .aljTBStyle .sapMBtnInner,
@@ -143,7 +144,8 @@
 .aljRedBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
     color: #fff;
     background: #CE0E2D;
-    min-width: 6rem;
+    min-width: 5rem;
+    font-family: 'UniversNextPro';
 }
 
 .aljRedBtnStyle .sapMBtnInner.sapMBtnActive {
@@ -156,10 +158,24 @@
 
 .aljRedBtnStyleRev .sapMBtnInner,
 .aljRedBtnStyleRev.sapMBtn:hover>.sapMBtnHoverable {
+    color: #ce292d;
+    background: #fff;
+    min-width: 5rem;
+    border: 1px solid #d8d8d8;
+    font-family: 'UniversNextPro';
+}
+
+.aljBlackBtnStyleRev .sapMBtnInner,
+.aljBlackBtnStyleRev.sapMBtn:hover>.sapMBtnHoverable {
     color: black;
     background: #fff;
-    min-width: 6rem;
-    border: 1px solid #d8d8d8
+    min-width: 5rem;
+    border: 1px solid #d8d8d8;
+    font-family: 'UniversNextPro';
+}
+
+.aljBlackBtnStyleRev .sapMBtnContent {
+    font-weight: normal;
 }
 
 .aljRedBtnStyleRev .sapMBtnIcon {
@@ -302,11 +318,11 @@
     z-index: 3;
 }
 
-.aljProductsStyle ellipse{
+.aljProductsStyle ellipse {
     fill: #888888;
 }
 
-.aljFooterSelectedStyle .aljProductsStyle ellipse{
+.aljFooterSelectedStyle .aljProductsStyle ellipse {
     fill: #CE0E2D;
 }
 
@@ -318,8 +334,13 @@
 .aljFooterSelectedStyle .aljMyCarLogoStyle circle,
 .aljFooterSelectedStyle circle,
 .aljFooterSelectedStyle rect,
-.aljFooterSelectedStyle line{
+.aljFooterSelectedStyle line {
     stroke: #CE0E2D;
+}
+
+.aljAddVehicleSamllText {
+    font-size: 0.8125rem;
+    font-family: 'UniversNextPro';
 }
 
 .aljFooterSelectedStyle .sapMText {
@@ -841,7 +862,7 @@
 
 .aljScannerStyle {
     width: 100%;
-    height: 9.5rem;
+    height: 11.25rem;
     border: dotted 1px grey;
     border-radius: 0.2rem;
 }
@@ -864,7 +885,9 @@
 .aljScanPHStyle {
     text-align: center !important;
     width: 100%;
+    font-size: 0.625rem;
     font-style: italic;
+    font-family: 'UniversNextPro';
 }
 
 
@@ -1137,6 +1160,12 @@
     font-weight: normal;
 }
 
+.aljHomeText {
+    font-size: 1.25rem;
+    font-family: 'UniversNextPro';
+    font-weight: normal;
+}
+
 .aljHomeCarModelTextCSS {
     font-size: 0.9375rem;
     font-family: 'UniversNextPro';
@@ -1195,13 +1224,16 @@
 .aljModelTextStyle {
     font-weight: bold;
     color: black;
+    font-family: 'UniversNextPro';
     font-size: 0.5rem;
 }
+
 
 /****top home page**/
 
 .aljCarListText {
     font-size: 15px !important;
+    font-family: 'UniversNextPro';
 }
 
 .aljSLServiceTypeStyle {
@@ -1219,7 +1251,7 @@
 }
 
 .aljSSModelTitleStyle {
-	font-family: 'UniversNextPro';
+    font-family: 'UniversNextPro';
     font-weight: normal;
     font-size: 0.625rem;
 }

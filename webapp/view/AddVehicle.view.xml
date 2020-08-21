@@ -3,22 +3,22 @@
 	<VBox class="aljAddVehicleBoxStyle" width="100%">
 		<HBox alignItems="Center" justifyContent="Center" width="100%" class="sapUiSmallMarginBottom">
 			<Image src="image/vehicleInfo.png" width="2.25rem" class="sapUiTinyMarginEnd"/>
-			<Text text="{i18n>AddVehicle}"/>
+			<Text text="{i18n>AddVehicle}" class="aljHomeText"/>
 		</HBox>
 		<Text text="{i18n>ScanIshthimara}" class="aljHeadingTextStyle sapUiTinyMarginBottom"/>
-		<Label text="{i18n>VINMatedoryMsg}" class="sapUiSmallMarginBottom"/>
+		<Label text="{i18n>VINMatedoryMsg}" class="aljAddVehicleSamllText sapUiSmallMarginBottom"/>
 		<Text text="{i18n>ScanVINText}" class="aljScanPHStyle sapUiSmallMarginBottom"/>
 		<HBox alignItems="Center" justifyContent="Center" class="aljScannerStyle sapUiSmallMarginBottom">
 			<!--<VBox alignItems="Center" justifyContent="Center" class="aljAddVehCameraRound">-->
 			<!--	<core:Icon src="sap-icon://camera" color="#8B8B8B" size="2rem"></core:Icon>-->
 			<!--</VBox>-->
-			<Image src="image/Scan.svg" height="20rem" width="30rem" press="onOpenProfile"/>
+			<Image src="image/Scan.svg" width="17rem" press="onOpenProfile"/>
 		</HBox>
-		<Label text="{i18n>VINNUMBER}" design="Bold" class=" sapUiTinyMarginBottom"/>
+		<Label text="{i18n>VINNUMBER}" class="aljAddVehicleSamllText sapUiTinyMarginBottom"/>
 		<Input value="{oAppModel>/enteredVIN}" class="aljVINInputStyle sapUiTinyMarginBottom"/>
 		<VBox width="100%" alignItems="Center" justifyContent="Center">
-			<Text text="{i18n>VINValidationMgs}" class="sapUiTinyMarginBottom" textAlign="Center"/>
-			<Button text="{i18n>ShowWherFindVIN}" class="aljLightGreyBtnStyle"/>
+			<Text text="{i18n>VINValidationMgs}" class="aljAddVehicleSamllText sapUiTinyMarginBottom" textAlign="Center"/>
+			<Button text="{i18n>ShowWherFindVIN}" class="sapUiSmallMarginTop sapUiMediumMarginBottom aljLightGreyBtnStyle"/>
 			<Button text="{i18n>Next}" press="onPressAddVehicle" class="aljRedBtnStyle"/>
 		</VBox>
 	</VBox>
