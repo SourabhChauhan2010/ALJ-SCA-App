@@ -2,7 +2,10 @@
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form">
 	<VBox justifyContent="Center" alignItems="Center" class="sapUiSmallMargin" renderType="Bare">
 		<!--<Text text="{i18n>SignUpLabel}" class="aljSignUpLabelStyle"/>-->
-		<HBox class="aljAddProfPicStyle"/>
+		<VBox alignItems="Center">
+			<Avatar src="image/user.png" customDisplaySize="4.625rem" displaySize="Custom"/>
+		</VBox>
+		<!--<HBox class="aljAddProfPicStyle"/>-->
 		<Text text="{i18n>AddProfilePic}" class="sapUiTinyMarginBottom"/>
 		<HBox class="aljEPInputStyle" renderType="Bare">
 			<Image src="image/FullName.png"/>
@@ -36,6 +39,6 @@
 		<!--	<Image src="image/Password.png"/>-->
 		<!--	<Input width="100%" placeholder="{i18n>RetypePassword}" value="{oAppModel>/UserInformation/ReenterPassword}"/>-->
 		<!--</HBox>-->
-		<Button text="{i18n>Save}" press="onSavePress" class="aljRedBtnStyle sapUiTinyMarginTop"/>
+		<Button text="{i18n>Save}" press="onSavePress" class="aljRedBtnStyle aljLargeBtnStyle sapUiSmallMarginTop"/>
 	</VBox>
 </mvc:View>
