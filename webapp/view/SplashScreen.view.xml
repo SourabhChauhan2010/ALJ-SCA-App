@@ -21,11 +21,8 @@
 		<Button text="{i18n>SKIP}" press="onSkipPress" class="aljSSSkipBtnStyle"/>
 	</HBox>
 	<HBox width="100%" class="aljSSFooterBox">
-		<HBox width="40%" justifyContent="Center" renderType="Bare">
+		<HBox justifyContent="Center" renderType="Bare" class="aljSSFooterStyle">
 			<Text text="{i18n>TakeOnTom}"/>
-		</HBox>
-		<HBox width="60%" justifyContent="Center" class="aljSSFooterStyle" renderType="Bare">
-			<!--<Text text="{i18n>TakeOnTom}"/>-->
 		</HBox>
 	</HBox>
 </mvc:View>

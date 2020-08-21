@@ -174,3 +174,10 @@
   font-weight: 900;
   src: local('UniversNextPro'), local('UniversNextPro-Heavy'), url(fonts/UniversNextPro-Heavy.otf) format('opentype');
 }
+
+@font-face {
+  font-family: 'UniversNextPro-MC';
+  font-style: normal;
+  font-weight: normal;
+  src: local('UniversNextPro'), local('UniversNextPro-MediumCond'), url(fonts/UniversNextPro-MediumCond.otf) format('opentype');
+}

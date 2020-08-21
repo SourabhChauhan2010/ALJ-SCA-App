@@ -10,7 +10,8 @@
 .sapMBtnContent,
 .sapMInputBaseInner,
 .sapMSLITitle,
-.sapMSLITitleOnly {
+.sapMSLITitleOnly,
+.sapMListHdrText {
     font-family: 'UniversNextPro';
 }
 
@@ -152,8 +153,18 @@
     background: #9e0011;
 }
 
-.aljRedBtnStyle .sapMBtnInner.sapMBtnActive {
-    background: #9e0011;
+.aljLargeBtnStyle {
+	height: 3rem;
+}
+
+.aljLargeBtnStyle .sapMBtnInner{
+	height: 3rem;
+	width: 10rem;
+}
+
+.aljLargeBtnStyle .sapMBtnContent{
+	line-height: 3rem;
+	font-size: 1rem;
 }
 
 .aljRedBtnStyleRev .sapMBtnInner,
@@ -177,7 +188,6 @@
 .aljBlackBtnStyleRev .sapMBtnContent {
     font-weight: normal;
 }
-
 .aljRedBtnStyleRev .sapMBtnIcon {
     color: black;
     font-size: 0.8rem;
@@ -318,11 +328,11 @@
     z-index: 3;
 }
 
-.aljProductsStyle ellipse {
+.aljProductsStyle ellipse{
     fill: #888888;
 }
 
-.aljFooterSelectedStyle .aljProductsStyle ellipse {
+.aljFooterSelectedStyle .aljProductsStyle ellipse{
     fill: #CE0E2D;
 }
 
@@ -334,17 +344,17 @@
 .aljFooterSelectedStyle .aljMyCarLogoStyle circle,
 .aljFooterSelectedStyle circle,
 .aljFooterSelectedStyle rect,
-.aljFooterSelectedStyle line {
+.aljFooterSelectedStyle line{
     stroke: #CE0E2D;
+}
+
+.aljFooterSelectedStyle .sapMText {
+    color: #CE0E2D;
 }
 
 .aljAddVehicleSamllText {
     font-size: 0.8125rem;
     font-family: 'UniversNextPro';
-}
-
-.aljFooterSelectedStyle .sapMText {
-    color: #CE0E2D;
 }
 
 .aljFooterBarDesktopStyle {
@@ -1049,11 +1059,16 @@
 }
 
 .aljSSSkipBtnStyle {
-    margin-top: 9rem;
+    margin-top: 11rem;
 }
 
 .aljSSSkipBtnStyle .sapMBtnInner {
     color: #000;
+}
+
+.aljSSSkipBtnStyle .sapMBtnContent {
+    font-family: 'UniversNextPro-MC';
+    font-size: 0.875rem;
 }
 
 .aljSSSkipBtnStyle .sapMBtnInner.sapMBtnActive {
@@ -1063,6 +1078,7 @@
 }
 
 .aljSSFooterStyle {
+    width: 100%;
     justify-content: start;
     background: #CE0E2D;
 }
@@ -1083,15 +1099,22 @@
 }
 
 .UserInfoVBoxCSS {
-    /*	text-align:left;
-    justify-content: center;*/
     text-align: left;
     border-bottom: 1px solid #d9d9d9;
-    justify-content: space-evenly!important;
+    padding: 0.75rem 2.5rem 0.75rem 2rem;
 }
 
-.UserInfoVBoxCSS .sapMVBox {
-    width: 10rem;
+.UserInfoBoxInner {
+    width: 100%;
+    margin-left: 1.25rem;
+}
+
+.UserInfoHeaderAlign .sapMLnk{
+	color: #000 !important;	
+}
+
+.aljProfileEditIconStyle{
+	margin-top: 1.2rem;
 }
 
 .VehicleListItemCSS .sapMLIB {
@@ -1114,6 +1137,18 @@
 
 .UserInfoHeaderAlign .sapMListHdrText {
     border-bottom: 1px solid #fff!important;
+    font-size: 1.25rem;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.UserInfoHeaderAlign .sapMLabel {
+    font-size: 1rem;
+    color: #CE0E2D;
+}
+
+.UserInfoHeaderAlign .sapMText {
+    font-size: 1rem;
+    color: #000;
 }
 
 
@@ -1201,7 +1236,7 @@
 .aljSkipBtnBox {
     height: 13.5rem;
     border-radius: 0 0 2rem 2rem;
-    box-shadow: -1px 2px 20px 0px #cecece;
+    box-shadow: -1px 2px 20px 8px #cecece59;
 }
 
 .sapMCrslControls.sapMCrslControlsBottom,
@@ -1211,7 +1246,11 @@
 }
 
 .aljSSFooterBox {
-    margin-top: 9rem;
+    bottom: 2.5rem;
+    position: fixed;
+    margin-left: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 900;
 }
 
 .aljBorderLine {
@@ -1224,16 +1263,13 @@
 .aljModelTextStyle {
     font-weight: bold;
     color: black;
-    font-family: 'UniversNextPro';
     font-size: 0.5rem;
 }
-
 
 /****top home page**/
 
 .aljCarListText {
     font-size: 15px !important;
-    font-family: 'UniversNextPro';
 }
 
 .aljSLServiceTypeStyle {
@@ -1251,7 +1287,7 @@
 }
 
 .aljSSModelTitleStyle {
-    font-family: 'UniversNextPro';
+	font-family: 'UniversNextPro';
     font-weight: normal;
     font-size: 0.625rem;
 }
