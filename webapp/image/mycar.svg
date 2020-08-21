@@ -1,27 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2rem" height="2rem" viewBox="0 0 32 32" class="aljMyCarLogoStyle">
-  <defs>
-    <clipPath id="clip-My_Car">
-      <rect width="32" height="32"/>
-    </clipPath>
-  </defs>
-  <g id="My_Car" data-name="My Car" clip-path="url(#clip-My_Car)">
-    <rect width="32" height="32" fill="#fff"/>
-    <g id="Group_2414" data-name="Group 2414" transform="translate(12532 4)">
-      <path id="Path_3442" data-name="Path 3442" d="M-12530.052,7.244s4.344,3.175,14.216,3.02,12.032-1.982,13.863-3.02" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.2"/>
-      <path id="Path_3443" data-name="Path 3443" d="M-12525,3.39c-.928,1.861-2.461,5.285-2.461,5.285s-1.994.156-2.491.792-.443.863-.487,1.724,0,3.547,0,3.547a3.248,3.248,0,0,0,2.3,2.5,7.208,7.208,0,0,0,2.8.255h20.58s2.307-.193,2.877-2.119a7.211,7.211,0,0,1,.266-.771V10.058s-.142-.625-1.319-1.068-1.568-.07-2.091-1.281-2.227-4.762-2.227-4.762a2.09,2.09,0,0,0-1.5-1.143c-1.164-.263-13.84,0-13.84,0A2.363,2.363,0,0,0-12525,3.39Z" fill="none" stroke="#000" stroke-width="1.2"/>
-      <g id="Ellipse_172" data-name="Ellipse 172" transform="translate(-12528 11)" fill="none" stroke="#000" stroke-width="1">
-        <circle cx="1.75" cy="1.75" r="1.75" stroke="none"/>
-        <circle cx="1.75" cy="1.75" r="1.25" fill="none"/>
-      </g>
-      <g id="Ellipse_173" data-name="Ellipse 173" transform="translate(-12508 11)" fill="none" stroke="#000" stroke-width="1">
-        <circle cx="1.75" cy="1.75" r="1.75" stroke="none"/>
-        <circle cx="1.75" cy="1.75" r="1.25" fill="none"/>
-      </g>
-      <path id="Path_3444" data-name="Path 3444" d="M-12521,13.849h10.018" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.2"/>
-      <path id="Path_3445" data-name="Path 3445" d="M-12523.493,7.244l3.906-3.59" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.2"/>
-      <path id="Path_3446" data-name="Path 3446" d="M-12523.492,5.114l1.661-1.46" transform="translate(-0.329 -0.538)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.2"/>
-      <path id="Path_3447" data-name="Path 3447" d="M-12528,17.745l.092,1.81a2.288,2.288,0,0,0,2.479,1.87c2.205-.053,2.545-1.608,2.555-2.085s0-1.6,0-1.6" fill="none" stroke="#000" stroke-width="1.2"/>
-      <path id="Path_3448" data-name="Path 3448" d="M-12528,17.745l.092,1.81a2.288,2.288,0,0,0,2.479,1.87c2.205-.053,2.545-1.608,2.555-2.085s0-1.6,0-1.6" transform="translate(19)" fill="none" stroke="#000" stroke-width="1.2"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="41.869" height="19.02" viewBox="0 0 41.869 19.02" class="aljMyCarLogoStyle">
+  <g id="Group_19059" data-name="Group 19059" transform="translate(0.235 0.176)">
+    <path id="Path_29481" data-name="Path 29481" d="M74.608,333.439c-2.827-.105-4.22-1.933-4.5-4.6-.435-4.175.329-2.638,3.651-3.91,5.83-2.234,9.476-5.161,16.207-3.992,4.706.817,8.633,3.623,13.041,5.021,2.121.673,6.46.664,7.775,2.917,1.849,3.17-1.013,4.328-3.725,4.582" transform="translate(-70 -320.673)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <line id="Line_2669" data-name="Line 2669" x2="13.235" transform="translate(14.253 13.06)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <path id="Path_29482" data-name="Path 29482" d="M142.773,336.87c-.161,0-.369-.017-.583-.035-1.606-.137-1.949-.478-2.38-1.245" transform="translate(-103.707 -327.876)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <path id="Path_29483" data-name="Path 29483" d="M88.5,341.386a3.139,3.139,0,1,0-3.139,3.139A3.139,3.139,0,0,0,88.5,341.386Z" transform="translate(-75.902 -329.159)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <path id="Path_29484" data-name="Path 29484" d="M132.586,341.386a3.139,3.139,0,1,0-3.139,3.139A3.139,3.139,0,0,0,132.586,341.386Z" transform="translate(-97.187 -329.159)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <path id="Path_29485" data-name="Path 29485" d="M75.191,335.119c-1.115.48-1.579-.208-1.392-1.507a.235.235,0,0,1,.232-.2H76.2a.207.207,0,0,1,.2.26c-.011.043-.024.086-.037.13A2.35,2.35,0,0,1,75.191,335.119Z" transform="translate(-71.815 -326.825)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <path id="Path_29486" data-name="Path 29486" d="M103.589,327.832l9.983.649a.3.3,0,0,0,.129-.562c-.584-.271-1.223-.571-1.658-.787a26.214,26.214,0,0,0-6.245-2.285,19.781,19.781,0,0,0-2.775-.3Z" transform="translate(-85.945 -322.545)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <path id="Path_29487" data-name="Path 29487" d="M94.1,324.839a18.352,18.352,0,0,0-3.952,1.148c-.17.068-.765.347-1.4.632a.474.474,0,0,0,.167.905l5.647.348Z" transform="translate(-78.92 -322.685)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <path id="Path_29488" data-name="Path 29488" d="M88.358,343.4a.981.981,0,1,0-.981.981A.981.981,0,0,0,88.358,343.4Z" transform="translate(-77.916 -331.173)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <path id="Path_29489" data-name="Path 29489" d="M132.443,343.4a.981.981,0,1,0-.981.981A.981.981,0,0,0,132.443,343.4Z" transform="translate(-99.202 -331.173)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <path id="Path_30237" data-name="Path 30237" d="M37.236,0" transform="translate(1.806 15.741)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="0.5"/>
+    <path id="Path_30236" data-name="Path 30236" d="M30,0" transform="translate(5.426 18.844)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="0.5"/>
   </g>
 </svg>

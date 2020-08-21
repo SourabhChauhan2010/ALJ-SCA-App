@@ -6,15 +6,15 @@
 				press="onServiceItemPress">
 				<VBox alignItems="Center" renderType="Bare">
 					<Text text="{oAppModel>model}" class="aljModelTextStyle sapUiTinyMarginTop"/>
-					<Image src="{oAppModel>src}" width="6rem"/>
+					<Image src="{oAppModel>src}" width="3.5rem"/>
 					<VBox class="sapUiTinyMarginBegin" alignItems="Start" width="100%">
-						<Label text="{oAppModel>serviceType}" design="Bold" class="classRedFont sapUiTinyMarginBegin"/>
+						<Label text="{oAppModel>serviceType}" class="aljSLServiceTypeStyle sapUiTinyMarginBegin"/>
 					</VBox>
 					<HBox class="aljServiceOffBox">
-						<Label text="{oAppModel>sar2}" design="Bold" class="classStrike"/>
-						<Label text="{oAppModel>sar1}" design="Bold" class="sapUiTinyMarginBegin"/>
+						<Label text="{oAppModel>sar2}" class="classStrike aljReccPriceStyle"/>
+						<Label text="{oAppModel>sar1}" class="aljReccPriceStyle"/>
 					</HBox>
-					<Button text="{i18n>Book}" class="aljRedBtnStyle aljBookBtnFill" press="onBookService"
+					<Button text="{i18n>BOOK}" class="aljRedBtnStyle aljBookBtnFill" press="onBookService"
 						visible="{= ${oAppModel>/currentScreen} !== 'BookAService'? true: false}"/>
 				</VBox>
 			</CustomListItem>

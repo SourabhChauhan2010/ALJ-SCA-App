@@ -65,6 +65,8 @@ sap.ui.define([
 			this.servicelist.push(currObj.serviceType);
 			this.getView().getContent()[8].getItems()[0].getItems()[1].getItems()[1].setText(this.servicelist);
 			this.getServiceType();
+			this.getBookingSlot();
+			this.cancelBooking();
 		},
 
 		onBeforeRendering: function () {
@@ -138,6 +140,37 @@ sap.ui.define([
 			var oFilter = [];
 			oFilter.push(new Filter("SrvType", "EQ", 'MC'));
 			oFilter.push(new Filter("Werks", "EQ", '7030'));
+			oERPDataModel.read(sUrl, {
+				filters: oFilter,
+				success: function (oData) {
+					oAppModel.setProperty("/serviceTypeSet", oData.results);
+				},
+				error: function (oData) {}
+			});
+		},
+			getBookingSlot: function () {
+		   var sUrl = "/Location_and_Slot_MasterSet";
+			var oERPDataModel = this.getModel("oERPDataModel");
+			var oAppModel = this.getModel("oAppModel");
+			var oFilter = [];
+			oFilter.push(new Filter("Zday", "EQ", '20200716'));
+			oFilter.push(new Filter("Werks", "EQ", '7030'));
+			oERPDataModel.read(sUrl, {
+				filters: oFilter,
+				success: function (oData) {
+					oAppModel.setProperty("/serviceTypeSet", oData.results);
+				},
+				error: function (oData) {}
+			});
+		},
+		
+		cancelBooking: function () {
+		   var sUrl = "/App_booking_cancellationSet";
+			var oERPDataModel = this.getModel("oERPDataModel");
+			var oAppModel = this.getModel("oAppModel");
+			var oFilter = [];
+			oFilter.push(new Filter("Vbeln", "EQ", '3000010714'));
+			oFilter.push(new Filter("Abgru", "EQ", "A1"));
 			oERPDataModel.read(sUrl, {
 				filters: oFilter,
 				success: function (oData) {

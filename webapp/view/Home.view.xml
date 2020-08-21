@@ -8,61 +8,51 @@ Comments:
 <mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.Home" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
 	xmlns="sap.m" xmlns:l="sap.ui.layout">
 	<VBox >
-		<HBox class="sapUiSmallMargin sapUiMediumMarginTop" justifyContent="SpaceBetween" alignItems="Center">
+		<HBox class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop" justifyContent="SpaceBetween" alignItems="Center">
 			<VBox alignItems="Start" class="aljTitleClassHome">
-				<Text text="{i18n>Welcome}" class="aljHomeTextCSS"/>
-				<Text text="Mohammed" class="classRedFont aljHomeTextCSS1"/>
-				<Text text="2019 Land Cruiser" class="aljHomeTextCSS"/>
+				<Text text="{i18n>Welcome}" class="aljWelcomeTextCSS"/>
+				<Text text="Mohammed" class="aljHomeNameTextCSS"/>
+				<Text text="2019 Land Cruiser" class="aljHomeCarModelTextCSS"/>
 				<Text text="30,000 KM" class="aljHomeTextCSS sapUiTinyMarginBottom"/>
 				<Button text="{i18n>UpdateKM}" class="sapUiTinyMarginBottom aljRedBtnStyle"/>
 			</VBox>
-			<!--	<ToolbarSpacer/>
-		<FlexBox  width="150px" height="250px" justifyContent="End"/>-->
-			<VBox alignItems="Center">
+			<VBox alignItems="End">
 				<Text text="Land Cruiser" class="boldFontCls"/>
-				<Text text="{i18n>SwitchCar}" class="aljLightGreyBtnStyle underLineCls"/>
+				<Text text="{i18n>SwitchCar}" class="underLineCls"/>
 			</VBox>
 		</HBox>
 		<Text text="{i18n>ServiceOffers}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiTinyMarginBottom"/>
-		<VBox class="aljBorderLine"></VBox>
 		<ScrollContainer horizontal="true" vertical="false">
 			<HBox items="{oAppModel>/ServiceOffer}" justifyContent="SpaceBetween" class="sapUiSmallMarginBeginEnd sapUiContentPadding scrollCnt">
-				<Image src="{oAppModel>src}" height="9rem" class="sapUiTinyMarginBottom sapUiContentPadding sapUiTinyMarginBeginEnd "
-					press="onServiceOfferPress"/>
+				<Image src="{oAppModel>src}" height="7rem" class="sapUiTinyMarginBottom sapUiContentPadding sapUiTinyMarginEnd" press="onServiceOfferPress"/>
 			</HBox>
 		</ScrollContainer>
-		<HBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom" alignItems="Center" justifyContent="SpaceBetween">
+		<HBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginTopBottom" alignItems="Start" justifyContent="SpaceBetween">
 			<VBox>
 				<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>
-				<VBox class="aljBorderLine"></VBox>
 			</VBox>
-			<!--
-				<ToolbarSpacer/>
-		<FlexBox  width="150px" height="250px" justifyContent="End"/>-->
-			<Text text="{i18n>ShowAll}"/>
+			<Link text="{i18n>ShowAll}" class="aljDetailLinkStyle"/>
 		</HBox>
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
 		<!-- Service Status Section - Start-->
-		<HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom">
+		<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginBeginEnd">
 			<VBox>
 				<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
-				<VBox class="aljBorderLine"></VBox>
 			</VBox>
 			<Link text="{i18n>ViewDetails} >" class="aljDetailLinkStyle"/>
 		</HBox>
-		<Text text="2019 Land Cruiser" class="sapUiSmallMarginBeginEnd"/>
+		<Text text="2019 Land Cruiser" class="aljSSModelTitleStyle sapUiSmallMarginBeginEnd"/>
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatus" type="XML"/>
 		<!-- Service Status Section - End-->
 		<!-- Service Section - Start-->
-		<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiTinyMarginBottom"/>
-		<VBox class="aljBorderLine"></VBox>
-		<HBox class="aljHomeServiceBoxStyle sapUiSmallMarginBeginEnd">
+		<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBeginEnd"/>
+		<HBox class="aljHomeServiceBoxStyle sapUiSmallMarginBeginEnd sapUiMediumMarginBottom">
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
-				<Image src="image/BookService.png" height="3rem"/>
+				<Image src="image/BookService.png" height="2.7rem"/>
 				<Button text="{i18n>BookAService}" class="aljServiceBtnStyle"/>
 			</VBox>
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
-				<Image src="image/MyService.png" height="3rem"/>
+				<Image src="image/MyService.png" height="2.7rem"/>
 				<Button text="{i18n>MyServices}" class="aljServiceBtnStyle"/>
 			</VBox>
 		</HBox>
