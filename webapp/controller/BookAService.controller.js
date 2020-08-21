@@ -148,8 +148,9 @@ sap.ui.define([
 				error: function (oData) {}
 			});
 		},
-			getBookingSlot: function () {
-		   var sUrl = "/Location_and_Slot_MasterSet";
+		
+		getBookingSlot: function () {
+			var sUrl = "/Location_and_Slot_MasterSet";
 			var oERPDataModel = this.getModel("oERPDataModel");
 			var oAppModel = this.getModel("oAppModel");
 			var oFilter = [];
@@ -163,9 +164,9 @@ sap.ui.define([
 				error: function (oData) {}
 			});
 		},
-		
+
 		cancelBooking: function () {
-		   var sUrl = "/App_booking_cancellationSet";
+			var sUrl = "/App_booking_cancellationSet";
 			var oERPDataModel = this.getModel("oERPDataModel");
 			var oAppModel = this.getModel("oAppModel");
 			var oFilter = [];

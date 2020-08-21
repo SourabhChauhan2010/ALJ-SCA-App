@@ -17,7 +17,8 @@ Comments:
 				<Button text="{i18n>UpdateKM}" class="sapUiTinyMarginBottom aljRedBtnStyle"/>
 			</VBox>
 			<VBox alignItems="End">
-				<Text text="Land Cruiser" class="boldFontCls"/>
+				<!--<Text text="Land Cruiser" class="boldFontCls"/>-->
+				<Image src="image/LC.svg" width="9rem"/>
 				<Text text="{i18n>SwitchCar}" class="underLineCls"/>
 			</VBox>
 		</HBox>
