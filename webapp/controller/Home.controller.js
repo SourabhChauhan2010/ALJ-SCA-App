@@ -39,6 +39,10 @@ sap.ui.define([
 			var currService = oEvent.getSource().getBindingContext("oAppModel").getObject();
 			this.getModel("oAppModel").setProperty("/oProductDetails", currService);
 			this.oRouter.navTo("ProductDetail");
+		},
+		
+		onPressMyServices: function() {
+			this.oRouter.navTo("MyServices");
 		}
 
 	});

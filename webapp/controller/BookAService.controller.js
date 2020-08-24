@@ -67,6 +67,7 @@ sap.ui.define([
 			this.getServiceType();
 			this.getBookingSlot();
 			this.cancelBooking();
+			this.rescheduleBooking();
 		},
 
 		onBeforeRendering: function () {
@@ -156,22 +157,6 @@ sap.ui.define([
 			var oFilter = [];
 			oFilter.push(new Filter("Zday", "EQ", '20200716'));
 			oFilter.push(new Filter("Werks", "EQ", '7030'));
-			oERPDataModel.read(sUrl, {
-				filters: oFilter,
-				success: function (oData) {
-					oAppModel.setProperty("/serviceTypeSet", oData.results);
-				},
-				error: function (oData) {}
-			});
-		},
-
-		cancelBooking: function () {
-			var sUrl = "/App_booking_cancellationSet";
-			var oERPDataModel = this.getModel("oERPDataModel");
-			var oAppModel = this.getModel("oAppModel");
-			var oFilter = [];
-			oFilter.push(new Filter("Vbeln", "EQ", '3000010714'));
-			oFilter.push(new Filter("Abgru", "EQ", "A1"));
 			oERPDataModel.read(sUrl, {
 				filters: oFilter,
 				success: function (oData) {
