@@ -66,8 +66,6 @@ sap.ui.define([
 			this.getView().getContent()[8].getItems()[0].getItems()[1].getItems()[1].setText(this.servicelist);
 			this.getServiceType();
 			this.getBookingSlot();
-			this.cancelBooking();
-			this.rescheduleBooking();
 		},
 
 		onBeforeRendering: function () {
