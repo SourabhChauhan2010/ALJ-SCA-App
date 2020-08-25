@@ -20,7 +20,7 @@
 				</HBox>
 			</HBox>
 		</VBox>
-		<VBox >
+		<VBox class="sapUiMediumMarginBottom">
 			<Label text="SAR 200" class="sapUiSmallMargin"/>
 			<Button text="{i18n>Confirm}" press="createAppointment" class="aljRedBtnStyle"/>
 		</VBox>

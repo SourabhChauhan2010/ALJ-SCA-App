@@ -11,7 +11,7 @@ sap.ui.define([
 		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.ServiceStatus
 		 */
 		onInit: function () {
-			this.initiateMap();
+			// this.initiateMap();
 		},
 
 		initiateMap: function () {
@@ -83,6 +83,30 @@ sap.ui.define([
 
 			window.plugins.calendar.createEvent(title, mylocation, notes, startDate, endDate, success, error);
 		},
+		
+		cancelBooking: function () {
+			var sUrl = "/App_booking_cancellationSet(Vbeln='3000010715',Abgru='A1')";
+			var oERPDataModel = this.getModel("oERPDataModel");
+			var oAppModel = this.getModel("oAppModel");
+			oERPDataModel.read(sUrl, {
+				success: function (oData) {
+					// oAppModel.setProperty("/serviceTypeSet", oData.results);
+				},
+				error: function (oData) {}
+			});
+		},
+		
+		rescheduleBooking: function () {
+			var sUrl = "/App_booking_ReschedulingSet(Vbeln='3000010715',AppTs='001',AppDate='20201408',AppType='ZAP')";
+			var oERPDataModel = this.getModel("oERPDataModel");
+			var oAppModel = this.getModel("oAppModel");
+			oERPDataModel.read(sUrl, {
+				success: function (oData) {
+					// oAppModel.setProperty("/serviceTypeSet", oData.results);
+				},
+				error: function (oData) {}
+			});
+		}
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

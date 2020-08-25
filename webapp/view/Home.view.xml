@@ -50,11 +50,11 @@ Comments:
 		<HBox class="aljHomeServiceBoxStyle sapUiSmallMarginBeginEnd sapUiMediumMarginBottom">
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
 				<Image src="image/BookService.png" height="2.7rem"/>
-				<Button text="{i18n>BookAService}" class="aljServiceBtnStyle"/>
+				<Button text="{i18n>BookAService}" class="aljServiceBtnStyle" press="onBookService"/>
 			</VBox>
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
 				<Image src="image/MyService.png" height="2.7rem"/>
-				<Button text="{i18n>MyServices}" class="aljServiceBtnStyle"/>
+				<Button text="{i18n>MyServices}" class="aljServiceBtnStyle" press="onPressMyServices"/>
 			</VBox>
 		</HBox>
 		<!-- Service Section - End-->
