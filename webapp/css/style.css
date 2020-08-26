@@ -154,17 +154,17 @@
 }
 
 .aljLargeBtnStyle {
-	height: 3rem;
+    height: 3rem;
 }
 
-.aljLargeBtnStyle .sapMBtnInner{
-	height: 3rem;
-	min-width: 10rem;
+.aljLargeBtnStyle .sapMBtnInner {
+    height: 3rem;
+    min-width: 10rem;
 }
 
-.aljLargeBtnStyle .sapMBtnContent{
-	line-height: 3rem;
-	font-size: 1rem;
+.aljLargeBtnStyle .sapMBtnContent {
+    line-height: 3rem;
+    font-size: 1rem;
 }
 
 .aljRedBtnStyleRev .sapMBtnInner,
@@ -188,6 +188,7 @@
 .aljBlackBtnStyleRev .sapMBtnContent {
     font-weight: normal;
 }
+
 .aljRedBtnStyleRev .sapMBtnIcon {
     color: black;
     font-size: 0.8rem;
@@ -328,11 +329,11 @@
     z-index: 3;
 }
 
-.aljProductsStyle ellipse{
+.aljProductsStyle ellipse {
     fill: #888888;
 }
 
-.aljFooterSelectedStyle .aljProductsStyle ellipse{
+.aljFooterSelectedStyle .aljProductsStyle ellipse {
     fill: #CE0E2D;
 }
 
@@ -344,7 +345,7 @@
 .aljFooterSelectedStyle .aljMyCarLogoStyle circle,
 .aljFooterSelectedStyle circle,
 .aljFooterSelectedStyle rect,
-.aljFooterSelectedStyle line{
+.aljFooterSelectedStyle line {
     stroke: #CE0E2D;
 }
 
@@ -1011,14 +1012,14 @@
 
 .aljSSWhiteBoxStyle {
     background: #fff;
-    height: 19rem;
+    height: 17.4rem;
     -webkit-clip-path: polygon(50% 65%, 100% 100%, 0 100%);
     clip-path: polygon(50% 65%, 100% 100%, 0 100%);
 }
 
 .aljSSCarlStyle {
     position: fixed;
-    top: 6rem;
+    top: 5rem;
     z-index: 1000;
     background: transparent;
     height: 29rem !important;
@@ -1084,13 +1085,15 @@
 }
 
 .aljSSFooterStyle .sapMText {
+    display: block;
     color: #000;
     font-size: 1rem;
     font-weight: bold;
     padding: 0.025rem 0.5rem 0 0.5rem;
     background: #fff;
-    height: 1.25rem;
+    height: 1.4rem;
     line-height: 1.25rem;
+    border: 0.3rem solid white;
 }
 
 .UserInfoHeaderAlign {
@@ -1109,12 +1112,12 @@
     margin-left: 1.25rem;
 }
 
-.UserInfoHeaderAlign .sapMLnk{
-	color: #000 !important;	
+.UserInfoHeaderAlign .sapMLnk {
+    color: #000 !important;
 }
 
-.aljProfileEditIconStyle{
-	margin-top: 1.2rem;
+.aljProfileEditIconStyle {
+    margin-top: 1.2rem;
 }
 
 .VehicleListItemCSS .sapMLIB {
@@ -1220,7 +1223,7 @@
 
 .aljCarouselImage-1 {
     width: 14rem !important;
-    margin: -1rem 0rem 0rem -1rem;
+    margin: -2rem 0rem 0rem -1rem;
 }
 
 .aljCarouselImage-2 {
@@ -1266,6 +1269,7 @@
     font-size: 0.5rem;
 }
 
+
 /****top home page**/
 
 .aljCarListText {
@@ -1287,7 +1291,7 @@
 }
 
 .aljSSModelTitleStyle {
-	font-family: 'UniversNextPro';
+    font-family: 'UniversNextPro';
     font-weight: normal;
     font-size: 0.625rem;
 }
