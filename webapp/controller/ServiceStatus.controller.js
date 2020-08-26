@@ -90,8 +90,8 @@ sap.ui.define([
 			var oAppModel = this.getModel("oAppModel");
 			oERPDataModel.read(sUrl, {
 				success: function (oData) {
-					// oAppModel.setProperty("/serviceTypeSet", oData.results);
-				},
+					this._showToastMessage("App_booking_cancellationSet Success");
+				}.bind(this),
 				error: function (oData) {}
 			});
 		},
@@ -102,8 +102,8 @@ sap.ui.define([
 			var oAppModel = this.getModel("oAppModel");
 			oERPDataModel.read(sUrl, {
 				success: function (oData) {
-					// oAppModel.setProperty("/serviceTypeSet", oData.results);
-				},
+					this._showToastMessage("App_booking_ReschedulingSet Success");
+				}.bind(this),
 				error: function (oData) {}
 			});
 		}

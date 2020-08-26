@@ -66,6 +66,7 @@ sap.ui.define([
 			this.getView().getContent()[8].getItems()[0].getItems()[1].getItems()[1].setText(this.servicelist);
 			this.getServiceType();
 			this.getBookingSlot();
+			this.getServiceLocations();
 		},
 
 		onBeforeRendering: function () {
@@ -124,7 +125,8 @@ sap.ui.define([
 			oERPDataModel.create(sUrl, oPayload, {
 				success: function (oData) {
 					// oAppModel.setProperty("/serviceTypeSet", oData.results);
-				},
+					this._showToastMessage("App_booking_CreationSet Success");
+				}.bind(this),
 				error: function (oData) {}
 			});
 
@@ -137,17 +139,33 @@ sap.ui.define([
 			var oERPDataModel = this.getModel("oERPDataModel");
 			var oAppModel = this.getModel("oAppModel");
 			var oFilter = [];
-			oFilter.push(new Filter("SrvType", "EQ", 'MC'));
 			oFilter.push(new Filter("Werks", "EQ", '7030'));
 			oERPDataModel.read(sUrl, {
 				filters: oFilter,
 				success: function (oData) {
 					oAppModel.setProperty("/serviceTypeSet", oData.results);
-				},
+					this._showToastMessage("Plant_and_Service_typeSet Werks Success");
+				}.bind(this),
 				error: function (oData) {}
 			});
 		},
 		
+		getServiceLocations: function () {
+			var sUrl = "/Plant_and_Service_typeSet";
+			var oERPDataModel = this.getModel("oERPDataModel");
+			var oAppModel = this.getModel("oAppModel");
+			var oFilter = [];
+			oFilter.push(new Filter("SrvType", "EQ", 'MC'));
+			oERPDataModel.read(sUrl, {
+				filters: oFilter,
+				success: function (oData) {
+					// oAppModel.setProperty("/serviceTypeSet", oData.results);
+					this._showToastMessage("Plant_and_Service_typeSet SrvType Success");
+				}.bind(this),
+				error: function (oData) {}
+			});
+		},
+
 		getBookingSlot: function () {
 			var sUrl = "/Location_and_Slot_MasterSet";
 			var oERPDataModel = this.getModel("oERPDataModel");
@@ -158,8 +176,8 @@ sap.ui.define([
 			oERPDataModel.read(sUrl, {
 				filters: oFilter,
 				success: function (oData) {
-					oAppModel.setProperty("/serviceTypeSet", oData.results);
-				},
+					this._showToastMessage("Location_and_Slot_MasterSet Success");
+				}.bind(this),
 				error: function (oData) {}
 			});
 		}
