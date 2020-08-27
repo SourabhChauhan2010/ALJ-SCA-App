@@ -1,5 +1,44 @@
 /********General Styles - Start*********/
 
+
+/* Removing focus outlines */
+
+html.sap-desktop .sapMSegBBtnFocusable.sapMSegBBtnSel:focus {
+    outline: none;
+}
+
+html.sap-desktop .sapMBtn:focus>.sapMFocusable {
+    outline: none;
+}
+
+.sapUiBody,
+.sapMInputBaseInner,
+.sapMText,
+.sapMLabel,
+.sapMBtnInner,
+.sapMSegBBtnInner,
+.sapMObjStatusText,
+.sapMTitle {
+    outline: none !important;
+}
+
+:focus {
+    outline: none !important;
+}
+
+.sapUiIcon:focus,
+.sapMInputBaseContentWrapper,
+.sapMSelectListItemBaseSelected,
+.sapMListBGTranslucent .sapMListTblHeader,
+.sapMSwtCont .sapMSwt,
+.sapMListTblRow,
+.sapMSLI,
+.sapMComboBoxBasePicker-CTX .sapMComboBoxList.sapMListFocus .sapMLIBSelected,
+.sapMComboBoxBasePicker-CTX .sapMComboBoxList.sapMListFocus .sapMLIBSelected {
+    outline: none !important;
+    outline-offset: 0 !important;
+}
+
 .sapMTitle,
 .sapMLabel,
 .sapMText,
@@ -159,7 +198,7 @@
 
 .aljLargeBtnStyle .sapMBtnInner {
     height: 3rem;
-    min-width: 10rem;
+    min-width: 10rem !important;
 }
 
 .aljLargeBtnStyle .sapMBtnContent {
@@ -195,7 +234,7 @@
 }
 
 .aljRedColorStyle {
-    color: #CE0E2D;
+    color: #CE0E2D !important;
 }
 
 .aljLightGreyBtnStyle .sapMBtnInner,
@@ -274,32 +313,6 @@
     .aljBoxContentStyle>div {
         max-width: 70rem;
         width: 100%;
-    }
-    .aljSSOuterBoxStyle {
-        max-width: 40rem;
-    }
-    .aljSSIBoxStyle {
-        height: 7rem !important;
-    }
-    .aljSSIBoxStyle .sapMText {
-        font-size: 1rem !important;
-        margin-right: 1.35rem !important;
-        margin-top: 1.25rem !important;
-    }
-    .aljSSIRedStyle {
-        background-size: 4.5rem;
-    }
-    .aljSSIGreenStyle {
-        background-size: 4.5rem;
-    }
-    .aljSSCarStyle {
-        top: -2rem !important;
-    }
-    .aljSSCarStyle .sapMImg {
-        height: 1.4rem !important;
-    }
-    .aljSSModelTitleStyle {
-        font-size: 1rem !important;
     }
 }
 
@@ -1131,6 +1144,7 @@
     text-align: left;
     border-bottom: 1px solid #d9d9d9;
     padding: 0.75rem 2.5rem 0.75rem 2rem;
+    min-width: 20rem;
 }
 
 .UserInfoBoxInner {
@@ -1153,7 +1167,7 @@
 .VehicleListVBCSS {
     border: 1px solid #d9d9d9;
     border-radius: 0.5rem;
-    height: 6rem;
+    min-height: 6rem;
 }
 
 .VehicleListVBRedCSS {
@@ -1299,7 +1313,7 @@
 /****top home page**/
 
 .aljCarListText {
-    font-size: 15px !important;
+    font-size: 14px !important;
 }
 
 .aljSLServiceTypeStyle {
@@ -1320,4 +1334,75 @@
     font-family: 'UniversNextPro';
     font-weight: normal;
     font-size: 0.625rem;
+}
+
+
+/****My Car****/
+
+.aljMyCarBtnBox {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.aljMyCarBtnBox .sapMFlexItem {
+    width: 100%;
+}
+
+.VehicleListVBCSS:hover {
+    border: 1px solid #ce292d;
+}
+
+.VehicleListVBCSS:active {
+    border: 1px solid #ce292d;
+}
+
+.aljTextBlock {
+    display: flex;
+}
+
+@media screen and (max-width: 400px) {
+    .aljTextBlock {
+        display: block !important;
+    }
+    .aljCarListText {
+        margin: 0rem !important;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .UserInfoVBoxCSS {
+        width: 30rem;
+    }
+}
+
+
+/*Service Status - Destop Version changes*/
+
+@media only screen and (min-width: 1024px) {
+    .aljSSOuterBoxStyle {
+        max-width: 40rem;
+    }
+    .aljSSIBoxStyle {
+        height: 7rem !important;
+    }
+    .aljSSIBoxStyle .sapMText {
+        font-size: 1rem !important;
+        margin-right: 1.35rem !important;
+        margin-top: 1.25rem !important;
+    }
+    .aljSSIRedStyle {
+        background-size: 4.5rem;
+    }
+    .aljSSIGreenStyle {
+        background-size: 4.5rem;
+    }
+    .aljSSCarStyle {
+        top: -2rem !important;
+    }
+    .aljSSCarStyle .sapMImg {
+        height: 1.4rem !important;
+    }
+    .aljSSModelTitleStyle {
+        font-size: 1rem !important;
+    }
 }
