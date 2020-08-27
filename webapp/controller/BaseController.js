@@ -229,6 +229,7 @@ sap.ui.define([
 					// var aData = oAppModelData.getProperty("/UserInformation");
 					// aData[0] = oEvent;
 					// oAppModelData.setProperty("/UserInformation", aData);
+					oAppModelData.setProperty("/UserInformation", oEvent);
 				} else {
 					// oAppModelData.setProperty("/UserInformation", {});
 				}
