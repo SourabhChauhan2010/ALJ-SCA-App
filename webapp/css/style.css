@@ -188,6 +188,14 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     font-family: 'UniversNextPro';
 }
 
+/*.aljRedBtnStyleDesktop .sapMBtnInner,
+.aljRedBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
+    color: #fff;
+    background: #CE0E2D;
+    min-width: 10rem;
+    font-family: 'UniversNextPro';
+}*/
+
 .aljRedBtnStyle .sapMBtnInner.sapMBtnActive {
     background: #9e0011;
 }
@@ -508,6 +516,16 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     background: #EDEDED;
     letter-spacing: 1.5px;
     width: 5.5rem;
+}
+.aljReccListStyleDesktop {
+    padding: 0.5rem 0rem;
+    border-radius: 9px;
+    margin: 0 0.5rem 0 0;
+    border: solid #f2f2f2 1px;
+    height: calc(100% - 1rem);
+    background: #EDEDED;
+    letter-spacing: 1.5px;
+    width: 10.5rem;
 }
 
 .aljServiceOffBox {
@@ -1000,6 +1018,13 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     width: 6rem;
     height: 1.25rem;
 }
+.aljServiceBtnStyleDTop .sapMBtnInner,
+.aljServiceBtnStyleDTop.sapMBtn:hover>.sapMBtnHoverable {
+    color: #fff;
+    background: #CE0E2D;
+    width: 9rem;
+    height: 2rem;
+}
 
 .aljServiceBtnStyle .sapMBtnContent {
     font-size: 0.5rem;
@@ -1213,6 +1238,14 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     font-size: 0.75rem;
 }
 
+.underLineClsDTop {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 300;
+    border-bottom: solid 1px;
+    font-size: 1.5rem;
+}
+
 .underLineSmlCls {
     border-bottom: solid 1px;
 }
@@ -1231,9 +1264,19 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     font-family: 'UniversNextPro';
     font-weight: lighter;
 }
-
+.aljWelcomeTextCSSDesktop {
+    font-size: 1.5rem;
+    font-family: 'UniversNextPro';
+    font-weight: lighter;
+}
 .aljHomeTextCSS {
     font-size: 0.8125rem;
+    font-family: 'UniversNextPro';
+    font-weight: normal;
+}
+
+.aljHomeTextCSSDesktop {
+    font-size: 1.625rem;
     font-family: 'UniversNextPro';
     font-weight: normal;
 }
@@ -1250,8 +1293,21 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     font-weight: normal;
 }
 
+.aljHomeCarModelTextCSSdesktop {
+    font-size: 0.9375rem;
+    font-family: 'UniversNextPro';
+    font-weight: normal;
+}
+
 .aljHomeNameTextCSS {
     font-size: 1.0625rem;
+    color: #CE0E2D;
+    font-family: 'UniversNextPro';
+    font-weight: normal;
+}
+
+.aljHomeNameTextCSSDesktop {
+    font-size: 2.125rem;
     color: #CE0E2D;
     font-family: 'UniversNextPro';
     font-weight: normal;
@@ -1309,6 +1365,11 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     font-size: 0.5rem;
 }
 
+.aljModelTextStyleDTop {
+    font-weight: bold;
+    color: black;
+    font-size: 1rem;
+}
 
 /****top home page**/
 
@@ -1323,12 +1384,21 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     font-weight: 700;
 }
 
+/*.aljSLServiceTypeStyleDTop {
+    font-size: 1rem;
+    color: #CE0E2D;
+    font-family: 'UniversNextPro';
+    font-weight: 700;
+}*/
+
 .aljReccPriceStyle {
     font-size: 0.5rem;
     color: #000;
     font-family: 'UniversNextPro';
     font-weight: normal;
 }
+
+
 
 .aljSSModelTitleStyle {
     font-family: 'UniversNextPro';
@@ -1405,4 +1475,22 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     .aljSSModelTitleStyle {
         font-size: 1rem !important;
     }
+    .aljReccPriceStyle {
+    font-size: 0.75rem;
+    }
+    .aljSLServiceTypeStyle{
+    font-size: 0.9rem;	
+    }
+    .aljRedBtnStyle{
+    font-size: 10rem;		
+    }
+    .aljTitleClass {
+    font-size: 1.4rem;
+   }
+   .aljDetailLinkStyle.sapMLnk {
+    font-size: 1rem;
+}
+.aljBookBtnFill .sapMBtnContent{
+font-size: 0.75rem;	
+}
 }

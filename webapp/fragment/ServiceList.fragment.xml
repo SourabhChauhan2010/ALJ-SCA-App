@@ -1,17 +1,18 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
 	<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
 		<HBox items="{oAppModel>/recommendations}" class="sapUiSmallMarginBeginEnd">
-			<CustomListItem class="aljReccListStyle"
+			<CustomListItem id="idRecommedCusList" 
 				visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.highlightSelectedItem'}" type="Active"
 				press="onServiceItemPress">
 				<VBox alignItems="Center" renderType="Bare">
-					<Text text="{oAppModel>model}" class="aljModelTextStyle sapUiTinyMarginTop"/>
-					<Image src="{oAppModel>src}" width="3.5rem"/>
+					<Text id="idRecomdForTxt" text="{oAppModel>model}"/>
+					<!--<Image src="{oAppModel>src}" width="3.5rem"/>-->
+					<Image src="{oAppModel>src}" width="{= ${device>/system/phone} === true ? '3.5rem' : '10rem' }"/>
 					<VBox class="sapUiTinyMarginBegin" alignItems="Start" width="100%">
-						<Label text="{oAppModel>serviceType}" class="aljSLServiceTypeStyle sapUiTinyMarginBegin"/>
+						<Label  text="{oAppModel>serviceType}" class="aljSLServiceTypeStyle sapUiTinyMarginBegin"/>
 					</VBox>
 					<HBox class="aljServiceOffBox">
-						<Label text="{oAppModel>sar2}" class="classStrike aljReccPriceStyle"/>
+						<Label  text="{oAppModel>sar2}" class="classStrike aljReccPriceStyle"/>
 						<Label text="{oAppModel>sar1}" class="aljReccPriceStyle"/>
 					</HBox>
 					<Button text="{i18n>BOOK}" class="aljRedBtnStyle aljBookBtnFill" press="onBookService"
