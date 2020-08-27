@@ -275,6 +275,32 @@
         max-width: 70rem;
         width: 100%;
     }
+    .aljSSOuterBoxStyle {
+        max-width: 40rem;
+    }
+    .aljSSIBoxStyle {
+        height: 7rem !important;
+    }
+    .aljSSIBoxStyle .sapMText {
+        font-size: 1rem !important;
+        margin-right: 1.35rem !important;
+        margin-top: 1.25rem !important;
+    }
+    .aljSSIRedStyle {
+        background-size: 4.5rem;
+    }
+    .aljSSIGreenStyle {
+        background-size: 4.5rem;
+    }
+    .aljSSCarStyle {
+        top: -2rem !important;
+    }
+    .aljSSCarStyle .sapMImg {
+        height: 1.4rem !important;
+    }
+    .aljSSModelTitleStyle {
+        font-size: 1rem !important;
+    }
 }
 
 
