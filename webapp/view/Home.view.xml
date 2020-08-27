@@ -7,26 +7,30 @@ Comments:
 *****************************************************************-->
 <mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.Home" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
 	xmlns="sap.m" xmlns:l="sap.ui.layout">
-	<VBox >
+	<VBox id="idVboxHomeView">
 		<HBox class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop" justifyContent="SpaceBetween" alignItems="Center">
-			<VBox alignItems="Start" class="aljTitleClassHome">
-				<Text text="{i18n>Welcome}" class="aljWelcomeTextCSS"/>
-				<Text text="Mohammed" class="aljHomeNameTextCSS"/>
-				<Text text="2019 Land Cruiser" class="aljHomeCarModelTextCSS"/>
-				<Text text="30,000 KM" class="aljHomeTextCSS sapUiTinyMarginBottom"/>
+			<VBox alignItems="Start" class="aljTitleClassHome sapUiSmallMarginTop">
+				<Text id="idHomeWcomeTxt" text="{i18n>Welcome}"/>
+				<Text id="idMohMdTxt" text="Mohammed"/>
+				<Text id="idLandCruiseTxt" text="2019 Land Cruiser" />
+				<Text id="idKmTxt" text="30,000 KM" class="sapUiTinyMarginBottom"/>
 				<Button text="{i18n>UpdateKM}" class="sapUiTinyMarginBottom aljRedBtnStyle"/>
 			</VBox>
 			<VBox alignItems="End">
 				<!--<Text text="Land Cruiser" class="boldFontCls"/>-->
-				<Image src="image/LC.svg" width="9rem"/>
-				<Text text="{i18n>SwitchCar}" class="underLineCls"/>
+				<Image src="image/LC.svg" width="{= ${device>/system/phone} === true ? '9rem' : '18rem' }"/>
+				<Text id="idSwtchCar" text="{i18n>SwitchCar}" class="underLineCls"/>
 			</VBox>
 		</HBox>
 		<Text text="{i18n>ServiceOffers}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiTinyMarginBottom"/>
 		<ScrollContainer horizontal="true" vertical="false">
-			<HBox items="{oAppModel>/ServiceOffer}" justifyContent="SpaceBetween" class="sapUiSmallMarginBeginEnd sapUiContentPadding scrollCnt">
+		<!--	<HBox items="{oAppModel>/ServiceOffer}" justifyContent="SpaceBetween" class="sapUiSmallMarginBeginEnd sapUiContentPadding scrollCnt">
 				<Image src="{oAppModel>src}" height="7rem" class="sapUiTinyMarginBottom sapUiContentPadding sapUiTinyMarginEnd" press="onServiceOfferPress"/>
-			</HBox>
+			</HBox>-->
+			<HBox items="{oAppModel>/ServiceOffer}"  class="sapUiSmallMarginBeginEnd ">
+		<Image src="{oAppModel>src}" height="{= ${device>/system/phone} === true ? '7rem' : '9.5rem' }" 
+		width="{= ${device>/system/phone} === true ? '12.5rem' : '25rem' }" class="sapUiTinyMarginEnd" press="onServiceOfferPress"/>
+			</HBox>	
 		</ScrollContainer>
 		<HBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginTopBottom" alignItems="Start" justifyContent="SpaceBetween">
 			<VBox>
@@ -49,12 +53,12 @@ Comments:
 		<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBeginEnd"/>
 		<HBox class="aljHomeServiceBoxStyle sapUiSmallMarginBeginEnd sapUiMediumMarginBottom">
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
-				<Image src="image/BookService.png" height="2.7rem"/>
-				<Button text="{i18n>BookAService}" class="aljServiceBtnStyle" press="onBookService"/>
+				<Image src="image/BookService.png" height="{= ${device>/system/phone} === true ? '2.7rem' : '5.4rem' }"/>
+				<Button id="idBtnBookAServ" text="{i18n>BookAService}" press="onBookService"/>
 			</VBox>
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
-				<Image src="image/MyService.png" height="2.7rem"/>
-				<Button text="{i18n>MyServices}" class="aljServiceBtnStyle" press="onPressMyServices"/>
+				<Image src="image/MyService.png" height="{= ${device>/system/phone} === true ? '2.7rem' : '5.4rem' }"/>
+				<Button id="idBtnMyServ" text="{i18n>MyServices}"  press="onPressMyServices"/>
 			</VBox>
 		</HBox>
 		<!-- Service Section - End-->
