@@ -1,5 +1,44 @@
 /********General Styles - Start*********/
 
+
+/* Removing focus outlines */
+
+html.sap-desktop .sapMSegBBtnFocusable.sapMSegBBtnSel:focus {
+    outline: none;
+}
+
+html.sap-desktop .sapMBtn:focus>.sapMFocusable {
+    outline: none;
+}
+
+.sapUiBody,
+.sapMInputBaseInner,
+.sapMText,
+.sapMLabel,
+.sapMBtnInner,
+.sapMSegBBtnInner,
+.sapMObjStatusText,
+.sapMTitle {
+    outline: none !important;
+}
+
+:focus {
+    outline: none !important;
+}
+
+.sapUiIcon:focus,
+.sapMInputBaseContentWrapper,
+.sapMSelectListItemBaseSelected,
+.sapMListBGTranslucent .sapMListTblHeader,
+.sapMSwtCont .sapMSwt,
+.sapMListTblRow,
+.sapMSLI,
+.sapMComboBoxBasePicker-CTX .sapMComboBoxList.sapMListFocus .sapMLIBSelected,
+.sapMComboBoxBasePicker-CTX .sapMComboBoxList.sapMListFocus .sapMLIBSelected {
+    outline: none !important;
+    outline-offset: 0 !important;
+}
+
 .sapMTitle,
 .sapMLabel,
 .sapMText,
@@ -159,7 +198,7 @@
 
 .aljLargeBtnStyle .sapMBtnInner {
     height: 3rem;
-    min-width: 10rem;
+    min-width: 10rem !important;
 }
 
 .aljLargeBtnStyle .sapMBtnContent {
@@ -195,7 +234,7 @@
 }
 
 .aljRedColorStyle {
-    color: #CE0E2D;
+    color: #CE0E2D !important;
 }
 
 .aljLightGreyBtnStyle .sapMBtnInner,
@@ -1127,7 +1166,7 @@
 .VehicleListVBCSS {
     border: 1px solid #d9d9d9;
     border-radius: 0.5rem;
-    height: 6rem;
+    min-height: 6rem;
 }
 
 .VehicleListVBRedCSS {
@@ -1273,7 +1312,7 @@
 /****top home page**/
 
 .aljCarListText {
-    font-size: 15px !important;
+    font-size: 14px !important;
 }
 
 .aljSLServiceTypeStyle {
@@ -1294,4 +1333,37 @@
     font-family: 'UniversNextPro';
     font-weight: normal;
     font-size: 0.625rem;
+}
+
+
+/****My Car****/
+
+.aljMyCarBtnBox {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.aljMyCarBtnBox .sapMFlexItem {
+    width: 100%;
+}
+
+.VehicleListVBCSS:hover {
+    border: 1px solid #ce292d;
+}
+
+.VehicleListVBCSS:active {
+    border: 1px solid #ce292d;
+}
+
+.aljTextBlock {
+    display: flex;
+}
+
+@media screen and (max-width: 400px) {
+    .aljTextBlock {
+        display: block !important;
+    }
+    .aljCarListText {
+        margin: 0rem !important;
+    }
 }

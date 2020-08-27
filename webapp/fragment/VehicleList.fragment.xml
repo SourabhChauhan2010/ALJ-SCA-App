@@ -21,16 +21,16 @@
 			<CustomListItem>
 				<HBox class="VehicleListVBCSS sapUiMediumMarginBeginEnd sapUiSmallMarginTopBottom" justifyContent="SpaceBetween"
 					visible="{parts: ['oAppModel>isDefault'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.setDefaultVehicleStyle'}">
-					<VBox class="sapUiSmallMarginBegin sapUiTinyMarginTopBottom vehiclListAlignCSS">
+					<VBox width="70%" class="sapUiSmallMarginBegin sapUiTinyMarginTopBottom vehiclListAlignCSS">
 						<Image src="{oAppModel>src}" width="6rem"/>
 						<Text text="{oAppModel>model} {oAppModel>year}" class="aljModelTextStyle aljCarListText"/>
 						<Text text="{oAppModel>vin}" class="aljCarListText"/>
-						<HBox>
+						<HBox class="aljTextBlock">
 							<Text text="{i18n>LastServiceDate}" class="aljCarListText"/>
 							<Text text="{oAppModel>lastServiceDate}" class="aljCarListText aljRedColorStyle sapUiTinyMarginBegin"/>
 						</HBox>
 					</VBox>
-					<VBox class="sapUiSmallMarginTop sapUiTinyMarginBeginEnd">
+					<VBox width="30%" class="sapUiSmallMarginTop sapUiTinyMarginBeginEnd">
 						<Image src="image/Edit.png"/>
 						<Button text="{parts: ['oAppModel>isDefault'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.getDefaultVBtnText'}"
 							press="onMakeDefaultCar"/>
