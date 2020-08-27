@@ -3,7 +3,7 @@
 	<VBox justifyContent="Center" alignItems="Center" class="sapUiSmallMargin" renderType="Bare">
 		<!--<Text text="{i18n>SignUpLabel}" class="aljSignUpLabelStyle"/>-->
 		<VBox alignItems="Center">
-			<Avatar src="image/user.png" customDisplaySize="4.625rem" displaySize="Custom"/>
+			<Avatar src="image/EditProfilePic.PNG" width="5.625rem" customDisplaySize="5.625rem" displaySize="Custom"/>
 		</VBox>
 		<!--<HBox class="aljAddProfPicStyle"/>-->
 		<Text text="{i18n>AddProfilePic}" class="sapUiTinyMarginBottom"/>
