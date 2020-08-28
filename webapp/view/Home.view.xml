@@ -29,13 +29,14 @@ Comments:
 			</HBox>-->
 			<HBox items="{oAppModel>/ServiceOffer}"  class="sapUiSmallMarginBeginEnd ">
 		<Image src="{oAppModel>src}" height="{= ${device>/system/phone} === true ? '7rem' : '9.5rem' }" 
-		width="{= ${device>/system/phone} === true ? '12.5rem' : '25rem' }" class="sapUiTinyMarginEnd" press="onServiceOfferPress"/>
+		width="{= ${device>/system/phone} === true ? '12.5rem' : '26rem' }" class="sapUiTinyMarginEnd" press="onServiceOfferPress"/>
 			</HBox>	
 		</ScrollContainer>
-		<HBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginTopBottom" alignItems="Start" justifyContent="SpaceBetween">
+		<HBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginTopBottom" alignItems="Start" >
 			<VBox>
 				<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>
 			</VBox>
+		<!--</ToolbarSpacer>-->
 			<Link text="{i18n>ShowAll}" class="aljDetailLinkStyle"/>
 		</HBox>
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>

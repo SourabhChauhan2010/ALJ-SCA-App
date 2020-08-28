@@ -6,8 +6,8 @@
 				press="onServiceItemPress">
 				<VBox alignItems="Center" renderType="Bare">
 					<Text  text="{oAppModel>model}" class="sapUiTinyMarginTop aljModelTextStyle"/>
-					<!--<Image src="{oAppModel>src}" width="3.5rem"/>-->
-					<Image src="{oAppModel>src}" width="{= ${device>/system/phone} === true ? '3.5rem' : '10rem' }"/>
+					<Image src="{oAppModel>src}" width="3.5rem"/>
+				<!--	<Image src="{oAppModel>src}" width="{= ${device>/system/phone} === true ? '3.5rem' : '10rem' }"/>-->
 					<VBox class="sapUiTinyMarginBegin" alignItems="Start" width="100%">
 						<Label  text="{oAppModel>serviceType}" class="aljSLServiceTypeStyle sapUiTinyMarginBegin"/>
 					</VBox>

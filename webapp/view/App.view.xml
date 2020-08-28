@@ -8,17 +8,17 @@
 				<customHeader>
 					<Toolbar>
 						<VBox height="6rem" width="100%">
-							<HBox height="3rem" width="100%" justifyContent="Center" alignItems="Center" class="aljPageStyle">
+							<HBox height="{= ${device>/system/phone} === true ? '3rem' : '4rem' }" width="100%" justifyContent="Center" alignItems="Center" class="aljPageStyle">
 								<Image src="image/Logo.png" width="6.5rem" class="sapUiTinyMarginTop" press="goToHome"/>
 							</HBox>
-							<HBox height="3rem" width="100%" justifyContent="SpaceBetween" alignItems="Center" visible="{= ${oAppModel>/currentScreen} === 'SplashScreen'? false: true}">
+							<HBox height="{= ${device>/system/phone} === true ? '3rem' : '5.5rem' }" width="100%" justifyContent="SpaceBetween" alignItems="Center" visible="{= ${oAppModel>/currentScreen} === 'SplashScreen'? false: true}">
 								<VBox class="sapUiSmallMarginBegin">
 									<!--<Image src="image/back.svg" visible="{= ${oAppModel>/currentScreen} === 'BookAService'? true: false}" width="1.25rem" press="onNavBack"/>-->
-									<Image src="image/user.png" height="1.875rem" width="1.875rem" press="onOpenProfile"/><!--visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}"-->
+									<Image src="image/user.png" height="{= ${device>/system/phone} === true ? '1.875rem' : '2.5rem' }" width="{= ${device>/system/phone} === true ? '1.875rem' : '2.5rem' }" press="onOpenProfile"/><!--visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}"-->
 								</VBox>
-								<Label text="{i18n>SERVICE}"/><!--text="{= ${oAppModel>/currentScreenTitle}.toUpperCase()}"-->
+								<Label text="{i18n>SERVICE}" class="headerTxtcls" /><!--text="{= ${oAppModel>/currentScreenTitle}.toUpperCase()}"-->
 								<VBox class="sapUiSmallMarginEnd">
-									<Image src="image/Notification-plain.svg" height="1.375rem" width="1.375rem" press="openNotification"/><!--visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}"--><!--<core:Icon src="sap-icon://decline" width="2.5rem" press="onCloseScreen" color="#ffffff"--><!--	visible="{parts: ['oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.showClose'}"/>--><!--<Image src="image/bell.png" height="37px" width="37px"--><!--	press="onNavBack"/>-->
+									<Image src="image/Notification-plain.svg" height="{= ${device>/system/phone} === true ? '1.375rem' : '2.35rem' }" width="{= ${device>/system/phone} === true ? '1.375rem' : '2.35rem' }" press="openNotification"/><!--visible="{= ${oAppModel>/currentScreen} === 'Home'? true: false}"--><!--<core:Icon src="sap-icon://decline" width="2.5rem" press="onCloseScreen" color="#ffffff"--><!--	visible="{parts: ['oAppModel>/currentScreen'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.showClose'}"/>--><!--<Image src="image/bell.png" height="37px" width="37px"--><!--	press="onNavBack"/>-->
 								</VBox>
 							</HBox>
 						</VBox>
@@ -27,10 +27,10 @@
 				<subHeader>
 					<Toolbar>
 						<!-- Added by Ravikant on 11/06/2020 for addition of header in desktop view - Start -->
-						<IconTabBar expandable="false" class="sapUiResponsiveContentPadding" select="onChangeScreen" items="{oAppModel>/mainScreens}"
+						<IconTabBar expandable="false"  select="onChangeScreen" items="{oAppModel>/mainScreens}" class="aljTabBarTxtClass"
 							selectedKey="{oAppModel>/currentScreen}">
 							<items class="sapUiLargeMarginBegin">
-								<IconTabFilter text="{oAppModel>text}" key="{oAppModel>key}"/>
+								<IconTabFilter text="{oAppModel>text}" key="{oAppModel>key}" class="aljTabBarTxtClass"/>
 							</items>
 						</IconTabBar>
 						<!-- Added by Ravikant on 11/06/2020 for addition of header in desktop view - End -->
