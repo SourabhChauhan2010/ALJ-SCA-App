@@ -10,16 +10,16 @@ Comments:
 	<VBox id="idVboxHomeView">
 		<HBox class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop" justifyContent="SpaceBetween" alignItems="Center">
 			<VBox alignItems="Start" class="aljTitleClassHome sapUiSmallMarginTop">
-				<Text id="idHomeWcomeTxt" text="{i18n>Welcome}"/>
-				<Text id="idMohMdTxt" text="Mohammed"/>
-				<Text id="idLandCruiseTxt" text="2019 Land Cruiser" />
-				<Text id="idKmTxt" text="30,000 KM" class="sapUiTinyMarginBottom"/>
+				<Text class="aljWelcomeTextCSS" text="{i18n>Welcome}"/>
+				<Text class="aljHomeNameTextCSS" text="Mohammed"/>
+				<Text class="aljHomeCarModelTextCSS" text="2019 Land Cruiser" />
+				<Text text="30,000 KM" class="sapUiTinyMarginBottom aljHomeTextCSS"/>
 				<Button text="{i18n>UpdateKM}" class="sapUiTinyMarginBottom aljRedBtnStyle"/>
 			</VBox>
 			<VBox alignItems="End">
 				<!--<Text text="Land Cruiser" class="boldFontCls"/>-->
 				<Image src="image/LC.svg" width="{= ${device>/system/phone} === true ? '9rem' : '18rem' }"/>
-				<Text id="idSwtchCar" text="{i18n>SwitchCar}" class="underLineCls"/>
+				<Text text="{i18n>SwitchCar}" class="underLineCls"/>
 			</VBox>
 		</HBox>
 		<Text text="{i18n>ServiceOffers}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiTinyMarginBottom"/>
@@ -54,11 +54,11 @@ Comments:
 		<HBox class="aljHomeServiceBoxStyle sapUiSmallMarginBeginEnd sapUiMediumMarginBottom">
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
 				<Image src="image/BookService.png" height="{= ${device>/system/phone} === true ? '2.7rem' : '5.4rem' }"/>
-				<Button id="idBtnBookAServ" text="{i18n>BookAService}" press="onBookService"/>
+				<Button class="aljServiceBtnStyle" text="{i18n>BookAService}" press="onBookService"/>
 			</VBox>
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
 				<Image src="image/MyService.png" height="{= ${device>/system/phone} === true ? '2.7rem' : '5.4rem' }"/>
-				<Button id="idBtnMyServ" text="{i18n>MyServices}"  press="onPressMyServices"/>
+				<Button  text="{i18n>MyServices}"  press="onPressMyServices" class="aljServiceBtnStyle"/>
 			</VBox>
 		</HBox>
 		<!-- Service Section - End-->
