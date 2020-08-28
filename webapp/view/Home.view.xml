@@ -32,15 +32,18 @@ Comments:
 		width="{= ${device>/system/phone} === true ? '12.5rem' : '26rem' }" class="sapUiTinyMarginEnd" press="onServiceOfferPress"/>
 			</HBox>	
 		</ScrollContainer>
-		<HBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginTopBottom" alignItems="Start" >
+			<l:HorizontalLayout class="sapUiContentPadding" >
+				<VBox>
+		<HBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginTopBottom" alignItems="Start" justifyContent="SpaceBetween">
 			<VBox>
 				<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>
 			</VBox>
-		<!--</ToolbarSpacer>-->
 			<Link text="{i18n>ShowAll}" class="aljDetailLinkStyle"/>
 		</HBox>
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
+		</VBox>
 		<!-- Service Status Section - Start-->
+		<VBox>
 		<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginBeginEnd">
 			<VBox>
 				<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
@@ -49,6 +52,8 @@ Comments:
 		</HBox>
 		<Text text="2019 Land Cruiser" class="aljSSModelTitleStyle sapUiSmallMarginBeginEnd"/>
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatus" type="XML"/>
+		</VBox>
+		</l:HorizontalLayout>
 		<!-- Service Status Section - End-->
 		<!-- Service Section - Start-->
 		<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBeginEnd"/>
