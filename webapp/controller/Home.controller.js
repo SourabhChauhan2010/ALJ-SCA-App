@@ -6,12 +6,13 @@ sap.ui.define([
 	return BaseController.extend("com.sap.alj.sca.ALJ_SCA.controller.Home", {
 		onInit: function () {
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            if (!sap.ui.Device.support.touch) {
-            this.getView().byId("idVboxHomeView").addStyleClass("sapUiMediumMarginBeginEnd");
-            }
-            else{
-            this.getView().byId("idVboxHomeView").removeStyleClass("sapUiMediumMarginBeginEnd");
-            }
+			if (!sap.ui.Device.support.touch) {
+				this.getView().byId("idVboxHomeView").addStyleClass("sapUiMediumMarginBeginEnd");
+			} else {
+				this.getView().byId("idVboxHomeView").removeStyleClass("sapUiMediumMarginBeginEnd");
+			}
+			this.getCampaigns();
+			this.fnSvaeCampaigns();
 		},
 
 		onBack: function (evt) {
@@ -45,10 +46,49 @@ sap.ui.define([
 			this.getModel("oAppModel").setProperty("/oProductDetails", currService);
 			this.oRouter.navTo("ProductDetail");
 		},
-		
-		onPressMyServices: function() {
+
+		onPressMyServices: function () {
 			this.oRouter.navTo("MyServices");
-		}
+		},
+
+		getCampaigns: function () {
+			var oAppModelData = this.getModel("oAppModel");
+			var sUrl = "https://alj-services-new.cfapps.eu10.hana.ondemand.com/alj/campaign/all";
+			this.doAjax(sUrl, "GET", null, function (oEvent) {
+				if (oEvent) {
+					// var aData = oAppModelData.getProperty("/UserInformation");
+					// aData[0] = oEvent;
+					// oAppModelData.setProperty("/UserInformation", aData);
+					oAppModelData.setProperty("/CampaignDetails", oEvent);
+				} else {
+					// oAppModelData.setProperty("/UserInformation", {});
+				}
+			}.bind(this), function (oEvent) {});
+		},
+
+		fnSvaeCampaigns: function () {
+			var oAppModelData = this.getModel("oAppModel");
+			var sUrl = "https://alj-services-new.cfapps.eu10.hana.ondemand.com/alj/campaign/save";
+			var oPayload = [{
+				"campaignId": "camp test 2",
+				"campaignTitle": "camp test title2",
+				"campaignDesc": "camp test desc2",
+				"imageUrl": "test url2",
+				"startDate": "2020-08-28T04:45:57.246+00:00",
+				"endDate": "2020-08-30T04:45:57.246+00:00",
+				"active": true
+			}];
+			this.doAjax(sUrl, "POST", oPayload, function (oEvent) {
+				if (oEvent) {
+					// var aData = oAppModelData.getProperty("/UserInformation");
+					// aData[0] = oEvent;
+					// oAppModelData.setProperty("/UserInformation", aData);
+					oAppModelData.setProperty("/CampaignDetails", oEvent);
+				} else {
+					// oAppModelData.setProperty("/UserInformation", {});
+				}
+			}.bind(this), function (oEvent) {});
+		},
 
 	});
 });
