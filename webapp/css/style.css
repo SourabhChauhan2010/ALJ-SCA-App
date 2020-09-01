@@ -1401,7 +1401,7 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
 
 @media only screen and (min-width: 1024px) {
     .aljSSOuterBoxStyle {
-        max-width: 40rem;
+        max-width: 39rem;
     }
     .aljSSIBoxStyle {
         height: 7rem !important;
@@ -1429,12 +1429,26 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     /*.aljReccPriceStyle {
     font-size: 0.75rem;
     }*/
+    .aljReccPriceStyle {
+        font-size: 0.5rem;
+    }
     /* .aljSLServiceTypeStyle{
     font-size: 0.9rem;	
     }*/
+    .aljSLServiceTypeStyle {
+        font-size: 0.65rem;
+    }
     /*  .aljRedBtnStyle{
     font-size: 10rem;		
     }*/
+    .aljRedBtnStyle {
+        font-size: 7.5rem;
+    }
+    .aljRedBtnStyle .sapMBtnInner,
+    .aljRedBtnStyle.sapMBtn:hover>.sapMBtnHoverable {
+        font-size: 1.5rem;
+        width: 9rem;
+    }
     .aljTitleClass {
         font-size: 1.4rem;
     }
@@ -1473,6 +1487,12 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     /*.aljModelTextStyle {
     font-size: 1rem;
 }*/
+    .aljModelTextStyle {
+        font-size: 0.75rem;
+    }
+    .aljReccListStyle {
+        width: 9.5rem;
+    }
     .aljServiceBtnStyle {
         width: 9rem;
         height: 2rem;
@@ -1565,5 +1585,12 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     }
     .aljHeardBellIconBox {
         margin-right: 2.5rem !important;
+    }
+    .aljServiceBtnStyle .sapMBtnContent {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+    }
+    .aljSSOuterContainerStyle {
+        min-width: 38rem;
     }
 }
