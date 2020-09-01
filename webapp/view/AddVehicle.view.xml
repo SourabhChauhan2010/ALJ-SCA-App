@@ -1,6 +1,6 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.AddVehicle"
 	xmlns:html="http://www.w3.org/1999/xhtml">
-	<VBox class="aljAddVehicleBoxStyle" width="100%">
+	<VBox class="aljAddVehicleBoxStyle sapUiSmallMarginTop" width="100%">
 		<HBox alignItems="Center" justifyContent="Center" width="100%" class="sapUiSmallMarginBottom">
 			<Image src="image/vehicleInfo.png" width="2.25rem" class="sapUiTinyMarginEnd"/>
 			<Text text="{i18n>AddVehicle}" class="aljHomeText"/>
@@ -18,8 +18,9 @@
 		<Input value="{oAppModel>/enteredVIN}" class="aljVINInputStyle sapUiTinyMarginBottom"/>
 		<VBox width="100%" alignItems="Center" justifyContent="Center">
 			<Text text="{i18n>VINValidationMgs}" class="aljAddVehicleSamllText sapUiTinyMarginBottom" textAlign="Center"/>
-			<Button text="{i18n>ShowWherFindVIN}" class="aljLargeBtnStyle sapUiSmallMarginTop sapUiMediumMarginBottom aljLightGreyBtnStyle"/>
-			<Button text="{i18n>Next}" press="onPressAddVehicle" class="aljLargeBtnStyle aljRedBtnStyle"/>
+			<Button text="{i18n>ShowWherFindVIN}" width="16rem"
+				class="aljLargeBtnStyle sapUiSmallMarginTop sapUiMediumMarginBottom aljLightGreyBtnStyle"/>
+			<Button text="{i18n>Next}" press="onPressAddVehicle" class="aljLargeBtnStyle aljRedBtnStyle aljMyCarVehInfoBtn"/>
 		</VBox>
 	</VBox>
 </mvc:View>
