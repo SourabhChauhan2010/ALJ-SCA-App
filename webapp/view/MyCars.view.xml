@@ -5,9 +5,9 @@
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>
 		</VBox>
 		<VBox class="aljMyCarBtnBox sapUiSmallMarginBottom" alignItems="Center" justifyContent="Center">
-			<Button text="{i18n>AddAnother}" class="aljLargeBtnStyle aljBlackBtnStyleRev sapUiSmallMarginBottom" width="100%" height="3.5rem"
+			<Button text="{i18n>AddAnother}" class="aljLargeBtnStyle aljBlackBtnStyleRev sapUiSmallMarginBottom" width="64%" height="3.5rem"
 				press="onAddVehiclePress"/>
-			<Button text="{i18n>Next}" class="aljRedBtnStyle aljLargeBtnStyle" width="100%" height="3.5rem"/>
+			<Button text="{i18n>Next}" class="aljRedBtnStyle aljLargeBtnStyle" width="64%" height="3.5rem"/>
 		</VBox>
 	</VBox>
 	<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.DesktopFooter" type="XML"/>
