@@ -35,10 +35,10 @@
 		"src": "image/supra.png"
 	}],
 	"vehicles": [{
-		"model": "Supra",
+		"model": "Avanza",
 		"year": "2020",
 		"lastServiceDate": "23/04/2020",
-		"src": "image/supra.png",
+		"src": "image/CarLogos/Avanza5d8e.svg",
 		"vin": "4T1BF1FK9GU973045",
 		"customerId": "NID12345678",
 		"plateNo": "NY99",
@@ -49,7 +49,7 @@
 		"model": "Camry",
 		"year": "2020",
 		"lastServiceDate": "23/04/2020",
-		"src": "image/camry.png",
+		"src": "image/CarLogos/Camry4eb3.svg",
 		"vin": "5336499986",
 		"customerId": "NID12345678",
 		"plateNo": "TN99",

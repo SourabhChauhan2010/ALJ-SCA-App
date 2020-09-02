@@ -14,7 +14,7 @@ Comments:
 				<Text class="aljHomeNameTextCSS" text="Mohammed"/>
 				<Text class="aljHomeCarModelTextCSS" text="2019 Land Cruiser" />
 				<Text text="30,000 KM" class="sapUiTinyMarginBottom aljHomeTextCSS"/>
-				<Button text="{i18n>UpdateKM}" class="sapUiTinyMarginBottom aljRedBtnStyle"/>
+				<Button text="{i18n>UpdateKM}" class="aljRedBtnStyle"/>
 			</VBox>
 			<VBox alignItems="End">
 				<!--<Text text="Land Cruiser" class="boldFontCls"/>-->
@@ -22,7 +22,7 @@ Comments:
 				<Text text="{i18n>SwitchCar}" class="underLineCls"/>
 			</VBox>
 		</HBox>
-		<Text text="{i18n>ServiceOffers}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiTinyMarginBottom"/>
+		<Text text="{i18n>ServiceOffers}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiLargeMarginTop"/>
 		<ScrollContainer horizontal="true" vertical="false">
 		<!--	<HBox items="{oAppModel>/ServiceOffer}" justifyContent="SpaceBetween" class="sapUiSmallMarginBeginEnd sapUiContentPadding scrollCnt">
 				<Image src="{oAppModel>src}" height="7rem" class="sapUiTinyMarginBottom sapUiContentPadding sapUiTinyMarginEnd" press="onServiceOfferPress"/>
@@ -32,9 +32,9 @@ Comments:
 		width="{= ${device>/system/phone} === true ? '12.5rem' : '26rem' }" class="sapUiTinyMarginEnd" press="onServiceOfferPress"/>
 			</HBox>	
 		</ScrollContainer>
-			<l:HorizontalLayout class="sapUiContentPadding" >
+			<l:HorizontalLayout visible="{device>/system/desktop}">
 				<VBox>
-		<HBox class="sapUiSmallMarginBeginEnd sapUiTinyMarginTopBottom" alignItems="Start" justifyContent="SpaceBetween">
+		<HBox class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop " alignItems="Start" justifyContent="SpaceBetween">
 			<VBox>
 				<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>
 			</VBox>
@@ -44,7 +44,7 @@ Comments:
 		</VBox>
 		<!-- Service Status Section - Start-->
 		<VBox>
-		<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginBeginEnd">
+		<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop">
 			<VBox>
 				<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
 			</VBox>
@@ -54,9 +54,29 @@ Comments:
 		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatus" type="XML"/>
 		</VBox>
 		</l:HorizontalLayout>
+		
+		<HBox class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop" alignItems="Start" justifyContent="SpaceBetween" visible="{device>/system/phone}">
+			<VBox>
+				<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>
+			</VBox>
+			<Link text="{i18n>ShowAll}" class="aljDetailLinkStyle"/>
+		</HBox>
+		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceListMobile" type="XML" />
+	
+		<!-- Service Status Section - Start-->
+		
+		<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop" visible="{device>/system/phone}">
+			<VBox>
+				<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
+			</VBox>
+			<Link text="{i18n>ViewDetails} >" class="aljDetailLinkStyle"/>
+		</HBox>
+		<Text text="2019 Land Cruiser" class="aljSSModelTitleStyle sapUiSmallMarginBeginEnd" visible="{device>/system/phone}"/>
+		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatusMobile" type="XML" />
+	
 		<!-- Service Status Section - End-->
 		<!-- Service Section - Start-->
-		<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBeginEnd"/>
+		<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiSmallMarginTop"/>
 		<HBox class="aljHomeServiceBoxStyle sapUiSmallMarginBeginEnd sapUiMediumMarginBottom">
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
 				<Image src="image/BookService.png" height="{= ${device>/system/phone} === true ? '2.7rem' : '5.4rem' }"/>
@@ -68,6 +88,6 @@ Comments:
 			</VBox>
 		</HBox>
 		<!-- Service Section - End-->
-		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.DesktopFooter" type="XML"/>
 	</VBox>
+		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.DesktopFooter" type="XML"/>
 </mvc:View>
