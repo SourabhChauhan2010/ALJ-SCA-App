@@ -11,8 +11,33 @@ sap.ui.define([
 		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.SafetyTips
 		 */
 		onInit: function () {
+			
+			
+			var oAppModelData = this.getModel("oAppModel");
+		//	var sUrl = "https://alj-services-new.cfapps.eu10.hana.ondemand.com/alj/campaign/all";
+		var sUrl="/Java_service/alj/misc/tips";
+		var data=[{
+				"tipsId":1234,
+				"title":"test title",
+				"desc":"desc",
+				"language":"AR",
+				"isActive":true
+		}];
+			this.doAjax(sUrl, "POST", data, function (oEvent) {
+				if (oEvent) {
+					// var aData = oAppModelData.getProperty("/UserInformation");
+					// aData[0] = oEvent;
+					// oAppModelData.setProperty("/UserInformation", aData);
+				//	oAppModelData.setProperty("/CampaignDetails", oEvent);
+				} else {
+					// oAppModelData.setProperty("/UserInformation", {});
+				}
+			}.bind(this), function (oEvent) {});
+		
+		
 
 		},
+		getSafetyTips:function(){},
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
