@@ -17,8 +17,24 @@ sap.ui.define([
 					if (oAppModelData.vehicles.length > 0) {
 						this.getVehicleHistory(oAppModelData.vehicles[0]);
 					}
+				/*	$.ajax({
+					type: "GET",
+					contentType: "application/json; charset=utf-8",
+					url: "/SCA_JAVA/alj/vehicle/owner/INC01314",
+					dataType: "json",
+					async: true,
+					data:null,
+					success: function (data) {
+						var vehicleObj = data;
+					}
+				});*/
+		
+			
 				}
 			}.bind(this));
+			
+		
+			
 		},
 		onSelectableItemPress:function(evt){
 			// evt;

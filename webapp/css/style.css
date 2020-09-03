@@ -1405,7 +1405,7 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
 
 @media only screen and (min-width: 1024px) {
     .aljSSOuterBoxStyle {
-        max-width: 39rem;
+        max-width: 37.35rem;
     }
     .aljSSIBoxStyle {
         height: 7rem !important;

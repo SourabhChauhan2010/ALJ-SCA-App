@@ -46,6 +46,13 @@
 			"type": "destination",
 			"name": "SBA_book_a_service"
 		}
+	},
+	{
+		"path": "/SCA_JAVA",
+		"target": {
+			"type": "destination",
+			"name": "SCA_JAVA"
+		}	
 	}],
 	"sendWelcomeFileRedirect": true
 }
