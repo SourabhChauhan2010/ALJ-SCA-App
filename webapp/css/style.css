@@ -188,7 +188,6 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     font-family: 'UniversNextPro';
 }
 
-
 .aljRedBtnStyleServList .sapMBtnInner,
 .aljRedBtnStyleServList.sapMBtn:hover>.sapMBtnHoverable {
     color: #fff;
@@ -1174,6 +1173,7 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
 }
 
 .VehicleListItemCSS .sapMLIB {
+    background: white !important;
     border-bottom: 1px solid #fff;
 }
 
@@ -1442,8 +1442,8 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     .aljSLServiceTypeStyle {
         font-size: 0.65rem;
     }
-      .aljRedBtnStyleServList{
-    font-size:  7.5rem;		
+    .aljRedBtnStyleServList {
+        font-size: 7.5rem;
     }
     .aljRedBtnStyle {
         font-size: 7.5rem;
@@ -1453,7 +1453,7 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
         font-size: 1.5rem;
         width: 9rem;
     }
-     .aljRedBtnStyleServList .sapMBtnInner,
+    .aljRedBtnStyleServList .sapMBtnInner,
     .aljRedBtnStyleServList.sapMBtn:hover>.sapMBtnHoverable {
         font-size: 1.5rem;
         width: 9rem;

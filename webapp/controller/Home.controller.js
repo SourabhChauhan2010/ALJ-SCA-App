@@ -53,7 +53,7 @@ sap.ui.define([
 
 		getCampaigns: function () {
 			var oAppModelData = this.getModel("oAppModel");
-			var sUrl = "https://alj-services-new.cfapps.eu10.hana.ondemand.com/alj/campaign/all";
+			var sUrl = "/Java_service/alj/campaign/all";
 			this.doAjax(sUrl, "GET", null, function (oEvent) {
 				if (oEvent) {
 					// var aData = oAppModelData.getProperty("/UserInformation");
@@ -68,7 +68,7 @@ sap.ui.define([
 
 		fnSvaeCampaigns: function () {
 			var oAppModelData = this.getModel("oAppModel");
-			var sUrl = "https://alj-services-new.cfapps.eu10.hana.ondemand.com/alj/campaign/save";
+			var sUrl = "/Java_service/alj/campaign/save";
 			var oPayload = [{
 				"campaignId": "camp test 2",
 				"campaignTitle": "camp test title2",
