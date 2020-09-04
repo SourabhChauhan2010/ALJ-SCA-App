@@ -46,13 +46,18 @@
 			"type": "destination",
 			"name": "SBA_book_a_service"
 		}
-	},
-	{
+	}, {
 		"path": "/SCA_JAVA",
 		"target": {
 			"type": "destination",
 			"name": "SCA_JAVA"
-		}	
+		}
+	}, {
+		"path": "/Java_service",
+		"target": {
+			"type": "destination",
+			"name": "Java_service"
+		}
 	},
 	{
 		"path": "/SCA_CRM",

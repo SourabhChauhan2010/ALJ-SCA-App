@@ -17,29 +17,38 @@ sap.ui.define([
 					if (oAppModelData.vehicles.length > 0) {
 						this.getVehicleHistory(oAppModelData.vehicles[0]);
 					}
-				/*	$.ajax({
-					type: "GET",
-					contentType: "application/json; charset=utf-8",
-					url: "/SCA_JAVA/alj/vehicle/owner/INC01314",
-					dataType: "json",
-					async: true,
-					data:null,
-					success: function (data) {
-						var vehicleObj = data;
-					}
-				});*/
-		
-			
+					/*	$.ajax({
+						type: "GET",
+						contentType: "application/json; charset=utf-8",
+						url: "/SCA_JAVA/alj/vehicle/owner/INC01314",
+						dataType: "json",
+						async: true,
+						data:null,
+						success: function (data) {
+							var vehicleObj = data;
+						}
+					});*/
+
 				}
 			}.bind(this));
-			
-		
-			
+
 		},
-		onSelectableItemPress:function(evt){
-			// evt;
+		onSelectableItemPress: function (oEvent) {
+			var oCarDetails = oEvent.getSource().getBindingContext("oAppModel").getObject();
+			var oAppModelData = this.getModel("oAppModel");
+			var sUrl = "/SCA_JAVA/alj/vehicle/vin/" + oCarDetails.vin;
+			this.doAjax(sUrl, "GET", null, function (oData) {
+				if (oEvent) {
+					// var aData = oAppModelData.getProperty("/UserInformation");
+					// aData[0] = oEvent;
+					// oAppModelData.setProperty("/UserInformation", aData);
+					oAppModelData.setProperty("/CampaignDetails", oEvent);
+				} else {
+					// oAppModelData.setProperty("/UserInformation", {});
+				}
+			}.bind(this), function (oData) {});
 		},
-		onMakeDefaultCar:function(oEvent){
+		onMakeDefaultCar: function (oEvent) {
 			if (oEvent.getSource().getText() !== "Make") {
 				return;
 			}
@@ -80,7 +89,7 @@ sap.ui.define([
 				"customerId": currObj.customerId
 			};
 			this.doAjax(sUrl, "POST", oPayload, function (oData) {
-				
+
 			}.bind(this), function (oData) {});
 		},
 

@@ -20,11 +20,11 @@
 				</VBox>
 			</CustomListItem>
 		</HBox>-->
-		<List src="image/BookService.png" items="{oAppModel>/vehicles}" class="VehicleListItemCSS UserInfoHeaderAlign" press="onSelectableItemPress">
-			<CustomListItem width="60%">
+		<List src="image/BookService.png" items="{oAppModel>/vehicles}" class="VehicleListItemCSS UserInfoHeaderAlign">
+			<CustomListItem width="60%" type="Active" press="onSelectableItemPress">
 				<HBox class="VehicleListVBCSS sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom" justifyContent="SpaceBetween"
 					visible="{parts: ['oAppModel>isDefault'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.setDefaultVehicleStyle'}">
-					<VBox width="50%" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom vehiclListAlignCSS">
+					<VBox width="50%" class="sapUiSmallMarginBegin sapUiTinyMarginTopBottom vehiclListAlignCSS">
 						<Image src="{oAppModel>src}" class="aljCarListLogos"/>
 						<Text text="{oAppModel>model} {oAppModel>year}" class="aljModelTextStyle aljCarListText"/>
 						<Text text="{oAppModel>vin}" class="aljCarListText"/>
