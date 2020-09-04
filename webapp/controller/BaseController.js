@@ -77,7 +77,7 @@ sap.ui.define([
 			var oAppModel = this.getOwnerComponent().getModel("oAppModel");
 			oAppModel.loadData("model/data.json", null, false);
 			this.oAppModel = oAppModel;
-			
+
 			//ODataModel holding metadata of Application's ODATA services
 			var oERPDataModel = this.getOwnerComponent().getModel("oERPDataModel");
 			this.oERPDataModel = oERPDataModel;
@@ -248,6 +248,19 @@ sap.ui.define([
 			}.bind(this), function (oData) {
 
 			});
+			this.checkCRMService();
+		},
+
+		checkCRMService: function (ownerId) {
+			var oAppModel = this.getModel("oAppModel");
+			var sUrl = "/SCA_CRM/sap/opu/odata/sap/ZGW_CRM_BUPA_SAA_SRV/$metadata"
+			this.doAjax(sUrl, "GET", null, function (aData) {
+				//Success block
+				// oAppModel.setProperty("/vehicles", aData);
+			}.bind(this), function (oData) {
+
+			});
+
 		},
 
 	});
