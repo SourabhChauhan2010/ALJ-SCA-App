@@ -78,9 +78,13 @@ sap.ui.define([
 			oAppModel.loadData("model/data.json", null, false);
 			this.oAppModel = oAppModel;
 
-			//ODataModel holding metadata of Application's ODATA services
+			//ODataModel holding metadata of Application's ERP ODATA services
 			var oERPDataModel = this.getOwnerComponent().getModel("oERPDataModel");
 			this.oERPDataModel = oERPDataModel;
+			
+			//ODataModel holding metadata of Application's CRM ODATA services
+			var oCRMDataModel = this.getOwnerComponent().getModel("oCRMDataModel");
+			this.oCRMDataModel = oCRMDataModel;
 		},
 
 		/** 
@@ -252,15 +256,14 @@ sap.ui.define([
 		},
 
 		checkCRMService: function (ownerId) {
-			var oAppModel = this.getModel("oAppModel");
-			var sUrl = "/SCA_CRM/sap/opu/odata/sap/ZGW_CRM_BUPA_SAA_SRV/$metadata"
-			this.doAjax(sUrl, "GET", null, function (aData) {
-				//Success block
-				// oAppModel.setProperty("/vehicles", aData);
-			}.bind(this), function (oData) {
-
-			});
-
+			// var sUrl = "/BUPASet";
+			// var oCRMDataModel = this.getModel("oCRMDataModel");
+			// var oAppModel = this.getModel("oAppModel");
+			// oCRMDataModel.read(sUrl, {
+			// 	success: function (oData) {
+			// 	}.bind(this),
+			// 	error: function (oData) {}
+			// });
 		},
 
 	});

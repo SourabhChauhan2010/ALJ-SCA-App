@@ -84,6 +84,7 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
 
 .aljPageStyle .sapMIBar.sapMTB .sapMBarChild:first-child {
     margin-left: 0;
+    padding: 0;
 }
 
 .aljPageStyle.sapMPage>.sapMPageHeader+section {

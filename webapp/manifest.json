@@ -17,6 +17,14 @@
 					"odataVersion": "2.0",
 					"localUri": "localService/metadata.xml"
 				}
+			},
+			"crmService": {
+				"uri": "/SCA_CRM/sap/opu/odata/sap/ZGW_CRM_BUPA_SAA_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
 			}
 		},
 		"sourceTemplate": {
@@ -69,6 +77,15 @@
 			},
 			"oERPDataModel": {
 				"dataSource": "mainService",
+				"settings": {
+					"metadataUrlParams": {
+						"sap-documentation": "heading"
+					},
+					"useBatch": false
+				}
+			},
+			"oCRMDataModel": {
+				"dataSource": "crmService",
 				"settings": {
 					"metadataUrlParams": {
 						"sap-documentation": "heading"
