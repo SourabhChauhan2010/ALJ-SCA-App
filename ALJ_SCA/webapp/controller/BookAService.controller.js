@@ -130,7 +130,13 @@ sap.ui.define([
 				error: function (oData) {}
 			});
 
-			this.oRouter.navTo("ServiceStatus");
+			if (!this.Calendar) {
+				this.Calendar = sap.ui.xmlfragment("com.sap.alj.sca.ALJ_SCA.fragment.Calendar", this);
+				this.getView().addDependent(this.Calendar);
+			}
+			this.Calendar.open();
+
+			// this.oRouter.navTo("ServiceStatus");
 
 		},
 
@@ -149,7 +155,7 @@ sap.ui.define([
 				error: function (oData) {}
 			});
 		},
-		
+
 		getServiceLocations: function () {
 			var sUrl = "/Plant_and_Service_typeSet";
 			var oERPDataModel = this.getModel("oERPDataModel");

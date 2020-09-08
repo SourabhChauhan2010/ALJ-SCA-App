@@ -1387,6 +1387,38 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     width: 6rem;
 }
 
+.aljCalender .BAS_DT_CSS .sapUiCalWH,
+.sapUiCalItem {
+    border: .125rem solid white;
+    background: white;
+    border-radius: 100% !important;
+    /* width: 12% !important; */
+    height: 2.5rem;
+    color: black;
+    line-height: 2.5rem !important;
+}
+
+.aljCalender .sapUiCalItem.sapUiCalItemSel:not(.sapUiCalItemSelBetween) {
+    background: #CE0E2D;
+}
+
+.aljCalender .sapUiCalItemNow:not(.sapUiCalItemSelBetween)>.sapUiCalItemText {
+    line-height: 2.3rem;
+    border: none;
+}
+
+.aljCalender .sapUiCalWH {
+    color: #8d8d8d;
+    white-space: nowrap;
+    height: 2rem;
+    line-height: 1.875rem;
+    font-size: .85rem;
+}
+
+.aljCalender .sapUiCalItem:focus>.sapUiCalItemText:after {
+    border: none !important;
+}
+
 @media screen and (max-width: 500px) {
     .aljTextBlock {
         display: block !important;
