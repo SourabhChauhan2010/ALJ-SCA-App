@@ -1410,18 +1410,18 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
         max-width: 37.35rem;
     }
     .aljSSIBoxStyle {
-        height: 7rem !important;
+        height: 8.5rem !important;
     }
     .aljSSIBoxStyle .sapMText {
         font-size: 1rem !important;
         margin-right: 1.35rem !important;
-        margin-top: 1.25rem !important;
+        margin-top: 1.5rem !important;
     }
     .aljSSIRedStyle {
-        background-size: 4.5rem;
+        background-size: 4.5rem 8rem;
     }
     .aljSSIGreenStyle {
-        background-size: 4.5rem;
+        background-size: 4.5rem 8rem;
     }
     .aljSSCarStyle {
         top: -2rem !important;

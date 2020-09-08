@@ -13,21 +13,58 @@ sap.ui.define([
 		onInit: function () {
 			this.getRouter().attachRoutePatternMatched(function (oEvent) {
 				if (oEvent.getParameter("name") === "MyCars") {
-					var oAppModelData = this.getModel("oAppModel").getData();
+					var oAppModel = this.getModel("oAppModel");
+					var oAppModelData = oAppModel.getData();
 					if (oAppModelData.vehicles.length > 0) {
 						this.getVehicleHistory(oAppModelData.vehicles[0]);
 					}
-					/*	$.ajax({
+					$.ajax({
 						type: "GET",
 						contentType: "application/json; charset=utf-8",
 						url: "/SCA_JAVA/alj/vehicle/owner/INC01314",
 						dataType: "json",
 						async: true,
-						data:null,
+						data: null,
 						success: function (data) {
-							var vehicleObj = data;
+							oAppModel.setProperty("/VehicleDetails", data);
+							oAppModel.refresh();
 						}
-					});*/
+					});
+					this.doAjax("/SCA_JAVA/alj/vehicle/model/productId/0000017963", "GET", null, function (data) {
+						if (data) {
+							//
+						} else {
+							//
+						}
+					}, function (data) {});
+					this.doAjax("/SCA_JAVA/alj/vehicle/model/brand/Z001", "GET", null, function (data) {
+						if (data) {
+							//
+						} else {
+							//
+						}
+					}, function (data) {});
+					this.doAjax("/SCA_JAVA/alj/vehicle/model/type/0002", "GET", null, function (data) {
+						if (data) {
+							//
+						} else {
+							//
+						}
+					}, function (data) {});
+					this.doAjax("/SCA_JAVA/alj/vehicle/model/modelcode/null", "GET", null, function (data) {
+						if (data) {
+							//
+						} else {
+							//
+						}
+					}, function (data) {});
+					this.doAjax("/SCA_JAVA/alj/vehicle/model/fuel_type/01", "GET", null, function (data) {
+						if (data) {
+							//
+						} else {
+							//
+						}
+					}, function (data) {});
 
 				}
 			}.bind(this));
@@ -46,7 +83,7 @@ sap.ui.define([
 				} else {
 					// oAppModelData.setProperty("/UserInformation", {});
 				}
-			}.bind(this), function (oData) {});
+			}, function (oData) {});
 		},
 		onMakeDefaultCar: function (oEvent) {
 			if (oEvent.getSource().getText() !== "Make") {
@@ -90,14 +127,14 @@ sap.ui.define([
 			};
 			this.doAjax(sUrl, "POST", oPayload, function (oData) {
 
-			}.bind(this), function (oData) {});
+			}, function (oData) {});
 		},
 
 		onServiceItemPress: function (oEvent) {
 			// var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
 			// currObj.isSelected = !currObj.isSelected;
 			// this.getModel("oAppModel").refresh();
-		},
+		}
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
