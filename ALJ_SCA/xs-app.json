@@ -1,6 +1,6 @@
 {
 	"welcomeFile": "/ALJ_SCA/index.html",
-	"authenticationMethod": "route",
+	"authenticationMethod": "none",
 	"logout": {
 		"logoutEndpoint": "/do/logout"
 	},
@@ -9,19 +9,24 @@
 		"target": "$1",
 		"localDir": "webapp"
 	}, {
-		"source": "^/sap/opu/odata/(.*)",
-		"destination": "ALJERP-DEV"
+		"source": "^/sap/opu/odata/",
+		"target": "/",
+		"destination": "ERPDEV"
 	}, {
-		"source": "^/SBA_book_a_service/(.*)",
+		"source": "^/SBA_book_a_service/",
+		"target": "/",
 		"destination": "SBA_book_a_service"
 	}, {
-		"source": "^/SCA_JAVA/(.*)",
+		"source": "^/SCA_JAVA/",
+		"target": "/",
 		"destination": "SCA_JAVA"
 	}, {
-		"source": "^/Java_service/(.*)",
-		"destination": "Java_service"
+		"source": "^/Java_Service/",
+		"target": "/",
+		"destination": "Java_Service"
 	}, {
-		"source": "^/SCA_CRM/(.*)",
+		"source": "^/SCA_CRM/",
+		"target": "/",
 		"destination": "SCA_CRM"
 	}]
 }
