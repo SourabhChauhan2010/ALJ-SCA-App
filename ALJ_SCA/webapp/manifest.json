@@ -9,6 +9,24 @@
 		},
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
+		"dataSources": {
+			"mainService": {
+				"uri": "/sap/opu/odata/sap/ZGW_SRW_SAA_APP_001_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			},
+			"crmService": {
+				"uri": "/SCA_CRM/sap/opu/odata/sap/ZGW_CRM_BUPA_SAA_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
 		"sourceTemplate": {
 			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
 			"version": "1.40.12"
@@ -57,6 +75,24 @@
 					"bundleName": "com.sap.alj.sca.ALJ_SCA.i18n.i18n"
 				}
 			},
+			"oERPDataModel": {
+				"dataSource": "mainService",
+				"settings": {
+					"metadataUrlParams": {
+						"sap-documentation": "heading"
+					},
+					"useBatch": false
+				}
+			},
+			"oCRMDataModel": {
+				"dataSource": "crmService",
+				"settings": {
+					"metadataUrlParams": {
+						"sap-documentation": "heading"
+					},
+					"useBatch": false
+				}
+			},
 			"oAppModel": {
 				"type": "sap.ui.model.json.JSONModel"
 			}
@@ -88,8 +124,15 @@
 			},
 			"routes": [
 				{
-					"name": "Home",
+					"name": "SplashScreen",
 					"pattern": "",
+					"target": [
+						"SplashScreen"
+					]
+				},
+				{
+					"name": "Home",
+					"pattern": "Home",
 					"target": [
 						"Home"
 					]
@@ -130,10 +173,59 @@
 					]
 				},
 				{
+					"name": "ProductDetail",
+					"pattern": "ProductDetail",
+					"target": [
+						"ProductDetail"
+					]
+				},
+				{
 					"name": "Profile",
 					"pattern": "Profile",
 					"target": [
 						"Profile"
+					]
+				},
+				{
+					"name": "ServiceStatus",
+					"pattern": "ServiceStatus",
+					"target": [
+						"ServiceStatus"
+					]
+				},
+				{
+					"name": "More",
+					"pattern": "More",
+					"target": [
+						"More"
+					]
+				},
+				{
+					"name": "SafetyTips",
+					"pattern": "SafetyTips",
+					"target": [
+						"SafetyTips"
+					]
+				},
+				{
+					"name": "AddNID",
+					"pattern": "AddNID",
+					"target": [
+						"AddNID"
+					]
+				},
+				{
+					"name": "EditProfile",
+					"pattern": "EditProfile",
+					"target": [
+						"EditProfile"
+					]
+				},
+				{
+					"name": "Notification",
+					"pattern": "Notification",
+					"target": [
+						"Notification"
 					]
 				}
 			],
@@ -162,6 +254,10 @@
 					"viewType": "XML",
 					"viewName": "Products"
 				},
+				"ProductDetail": {
+					"viewType": "XML",
+					"viewName": "ProductDetail"
+				},
 				"AddVehicle": {
 					"viewType": "XML",
 					"viewName": "AddVehicle"
@@ -169,8 +265,40 @@
 				"Profile": {
 					"viewType": "XML",
 					"viewName": "Profile"
+				},
+				"ServiceStatus": {
+					"viewType": "XML",
+					"viewName": "ServiceStatus"
+				},
+				"More": {
+					"viewType": "XML",
+					"viewName": "More"
+				},
+				"SafetyTips": {
+					"viewType": "XML",
+					"viewName": "SafetyTips"
+				},
+				"AddNID": {
+					"viewType": "XML",
+					"viewName": "AddNID"
+				},
+				"EditProfile": {
+					"viewType": "XML",
+					"viewName": "EditProfile"
+				},
+				"Notification": {
+					"viewType": "XML",
+					"viewName": "Notification"
+				},
+				"SplashScreen": {
+					"viewType": "XML",
+					"viewName": "SplashScreen"
 				}
 			}
 		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
 	}
 }

@@ -3,12 +3,15 @@
 	<VBox class="sapUiSmallMarginTop">
 		<Label text="{i18n>ServiceType}" class="aljTitleClass sapUiSmallMarginBegin"/>
 		<HBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
-			<ToggleButton text="{i18n>Ongoing}" class="aljTBStyle sapUiTinyMarginEnd"/>
-			<ToggleButton text="{i18n>Past}" class="aljTBStyle sapUiTinyMarginEnd"/>
-			<ToggleButton text="{i18n>Upcoming}" class="aljTBStyle" pressed="true"/>
+			<ToggleButton text="{i18n>Ongoing}" pressed="{= ${oAppModel>/selectedServiceListType} === ${i18n>Ongoing}}"
+				class="aljTBStyle sapUiTinyMarginEnd" press="onPressServiceType"/>
+			<ToggleButton text="{i18n>Past}" pressed="{= ${oAppModel>/selectedServiceListType} === ${i18n>Past}}" class="aljTBStyle sapUiTinyMarginEnd"
+				press="onPressServiceType"/>
+			<ToggleButton text="{i18n>Upcoming}" class="aljTBStyle" pressed="{= ${oAppModel>/selectedServiceListType} === ${i18n>Upcoming}}"
+				press="onPressServiceType"/>
 		</HBox>
 		<VBox class="aljBoxStyle">
-			<Label text="{i18n>UpcomingServices}" class="aljTitleClass sapUiSmallMarginBegin"/>
+			<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBegin"/>
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceHistory" type="XML"/>
 		</VBox>
 	</VBox>

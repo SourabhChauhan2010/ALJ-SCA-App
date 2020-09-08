@@ -6,59 +6,88 @@ Requirement:
 Comments:
 *****************************************************************-->
 <mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.Home" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
-	xmlns="sap.m">
-	<VBox>
-		<Carousel id="offersCarousel" pages="{oAppModel>/aOffers}" loop="true">
-			<pages>
-				<Image press="onOfferPress" height="200px" src="{oAppModel>imageSource}"/>
-			</pages>
-		</Carousel>
-	</VBox>
-	<VBox>
-		<Label text="Recommended for you" class="styleStatusTitle sapUiSmallMarginBegin"/>
-		<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
-			<HBox items="{oAppModel>/aRecommendationsHome}" class="sapUiSmallMarginBeginEnd">
-				<CustomListItem class="styleRecommendedBox" press="onBookService" type="Active">
-					<VBox alignItems="Center">
-						<Image src="{oAppModel>model}" width="6rem"/>
-						<Label text="{oAppModel>serviceType}" class="sapUiTinyMarginBottom styleServType"/>
-						<Image src="{oAppModel>src}" width="6rem"/>
-						<Label text="{oAppModel>sar2}" class="styleCAR2"/>
-						<Text text="{oAppModel>sar1}" class="sapUiTinyMarginBottom styleCAR1"/>
-						<Button text="Book" class="aljRedBtnStyle"/>
-					</VBox>
-				</CustomListItem>
-			</HBox>
-		</ScrollContainer>
-	</VBox>
-<!--	<CustomListItem press="onBookService" class="styleStatusBox" type="Active">
-		<HBox justifyContent="SpaceBetween">
-			<VBox binding="{oAppModel>/oServiceStatus}" class="sapUiSmallMarginBegin">
-				<Text text="Service Status" class="styleStatusTitle sapUiTinyMarginBottom sapUiTinyMarginTop"/>
-				<Text text="{oAppModel>model}" class="sapUiTinyMarginBottom"/>
-				<Text text="PDT: {oAppModel>time}" class="sapUiTinyMarginBottom"/>
-				<Text text="Status: {oAppModel>status}"/>
+	xmlns="sap.m" xmlns:l="sap.ui.layout">
+	<VBox id="idVboxHomeView">
+		<HBox class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop" justifyContent="SpaceBetween" alignItems="Center">
+			<VBox alignItems="Start" class="aljTitleClassHome sapUiSmallMarginTop">
+				<Text class="aljWelcomeTextCSS" text="{i18n>Welcome}"/>
+				<Text class="aljHomeNameTextCSS" text="Mohammed"/>
+				<Text class="aljHomeCarModelTextCSS" text="2019 Land Cruiser" />
+				<Text text="30,000 KM" class="sapUiTinyMarginBottom aljHomeTextCSS"/>
+				<Button text="{i18n>UpdateKM}" class="aljRedBtnStyle"/>
 			</VBox>
-			<VBox class="sapUiMediumMarginEnd">
-				<Image height="107px"
-					src="data:image/png;base64,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"/>
+			<VBox alignItems="End">
+				<!--<Text text="Land Cruiser" class="boldFontCls"/>-->
+				<Image src="image/LC.svg" width="{= ${device>/system/phone} === true ? '9rem' : '18rem' }"/>
+				<Text text="{i18n>SwitchCar}" class="underLineCls"/>
 			</VBox>
 		</HBox>
-	</CustomListItem>-->
-	<VBox class="sapUiTinyMarginTop">
-		<Label text="Services" class="styleStatusTitle sapUiSmallMarginBegin sapUiTinyMarginBottom"/>
-		<ScrollContainer height="100%" width="100%" horizontal="false" focusable="true">
-			<VBox items="{oAppModel>/aServices}" class="sapUiSmallMarginBeginEnd" id="idVBServiceListItems">
-				<CustomListItem press="NavtoServices" class="styleServiceBox sapUiTinyMarginBottom" type="Active">
-					<FlexBox justifyContent="SpaceBetween" alignItems="Center">
-						<Image src="{oAppModel>src}" width="40px" height="40px" class="sapUiTinyMarginBegin" press="NavtoServices" tooltip="{oAppModel>name}"/>
-						<Label text="{oAppModel>name}" class="styleLabel"/>
-						<VBox class="styleArrowBox">
-							<Image src="image/arrow.png" width="14px" height="26px" press="onMyService" class="sapUiTinyMarginEnd"/>
-						</VBox>
-					</FlexBox>
-				</CustomListItem>
-			</VBox>
+		<Text text="{i18n>ServiceOffers}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiLargeMarginTop"/>
+		<ScrollContainer horizontal="true" vertical="false">
+		<!--	<HBox items="{oAppModel>/ServiceOffer}" justifyContent="SpaceBetween" class="sapUiSmallMarginBeginEnd sapUiContentPadding scrollCnt">
+				<Image src="{oAppModel>src}" height="7rem" class="sapUiTinyMarginBottom sapUiContentPadding sapUiTinyMarginEnd" press="onServiceOfferPress"/>
+			</HBox>-->
+			<HBox items="{oAppModel>/ServiceOffer}"  class="sapUiSmallMarginBeginEnd ">
+		<Image src="{oAppModel>src}" height="{= ${device>/system/phone} === true ? '7rem' : '9.5rem' }" 
+		width="{= ${device>/system/phone} === true ? '12.5rem' : '26rem' }" class="sapUiTinyMarginEnd" press="onServiceOfferPress"/>
+			</HBox>	
 		</ScrollContainer>
+			<l:HorizontalLayout visible="{device>/system/desktop}">
+				<VBox>
+		<HBox class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop " alignItems="Start" justifyContent="SpaceBetween">
+			<VBox>
+				<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>
+			</VBox>
+			<Link text="{i18n>ShowAll}" class="aljDetailLinkStyle"/>
+		</HBox>
+		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
+		</VBox>
+		<!-- Service Status Section - Start-->
+		<VBox>
+		<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop">
+			<VBox>
+				<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
+			</VBox>
+			<Link text="{i18n>ViewDetails} >" class="aljDetailLinkStyle"/>
+		</HBox>
+		<Text text="2019 Land Cruiser" class="aljSSModelTitleStyle sapUiSmallMarginBeginEnd"/>
+		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatus" type="XML"/>
+		</VBox>
+		</l:HorizontalLayout>
+		
+		<HBox class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop" alignItems="Start" justifyContent="SpaceBetween" visible="{device>/system/phone}">
+			<VBox>
+				<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>
+			</VBox>
+			<Link text="{i18n>ShowAll}" class="aljDetailLinkStyle"/>
+		</HBox>
+		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceListMobile" type="XML" />
+	
+		<!-- Service Status Section - Start-->
+		
+		<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop" visible="{device>/system/phone}">
+			<VBox>
+				<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
+			</VBox>
+			<Link text="{i18n>ViewDetails} >" class="aljDetailLinkStyle"/>
+		</HBox>
+		<Text text="2019 Land Cruiser" class="aljSSModelTitleStyle sapUiSmallMarginBeginEnd" visible="{device>/system/phone}"/>
+		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatusMobile" type="XML" />
+	
+		<!-- Service Status Section - End-->
+		<!-- Service Section - Start-->
+		<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiSmallMarginTop"/>
+		<HBox class="aljHomeServiceBoxStyle sapUiSmallMarginBeginEnd sapUiMediumMarginBottom">
+			<VBox justifyContent="Center" alignItems="Center" width="50%">
+				<Image src="image/BookService.png" height="{= ${device>/system/phone} === true ? '2.7rem' : '5.4rem' }"/>
+				<Button class="aljServiceBtnStyle" text="{i18n>BookAService}" press="onBookService"/>
+			</VBox>
+			<VBox justifyContent="Center" alignItems="Center" width="50%">
+				<Image src="image/MyService.png" height="{= ${device>/system/phone} === true ? '2.7rem' : '5.4rem' }"/>
+				<Button  text="{i18n>MyServices}"  press="onPressMyServices" class="aljServiceBtnStyle"/>
+			</VBox>
+		</HBox>
+		<!-- Service Section - End-->
 	</VBox>
+		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.DesktopFooter" type="XML"/>
 </mvc:View>

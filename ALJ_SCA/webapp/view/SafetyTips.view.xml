@@ -1,0 +1,15 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.SafetyTips"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<VBox class="sapUiMediumMargin">
+		<Label text="{i18n>SafetyMaintenanceTips}" class="aljTitleClass"/>
+		<VBox items="{oAppModel>/safetyTips}" class="aljNormTextStyle">
+			<HBox class="sapUiSmallMarginTop">
+				<core:Icon src="sap-icon://feeder-arrow" color="#eb0a1e" size="0.75rem" class="sapUiSmallMarginEnd sapUiSmallMarginBottom"/>
+				<VBox>
+					<Label design="Bold" text="{oAppModel>title}"/>
+					<Text text="{oAppModel>summary}"/>
+				</VBox>
+			</HBox>
+		</VBox>
+	</VBox>
+</mvc:View>

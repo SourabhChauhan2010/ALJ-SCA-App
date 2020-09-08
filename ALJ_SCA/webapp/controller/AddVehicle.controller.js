@@ -14,6 +14,30 @@ sap.ui.define([
 
 		},
 
+		onPressAddVehicle: function () {
+			var oAppModelData = this.getModel("oAppModel").getData();
+			var sVIN = oAppModelData.enteredVIN;
+			if (!sVIN) {
+				this._createConfirmationMessage(this.getResourceText("ErrorEnterVIN"), "", "OK", false, function (oEvent) {});
+				return;
+			}
+			var sUrl = "/SBA_book_a_service/alj/validate/vin";
+			var oPayload = {
+				"vin": sVIN
+			};
+			this.doAjax(sUrl, "POST", oPayload, function (oData) {
+				//Success block
+				if (oData) {
+					this._showToastMessage(this.getResourceText("SuccssVIDMsg"));
+				} else {
+					this._createConfirmationMessage(this.getResourceText("ErrorFindingVIN"), "Yes", "Cancel", true, function (oEvent) {
+						//What to do if yes?
+					});
+				}
+
+			}.bind(this), function (oData) {});
+		}
+
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 		 * (NOT before the first rendering! onInit() is used for that one!).

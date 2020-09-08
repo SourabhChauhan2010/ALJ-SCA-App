@@ -11,12 +11,93 @@ sap.ui.define([
 		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.MyCars
 		 */
 		onInit: function () {
+			this.getRouter().attachRoutePatternMatched(function (oEvent) {
+				if (oEvent.getParameter("name") === "MyCars") {
+					var oAppModelData = this.getModel("oAppModel").getData();
+					if (oAppModelData.vehicles.length > 0) {
+						this.getVehicleHistory(oAppModelData.vehicles[0]);
+					}
+					/*	$.ajax({
+						type: "GET",
+						contentType: "application/json; charset=utf-8",
+						url: "/SCA_JAVA/alj/vehicle/owner/INC01314",
+						dataType: "json",
+						async: true,
+						data:null,
+						success: function (data) {
+							var vehicleObj = data;
+						}
+					});*/
+
+				}
+			}.bind(this));
 
 		},
-		
-		onAddVehiclePress: function(oEvent) {
+		onSelectableItemPress: function (oEvent) {
+			var oCarDetails = oEvent.getSource().getBindingContext("oAppModel").getObject();
+			var oAppModelData = this.getModel("oAppModel");
+			var sUrl = "/SCA_JAVA/alj/vehicle/vin/" + oCarDetails.vin;
+			this.doAjax(sUrl, "GET", null, function (oData) {
+				if (oEvent) {
+					// var aData = oAppModelData.getProperty("/UserInformation");
+					// aData[0] = oEvent;
+					// oAppModelData.setProperty("/UserInformation", aData);
+					oAppModelData.setProperty("/CampaignDetails", oEvent);
+				} else {
+					// oAppModelData.setProperty("/UserInformation", {});
+				}
+			}.bind(this), function (oData) {});
+		},
+		onMakeDefaultCar: function (oEvent) {
+			if (oEvent.getSource().getText() !== "Make") {
+				return;
+			}
+			var sIndex = oEvent.getSource().getBindingContext("oAppModel").getPath().split("/").pop();
+			var vehicles = this.getModel("oAppModel").getData().vehicles;
+			for (var i = 0; i < vehicles.length; i++) {
+				if (i == sIndex) {
+					vehicles[i].isDefault = true;
+				} else {
+					vehicles[i].isDefault = false;
+				}
+			}
+			this.getModel("oAppModel").refresh();
+		},
+
+		onAddVehiclePress: function (oEvent) {
 			this.getRouter().navTo("AddVehicle");
-		}
+		},
+
+		onVehicleItemPress: function (oEvent) {
+			var oAppModel = this.getModel("oAppModel");
+			var aVehicles = oAppModel.getProperty("/vehicles");
+			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
+			for (var i = 0; i < aVehicles.length; i++) {
+				aVehicles[i].isSelected = false;
+			}
+			this.getVehicleHistory(currObj);
+		},
+
+		getVehicleHistory: function (currObj) {
+			var oAppModel = this.getModel("oAppModel");
+			currObj.isSelected = true;
+			oAppModel.setProperty("/selectedVehicle", currObj);
+			oAppModel.refresh();
+			var sUrl = "/SBA_book_a_service/alj/vehicle/history";
+			var oPayload = {
+				"vin": currObj.vin,
+				"customerId": currObj.customerId
+			};
+			this.doAjax(sUrl, "POST", oPayload, function (oData) {
+
+			}.bind(this), function (oData) {});
+		},
+
+		onServiceItemPress: function (oEvent) {
+			// var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
+			// currObj.isSelected = !currObj.isSelected;
+			// this.getModel("oAppModel").refresh();
+		},
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

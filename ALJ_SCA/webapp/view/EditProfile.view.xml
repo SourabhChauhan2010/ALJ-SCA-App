@@ -1,0 +1,44 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.EditProfile"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form">
+	<VBox justifyContent="Center" alignItems="Center" class="sapUiSmallMargin sapUiMediumMarginTop" renderType="Bare">
+		<!--<Text text="{i18n>SignUpLabel}" class="aljSignUpLabelStyle"/>-->
+		<VBox alignItems="Center">
+			<Avatar src="image/EditProfilePic.PNG" width="5.625rem" class="aljEditProfileIcon" customDisplaySize="5.625rem" displaySize="Custom"/>
+		</VBox>
+		<!--<HBox class="aljAddProfPicStyle"/>-->
+		<Text text="{i18n>AddProfilePic}" class="sapUiTinyMarginBottom"/>
+		<HBox class="aljEPInputStyle" renderType="Bare">
+			<Image src="image/FullName.png"/>
+			<Input width="100%" placeholder="{i18n>FirstName}" value="{oAppModel>/UserInformation/nameFirst}"/>
+		</HBox>
+		<HBox class="aljEPInputStyle" renderType="Bare">
+			<Image src="image/FullName.png"/>
+			<Input width="100%" placeholder="{i18n>MiddleName}" value="{oAppModel>/UserInformation/nameMiddle}"/>
+		</HBox>
+		<HBox class="aljEPInputStyle" renderType="Bare">
+			<Image src="image/FullName.png"/>
+			<Input width="100%" placeholder="{i18n>LastName}" value="{oAppModel>/UserInformation/nameLast}"/>
+		</HBox>
+		<HBox class="aljEPInputStyle" renderType="Bare">
+			<Image src="image/NID.png"/>
+			<Input width="100%" placeholder="{i18n>NID}" maxLength="10" value="{oAppModel>/UserInformation/NID}"/>
+		</HBox>
+		<HBox class="aljEPInputStyle" renderType="Bare">
+			<Image src="image/Mobile.png"/>
+			<Input width="100%" placeholder="{i18n>Mobile}" maxLength="10" value="{oAppModel>/UserInformation/mobile2}"/>
+		</HBox>
+		<HBox class="aljEPInputStyle" renderType="Bare">
+			<Image src="image/Email.png"/>
+			<Input width="100%" placeholder="{i18n>Email}" type="Email" value="{oAppModel>/UserInformation/email}"/>
+		</HBox>
+		<!--<HBox class="aljEPInputStyle" renderType="Bare">-->
+		<!--	<Image src="image/Password.png"/>-->
+		<!--	<Input width="100%" placeholder="{i18n>Password}" value="{oAppModel>/UserInformation/EnterPassword}"/>-->
+		<!--</HBox>-->
+		<!--<HBox class="aljEPInputStyle" renderType="Bare">-->
+		<!--	<Image src="image/Password.png"/>-->
+		<!--	<Input width="100%" placeholder="{i18n>RetypePassword}" value="{oAppModel>/UserInformation/ReenterPassword}"/>-->
+		<!--</HBox>-->
+		<Button text="{i18n>Save}" press="onSavePress" class="aljRedBtnStyle aljLargeBtnStyle sapUiSmallMarginTop"/>
+	</VBox>
+</mvc:View>

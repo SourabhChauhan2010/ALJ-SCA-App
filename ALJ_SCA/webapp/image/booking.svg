@@ -1,59 +1,14 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="1.875rem" height="2rem">
-<g>
-	<g>
-		<g>
-			<circle cx="386" cy="210" r="20"/>
-			<path d="M432,40h-26V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v20h-91V20c0-11.046-8.954-20-20-20
-				c-11.046,0-20,8.954-20,20v20h-90V20c0-11.046-8.954-20-20-20s-20,8.954-20,20v20H80C35.888,40,0,75.888,0,120v312
-				c0,44.112,35.888,80,80,80h153c11.046,0,20-8.954,20-20c0-11.046-8.954-20-20-20H80c-22.056,0-40-17.944-40-40V120
-				c0-22.056,17.944-40,40-40h25v20c0,11.046,8.954,20,20,20s20-8.954,20-20V80h90v20c0,11.046,8.954,20,20,20s20-8.954,20-20V80h91
-				v20c0,11.046,8.954,20,20,20c11.046,0,20-8.954,20-20V80h26c22.056,0,40,17.944,40,40v114c0,11.046,8.954,20,20,20
-				c11.046,0,20-8.954,20-20V120C512,75.888,476.112,40,432,40z"/>
-			<path d="M391,270c-66.72,0-121,54.28-121,121s54.28,121,121,121s121-54.28,121-121S457.72,270,391,270z M391,472
-				c-44.663,0-81-36.336-81-81s36.337-81,81-81c44.663,0,81,36.336,81,81S435.663,472,391,472z"/>
-			<path d="M420,371h-9v-21c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v41c0,11.046,8.954,20,20,20h29
-				c11.046,0,20-8.954,20-20C440,379.954,431.046,371,420,371z"/>
-			<circle cx="299" cy="210" r="20"/>
-			<circle cx="212" cy="297" r="20"/>
-			<circle cx="125" cy="210" r="20"/>
-			<circle cx="125" cy="297" r="20"/>
-			<circle cx="125" cy="384" r="20"/>
-			<circle cx="212" cy="384" r="20"/>
-			<circle cx="212" cy="210" r="20"/>
-		</g>
-	</g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="18.791" height="19.324" viewBox="0 0 18.791 19.324">
+  <g id="_14" data-name="14" transform="translate(0.25 0.25)">
+    <rect id="Rectangle_2712" data-name="Rectangle 2712" width="18.291" height="18.824" rx="2.6" transform="translate(0)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <line id="Line_2582" data-name="Line 2582" x2="6.177" transform="translate(6.057 4.412)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <line id="Line_2583" data-name="Line 2583" x2="3.53" transform="translate(14.48 4.452)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <line id="Line_2584" data-name="Line 2584" x2="3.49" transform="translate(0.321 4.452)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <rect id="Rectangle_2713" data-name="Rectangle 2713" width="1.965" height="3.289" rx="0.983" transform="translate(4.051 2.768)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <rect id="Rectangle_2714" data-name="Rectangle 2714" width="1.965" height="3.289" rx="0.983" transform="translate(12.274 2.768)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <rect id="Rectangle_2715" data-name="Rectangle 2715" width="12.675" height="7.637" transform="translate(2.808 8.303)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <line id="Line_2585" data-name="Line 2585" y2="7.3" transform="translate(7.06 8.463)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <line id="Line_2586" data-name="Line 2586" y2="7.3" transform="translate(11.231 8.463)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <line id="Line_2587" data-name="Line 2587" x1="12.515" transform="translate(2.888 12.114)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+  </g>
 </svg>
