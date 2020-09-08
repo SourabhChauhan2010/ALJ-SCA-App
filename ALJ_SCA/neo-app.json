@@ -1,24 +1,70 @@
 {
-  "welcomeFile": "/webapp/index.html",
-  "routes": [
-    {
-      "path": "/resources",
-      "target": {
-        "type": "service",
-        "name": "sapui5",
-        "entryPath": "/resources"
-      },
-      "description": "SAPUI5 Resources"
-    },
-    {
-      "path": "/test-resources",
-      "target": {
-        "type": "service",
-        "name": "sapui5",
-        "entryPath": "/test-resources"
-      },
-      "description": "SAPUI5 Test Resources"
-    }
-  ],
-  "sendWelcomeFileRedirect": true
+	"welcomeFile": "/webapp/index.html",
+	"routes": [{
+		"path": "/sap/opu/odata",
+		"target": {
+			"type": "destination",
+			"name": "ALJERP-DEV",
+			"entryPath": "/sap/opu/odata"
+		},
+		"description": "ALJERP-DEV"
+	}, {
+		"path": "/resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/resources"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/test-resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/test-resources"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/webapp/resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/resources"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/webapp/test-resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/test-resources"
+		},
+		"description": "SAPUI5 Test Resources"
+	}, {
+		"path": "/SBA_book_a_service",
+		"target": {
+			"type": "destination",
+			"name": "SBA_book_a_service"
+		}
+	}, {
+		"path": "/SCA_JAVA",
+		"target": {
+			"type": "destination",
+			"name": "SCA_JAVA"
+		}
+	}, {
+		"path": "/Java_Service",
+		"target": {
+			"type": "destination",
+			"name": "Java_service"
+		}
+	},
+	{
+		"path": "/SCA_CRM",
+		"target": {
+			"type": "destination",
+			"name": "SCA_CRM"
+		}	
+	}],
+	"sendWelcomeFileRedirect": true
 }

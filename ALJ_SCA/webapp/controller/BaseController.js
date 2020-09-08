@@ -264,6 +264,12 @@ sap.ui.define([
 			// 	}.bind(this),
 			// 	error: function (oData) {}
 			// });
+			this.doAjax("/SCA_CRM/sap/opu/odata/sap/ZGW_CRM_BUPA_SAA_SRV/$metadata", "GET", null, function (aData) {
+				//Success block
+				// oAppModel.setProperty("/vehicles", aData);
+			}.bind(this), function (oData) {
+
+			});
 		},
 
 	});

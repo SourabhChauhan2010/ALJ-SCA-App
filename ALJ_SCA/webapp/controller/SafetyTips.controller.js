@@ -15,7 +15,7 @@ sap.ui.define([
 			
 			var oAppModelData = this.getModel("oAppModel");
 		//	var sUrl = "https://alj-services-new.cfapps.eu10.hana.ondemand.com/alj/campaign/all";
-		var sUrl="/Java_service/alj/misc/tips";
+		var sUrl="/Java_Service/alj/misc/tips";
 		var data=[{
 				"tipsId":1234,
 				"title":"test title",
