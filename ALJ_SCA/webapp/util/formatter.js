@@ -67,7 +67,7 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 			return "Primary Car";
 		} else {
 			this.addStyleClass("aljRedBtnStyleRev");
-			return "Make";
+			return "Make Primary";
 		}
 	},
 	

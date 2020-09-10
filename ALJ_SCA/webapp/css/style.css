@@ -1329,6 +1329,7 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
 
 .aljCarListText {
     font-size: 14px !important;
+    margin-top: 0.5rem;
 }
 
 .aljSLServiceTypeStyle {
@@ -1385,6 +1386,16 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
 
 .aljCarListLogos {
     width: 6rem;
+}
+
+.aljCarDetLinkStyle.sapMLnk{
+	color: #CE0E2D !important;
+    text-decoration: underline #CE0E2D;
+    font-size: 13px;
+    text-align: end;
+    width: 100%;
+    margin-right: 1rem;
+    margin-top: 0.25rem;
 }
 
 @media screen and (max-width: 500px) {

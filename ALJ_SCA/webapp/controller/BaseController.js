@@ -79,9 +79,9 @@ sap.ui.define([
 			this.oAppModel = oAppModel;
 
 			//ODataModel holding metadata of Application's ERP ODATA services
-			var oERPDataModel = this.getOwnerComponent().getModel("oERPDataModel");
+			var oERPDataModel = this.getOwnerComponent().getModel("oERPModel");
 			this.oERPDataModel = oERPDataModel;
-			
+
 			//ODataModel holding metadata of Application's CRM ODATA services
 			var oCRMDataModel = this.getOwnerComponent().getModel("oCRMDataModel");
 			this.oCRMDataModel = oCRMDataModel;
@@ -117,6 +117,9 @@ sap.ui.define([
 				url: sUrl,
 				data: oData,
 				async: !bSync,
+				// headers: {
+				// 	"X-CSRF-Token": this.getCSRFToken(sUrl)
+				// },
 				dataType: "json",
 				contentType: "application/json; charset=utf-8",
 				error: function (err) {
@@ -127,6 +130,24 @@ sap.ui.define([
 				},
 				type: sMethod
 			});
+		},
+
+		getCSRFToken: function (sUrl) {
+			// var sUrl = "InctureApDest/statusConfig/getAll/EN";
+			sUrl = "/Java_Service/alj/campaign/all";
+			var token = null;
+			$.ajax({
+				url: sUrl,
+				type: "GET",
+				async: false,
+				beforeSend: function (xhr) {
+					xhr.setRequestHeader("X-CSRF-Token", "Fetch");
+				},
+				complete: function (xhr) {
+					token = xhr.getResponseHeader("X-CSRF-Token");
+				}
+			});
+			return token;
 		},
 
 		/**

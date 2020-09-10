@@ -3,8 +3,8 @@
 	<!--<contentMiddle>-->
 	<HBox width="100%" class="sapUiSmallMarginTop aljMyCarsHedingBox sapUiSmallMarginBeginEnd sapUiSmallMarginBottom" justifyContent="Center"
 		alignItems="Center">
-		<Image src="image/vehicleInfo.png" class="sapUiTinyMarginEnd"/>
-		<Text text="{i18n>VehicleInformation}" class="aljHomeText"/>
+		<!--<Image src="image/vehicleInfo.png" class="sapUiTinyMarginEnd"/>-->
+		<Text text="{i18n>MyCars}" class="aljHomeText"/>
 	</HBox>
 	<!--</contentMiddle>-->
 	<!--</Bar>-->
@@ -20,25 +20,33 @@
 				</VBox>
 			</CustomListItem>
 		</HBox>-->
-		<List src="image/BookService.png" items="{oAppModel>/vehicles}" class="VehicleListItemCSS UserInfoHeaderAlign">
-			<CustomListItem width="60%" type="Active" press="onSelectableItemPress">
-				<HBox class="VehicleListVBCSS sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom" justifyContent="SpaceBetween"
-					visible="{parts: ['oAppModel>isDefault'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.setDefaultVehicleStyle'}">
-					<VBox width="50%" class="sapUiSmallMarginBegin sapUiTinyMarginTopBottom vehiclListAlignCSS">
-						<Image src="{oAppModel>src}" class="aljCarListLogos"/>
-						<Text text="{oAppModel>model} {oAppModel>year}" class="aljModelTextStyle aljCarListText"/>
-						<Text text="{oAppModel>vin}" class="aljCarListText"/>
-						<HBox class="aljTextBlock">
-							<Text text="{i18n>LastServiceDate}" class="aljCarListText"/>
-							<Text text="{oAppModel>lastServiceDate}" class="aljCarListText aljRedColorStyle sapUiTinyMarginBegin"/>
+		<List items="{oAppModel>/vehicles}" class="VehicleListItemCSS UserInfoHeaderAlign">
+			<CustomListItem type="Active" press="onSelectableItemPress">
+				<VBox>
+					<VBox class="VehicleListVBCSS sapUiSmallMarginBeginEnd sapUiSmallMarginTop"
+						visible="{parts: ['oAppModel>isDefault'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.setDefaultVehicleStyle'}">
+						<HBox justifyContent="SpaceBetween">
+							<VBox class="sapUiSmallMarginBegin sapUiTinyMarginTopBottom vehiclListAlignCSS">
+								<Image src="{oAppModel>src}" class="aljCarListLogos"/>
+								<Text text="{oAppModel>model} {oAppModel>year}" class="aljModelTextStyle aljCarListText"/>
+							</VBox>
+							<VBox justifyContent="Center" class="sapUiSmallMarginEnd">
+								<!--<Image src="image/Edit.png" class="aljMyCarsEditIcon"/>-->
+								<Button text="{parts: ['oAppModel>isDefault'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.getDefaultVBtnText'}"
+									press="onMakeDefaultCar" width="100%"/>
+							</VBox>
 						</HBox>
+						<VBox alignItems="Start" class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom">
+							<Text text="{i18n>VIN}: {oAppModel>vin}" class="aljCarListText"/>
+							<Text text="{i18n>LastService}: {oAppModel>lastServiceDate}" class="aljCarListText"/>
+							<Text text="{i18n>PlateNo}: {oAppModel>plateNo}" class="aljCarListText"/>
+							<Text text="{i18n>VehicleOwnership}: {oAppModel>ownership}" class="aljCarListText"/>
+						</VBox>
 					</VBox>
-					<VBox width="30%" justifyContent="Center" alignItems="Center" class="sapUiTinyMarginBeginEnd">
-						<Image src="image/Edit.png" class="aljMyCarsEditIcon"/>
-						<Button text="{parts: ['oAppModel>isDefault'], formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.getDefaultVBtnText'}"
-							press="onMakeDefaultCar"/>
-					</VBox>
-				</HBox>
+					<HBox renderType="Bare">
+						<Link text="{i18n>ViewCarDetails}" class="aljCarDetLinkStyle"/>
+					</HBox>
+				</VBox>
 			</CustomListItem>
 		</List>
 	</ScrollContainer>

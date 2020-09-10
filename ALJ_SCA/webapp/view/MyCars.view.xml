@@ -6,8 +6,8 @@
 		</VBox>
 		<VBox class="aljMyCarBtnBox sapUiSmallMarginBottom" alignItems="Center" justifyContent="Center">
 			<Button text="{i18n>AddAnother}" class="aljLargeBtnStyle aljBlackBtnStyleRev sapUiSmallMarginBottom aljMyCarVehInfoBtn" width="100%"
-				height="3.5rem" press="onAddVehiclePress"/>
-			<Button text="{i18n>Next}" class="aljRedBtnStyle aljLargeBtnStyle aljMyCarVehInfoBtn" width="100%" height="3.5rem"/>
+				press="onAddVehiclePress"/>
+			<Button text="{i18n>Next}" class="aljRedBtnStyle aljLargeBtnStyle aljMyCarVehInfoBtn" width="100%"/>
 		</VBox>
 	</VBox>
 	<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.DesktopFooter" type="XML"/>
