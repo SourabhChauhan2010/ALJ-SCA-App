@@ -73,7 +73,7 @@
 					"bundleName": "com.sap.alj.sca.ALJ_SCA.i18n.i18n"
 				}
 			},
-			"oERPModel": {
+			"oERPDataModel": {
 				"type": "sap.ui.model.odata.v2.ODataModel",
 				"settings": {
 					"defaultOperationMode": "Server",
@@ -83,7 +83,7 @@
 				"dataSource": "ZGW_SRW_SAA_APP_001_SRV",
 				"preload": true
 			},
-			"oCRMModel": {
+			"oCRMDataModel": {
 				"type": "sap.ui.model.odata.v2.ODataModel",
 				"settings": {
 					"defaultOperationMode": "Server",
