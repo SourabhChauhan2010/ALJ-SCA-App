@@ -44,7 +44,8 @@
 		"plateNo": "NY99",
 		"vehicleType": "Own",
 		"warranty": "06/02/2020 to 06/02/2021",
-		"isDefault": false
+		"isDefault": false,
+		"ownership": "Verified"
 	}, {
 		"model": "Camry",
 		"year": "2020",
@@ -55,7 +56,8 @@
 		"plateNo": "TN99",
 		"vehicleType": "Pickup",
 		"warranty": "06/02/2020 to 06/02/2021",
-		"isDefault": true
+		"isDefault": true,
+		"ownership": "Non Verified"
 	}],
 	"recommendations": [{
 		"model": "Land Cruiser",
