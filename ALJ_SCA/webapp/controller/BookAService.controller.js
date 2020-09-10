@@ -11,6 +11,7 @@ sap.ui.define([
 
 		onAfterRendering: function () {
 			this.servicelist = [];
+			this.getFridays();
 		},
 
 		//Vehicle selection code
@@ -130,7 +131,96 @@ sap.ui.define([
 				error: function (oData) {}
 			});
 
-			this.oRouter.navTo("ServiceStatus");
+			if (!this.Calendar) {
+				this.Calendar = sap.ui.xmlfragment("com.sap.alj.sca.ALJ_SCA.fragment.Calendar", this);
+				this.getView().addDependent(this.Calendar);
+			}
+			var timeSlot = [{
+				time: "08: 00 AM",
+				available: false
+			}, {
+				time: "08: 30 AM",
+				available: true
+			}, {
+				time: "09: 00 AM",
+				available: true
+			}, {
+				time: "09: 30 AM",
+				available: true
+			}, {
+				time: "10: 00 AM",
+				available: false
+			}, {
+				time: "10: 30 AM",
+				available: true
+			}, {
+				time: "11: 00 AM",
+				available: true
+			}, {
+				time: "11: 30 AM",
+				available: false
+			}, {
+				time: "12: 00 PM",
+				available: true
+			}, {
+				time: "12: 30 PM",
+				available: true
+			}, {
+				time: "01: 00 PM",
+				available: true
+			}, {
+				time: "01: 30 PM",
+				available: true
+			}, {
+				time: "02: 00 PM",
+				available: false
+			}, {
+				time: "02: 30 PM",
+				available: true
+			}, {
+				time: "03: 00 PM",
+				available: true
+			}, {
+				time: "03: 30 PM",
+				available: true
+			}, {
+				time: "04: 00 PM",
+				available: true
+			}, {
+				time: "04: 30 PM",
+				available: true
+			}, {
+				time: "05: 00 PM",
+				available: true
+			}, {
+				time: "05: 30 PM",
+				available: true
+			}, {
+				time: "06: 00 PM",
+				available: true
+			}, {
+				time: "06: 30 PM",
+				available: true
+			}, {
+				time: "07: 00 PM",
+				available: true
+			}, {
+				time: "07: 30 PM",
+				available: true
+			}, {
+				time: "08: 00 PM",
+				available: true
+			}, {
+				time: "08: 30 PM",
+				available: true
+			}, {
+				time: "09: 00 PM",
+				available: true
+			}];
+			oAppModel.setProperty("/TimeSlot", timeSlot);
+			this.Calendar.open();
+
+			// this.oRouter.navTo("ServiceStatus");
 
 		},
 
@@ -149,7 +239,7 @@ sap.ui.define([
 				error: function (oData) {}
 			});
 		},
-		
+
 		getServiceLocations: function () {
 			var sUrl = "/Plant_and_Service_typeSet";
 			var oERPDataModel = this.getModel("oERPDataModel");
@@ -180,6 +270,45 @@ sap.ui.define([
 				}.bind(this),
 				error: function (oData) {}
 			});
+		},
+
+		handleCalendarSelect: function (oEvent) {
+			var oAppModel = this.getModel("oAppModel");
+			var oData = oEvent;
+			this.getFridays();
+
+		},
+
+		getFridays: function () {
+			var oAppModel = this.getModel("oAppModel");
+			var arr = [];
+			var x = new Date();
+
+			//set the financial year starting date
+			x.setFullYear(x.getFullYear(), 3, 1);
+
+			//set the next financial year starting date
+			var y = new Date();
+			y.setFullYear(y.getFullYear() + 3, 3, 1);
+			var j = 1;
+			var count = 0;
+
+			//getting the all fridays in a financial year
+			for (var i = 0; x < y; i += j) {
+				if (x.getDay() == 5) {
+					x = new Date(x.getTime() + (7 * 24 * 60 * 60 * 1000));
+					var a = {
+						date: x
+					}
+					arr.push(a);
+					j = 7;
+					count++;
+				} else {
+					j = 1;
+					x = new Date(x.getTime() + (24 * 60 * 60 * 1000));
+				}
+			}
+			oAppModel.setProperty("/Fridays", arr);
 		}
 
 	});

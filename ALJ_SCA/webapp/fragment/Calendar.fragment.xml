@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified">
+	<Dialog showHeader="false">
+		<!--<customHeader>-->
+		<!--	<Toolbar>-->
+		<!--		<ToolbarSpacer/>-->
+		<!--		<core:Icon src="sap-icon://decline" width="2.5rem" press="onCloseGMaps" color="#ffffff"/>-->
+		<!--	</Toolbar>-->
+		<!--</customHeader>-->
+		<!--<HBox id="map_canvas" height="100%" width="100%" fitContainer="true" justifyContent="Center" alignItems="Center"/>-->
+		<VBox alignItems="Center" class="aljCalendarBox">
+			<VBox>
+				<Text text="{i18n>DATE}" class="aljDateLabel"></Text>
+				<u:Calendar id="calendar" class="aljCalender" showWeekNumbers="false" select="handleCalendarSelect" disabledDates="{oAppModel>/Fridays}">
+					<u:disabledDates>
+						<u:DateRange startDate="{oAppModel>date}"/>
+					</u:disabledDates>
+				</u:Calendar>
+			</VBox>
+			<VBox>
+				<Text text="{i18n>TIMESLOT}" class="aljTimeSlotLabel sapUiSmallMargin"></Text>
+				<l:Grid defaultSpan="XL4 L4 M4 S4" content="{oAppModel>/TimeSlot}">
+					<l:content>
+						<!--<CustomListItem type="Active" press="onIncidenceComments">-->
+						<Button class="aljTimeSlotbtn" text="{oAppModel>time}" enabled="{oAppModel>available}"></Button>
+						<!--</CustomListItem>-->
+					</l:content>
+				</l:Grid>
+			</VBox>
+			<Button text="{i18n>SELECTDATETIME}" class="aljRedBtnStyle sapUiSmallMargin"/>
+		</VBox>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1398,6 +1398,131 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     margin-top: 0.25rem;
 }
 
+.aljCalender .BAS_DT_CSS .sapUiCalWH,
+.sapUiCalItem {
+    border: .125rem solid white;
+    background: white;
+    border-radius: 100% !important;
+    /* width: 12% !important; */
+    height: 2.7rem;
+    color: black;
+    line-height: 2.4rem !important;
+}
+
+.aljCalender .sapUiCalItem.sapUiCalItemSel:not(.sapUiCalItemSelBetween) {
+    background: #CE0E2D;
+}
+
+.aljCalender .sapUiCalItemNow:not(.sapUiCalItemSelBetween)>.sapUiCalItemText {
+    line-height: 2.3rem;
+    border: none;
+    box-shadow: none;
+}
+
+.aljCalender .sapUiCalWH {
+    color: #8d8d8d;
+    white-space: nowrap;
+    height: 2rem;
+    line-height: 1.875rem;
+    font-size: .85rem;
+}
+
+.aljCalender .sapUiCalItem:focus>.sapUiCalItemText:after {
+    border: none !important;
+}
+
+.aljCalender .sapUiCalItemDsbl {
+    color: #8d8d8d !important;
+}
+
+.aljCalender .sapUiCalHead>.sapUiCalHeadB,
+.aljCalender .sapUiCalCancel,
+html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:hover,
+html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
+    color: #CE0E2D;
+    font-weight: bold;
+}
+
+.aljCalender.sapUiCal:not(.sapUiCalInt)>.sapUiCalHead {
+    text-align-last: end;
+}
+
+.aljCalender .sapUiCalHeadB {
+    width: auto;
+}
+
+.aljCalender .sapUiCalHeadBLast {
+    margin-left: 0.25rem;
+    /* float: right; */
+    margin-right: 1rem;
+}
+
+.aljCalender .sapUiCalHeadPrev,
+.aljCalender .sapUiCalHeadNext {
+    position: absolute;
+    width: 2.5rem;
+    display: none;
+}
+
+.aljCalender.sapUiCal {
+    padding: 0 !important;
+}
+
+.aljCalender.sapUiCal .sapUiCalMonthView,
+.aljCalender.sapUiCal .sapUiCalRow {
+    /*padding: 0 !important;*/
+}
+
+.aljCalender .sapUiCalItem.sapUiCalItemNow {
+    border: none;
+}
+
+.aljDateLabel {
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    left: 1rem;
+}
+
+.aljTimeSlotLabel {
+    color: black;
+    font-weight: bold;
+}
+
+.aljCalendarBox {
+    max-width: 18rem;
+}
+
+.aljTimeSlotbtn.sapMBtn {
+    border: none;
+    border-radius: .4rem;
+    height: 1.7rem;
+    width: 5rem;
+}
+
+.aljTimeSlotbtn .sapMBtnInner {
+    border: 0.1rem solid black;
+    color: black;
+    font-weight: normal;
+}
+
+.aljTimeSlotbtn .sapMBtnContent {
+    font-weight: normal;
+}
+
+.aljTimeSlotbtn.sapMBtn:hover>.sapMBtnHoverable {
+    background-image: none;
+    background-color: #CE0E2D;
+    border-color: #CE0E2D;
+    color: white;
+}
+
+.aljCalendarBox .sapUiRespGrid.sapUiRespGridVSpace1>div {
+    margin-bottom: 0.5rem;
+}
+
 @media screen and (max-width: 500px) {
     .aljTextBlock {
         display: block !important;
