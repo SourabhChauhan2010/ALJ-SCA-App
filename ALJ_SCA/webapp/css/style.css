@@ -1387,6 +1387,10 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     width: 6rem;
 }
 
+.aljCalendarDialog.sapMDialog {
+    border-radius: 1rem;
+}
+
 .aljCalender .BAS_DT_CSS .sapUiCalWH,
 .sapUiCalItem {
     border: .125rem solid white;
@@ -1480,10 +1484,6 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
     font-weight: bold;
 }
 
-.aljCalendarBox {
-    max-width: 18rem;
-}
-
 .aljTimeSlotbtn.sapMBtn {
     border: none;
     border-radius: .4rem;
@@ -1492,7 +1492,7 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
 }
 
 .aljTimeSlotbtn .sapMBtnInner {
-    border: 0.1rem solid black;
+    border: 0.1rem solid #888888;
     color: black;
     font-weight: normal;
 }
@@ -1508,8 +1508,39 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
     color: white;
 }
 
+.aljTimeSlotbtn.sapMBtn .sapMBtnHoverable.sapMToggleBtnPressed:hover {
+    background-image: none;
+    background-color: #CE0E2D;
+    border-color: #CE0E2D;
+    color: white;
+}
+
+.aljTimeSlotbtn .sapMBtnInner.sapMToggleBtnPressed:not(.sapMBtnDisabled) {
+    background-image: none;
+    background-color: #CE0E2D;
+    border-color: #FF5722;
+    color: #fff;
+    text-shadow: none;
+}
+
+.aljTimeSlotbtn.sapMBtnDisabled .sapMBtnInner {
+    background: #e3e3e3;
+    color: black;
+}
+
+.aljTimeSlotbtn.sapMBtnDisabled {
+    opacity: 1;
+}
+
 .aljCalendarBox .sapUiRespGrid.sapUiRespGridVSpace1>div {
     margin-bottom: 0.5rem;
+}
+
+.aljCalendarBtn .sapMBtnInner {
+    color: #fff;
+    background: #CE0E2D;
+    min-width: 5rem;
+    font-family: 'UniversNextPro';
 }
 
 @media screen and (max-width: 500px) {
@@ -1524,6 +1555,15 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
 @media only screen and (min-width: 700px) {
     .UserInfoVBoxCSS {
         width: 30rem;
+    }
+    .aljCalendarBox {
+        max-width: 20rem;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .aljCalendarBox {
+        max-width: 20rem;
     }
 }
 
@@ -1742,5 +1782,8 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
     }
     .vehiclListAlignCSS {
         margin: 1rem 2rem !important;
+    }
+    .aljCalendarBox {
+        max-width: 20rem;
     }
 }

@@ -1,5 +1,5 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified">
-	<Dialog showHeader="false">
+	<Dialog showHeader="false" class="aljCalendarDialog">
 		<!--<customHeader>-->
 		<!--	<Toolbar>-->
 		<!--		<ToolbarSpacer/>-->
@@ -21,12 +21,12 @@
 				<l:Grid defaultSpan="XL4 L4 M4 S4" content="{oAppModel>/TimeSlot}">
 					<l:content>
 						<!--<CustomListItem type="Active" press="onIncidenceComments">-->
-						<Button class="aljTimeSlotbtn" text="{oAppModel>time}" enabled="{oAppModel>available}"></Button>
+						<ToggleButton class="aljTimeSlotbtn" text="{oAppModel>time}" enabled="{oAppModel>available}"/>
 						<!--</CustomListItem>-->
 					</l:content>
 				</l:Grid>
 			</VBox>
-			<Button text="{i18n>SELECTDATETIME}" class="aljRedBtnStyle sapUiSmallMargin"/>
+			<Button text="{i18n>SELECTDATETIME}" class="aljCalendarBtn sapUiSmallMargin"/>
 		</VBox>
 	</Dialog>
 </core:FragmentDefinition>
