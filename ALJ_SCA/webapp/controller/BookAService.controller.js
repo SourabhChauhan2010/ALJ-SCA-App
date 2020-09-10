@@ -191,7 +191,7 @@ sap.ui.define([
 					for (var counter = 0; counter < aSlots.length; counter++) {
 						for (var iSlotCount = 0; iSlotCount < aTimeSlots.length; iSlotCount++) {
 							aSlots[counter].TimeFrom.trim();
-							var time = aTimeSlots[iSlotCount].time.split(" ")[0];
+							var time = aTimeSlots[iSlotCount].time;
 							if (aSlots[counter].TimeFrom === time && aTimeSlots[iSlotCount].available === false) {
 								aTimeSlots[iSlotCount].available = true;
 							}
@@ -260,85 +260,112 @@ sap.ui.define([
 		fnTimeSlot: function () {
 			var oAppModel = this.getModel("oAppModel");
 			var timeSlot = [{
-				time: "08:00 AM",
+				text: "08:00 AM",
+				time: "08:00",
 				available: false
 			}, {
-				time: "08:30 AM",
+				text: "08:30 AM",
+				time: "08:30",
 				available: false
 			}, {
-				time: "09:00 AM",
+				text: "09:00 AM",
+				time: "09:00",
 				available: false
 			}, {
-				time: "09:30 AM",
+				text: "09:30 AM",
+				time: "09:30",
 				available: false
 			}, {
-				time: "10:00 AM",
+				text: "10:00 AM",
+				time: "10:00",
 				available: false
 			}, {
-				time: "10:30 AM",
+				text: "10:30 AM",
+				time: "10:30",
 				available: false
 			}, {
-				time: "11:00 AM",
+				text: "11:00 AM",
+				time: "11:00",
 				available: false
 			}, {
-				time: "11:30 AM",
+				text: "11:30 AM",
+				time: "11:30",
 				available: false
 			}, {
-				time: "12:00 PM",
+				text: "12:00 PM",
+				time: "12:00",
 				available: false
 			}, {
-				time: "12:30 PM",
+				text: "12:30 PM",
+				time: "12:30",
 				available: false
 			}, {
-				time: "01:00 PM",
+				text: "01:00 PM",
+				time: "13:00",
 				available: false
 			}, {
-				time: "01:30 PM",
+				text: "01:30 PM",
+				time: "13:30",
 				available: false
 			}, {
-				time: "02:00 PM",
+				text: "02:00 PM",
+				time: "14:00",
 				available: false
 			}, {
-				time: "02:30 PM",
+				text: "02:30 PM",
+				time: "14:30",
 				available: false
 			}, {
-				time: "03: 00 PM",
+				text: "03: 00 PM",
+				time: "15:00",
 				available: false
 			}, {
-				time: "03:30 PM",
+				text: "03:30 PM",
+				time: "15:30",
 				available: false
 			}, {
-				time: "04:00 PM",
+				text: "04:00 PM",
+				time: "16:00",
 				available: false
 			}, {
-				time: "04:30 PM",
+				text: "04:30 PM",
+				time: "16:30",
 				available: false
 			}, {
-				time: "05:00 PM",
+				text: "05:00 PM",
+				time: "17:00",
 				available: false
 			}, {
-				time: "05:30 PM",
+				text: "05:30 PM",
+				time: "17:30",
 				available: false
 			}, {
-				time: "06:00 PM",
+				text: "06:00 PM",
+				time: "18:00",
 				available: false
 			}, {
-				time: "06:30 PM",
+				text: "06:30 PM",
+				time: "18:30",
 				available: false
 			}, {
-				time: "07:00 PM",
+				text: "07:00 PM",
+				time: "19:00",
 				available: false
 			}, {
-				time: "07:30 PM",
+				text: "07:30 PM",
+				time: "19:30",
 				available: false
 			}, {
-				time: "08:00 PM",
+				text: "08:00 PM",
+				time: "20:00",
 				available: false
 			}, {
-				time: "08:30 PM",
+				text: "08:30 PM",
+				time: "20:30",
 				available: false
 			}, {
-				time: "09:00 PM",
+				text: "09:00 PM",
+				time: "21:00",
 				available: false
 			}];
 			oAppModel.setProperty("/TimeSlot", timeSlot);

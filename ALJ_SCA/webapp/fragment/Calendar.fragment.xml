@@ -21,7 +21,7 @@
 				<l:Grid defaultSpan="XL4 L4 M4 S4" content="{oAppModel>/TimeSlot}">
 					<l:content>
 						<!--<CustomListItem type="Active" press="onIncidenceComments">-->
-						<ToggleButton class="aljTimeSlotbtn" text="{oAppModel>time}" enabled="{oAppModel>available}"/>
+						<ToggleButton class="aljTimeSlotbtn" text="{oAppModel>text}" enabled="{oAppModel>available}"/>
 						<!--</CustomListItem>-->
 					</l:content>
 				</l:Grid>

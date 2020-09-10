@@ -1388,8 +1388,8 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     width: 6rem;
 }
 
-.aljCarDetLinkStyle.sapMLnk{
-	color: #CE0E2D !important;
+.aljCarDetLinkStyle.sapMLnk {
+    color: #CE0E2D !important;
     text-decoration: underline #CE0E2D;
     font-size: 13px;
     text-align: end;
@@ -1503,13 +1503,14 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
 }
 
 .aljTimeSlotbtn .sapMBtnInner {
-    border: 0.1rem solid #888888;
+    border: 0.1rem solid #a4a4a4;
     color: black;
     font-weight: normal;
 }
 
 .aljTimeSlotbtn .sapMBtnContent {
     font-weight: normal;
+    line-height: 1.7rem;
 }
 
 .aljTimeSlotbtn.sapMBtn:hover>.sapMBtnHoverable {
