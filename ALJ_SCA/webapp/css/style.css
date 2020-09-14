@@ -1561,10 +1561,71 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
     font-family: 'UniversNextPro';
 }
 
-.CarDetailsBoldLabel {
+.aljCarDetailsBoldLabel {
     font-family: 'UniversNextPro';
     font-weight: bold;
     font-size: 0.83rem;
+}
+
+.aljCarDetailsHearBox {
+    background: #F4F4F4;
+    padding-top: 1.5rem;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.aljLightBottomBorder {
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.aljCarDetailsBorderBox {
+    height: 4rem;
+    align-self: flex-end;
+    border-right: 1px solid #d5d5d5;
+}
+
+.aljCarDetailsLinks {
+    color: black !important;
+    text-decoration: underline;
+    font-family: 'UniversNextPro';
+    font-size: 0.7rem;
+}
+
+.aljCarDetailsText {
+    font-family: 'UniversNextPro';
+    font-size: 0.625rem;
+}
+
+.aljHeaderText {
+    color: black !important;
+    font-weight: bold;
+    font-size: 0.8125rem;
+    font-family: 'UniversNextPro';
+}
+
+.aljProductSearch .sapMSFF {
+    box-sizing: border-box;
+    height: 2.25rem;
+    line-height: 2.125rem;
+    background: #fff;
+    vertical-align: top;
+    width: 17.25rem;
+    position: relative;
+    padding-left: 0.625rem;
+    padding-right: 4.75rem;
+    border: aliceblue;
+    border: dashed 2px #d9d9d9;
+    border-radius: 0.5rem !important;
+}
+
+.aljProductSearch .sapMSFB {
+    font-size: 1.5rem;
+    color: #000000 !important;
+    width: 3.5rem;
+    height: 2rem;
+}
+
+.aljProductSearch.sapMFocus>.sapMSFF::before {
+    border: none !important;
 }
 
 @media screen and (max-width: 500px) {

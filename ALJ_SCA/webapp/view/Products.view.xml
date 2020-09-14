@@ -1,26 +1,32 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.Products"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<VBox class="aljBoxContentStyle sapUiSmallMarginTop">
-		<VBox class="styleVehicleBox">
-			<HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom">
-				<Label text="{i18n>SelectVehicle{i18n>SelectVehicle}}" class="aljTitleClass"/>
-				<Button text="{i18n>AddVehicle}" class="aljLightGreyBtnStyle" press="onAddVehiclePress"/>
-			</HBox>
+		<VBox>
 			<!--<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>-->
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.CarDetailsHeader" type="XML"/>
 		</VBox>
-		<VBox class="styleProdCatBox">
-			<Label text="{i18n>ProductCatalog}" class="aljTitleClass sapUiSmallMarginBegin"/>
-			<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
-				<HBox items="{oAppModel>/aProdCatelogs}" class="sapUiSmallMarginBeginEnd">
-					<CustomListItem class="styleProdServBookBox" type="Active" press="onProdCatPress">
-						<VBox alignItems="Center">
-							<Image src="{oAppModel>src}" width="6rem"/>
-							<Label text="{oAppModel>name}"/>
-						</VBox>
-					</CustomListItem>
-				</HBox>
-			</ScrollContainer>
+		<HBox class="aljLightBottomBorder" width="100%" height="2.875rem" justifyContent="Center" alignItems="Center">
+			<Image src="image/ProductsIcon.png" width="2rem" class="sapUiSmallMarginEnd"/>
+			<Text class="aljHeaderText" text="{i18n>PRODUCTS}"></Text>
+		</HBox>
+		<!--<VBox class="styleProdCatBox">-->
+		<!--	<Label text="{i18n>ProductCatalog}" class="aljTitleClass sapUiTinyMarginBegin"/>-->
+		<!--	<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">-->
+		<!--		<HBox items="{oAppModel>/aProdCatelogs}" class="sapUiSmallMarginBeginEnd">-->
+		<!--			<CustomListItem class="styleProdServBookBox" type="Active" press="onProdCatPress">-->
+		<!--				<VBox alignItems="Center">-->
+		<!--					<Image src="{oAppModel>src}" width="6rem"/>-->
+		<!--					<Label text="{oAppModel>name}"/>-->
+		<!--				</VBox>-->
+		<!--			</CustomListItem>-->
+		<!--		</HBox>-->
+		<!--	</ScrollContainer>-->
+		<!--</VBox>-->
+		<VBox justifyContent="Center" class="sapUiMediumMarginTopBottom" alignItems="Center" width="100%">
+			<SearchField class="aljProductSearch"></SearchField>
+		</VBox>
+		<VBox class="sapUiMediumMarginBegin">
+			<Text text="{i18n>PRODUCTCAT}" class="aljTitleClass"/>
 		</VBox>
 		<VBox class="styleProdServBox sapUiNoMarginTop" visible="{= ${oAppModel>/sSelectedCatelog} ? true : false}">
 			<Label text="{oAppModel>/sSelectedCatelog}" class="aljTitleClass sapUiSmallMarginBegin"/>
