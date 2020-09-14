@@ -1,0 +1,18 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<HBox width="100%" class="sapUiSmallMarginTop aljMyCarsHedingBox sapUiSmallMarginBeginEnd sapUiSmallMarginBottom" justifyContent="Center"
+		alignItems="Center">
+		<VBox justifyContent="Center" alignItems="Center">
+			<Image src="image/LC.svg" width="9rem"/>
+			<Text text="{i18n>SwitchCar}" class="underLineCls"/>
+		</VBox>
+		<VBox justifyContent="Center" alignItems="Center">
+			<Text class="CarDetailsBoldLabel" text="{i18n>LASTKMREADING}"></Text>
+			<Text text="16,000 KM"></Text>
+			<Link text="{i18n>UpdateKM}"></Link>
+		</VBox>
+		<VBox justifyContent="Center" alignItems="Center">
+			<Text class="CarDetailsBoldLabel" text="{i18n>LastServiceDate}"></Text>
+			<Text text="16-4-2020"></Text>
+		</VBox>
+	</HBox>
+</core:FragmentDefinition>

@@ -10,6 +10,11 @@ sap.ui.define([
 			this.getView().setModel(oAppModel, "oAppModel");
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			this.fnTimeSlot();
+			this.getUserPref();
+			this.getUserCreate();
+			this.getUserUpdate();
+			this.getServiceHist();
+
 		},
 
 		onAfterRendering: function () {
@@ -369,7 +374,76 @@ sap.ui.define([
 				available: false
 			}];
 			oAppModel.setProperty("/TimeSlot", timeSlot);
-		}
+		},
+
+		getUserPref: function () {
+			var oAppModelData = this.getModel("oAppModel");
+			var sUrl = "/Java_Service/alj/misc/pref/INC01314";
+			this.doAjax(sUrl, "GET", null, function (oEvent) {
+				if (oEvent) {
+					// var aData = oAppModelData.getProperty("/UserInformation");
+					// aData[0] = oEvent;
+					// oAppModelData.setProperty("/UserInformation", aData);
+					// oAppModelData.setProperty("/CampaignDetails", oEvent);
+				} else {
+					// oAppModelData.setProperty("/UserInformation", {});
+				}
+			}.bind(this), function (oEvent) {});
+		},
+		getServiceHist: function () {
+			var oAppModelData = this.getModel("oAppModel");
+			var sUrl = "/SCA_JAVA/alj/sales_history/vin/MR0HX8CD9L1393444";
+			this.doAjax(sUrl, "GET", null, function (oEvent) {
+				if (oEvent) {
+					// var aData = oAppModelData.getProperty("/UserInformation");
+					// aData[0] = oEvent;
+					// oAppModelData.setProperty("/UserInformation", aData);
+					// oAppModelData.setProperty("/CampaignDetails", oEvent);
+				} else {
+					// oAppModelData.setProperty("/UserInformation", {});
+				}
+			}.bind(this), function (oEvent) {});
+		},
+		getUserCreate: function () {
+			var oAppModelData = this.getModel("oAppModel");
+			var sUrl = "/Java_Service/alj/misc/pref";
+			var payLoad = {
+				"ownerId": "INC01315",
+				"prefLanguage": "TEST_LANG",
+				"prefVehicle": "TEST VIN",
+				"prefServiceCenter": "TEST_SERVICE_CENTER"
+			};
+			this.doAjax(sUrl, "POST", payLoad, function (oEvent) {
+				if (oEvent) {
+					// var aData = oAppModelData.getProperty("/UserInformation");
+					// aData[0] = oEvent;
+					// oAppModelData.setProperty("/UserInformation", aData);
+					// oAppModelData.setProperty("/CampaignDetails", oEvent);
+				} else {
+					// oAppModelData.setProperty("/UserInformation", {});
+				}
+			}.bind(this), function (oEvent) {});
+		},
+		getUserUpdate: function () {
+			var oAppModelData = this.getModel("oAppModel");
+			var sUrl = "/Java_Service/alj/misc/pref";
+			var payLoad = {
+				"ownerId": "INC01314",
+				"prefLanguage": "TEST_LANG",
+				"prefVehicle": "TEST VIN",
+				"prefServiceCenter": "TEST_SERVICE_CENTER"
+			};
+			this.doAjax(sUrl, "PUT", payLoad, function (oEvent) {
+				if (oEvent) {
+					// var aData = oAppModelData.getProperty("/UserInformation");
+					// aData[0] = oEvent;
+					// oAppModelData.setProperty("/UserInformation", aData);
+					// oAppModelData.setProperty("/CampaignDetails", oEvent);
+				} else {
+					// oAppModelData.setProperty("/UserInformation", {});
+				}
+			}.bind(this), function (oEvent) {});
+		},
 
 	});
 });

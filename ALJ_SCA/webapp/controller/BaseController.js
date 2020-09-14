@@ -285,6 +285,17 @@ sap.ui.define([
 			// 	}.bind(this),
 			// 	error: function (oData) {}
 			// });
+
+			// var sUrl = "/ZGW_CRM_BUPA_SAA_SRV(Vbeln='3000010715',Abgru='A1')";
+			// var oERPDataModel = this.getModel("oERPDataModel");
+			// var oAppModel = this.getModel("oAppModel");
+			// oERPDataModel.read(sUrl, {
+			// 	success: function (oData) {
+			// 		this._showToastMessage("App_booking_cancellationSet Success");
+			// 	}.bind(this),
+			// 	error: function (oData) {}
+			// });
+
 			this.doAjax("/SCA_CRM/sap/opu/odata/sap/ZGW_CRM_BUPA_SAA_SRV/$metadata", "GET", null, function (aData) {
 				//Success block
 				// oAppModel.setProperty("/vehicles", aData);
