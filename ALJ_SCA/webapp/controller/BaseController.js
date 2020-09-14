@@ -79,7 +79,7 @@ sap.ui.define([
 			this.oAppModel = oAppModel;
 
 			//ODataModel holding metadata of Application's ERP ODATA services
-			var oERPDataModel = this.getOwnerComponent().getModel("oERPModel");
+			var oERPDataModel = this.getOwnerComponent().getModel("oERPDataModel");
 			this.oERPDataModel = oERPDataModel;
 
 			//ODataModel holding metadata of Application's CRM ODATA services

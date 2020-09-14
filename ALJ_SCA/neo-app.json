@@ -1,11 +1,10 @@
 {
 	"welcomeFile": "/webapp/index.html",
 	"routes": [{
-		"path": "/sap/opu/odata",
+		"path": "/ALJERP-DEV",
 		"target": {
 			"type": "destination",
-			"name": "ALJERP-DEV",
-			"entryPath": "/sap/opu/odata"
+			"name": "ALJERP-DEV"
 		},
 		"description": "ALJERP-DEV"
 	}, {

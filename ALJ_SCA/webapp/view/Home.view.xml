@@ -12,7 +12,7 @@ Comments:
 			<VBox alignItems="Start" class="aljTitleClassHome sapUiSmallMarginTop">
 				<Text class="aljWelcomeTextCSS" text="{i18n>Welcome}"/>
 				<Text class="aljHomeNameTextCSS" text="Mohammed"/>
-				<Text class="aljHomeCarModelTextCSS" text="2019 Land Cruiser" />
+				<Text class="aljHomeCarModelTextCSS" text="2019 Land Cruiser"/>
 				<Text text="30,000 KM" class="sapUiTinyMarginBottom aljHomeTextCSS"/>
 				<Button text="{i18n>UpdateKM}" class="aljRedBtnStyle"/>
 			</VBox>
@@ -22,49 +22,51 @@ Comments:
 				<Text text="{i18n>SwitchCar}" class="underLineCls"/>
 			</VBox>
 		</HBox>
-		<Text text="{i18n>ServiceOffers}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiLargeMarginTop"/>
+		<Text text="{i18n>ServiceOffers}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiSmallMarginTop"/>
 		<ScrollContainer horizontal="true" vertical="false">
-		<!--	<HBox items="{oAppModel>/ServiceOffer}" justifyContent="SpaceBetween" class="sapUiSmallMarginBeginEnd sapUiContentPadding scrollCnt">
+			<!--	<HBox items="{oAppModel>/ServiceOffer}" justifyContent="SpaceBetween" class="sapUiSmallMarginBeginEnd sapUiContentPadding scrollCnt">
 				<Image src="{oAppModel>src}" height="7rem" class="sapUiTinyMarginBottom sapUiContentPadding sapUiTinyMarginEnd" press="onServiceOfferPress"/>
 			</HBox>-->
-			<HBox items="{oAppModel>/ServiceOffer}"  class="sapUiSmallMarginBeginEnd ">
-		<Image src="{oAppModel>src}" height="{= ${device>/system/phone} === true ? '7rem' : '9.5rem' }" 
-		width="{= ${device>/system/phone} === true ? '12.5rem' : '26rem' }" class="sapUiTinyMarginEnd" press="onServiceOfferPress"/>
-			</HBox>	
+			<HBox items="{oAppModel>/ServiceOffer}" class="sapUiSmallMarginBeginEnd ">
+				<Image src="{oAppModel>src}" height="{= ${device>/system/phone} === true ? '7rem' : '9.5rem' }"
+					width="{= ${device>/system/phone} === true ? '12.5rem' : '26rem' }" class="sapUiTinyMarginEnd" press="onServiceOfferPress"/>
+			</HBox>
 		</ScrollContainer>
-			<l:HorizontalLayout visible="{device>/system/desktop}">
-				<VBox>
-		<HBox class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop " alignItems="Start" justifyContent="SpaceBetween">
+		<l:HorizontalLayout visible="{device>/system/desktop}">
 			<VBox>
-				<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>
+				<HBox class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop " alignItems="Start" justifyContent="SpaceBetween">
+					<VBox>
+						<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>
+					</VBox>
+					<Link text="{i18n>ShowAll}" class="aljDetailLinkStyle"/>
+				</HBox>
+				<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true"
+					class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom aljSSOuterContainerStyle">
+					<HBox items="{oAppModel>/recommendations}">
+						<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
+					</HBox>
+				</ScrollContainer>
 			</VBox>
-			<Link text="{i18n>ShowAll}" class="aljDetailLinkStyle"/>
-		</HBox>
-		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
-		</VBox>
-		<!-- Service Status Section - Start-->
-		<VBox>
-		<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop">
+			<!-- Service Status Section - Start-->
 			<VBox>
-				<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
+				<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop">
+					<VBox>
+						<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
+					</VBox>
+					<Link text="{i18n>ViewDetails} >" class="aljDetailLinkStyle"/>
+				</HBox>
+				<Text text="2019 Land Cruiser" class="aljSSModelTitleStyle sapUiSmallMarginBeginEnd"/>
+				<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatus" type="XML"/>
 			</VBox>
-			<Link text="{i18n>ViewDetails} >" class="aljDetailLinkStyle"/>
-		</HBox>
-		<Text text="2019 Land Cruiser" class="aljSSModelTitleStyle sapUiSmallMarginBeginEnd"/>
-		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatus" type="XML"/>
-		</VBox>
 		</l:HorizontalLayout>
-		
-		<HBox class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop" alignItems="Start" justifyContent="SpaceBetween" visible="{device>/system/phone}">
+		<HBox class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop" alignItems="Start" justifyContent="SpaceBetween" visible="{device>/system/phone}">
 			<VBox>
 				<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>
 			</VBox>
 			<Link text="{i18n>ShowAll}" class="aljDetailLinkStyle"/>
 		</HBox>
-		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceListMobile" type="XML" />
-	
+		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceListMobile" type="XML"/>
 		<!-- Service Status Section - Start-->
-		
 		<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop" visible="{device>/system/phone}">
 			<VBox>
 				<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
@@ -72,8 +74,7 @@ Comments:
 			<Link text="{i18n>ViewDetails} >" class="aljDetailLinkStyle"/>
 		</HBox>
 		<Text text="2019 Land Cruiser" class="aljSSModelTitleStyle sapUiSmallMarginBeginEnd" visible="{device>/system/phone}"/>
-		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatusMobile" type="XML" />
-	
+		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatusMobile" type="XML"/>
 		<!-- Service Status Section - End-->
 		<!-- Service Section - Start-->
 		<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiSmallMarginTop"/>
@@ -84,10 +85,10 @@ Comments:
 			</VBox>
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
 				<Image src="image/MyService.png" height="{= ${device>/system/phone} === true ? '2.7rem' : '5.4rem' }"/>
-				<Button  text="{i18n>MyServices}"  press="onPressMyServices" class="aljServiceBtnStyle"/>
+				<Button text="{i18n>MyServices}" press="onPressMyServices" class="aljServiceBtnStyle"/>
 			</VBox>
 		</HBox>
 		<!-- Service Section - End-->
 	</VBox>
-		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.DesktopFooter" type="XML"/>
+	<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.DesktopFooter" type="XML"/>
 </mvc:View>

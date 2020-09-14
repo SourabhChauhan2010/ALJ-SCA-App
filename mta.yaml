@@ -1,31 +1,33 @@
 ID: MTA_ALJ_SCA
 _schema-version: '2.1'
 version: 0.0.1
-
 modules:
- - name: ALJ_SCA
-   type: html5
-   path: ALJ_SCA
-   parameters:
+  - name: ALJ_SCA
+    type: html5
+    path: ALJ_SCA
+    parameters:
       disk-quota: 512M
       memory: 256M
-   build-parameters:
+    build-parameters:
       builder: grunt
-   requires:
-    - name: uaa_MTA_ALJ_SCA
-    - name: dest_MTA_ALJ_SCA
-
+    requires:
+      - name: uaa_MTA_ALJ_SCA
+      - name: dest_MTA_ALJ_SCA
+      - name: conn_MTA_ALJ_SCA
 resources:
- - name: uaa_MTA_ALJ_SCA
-   parameters:
+  - name: uaa_MTA_ALJ_SCA
+    parameters:
       path: ./xs-security.json
       service-plan: application
       service: xsuaa
-   type: org.cloudfoundry.managed-service
-
- - name: dest_MTA_ALJ_SCA
-   parameters:
+    type: org.cloudfoundry.managed-service
+  - name: dest_MTA_ALJ_SCA
+    parameters:
       service-plan: lite
       service: destination
-   type: org.cloudfoundry.managed-service
-
+    type: org.cloudfoundry.managed-service
+  - name: conn_MTA_ALJ_SCA
+    parameters:
+      service-plan: lite
+      service: connectivity
+    type: org.cloudfoundry.managed-service

@@ -1,13 +1,13 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"com/sap/alj/sca/ALJ_SCA/controller/View1.controller"
+	"com/sap/alj/sca/ALJ_SCA/controller/App.controller"
 ], function (Controller) {
 	"use strict";
 
-	QUnit.module("View1 Controller");
+	QUnit.module("App Controller");
 
-	QUnit.test("I should test the View1 controller", function (assert) {
+	QUnit.test("I should test the App controller", function (assert) {
 		var oAppController = new Controller();
 		oAppController.onInit();
 		assert.ok(oAppController);
