@@ -85,6 +85,20 @@
 		"sar1": "SR 300",
 		"sar2": "SR 500"
 	}],
+	"productCategory": [{
+		"serviceType": "Campaign",
+		"src": "image/Campaign.svg"
+	}, {
+		"serviceType": "General Jobs",
+		"src": "image/General-Jobs.svg"
+	}, {
+		"serviceType": "Service Contract",
+		"src": "image/Service-Contract.svg"
+
+	}, {
+		"serviceType": "Packages",
+		"src": "image/Packages.svg"
+	}],
 	"ServiceOffer": [{
 
 		"src": "image/home1.png"

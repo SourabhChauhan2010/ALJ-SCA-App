@@ -1,12 +1,12 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.Products"
-	xmlns:html="http://www.w3.org/1999/xhtml">
-	<VBox class="aljBoxContentStyle sapUiSmallMarginTop">
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.f" xmlns:l="sap.ui.layout">
+	<VBox class="aljBoxContentStyle">
 		<VBox>
 			<!--<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>-->
 			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.CarDetailsHeader" type="XML"/>
 		</VBox>
 		<HBox class="aljLightBottomBorder" width="100%" height="2.875rem" justifyContent="Center" alignItems="Center">
-			<Image src="image/ProductsIcon.png" width="2rem" class="sapUiSmallMarginEnd"/>
+			<Image src="image/Products.svg" width="2rem" class="sapUiSmallMarginEnd"/>
 			<Text class="aljHeaderText" text="{i18n>PRODUCTS}"></Text>
 		</HBox>
 		<!--<VBox class="styleProdCatBox">-->
@@ -25,8 +25,28 @@
 		<VBox justifyContent="Center" class="sapUiMediumMarginTopBottom" alignItems="Center" width="100%">
 			<SearchField class="aljProductSearch"></SearchField>
 		</VBox>
+		<VBox class="sapUiSmallMarginBegin">
+			<Text text="{i18n>PRODUCTCAT}" class="aljTitleClass"/>
+		</VBox>
+		<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true"
+			class="sapUiTinyMarginBeginEnd sapUiSmallMarginBottom aljSSOuterContainerStyle">
+			<HBox items="{oAppModel>/productCategory}">
+				<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ProductCategory" type="XML"/>
+			</HBox>
+		</ScrollContainer>
 		<VBox class="sapUiMediumMarginBegin">
 			<Text text="{i18n>PRODUCTCAT}" class="aljTitleClass"/>
+		</VBox>
+		<!--<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true"-->
+		<!--class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom aljSSOuterContainerStyle">-->
+		<l:Grid defaultSpan="XL3 L3 M3 S3" class="sapUiMediumMarginBottom" content="{oAppModel>/recommendations}">
+			<l:content>
+				<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
+			</l:content>
+		</l:Grid>
+		<!--</ScrollContainer>-->
+		<VBox width="100%" alignItems="Center">
+			<Button class="aljContinueBtn" text="{i18n>ContinuetoBooking}" icon="sap-icon://navigation-right-arrow"></Button>
 		</VBox>
 		<VBox class="styleProdServBox sapUiNoMarginTop" visible="{= ${oAppModel>/sSelectedCatelog} ? true : false}">
 			<Label text="{oAppModel>/sSelectedCatelog}" class="aljTitleClass sapUiSmallMarginBegin"/>
