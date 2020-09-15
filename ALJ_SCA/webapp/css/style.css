@@ -1663,6 +1663,48 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
     font-size: 0.6rem;
 }
 
+.aljProductImgBox {
+    width: 100%rem;
+    background: #EDEDED;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.aljProductDList {
+    border-bottom: 0.1rem solid #EDEDED;
+    min-height: 2rem;
+    padding: 1rem;
+}
+
+.aljProductDListBox {
+    border: 0.1rem solid #EDEDED;
+    border-radius: 0.5rem;
+    border-bottom: none;
+    padding: 0 0.5rem;
+}
+
+.aljProdDetailsTextStyle {
+    font-size: 0.75rem;
+    font-family: 'UniversNextPro';
+}
+
+.aljProdOfferBox {
+    background: black;
+    border-radius: 0.3rem;
+}
+
+.aljOfferLbl.sapMLabel {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'UniversNextPro';
+}
+
+.aljProdBackBtn .sapMBtnIcon {
+    color: black;
+    font-size: 1.3rem;
+}
+
 @media screen and (max-width: 500px) {
     .aljTextBlock {
         display: block !important;

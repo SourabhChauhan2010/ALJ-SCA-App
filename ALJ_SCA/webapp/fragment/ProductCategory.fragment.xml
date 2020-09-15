@@ -1,5 +1,5 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
-	<CustomListItem class="aljReccListStyle aljProdCatListStyle" type="Active" press="onServiceItemPress">
+	<CustomListItem class="aljReccListStyle aljProdCatListStyle" type="Active" press="onProdCategoryPress">
 		<VBox alignItems="Center" renderType="Bare">
 			<VBox visible="{path: 'oAppModel>isSelected', formatter:'com.sap.alj.sca.ALJ_SCA.util.formatter.prodCatSelected'}"
 				class="aljProdCatImgBox sapUiTinyMarginBottom" alignItems="Center" justifyContent="Center">
