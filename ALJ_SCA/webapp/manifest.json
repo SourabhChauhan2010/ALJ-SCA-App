@@ -293,6 +293,10 @@
 				"SplashScreen": {
 					"viewType": "XML",
 					"viewName": "SplashScreen"
+				},
+				"ServiceOfferDetail": {
+					"viewType": "XML",
+					"viewName": "ServiceOfferDetail"
 				}
 			}
 		}

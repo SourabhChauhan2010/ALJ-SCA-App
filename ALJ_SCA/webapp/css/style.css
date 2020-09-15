@@ -1663,6 +1663,14 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
     font-size: 0.6rem;
 }
 
+.aljServiceOffersStyle .sapMImg {
+    width: 12.5rem;
+}
+
+.aljSSOuterBoxStyle {
+    min-width: 18rem;
+}
+
 .aljProductImgBox {
     width: 100%rem;
     background: #EDEDED;
@@ -1734,18 +1742,20 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
 
 @media only screen and (min-width: 1024px) {
     .aljSSOuterBoxStyle {
+        margin-right: 0 !important;
         max-width: 37.35rem;
+        margin-top: 0.5rem;
     }
     .aljSSIBoxStyle {
-        height: 7rem !important;
+        height: 6.5rem !important;
     }
     .aljSSIBoxStyle .sapMText {
-        font-size: 1rem !important;
+        font-size: 0.75rem !important;
         margin-right: 1.35rem !important;
         margin-top: 1.25rem !important;
     }
     .aljSSIRedStyle {
-        background-size: 4.5rem;
+        background-size: 4rem;
     }
     .aljSSIGreenStyle {
         background-size: 4.5rem;
@@ -1830,7 +1840,7 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
         font-size: 0.75rem;
     }
     .aljReccListStyle {
-        width: 9.5rem;
+        width: 6.5rem;
     }
     .aljServiceBtnStyle {
         width: 9rem;
@@ -1939,13 +1949,17 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
         font-size: 0.75rem;
         line-height: 2rem;
     }
-    .aljSSOuterContainerStyle {
-        min-width: 38rem;
-    }
+    .aljSSOuterContainerStyle {}
     .vehiclListAlignCSS {
         margin: 1rem 2rem !important;
     }
     .aljCalendarBox {
         max-width: 20rem;
+    }
+    .aljServiceOffersStyle .sapMImg {
+        width: 20rem;
+    }
+    .aljHomeOutterBoxStyle {
+        padding: 0 2.5rem;
     }
 }

@@ -7,88 +7,104 @@ Comments:
 *****************************************************************-->
 <mvc:View controllerName="com.sap.alj.sca.ALJ_SCA.controller.Home" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
 	xmlns="sap.m" xmlns:l="sap.ui.layout">
-	<VBox id="idVboxHomeView">
-		<HBox class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop" justifyContent="SpaceBetween" alignItems="Center">
-			<VBox alignItems="Start" class="aljTitleClassHome sapUiSmallMarginTop">
+	<VBox class="aljHomeOutterBoxStyle">
+		<HBox class="sapUiSmallMarginBeginEnd sapUiMediumMarginTop" justifyContent="SpaceBetween" alignItems="Center"
+			visible="{oAppModel>/isUserAvailable}">
+			<VBox alignItems="Start" class="aljTitleClassHome">
 				<Text class="aljWelcomeTextCSS" text="{i18n>Welcome}"/>
 				<Text class="aljHomeNameTextCSS" text="Mohammed"/>
-				<Text class="aljHomeCarModelTextCSS" text="2019 Land Cruiser"/>
-				<Text text="30,000 KM" class="sapUiTinyMarginBottom aljHomeTextCSS"/>
-				<Button text="{i18n>UpdateKM}" class="aljRedBtnStyle"/>
+				<Text class="aljHomeCarModelTextCSS" text="2019 Land Cruiser" visible="{= ${oAppModel>/vehicles}.length > 0}"/>
+				<Text text="30,000 KM" class="sapUiTinyMarginBottom aljHomeTextCSS" visible="{= ${oAppModel>/vehicles}.length > 0}"/>
+				<Button text="{i18n>UpdateKM}" class="aljRedBtnStyle" press="fnUpdateKMPress" visible="{= ${oAppModel>/vehicles}.length > 0}"/>
 			</VBox>
 			<VBox alignItems="End">
-				<!--<Text text="Land Cruiser" class="boldFontCls"/>-->
-				<Image src="image/LC.svg" width="{= ${device>/system/phone} === true ? '9rem' : '18rem' }"/>
-				<Text text="{i18n>SwitchCar}" class="underLineCls"/>
+				<Image src="image/LC.svg" width="{= ${device>/system/phone} === true ? '9rem' : '18rem' }" visible="{= ${oAppModel>/vehicles}.length > 0}"/>
+				<Text text="{i18n>SwitchCar}" class="underLineCls" visible="{= ${oAppModel>/vehicles}.length > 0}"/>
+				<Button text="{i18n>AddVehicle}" class="aljRedBtnStyle" press="onAddVehiclePress" visible="{= ${oAppModel>/vehicles}.length === 0}"/>
 			</VBox>
 		</HBox>
+		<VBox class="sapUiSmallMarginBeginEnd sapUiMediumMarginTop" justifyContent="SpaceBetween" alignItems="Center"
+			visible="{= !${oAppModel>/isUserAvailable}}">
+			<Text class="aljHomeNameTextCSS" text="{i18n>FindServicePH}"/>
+			<Button text="{i18n>BookAService}" class="aljRedBtnStyle sapUiTinyMarginTop" press="onBookService"/>
+		</VBox>
 		<Text text="{i18n>ServiceOffers}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiSmallMarginTop"/>
 		<ScrollContainer horizontal="true" vertical="false">
 			<!--	<HBox items="{oAppModel>/ServiceOffer}" justifyContent="SpaceBetween" class="sapUiSmallMarginBeginEnd sapUiContentPadding scrollCnt">
 				<Image src="{oAppModel>src}" height="7rem" class="sapUiTinyMarginBottom sapUiContentPadding sapUiTinyMarginEnd" press="onServiceOfferPress"/>
 			</HBox>-->
-			<HBox items="{oAppModel>/ServiceOffer}" class="sapUiSmallMarginBeginEnd ">
-				<Image src="{oAppModel>src}" height="{= ${device>/system/phone} === true ? '7rem' : '9.5rem' }"
-					width="{= ${device>/system/phone} === true ? '12.5rem' : '26rem' }" class="sapUiTinyMarginEnd" press="onServiceOfferPress"/>
+			<HBox items="{oAppModel>/ServiceOffer}" class="sapUiSmallMarginBeginEnd aljServiceOffersStyle">
+				<Image src="{oAppModel>src}" class="sapUiTinyMarginEnd" press="onServiceOfferPress"/>
 			</HBox>
 		</ScrollContainer>
-		<l:HorizontalLayout visible="{device>/system/desktop}">
+		<l:Grid defaultSpan="XL6 L6 M6 S12">
 			<VBox>
-				<HBox class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop " alignItems="Start" justifyContent="SpaceBetween">
+				<HBox class="sapUiSmallMarginTop " alignItems="Start" justifyContent="SpaceBetween">
 					<VBox>
-						<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>
+						<Text text="{= ${oAppModel>/vehicles}.length > 0 ? ${i18n>RecommendedForYou} : ${i18n>TopProducts}}" class="aljTitleClass"/>
 					</VBox>
 					<Link text="{i18n>ShowAll}" class="aljDetailLinkStyle"/>
 				</HBox>
-				<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true"
-					class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom aljSSOuterContainerStyle">
+				<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true" class="sapUiSmallMarginBottom aljSSOuterContainerStyle">
 					<HBox items="{oAppModel>/recommendations}">
 						<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
 					</HBox>
 				</ScrollContainer>
 			</VBox>
 			<!-- Service Status Section - Start-->
-			<VBox>
-				<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop">
+			<VBox visible="{= ${oAppModel>/vehicles}.length > 0}">
+				<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginTop">
 					<VBox>
 						<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
 					</VBox>
-					<Link text="{i18n>ViewDetails} >" class="aljDetailLinkStyle"/>
+					<Link text="{i18n>ViewDetails}>" class="aljDetailLinkStyle" press="onClickServiceStatus"/>
 				</HBox>
-				<Text text="2019 Land Cruiser" class="aljSSModelTitleStyle sapUiSmallMarginBeginEnd"/>
+				<Text text="2019 Land Cruiser" class="aljSSModelTitleStyle"/>
 				<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatus" type="XML"/>
 			</VBox>
-		</l:HorizontalLayout>
-		<HBox class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop" alignItems="Start" justifyContent="SpaceBetween" visible="{device>/system/phone}">
-			<VBox>
-				<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>
-			</VBox>
-			<Link text="{i18n>ShowAll}" class="aljDetailLinkStyle"/>
-		</HBox>
-		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceListMobile" type="XML"/>
+		</l:Grid>
+		<!--<HBox class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop" alignItems="Start" justifyContent="SpaceBetween" visible="{device>/system/phone}">-->
+		<!--	<VBox>-->
+		<!--		<Text text="{i18n>RecommendedForYou}" class="aljTitleClass"/>-->
+		<!--	</VBox>-->
+		<!--	<Link text="{i18n>ShowAll}" class="aljDetailLinkStyle"/>-->
+		<!--</HBox>-->
+		<!--<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceListMobile" type="XML"/>-->
 		<!-- Service Status Section - Start-->
-		<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop" visible="{device>/system/phone}">
-			<VBox>
-				<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>
-			</VBox>
-			<Link text="{i18n>ViewDetails} >" class="aljDetailLinkStyle"/>
-		</HBox>
-		<Text text="2019 Land Cruiser" class="aljSSModelTitleStyle sapUiSmallMarginBeginEnd" visible="{device>/system/phone}"/>
-		<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatusMobile" type="XML"/>
+		<!--<HBox justifyContent="SpaceBetween" alignItems="Start" class="sapUiSmallMarginBeginEnd sapUiLargeMarginTop" visible="{device>/system/phone}">-->
+		<!--	<VBox>-->
+		<!--		<Label text="{i18n>ServiceStatus}" class="aljTitleClass"/>-->
+		<!--	</VBox>-->
+		<!--	<Link text="{i18n>ViewDetails} >" class="aljDetailLinkStyle"/>-->
+		<!--</HBox>-->
+		<!--<Text text="2019 Land Cruiser" class="aljSSModelTitleStyle sapUiSmallMarginBeginEnd" visible="{device>/system/phone}"/>-->
+		<!--<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceStatusMobile" type="XML"/>-->
 		<!-- Service Status Section - End-->
 		<!-- Service Section - Start-->
-		<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiSmallMarginTop"/>
-		<HBox class="aljHomeServiceBoxStyle sapUiSmallMarginBeginEnd sapUiMediumMarginBottom">
+		<Label text="{i18n>Services}" class="aljTitleClass sapUiSmallMarginBeginEnd sapUiSmallMarginTop" visible="{oAppModel>/isUserAvailable}"/>
+		<HBox class="aljHomeServiceBoxStyle sapUiSmallMarginBeginEnd sapUiMediumMarginBottom" visible="{oAppModel>/isUserAvailable}">
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
-				<Image src="image/BookService.png" height="{= ${device>/system/phone} === true ? '2.7rem' : '5.4rem' }"/>
+				<Image src="image/Booking.svg" height="{= ${device>/system/phone} === true ? '2.7rem' : '5rem' }"/>
 				<Button class="aljServiceBtnStyle" text="{i18n>BookAService}" press="onBookService"/>
 			</VBox>
 			<VBox justifyContent="Center" alignItems="Center" width="50%">
-				<Image src="image/MyService.png" height="{= ${device>/system/phone} === true ? '2.7rem' : '5.4rem' }"/>
+				<Image src="image/MyServices.svg" height="{= ${device>/system/phone} === true ? '2.7rem' : '5rem' }"/>
 				<Button text="{i18n>MyServices}" press="onPressMyServices" class="aljServiceBtnStyle"/>
 			</VBox>
 		</HBox>
 		<!-- Service Section - End-->
+		<VBox visible="{= ${oAppModel>/vehicles}.length === 0 &amp;&amp; ${oAppModel>/isUserAvailable}}">
+			<HBox class="sapUiSmallMarginBeginEnd" alignItems="Start" justifyContent="SpaceBetween">
+				<VBox>
+					<Text text="{i18n>TechnicalTips}" class="aljTitleClass"/>
+				</VBox>
+			</HBox>
+			<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true" class="sapUiSmallMarginBottom aljSSOuterContainerStyle">
+				<!--<HBox items="{oAppModel>/recommendations}">-->
+				<!--<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>-->
+				<!--</HBox>-->
+			</ScrollContainer>
+		</VBox>
 	</VBox>
 	<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.DesktopFooter" type="XML"/>
 </mvc:View>

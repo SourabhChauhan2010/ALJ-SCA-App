@@ -34,31 +34,7 @@
 		"vin": "98975161892375",
 		"src": "image/supra.png"
 	}],
-	"vehicles": [{
-		"model": "Avanza",
-		"year": "2020",
-		"lastServiceDate": "23/04/2020",
-		"src": "image/CarLogos/Avanza5d8e.svg",
-		"vin": "4T1BF1FK9GU973045",
-		"customerId": "NID12345678",
-		"plateNo": "NY99",
-		"vehicleType": "Own",
-		"warranty": "06/02/2020 to 06/02/2021",
-		"isDefault": false,
-		"ownership": "Verified"
-	}, {
-		"model": "Camry",
-		"year": "2020",
-		"lastServiceDate": "23/04/2020",
-		"src": "image/CarLogos/Camry4eb3.svg",
-		"vin": "5336499986",
-		"customerId": "NID12345678",
-		"plateNo": "TN99",
-		"vehicleType": "Pickup",
-		"warranty": "06/02/2020 to 06/02/2021",
-		"isDefault": true,
-		"ownership": "Non Verified"
-	}],
+	"vehicles": [],
 	"recommendations": [{
 		"model": "Land Cruiser",
 		"serviceType": "Change Oil ",
@@ -240,15 +216,8 @@
 		"key": "Jeddah",
 		"text": "Safa Showroom"
 	}],
-	"UserInformation": {
-		"nameFirst": "Mohammed",
-		"nameMiddle": "",
-		"nameLast": "Ahmed",
-		"mobile2": "9553789324",
-		"email": "abc@gmail.com",
-		"NID": "2345543212",
-		"Password": "abcd1234"
-	},
+	"UserInformation": {},
+	"isUserAvailable": false,
 	"appointmentDetails": {
 		"appointmentNo": "987548265",
 		"vehicle": "Fortuner 2018",
