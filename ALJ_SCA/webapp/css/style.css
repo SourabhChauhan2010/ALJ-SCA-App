@@ -576,7 +576,7 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
 }
 
 .aljSelectedItemStyle {
-    border: solid #CE0E2D 1px;
+    border: solid #CE0E2D 1px !important;
 }
 
 .aljLastServiceDateStyle {
@@ -1626,6 +1626,41 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
 
 .aljProductSearch.sapMFocus>.sapMSFF::before {
     border: none !important;
+}
+
+.aljProdCatImgBox {
+    width: 4.375rem;
+    height: 4.375rem;
+    border: 1px solid #d5d5d5;
+    border-radius: 0.5rem;
+}
+
+.aljProdCatListStyle {
+    background: white !important;
+    border: none !important;
+    margin: 0rem !important;
+    width: auto !important;
+    min-width: 5.5rem;
+}
+
+.aljContinueBtn .sapMBtnInner {
+    color: black;
+    height: 2.25rem;
+    width: 10.375rem;
+    border: 1px solid #e4e4e4;
+}
+
+.aljContinueBtn .sapMBtnContent {
+    line-height: 2.1rem !important;
+    position: absolute;
+    left: 1rem;
+}
+
+.aljContinueBtn .sapMBtnInner.sapMBtnText .sapMBtnIcon:before {
+    position: absolute;
+    right: 0.3rem;
+    color: black;
+    font-size: 0.6rem;
 }
 
 .aljServiceOffersStyle .sapMImg {
