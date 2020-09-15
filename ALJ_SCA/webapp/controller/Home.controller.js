@@ -6,11 +6,6 @@ sap.ui.define([
 	return BaseController.extend("com.sap.alj.sca.ALJ_SCA.controller.Home", {
 		onInit: function () {
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			if (!sap.ui.Device.support.touch) {
-				this.getView().byId("idVboxHomeView").addStyleClass("sapUiMediumMarginBeginEnd");
-			} else {
-				this.getView().byId("idVboxHomeView").removeStyleClass("sapUiMediumMarginBeginEnd");
-			}
 			this.getCampaigns();
 			this.fnSvaeCampaigns();
 		},
@@ -39,6 +34,7 @@ sap.ui.define([
 		onServiceOfferPress: function (oEvent) {
 			var currOffer = oEvent.getSource().getBindingContext("oAppModel").getObject();
 			this._showToastMessage(this.getResourceText("ServiceOfferPressed"));
+			this.oRouter.navTo("ServiceOfferDetail");
 		},
 
 		onServiceItemPress: function (oEvent) {
@@ -89,6 +85,32 @@ sap.ui.define([
 				}
 			}.bind(this), function (oEvent) {});
 		},
+		
+		fnUpdateKMPress: function() {
+			if (!this.updateKM) {
+				this.updateKM = sap.ui.xmlfragment("com.sap.alj.sca.ALJ_SCA.fragment.UpdateKM", this);
+				this.getView().addDependent(this.updateKM);
+			}
+			this.updateKM.open();
+		},
+		
+		cancelUpdateKM: function() {
+			this.updateKM.close();
+		},
+		
+		submitUpdateKM: function() {
+			this.cancelUpdateKM();
+		},
+		
+		onAddVehiclePress: function() {
+			var oAppModel = this.getModel("oAppModel");
+			var sUrl = "model/vehicleDetails.json";
+			this.doAjax(sUrl, "GET", null, function (oData) {
+				if (oData) {
+					oAppModel.setProperty("/vehicles", oData.vehicles);
+				}
+			}.bind(this), function (oEvent) {});
+		}
 
 	});
 });
