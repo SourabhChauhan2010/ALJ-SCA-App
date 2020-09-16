@@ -6,7 +6,7 @@ sap.ui.define([
 	return Controller.extend("com.sap.alj.sca.ALJ_SCA.controller.Share", {
 
 		onInit: function () {
-
+        
 		},
 
 	    onNavBack: function(){

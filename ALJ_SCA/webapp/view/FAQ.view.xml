@@ -15,13 +15,17 @@
 		<!--	<VBox  items="{oAppModel>/Faqs}">-->
 		<List items="{oAppModel>/Faqs}" class=" sapUiMarginStartFAq aljMoreContentText">
 			<CustomListItem>
-				<HBox width="70%" class="sapUiMediumMarginTop sapUiSmallMarginEnd aljMoreContentText">
-					<Text class="sapUiMrgnRightFaq " text="{oAppModel>faq}"/>
+				<HBox class="sapUiMediumMarginTop sapUiSmallMarginEnd aljMoreContentText">
+					<HBox width="85%">
+					<Text class="sapUiMrgnRightFaq " text="{oAppModel>faq}" />
+					</HBox>
+					<HBox width="15%">
 					<core:Icon src="sap-icon://add" class="plusIconFaq" press="onFaqBtnOpenPress" visible="{oAppModel>expand}"/>
-					<core:Icon src="sap-icon://less" class=" plusIconFaq " visible="{oAppModel>collapse}" press="onFaqBtnClsPress"/>
+					<core:Icon src="sap-icon://less" class=" plusIconFaq " visible="{oAppModel>collapse}" press="onFaqBtnClsPress" />
+					</HBox>
 				</HBox>
-				<HBox width="100%">
-					<Text class=" sapUiMrgnRightFaq sapUiTinyMarginTop " visible="{oAppModel>expandedTxtVisible}" text="{oAppModel>expandedTxt}"/>
+				<HBox>
+					<Text class=" sapUiMrgnRightFaq sapUiSmallMarginEnd sapUiTinyMarginTop " visible="{oAppModel>expandedTxtVisible}" text="{oAppModel>expandedTxt}" width="75%"/>
 				</HBox>
 			</CustomListItem>
 		</List>
