@@ -34,29 +34,7 @@
 		"vin": "98975161892375",
 		"src": "image/supra.png"
 	}],
-	"vehicles": [{
-		"model": "Avanza",
-		"year": "2020",
-		"lastServiceDate": "23/04/2020",
-		"src": "image/CarLogos/Avanza5d8e.svg",
-		"vin": "4T1BF1FK9GU973045",
-		"customerId": "NID12345678",
-		"plateNo": "NY99",
-		"vehicleType": "Own",
-		"warranty": "06/02/2020 to 06/02/2021",
-		"isDefault": false
-	}, {
-		"model": "Camry",
-		"year": "2020",
-		"lastServiceDate": "23/04/2020",
-		"src": "image/CarLogos/Camry4eb3.svg",
-		"vin": "5336499986",
-		"customerId": "NID12345678",
-		"plateNo": "TN99",
-		"vehicleType": "Pickup",
-		"warranty": "06/02/2020 to 06/02/2021",
-		"isDefault": true
-	}],
+	"vehicles": [],
 	"recommendations": [{
 		"model": "Land Cruiser",
 		"serviceType": "Change Oil ",
@@ -82,6 +60,20 @@
 		"src": "image/major-service.png",
 		"sar1": "SR 300",
 		"sar2": "SR 500"
+	}],
+	"productCategory": [{
+		"serviceType": "Campaign",
+		"src": "image/Campaign.svg"
+	}, {
+		"serviceType": "General Jobs",
+		"src": "image/General-Jobs.svg"
+	}, {
+		"serviceType": "Service Contract",
+		"src": "image/Service-Contract.svg"
+
+	}, {
+		"serviceType": "Packages",
+		"src": "image/Packages.svg"
 	}],
 	"ServiceOffer": [{
 
@@ -224,15 +216,8 @@
 		"key": "Jeddah",
 		"text": "Safa Showroom"
 	}],
-	"UserInformation": {
-		"nameFirst": "Mohammed",
-		"nameMiddle": "",
-		"nameLast": "Ahmed",
-		"mobile2": "9553789324",
-		"email": "abc@gmail.com",
-		"NID": "2345543212",
-		"Password": "abcd1234"
-	},
+	"UserInformation": {},
+	"isUserAvailable": false,
 	"appointmentDetails": {
 		"appointmentNo": "987548265",
 		"vehicle": "Fortuner 2018",
@@ -298,7 +283,7 @@
 		"status": "Ready for Delivery"
 	}],
 	"currServiceStatus": "Car Received",
-   	"Spots" :
+     	"Spots" :
 		[
 			{
                 "pos": "9.98336;48.55024;0",
@@ -437,4 +422,5 @@
     		"expandedTxt": "Quisque sit amet felis vitae elit bibendum sollicitudin. Fusce sit amet enim viverra, pellentesque libero eu, gravida leo. Pellentesque eu nisl vestibulum, eleifend mi vel, molestie ante. Praesent id mauris nisl. Nunc aliquam turpis in rhoncus consequat. Curabitur et gravida enim, a ullamcorper massa. Cras id justo sit amet quam consectetur interdum. Etiam ac nisl sollicitudin, luctus sapien vitae, luctus sapien. Donec semper sem nec quam volutpat, ac sollicitudin lectus rhoncus. Proin a tempor enim, quis aliquet libero."
     	}
     	]
+
 }

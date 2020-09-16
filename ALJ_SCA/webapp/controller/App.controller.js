@@ -10,10 +10,11 @@ sap.ui.define([
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.App
 		 */
+		
 		onInit: function () {
 			this.fnInitApp();
 			this.setSVGContents();
-			this.getUserInformation();
+			// this.getUserInformation();
 			this.getVehicles();
 			this.getRouter().attachRoutePatternMatched(function (oEvent) {
 				this.setScreenDetails(oEvent.getParameter("name"));

@@ -51,7 +51,7 @@
 		</List>
 	</VBox>
 	<FlexBox alignItems="Center" justifyContent="Center" class="sapUiMediumMarginTopBottom">
-		<Button text="{i18n>Next}" class="aljRedBtnStyle aljLargeBtnStyle"/>
+		<Button text="{i18n>Next}" class="aljRedBtnStyle aljLargeBtnStyle" press="getUserInformation"/>
 	</FlexBox>
 	<!--<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="4"
 				binding="{oAppModel>/UserInformation/0}">

@@ -10,6 +10,14 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 		return true;
 	},
 
+	prodCatSelected: function (oIsSelected) {
+		this.removeStyleClass("aljSelectedItemStyle");
+		if (oIsSelected) {
+			this.addStyleClass("aljSelectedItemStyle");
+		}
+		return true;
+	},
+
 	setFooterStyle: function (key, currentPage) {
 		this.removeStyleClass("aljFooterSelectedStyle");
 		if (key === currentPage) {
@@ -58,8 +66,8 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 		}
 		return true;
 	},
-	
-	getDefaultVBtnText: function(isDefault) {
+
+	getDefaultVBtnText: function (isDefault) {
 		this.removeStyleClass("aljRedBtnStyleRev");
 		this.removeStyleClass("aljRedBtnStyle");
 		if (isDefault) {
@@ -67,15 +75,15 @@ com.sap.alj.sca.ALJ_SCA.util.formatter = {
 			return "Primary Car";
 		} else {
 			this.addStyleClass("aljRedBtnStyleRev");
-			return "Make";
+			return "Make Primary";
 		}
 	},
-	
-	setDefaultVehicleStyle: function(isDefault) {
+
+	setDefaultVehicleStyle: function (isDefault) {
 		this.removeStyleClass("VehicleListVBRedCSS");
 		if (isDefault) {
 			this.addStyleClass("VehicleListVBRedCSS");
-		} 
+		}
 		return true;
 	}
 };

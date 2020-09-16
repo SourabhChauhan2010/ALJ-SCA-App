@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified">
+	<Dialog showHeader="false">
+		<VBox class="sapUiSmallMargin">
+			<HBox class="sapUiSmallMarginBottom">
+				<Image/>
+				<VBox>
+					<Text text="{i18n>LastUpdateDate}"/>
+					<Text text="July 31, 2020"/>
+				</VBox>
+			</HBox>
+			<HBox class="sapUiSmallMarginBottom">
+				<Image/>
+				<VBox>
+					<Text text="{i18n>Mileage}"/>
+					<Text text="{i18n>currentMileage}"/>
+					<Input/>
+					<Text text="{i18n>LastMileageUpdated} km"/>
+				</VBox>
+			</HBox>
+			<HBox class="sapUiSmallMargin">
+				<Button text="{i18n>Cancel}" class="aljRedBtnStyleRev" press="cancelUpdateKM"/>
+				<Button text="{i18n>Update}" class="aljRedBtnStyle" press="submitUpdateKM"/>
+			</HBox>
+		</VBox>
+	</Dialog>
+</core:FragmentDefinition>

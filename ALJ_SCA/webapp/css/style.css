@@ -145,7 +145,7 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     content: '-';
     background: #CE0E2D;
     display: block;
-    clip-path: polygon(0px 5px, 15px 5px, 15px 6px, 0px 6px);
+    clip-path: polygon(0px 4.3px, 13px 4.3px, 13px 5px, 0px 5px);
 }
 
 .aljTitleClassHome {
@@ -576,7 +576,7 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
 }
 
 .aljSelectedItemStyle {
-    border: solid #CE0E2D 1px;
+    border: solid #CE0E2D 1px !important;
 }
 
 .aljLastServiceDateStyle {
@@ -1329,6 +1329,7 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
 
 .aljCarListText {
     font-size: 14px !important;
+    margin-top: 0.5rem;
 }
 
 .aljSLServiceTypeStyle {
@@ -1387,6 +1388,20 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     width: 6rem;
 }
 
+.aljCarDetLinkStyle.sapMLnk {
+    color: #CE0E2D !important;
+    text-decoration: underline #CE0E2D;
+    font-size: 13px;
+    text-align: end;
+    width: 100%;
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+}
+
+.aljCalendarDialog.sapMDialog {
+    border-radius: 1rem;
+}
+
 .aljCalender .BAS_DT_CSS .sapUiCalWH,
 .sapUiCalItem {
     border: .125rem solid white;
@@ -1395,7 +1410,8 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     /* width: 12% !important; */
     height: 2.7rem;
     color: black;
-    line-height: 2.4rem !important;
+    line-height: 2.6rem !important;
+    font-family: 'UniversNextPro';
 }
 
 .aljCalender .sapUiCalItem.sapUiCalItemSel:not(.sapUiCalItemSelBetween) {
@@ -1414,6 +1430,7 @@ html.sap-desktop .sapMBtn:focus>.sapMFocusable {
     height: 2rem;
     line-height: 1.875rem;
     font-size: .85rem;
+    font-family: 'UniversNextPro';
 }
 
 .aljCalender .sapUiCalItem:focus>.sapUiCalItemText:after {
@@ -1480,10 +1497,6 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
     font-weight: bold;
 }
 
-.aljCalendarBox {
-    max-width: 18rem;
-}
-
 .aljTimeSlotbtn.sapMBtn {
     border: none;
     border-radius: .4rem;
@@ -1492,13 +1505,14 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
 }
 
 .aljTimeSlotbtn .sapMBtnInner {
-    border: 0.1rem solid black;
+    border: 0.1rem solid #a4a4a4;
     color: black;
     font-weight: normal;
 }
 
 .aljTimeSlotbtn .sapMBtnContent {
     font-weight: normal;
+    line-height: 1.7rem;
 }
 
 .aljTimeSlotbtn.sapMBtn:hover>.sapMBtnHoverable {
@@ -1508,23 +1522,195 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
     color: white;
 }
 
+.aljTimeSlotbtn.sapMBtn .sapMBtnHoverable.sapMToggleBtnPressed:hover {
+    background-image: none;
+    background-color: #CE0E2D;
+    border-color: #CE0E2D;
+    color: white;
+}
+
+.aljTimeSlotbtn .sapMBtnInner.sapMToggleBtnPressed:not(.sapMBtnDisabled) {
+    background-image: none;
+    background-color: #CE0E2D;
+    border-color: #FF5722;
+    color: #fff;
+    text-shadow: none;
+}
+
+.aljTimeSlotbtn.sapMBtnDisabled .sapMBtnInner {
+    background: #e3e3e3;
+    color: black;
+}
+
+.aljTimeSlotbtn.sapMBtnDisabled {
+    opacity: 1;
+}
+
 .aljCalendarBox .sapUiRespGrid.sapUiRespGridVSpace1>div {
     margin-bottom: 0.5rem;
 }
 
-@media screen and (max-width: 500px) {
-    .aljTextBlock {
-        display: block !important;
-    }
-    .aljCarListText {
-        margin: 0rem !important;
-    }
+.aljCalendarBox .sapUiCal:not(.sapUiCalInt) {
+    min-width: 20rem;
 }
 
-@media only screen and (min-width: 700px) {
-    .UserInfoVBoxCSS {
-        width: 30rem;
-    }
+.aljCalendarBtn .sapMBtnInner {
+    color: #fff;
+    background: #CE0E2D;
+    min-width: 5rem;
+    font-family: 'UniversNextPro';
+}
+
+.aljCarDetailsBoldLabel {
+    font-family: 'UniversNextPro';
+    font-weight: bold;
+    font-size: 0.83rem;
+}
+
+.aljCarDetailsHearBox {
+    background: #F4F4F4;
+    padding-top: 1.5rem;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.aljLightBottomBorder {
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.aljCarDetailsBorderBox {
+    height: 4rem;
+    align-self: flex-end;
+    border-right: 1px solid #d5d5d5;
+}
+
+.aljCarDetailsLinks {
+    color: black !important;
+    text-decoration: underline;
+    font-family: 'UniversNextPro';
+    font-size: 0.7rem;
+}
+
+.aljCarDetailsText {
+    font-family: 'UniversNextPro';
+    font-size: 0.625rem;
+}
+
+.aljHeaderText {
+    color: black !important;
+    font-weight: bold;
+    font-size: 0.8125rem;
+    font-family: 'UniversNextPro';
+}
+
+.aljProductSearch .sapMSFF {
+    box-sizing: border-box;
+    height: 2.25rem;
+    line-height: 2.125rem;
+    background: #fff;
+    vertical-align: top;
+    width: 17.25rem;
+    position: relative;
+    padding-left: 0.625rem;
+    padding-right: 4.75rem;
+    border: aliceblue;
+    border: dashed 2px #d9d9d9;
+    border-radius: 0.5rem !important;
+}
+
+.aljProductSearch .sapMSFB {
+    font-size: 1.5rem;
+    color: #000000 !important;
+    width: 3.5rem;
+    height: 2rem;
+}
+
+.aljProductSearch.sapMFocus>.sapMSFF::before {
+    border: none !important;
+}
+
+.aljProdCatImgBox {
+    width: 4.375rem;
+    height: 4.375rem;
+    border: 1px solid #d5d5d5;
+    border-radius: 0.5rem;
+}
+
+.aljProdCatListStyle {
+    background: white !important;
+    border: none !important;
+    margin: 0rem !important;
+    width: auto !important;
+    min-width: 5.5rem;
+}
+
+.aljContinueBtn .sapMBtnInner {
+    color: black;
+    height: 2.25rem;
+    width: 10.375rem;
+    border: 1px solid #e4e4e4;
+}
+
+.aljContinueBtn .sapMBtnContent {
+    line-height: 2.1rem !important;
+    position: absolute;
+    left: 1rem;
+}
+
+.aljContinueBtn .sapMBtnInner.sapMBtnText .sapMBtnIcon:before {
+    position: absolute;
+    right: 0.3rem;
+    color: black;
+    font-size: 0.6rem;
+}
+
+.aljServiceOffersStyle .sapMImg {
+    width: 12.5rem;
+}
+
+.aljSSOuterBoxStyle {
+    min-width: 18rem;
+}
+
+.aljProductImgBox {
+    width: 100%rem;
+    background: #EDEDED;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.aljProductDList {
+    border-bottom: 0.1rem solid #EDEDED;
+    min-height: 2rem;
+    padding: 1rem;
+}
+
+.aljProductDListBox {
+    border: 0.1rem solid #EDEDED;
+    border-radius: 0.5rem;
+    border-bottom: none;
+    padding: 0 0.5rem;
+}
+
+.aljProdDetailsTextStyle {
+    font-size: 0.75rem;
+    font-family: 'UniversNextPro';
+}
+
+.aljProdOfferBox {
+    background: black;
+    border-radius: 0.3rem;
+}
+
+.aljOfferLbl.sapMLabel {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'UniversNextPro';
+}
+
+.aljProdBackBtn .sapMBtnIcon {
+    color: black;
+    font-size: 1.3rem;
 }
 
 
@@ -1578,22 +1764,50 @@ font-size: .75rem;
  font-family: 'Roboto';
  font-weight: lighter;	
 }
+
+@media screen and (max-width: 500px) {
+    .aljTextBlock {
+        display: block !important;
+    }
+    .aljCarListText {
+        margin: 0rem !important;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .UserInfoVBoxCSS {
+        width: 30rem;
+    }
+    .aljCalendarBox {
+        max-width: 20rem;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .aljCalendarBox {
+        max-width: 20rem;
+    }
+}
+
+
 /*Service Status - Destop Version changes*/
 
 @media only screen and (min-width: 1024px) {
     .aljSSOuterBoxStyle {
+        margin-right: 0 !important;
         max-width: 37.35rem;
+        margin-top: 0.5rem;
     }
     .aljSSIBoxStyle {
-        height: 7rem !important;
+        height: 6.5rem !important;
     }
     .aljSSIBoxStyle .sapMText {
-        font-size: 1rem !important;
+        font-size: 0.75rem !important;
         margin-right: 1.35rem !important;
         margin-top: 1.25rem !important;
     }
     .aljSSIRedStyle {
-        background-size: 4.5rem;
+        background-size: 4rem;
     }
     .aljSSIGreenStyle {
         background-size: 4.5rem;
@@ -1678,7 +1892,7 @@ font-size: .75rem;
         font-size: 0.75rem;
     }
     .aljReccListStyle {
-        width: 9.5rem;
+        width: 6.5rem;
     }
     .aljServiceBtnStyle {
         width: 9rem;
@@ -1787,14 +2001,20 @@ font-size: .75rem;
         font-size: 0.75rem;
         line-height: 2rem;
     }
-    .aljSSOuterContainerStyle {
-        min-width: 38rem;
-    }
+    .aljSSOuterContainerStyle {}
     .vehiclListAlignCSS {
         margin: 1rem 2rem !important;
     }
-    
-    /***MORE***/
+    .aljCalendarBox {
+        max-width: 20rem;
+    }
+    .aljServiceOffersStyle .sapMImg {
+        width: 20rem;
+    }
+    .aljHomeOutterBoxStyle {
+        padding: 0 2.5rem;
+    }
+        /***MORE***/
     .sapUiMrgnFaqDTop{
     	margin-left:8rem;
     }
