@@ -11,13 +11,12 @@
 			<HBox width="100%" class="sapUiSmallMarginTopBottom" justifyContent="Center" alignItems="Center">
 				<Text text="Select Your Language" class="aljHomeText"/>
 			</HBox>
-				<HBox>
+				<HBox justifyContent="Center" alignItems="Center">
 				<Text class="sapUiMrgnLangText" text="Later you can change the language from application settings."/>
-			
 			</HBox>
 		</VBox>
 			<VBox class="aljMyCarBtnBox sapUiSmallMarginTopBottom " alignItems="Center" justifyContent="Center">
-		<Button id="idEngBtn" text="English" class="aljRedBtnStyle aljLargeBtnStyle aljMyCarVehInfoBtn sapUiMrgnLang" width="90%" press="onPressEnglishLang"/>
+		<Button id="idEngBtn" text="English" class="aljRedBtnStyle aljLargeBtnStyle aljMyCarVehInfoBtn sapUiMrgnLang" press="onPressEnglishLang" width="90%"/>
 			<Button id="idArabBtn" press="onPressArabicLang" text="العربية" class="sapUiMrgnLang aljLargeBtnStyle aljBlackBtnStyleRev sapUiSmallMarginTopBottom aljMyCarVehInfoBtn" width="90%"/>
 		
 		</VBox>

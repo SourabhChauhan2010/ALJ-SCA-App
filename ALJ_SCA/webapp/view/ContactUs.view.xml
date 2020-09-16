@@ -13,27 +13,27 @@
 				<Text text="{i18n>ContactUs}" class="aljHomeText"/>
 			</HBox>
 		</VBox>
-		<VBox class="sapUiTinyMarginTop sapUiSmallMarginEnd sapUiLargeMarginBegin aljMoreContactText">
+		<VBox class="sapUiTinyMarginTop sapUiSmallMarginEnd sapUiLargeMarginBegin aljMoreContactText" justifyContent="Center" alignItems="Center">
 			<Text
 				text="{i18n>headerDescContact}"/>
 		</VBox>
 		
 		<VBox class="sapUiLargeMarginTop sapUiSmallMarginBeginEnd aljHomeText">
-			<HBox width="100%" class="sapUiSmallMarginTop sapUiSmallMarginBottom"  alignItems="Center">
+			<HBox width="100%" class="sapUiSmallMarginTop sapUiSmallMarginBottom"  justifyContent="Center" alignItems="Center">
 				<Image src="image/contact.png"/>
 			</HBox>
 	<!--	<Label text="920024454" design="Bold" class="sapUiSmallMarginTop sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"  textAlign="Center"/>-->
 	
 	
 	</VBox>
-		<VBox class="sapUiLargeMarginTop sapUiSmallMarginBeginEnd">
-			<HBox width="100%" class="sapUiSmallMarginTop sapUiSmallMarginBottom sapUiCustomMarginMore"  alignItems="Center">
+		<VBox class="sapUiLargeMarginTop sapUiSmallMarginBeginEnd"  justifyContent="Center" alignItems="Center" >
+			<HBox width="100%" class="sapUiSmallMarginTop sapUiSmallMarginBottom "   justifyContent="Center" alignItems="Center">
 				<Image src="image/help.png"/>
 			</HBox>
-			<HBox width="100%" class="sapUiSmallMarginTop sapUiSmallMarginBottom sapUiCustomMarginMore aljTitleClass"  alignItems="Center">
+			<HBox width="100%" class="sapUiSmallMarginTop sapUiSmallMarginBottom  aljTitleClass"  justifyContent="Center" alignItems="Center">
 				<Label text="Follow Us" design="Bold"/>
 			</HBox>
-				<HBox width="100%" class="sapUiSmallMarginTop sapUiMediumMarginBottom sapUiCustomMediaMrgMore aljTitleClass"  alignItems="Center">
+				<HBox width="100%" class="sapUiSmallMarginTop sapUiMediumMarginBottom  aljTitleClass"   justifyContent="Center" alignItems="Center">
 				<Image src="image/socialMedia.png"/>
 			</HBox>
 	<!--	<Label text="920024454" design="Bold" class="sapUiSmallMarginTop sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"  textAlign="Center"/>-->

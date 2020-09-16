@@ -9,42 +9,42 @@
 			press="onNavBack">
 		</core:Icon>
 			</HBox>
-			<HBox width="100%" class="sapUiSmallMargin" justifyContent="Center"  alignItems="Center">
+			<HBox width="100%"  justifyContent="Center"  alignItems="Center">
 				<Text text="Terms Of Use" class="aljHomeText"/>
 			</HBox>
 		</VBox>
 			<VBox class="sapUiSmallMarginTop sapUiSmallMarginEnd sapUiLargeMarginBegin aljTermsText">
-			<HBox width="100%" justifyContent="Center" alignItems="Center">
+			<HBox width="100%" >
 				<Text class="sapUiMrgnRightFaq aljTermsText" 
 					text="Nulla cursus vitae nisi sed venenatis. Fusce purus eros, imperdiet at mattis vel, 
 					fringilla a odio. Vestibulum luctus in lorem a mattis. Sed euismod tincidunt orci, 
 					vitae faucibus ligula scelerisque nec. Sed a orci quis lorem maximus accumsan lacinia in nisi. "/>
 			</HBox>
-			<HBox width="100%" justifyContent="Center" alignItems="Center">
+			<HBox width="100%" >
 				<Text class="sapUiMrgnRightFaq aljTermsText sapUiMediumMarginTop" 
 					text="Cras blandit consequat sapien ut cursus. Duis in mollis magna. Sed sit amet faucibus nulla. Pellentesque non ex velit. "/>
 			</HBox>
-				<HBox width="100%" justifyContent="Center" alignItems="Center">
+				<HBox width="100%" >
 				<Text class="sapUiMrgnRightFaq aljTermsText sapUiMediumMarginTop" 
 					text="Nam a nisi eu arcu dictum mattis. Aenean varius justo a sollicitudin tincidunt. Nullam congue sed dolor ut vehicula. Sed lobortis et nisl id auctor. Nulla cursus vitae nisi sed venenatis. Fusce purus eros, imperdiet at mattis vel, fringilla a odio.  Vestibulum luctus in lorem a mattis. Sed euismod tincidunt orci, vitae faucibus ligula scelerisque nec. Sed a orci quis lorem maximus accumsan lacinia in nisi. "/>
 			</HBox>
-				<HBox width="100%" justifyContent="Center" alignItems="Center">
+				<HBox width="100%" >
 				<Text class="sapUiMrgnRightFaq aljTermsText sapUiMediumMarginTop" 
 					text="Cras blandit consequat sapien ut cursus. Duis in mollis magna. Sed sit amet faucibus nulla. Pellentesque non ex velit. "/>
 			</HBox>
-			<HBox width="100%" justifyContent="Center" alignItems="Center">
+			<HBox width="100%" >
 				<Text class="sapUiMrgnRightFaq aljTermsText sapUiMediumMarginTop" 
 					text="Nam a nisi eu arcu dictum mattis. Aenean varius justo a sollicitudin tincidunt. Nullam congue sed dolor ut vehicula. Sed lobortis et nisl id auctor."/>
 			</HBox>
-			<HBox width="100%" justifyContent="Center" alignItems="Center">
+			<HBox width="100%" >
 				<Text class="sapUiMrgnRightFaq aljTermsText sapUiMediumMarginTop" 
 					text="Nulla cursus vitae nisi sed venenatis. Fusce purus eros, imperdiet at mattis vel, fringilla a odio. Vestibulum luctus in lorem a mattis. Sed euismod tincidunt orci, vitae faucibus ligula scelerisque nec. Sed a orci quis lorem maximus accumsan lacinia in nisi. "/>
 			</HBox>
-				<HBox width="100%" justifyContent="Center" alignItems="Center">
+				<HBox width="100%" >
 				<Text class="sapUiMrgnRightFaq aljTermsText sapUiMediumMarginTop" 
 					text="Cras blandit consequat sapien ut cursus. Duis in mollis magna. Sed sit amet faucibus nulla. Pellentesque non ex velit. "/>
 			</HBox>
-							<HBox width="100%" justifyContent="Center" alignItems="Center">
+				<HBox width="100%" >
 				<Text class="sapUiMrgnRightFaq aljTermsText sapUiMediumMarginTop" 
 					text="Nam a nisi eu arcu dictum mattis. Aenean varius justo a sollicitudin tincidunt. Nullam congue sed dolor ut vehicula. Sed lobortis et nisl id auctor. "/>
 			</HBox>

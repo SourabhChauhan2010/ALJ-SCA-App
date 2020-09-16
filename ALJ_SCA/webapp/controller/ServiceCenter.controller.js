@@ -8,8 +8,7 @@ sap.ui.define([
 	
 		onInit : function () 
 		{
-		oModel =  this.getModel("oAppModel");
-	//	this.getView().setModel(oModel);
+	
 		 },
 		 
 		 onSelectionChange : function (oEvt) 
@@ -28,7 +27,7 @@ sap.ui.define([
 							flagScaled=true;
 						}
 						else if(oModel.getProperty("/Spots/"+j+"/scale") == "1.5;1.5;1.5"){
-							flagScaled=true;
+							flagScaled = false;
 						}
 					}
 					continue;

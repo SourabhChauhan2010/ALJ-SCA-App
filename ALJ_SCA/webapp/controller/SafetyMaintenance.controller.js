@@ -13,8 +13,8 @@ sap.ui.define([
        _onRouteMatched: function(){
        	var oHtml1 = this.getView().byId("idSafetyVideo1");
        	var oHtml2 = this.getView().byId("idSafetyVideo2");
-       	oHtml1.setContent("<div id=\"ytv\"><iframe type=\"text/html\" width=300 height=150 src=\"https://www.youtube.com/embed/3Vw9jKz5SrA\"frameborder=\"0\"></iframe></div>");
-       	oHtml2.setContent("<div id=\"ytv\"><iframe type=\"text/html\" width=300 height=150 src=\"https://www.youtube.com/embed/3Vw9jKz5SrA\"frameborder=\"0\"></iframe></div>");
+       	oHtml1.setContent("<div id=\"ytv\"><iframe type=\"text/html\"  src=\"https://www.youtube.com/embed/3Vw9jKz5SrA\"frameborder=\"0\"></iframe></div>");
+       	oHtml2.setContent("<div id=\"ytv\"><iframe type=\"text/html\"  src=\"https://www.youtube.com/embed/3Vw9jKz5SrA\"frameborder=\"0\"></iframe></div>");
        },
        
        onNavBack: function(){

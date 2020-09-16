@@ -85,7 +85,7 @@
 					<Image src="image/pinLocation.png" width="1.25rem"/>
 					<VBox class="UserInfoBoxInner">
 						<Label text="City"/>
-					<ComboBox width="20rem" change="onCityChange">
+					<ComboBox width="20rem" change="onCityChange"  selectedKey="Jedah">
 				<core:Item key="Jedah" text="Jedah" />
 			</ComboBox>
 					</VBox>
@@ -96,7 +96,7 @@
 					<VBox class="UserInfoBoxInner">
 						<Label text="Nearest Service Center"/>
 					<ComboBox width="20rem" change="onSelectionChange">
-				<core:Item key="Toyata2" text="Toyota2" />
+				<core:Item key="Toyota2" text="Toyota2" />
 					<core:Item key="Toyota3" text="Toyota3" />
 						<core:Item key="Toyota1" text="Toyota1" />
 			</ComboBox>
