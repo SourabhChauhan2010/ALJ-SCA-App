@@ -1629,10 +1629,12 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
 }
 
 .aljProdCatImgBox {
-    width: 4.375rem;
-    height: 4.375rem;
+    min-width: 4.375rem;
+    min-height: 4.375rem;
     border: 1px solid #d5d5d5;
     border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
 }
 
 .aljProdCatListStyle {
@@ -1699,6 +1701,7 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
 .aljProdOfferBox {
     background: black;
     border-radius: 0.3rem;
+    max-width: 23rem;
 }
 
 .aljOfferLbl.sapMLabel {
@@ -1715,54 +1718,66 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
 
 
 /****More Section*****/
-.listStyleMore{
-font-weight: bold;
-font-family: 'UniversNextPro';
-color: #0D0E10;
-font-size: 16px;
+
+.listStyleMore {
+    font-weight: bold;
+    font-family: 'UniversNextPro';
+    color: #0D0E10;
+    font-size: 16px;
 }
+
 .UserInfoVBoxCSSMoreSection {
     text-align: left;
     padding: 0.75rem 2.5rem 0.75rem 2rem;
     min-width: 20rem;
 }
-.sapUiCustomMarginMore{
-  margin-left: 8rem !important;	
+
+.sapUiCustomMarginMore {
+    margin-left: 8rem !important;
 }
-.sapUiCustomMediaMrgMore{
-margin-left: 5rem !important;		
+
+.sapUiCustomMediaMrgMore {
+    margin-left: 5rem !important;
 }
-.sapUiMrgnRightFaq{
-margin-right: 1.5rem !important;
-align-items:center;
+
+.sapUiMrgnRightFaq {
+    margin-right: 1.5rem !important;
+    align-items: center;
 }
-.sapUiMrgnLang{
-margin-right: 2.75rem !important;
-margin-left: 1.5rem !important;
+
+.sapUiMrgnLang {
+    margin-right: 2.75rem !important;
+    margin-left: 1.5rem !important;
 }
-.sapUiMrgnLangText{
-margin-right: 2.75rem !important;
-margin-left: 3.5rem !important;
+
+.sapUiMrgnLangText {
+    margin-right: 2.75rem !important;
+    margin-left: 3.5rem !important;
 }
-.plusIconFaq{
-font-size:.875rem;
+
+.plusIconFaq {
+    font-size: .875rem;
 }
-.sapUiMarginStartFAq{
-    margin-left:2.25rem;	
-    }
- .aljMoreContentText{
-font-size: .75rem;
- font-family: 'UniversNextPro';
- }
- .aljMoreContactText{
- font-size: .8125rem;
- font-family: 'UniversNextPro';
- font-weight: lighter;
- }
-.aljTermsText{
- font-size: .8125rem;
- font-family: 'Roboto';
- font-weight: lighter;	
+
+.sapUiMarginStartFAq {
+    margin-left: 2.25rem;
+}
+
+.aljMoreContentText {
+    font-size: .75rem;
+    font-family: 'UniversNextPro';
+}
+
+.aljMoreContactText {
+    font-size: .8125rem;
+    font-family: 'UniversNextPro';
+    font-weight: lighter;
+}
+
+.aljTermsText {
+    font-size: .8125rem;
+    font-family: 'Roboto';
+    font-weight: lighter;
 }
 
 @media screen and (max-width: 500px) {
@@ -1771,6 +1786,12 @@ font-size: .75rem;
     }
     .aljCarListText {
         margin: 0rem !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .aljPrductGrid.sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace1>.sapUiRespGridSpanS3 {
+        width: calc(33% - 1rem) !important;
     }
 }
 
@@ -2014,20 +2035,20 @@ font-size: .75rem;
     .aljHomeOutterBoxStyle {
         padding: 0 2.5rem;
     }
-        /***MORE***/
-    .sapUiMrgnFaqDTop{
-    	margin-left:8rem;
+    /***MORE***/
+    .sapUiMrgnFaqDTop {
+        margin-left: 8rem;
     }
-    .sapUiMrgnRightFaq{
-align-items:stretch-start;
-margin-right: 3rem !important;
-}
-.aljMoreContentText{
-font-size: 1rem;	
-}
-.aljTermsText{
- font-size: 1rem;
- font-family: 'Roboto';
- font-weight: lighter;	
-}
+    .sapUiMrgnRightFaq {
+        align-items: stretch-start;
+        margin-right: 3rem !important;
+    }
+    .aljMoreContentText {
+        font-size: 1rem;
+    }
+    .aljTermsText {
+        font-size: 1rem;
+        font-family: 'Roboto';
+        font-weight: lighter;
+    }
 }

@@ -1,6 +1,8 @@
 sap.ui.define([
-	"com/sap/alj/sca/ALJ_SCA/controller/BaseController"
-], function (BaseController) {
+	"com/sap/alj/sca/ALJ_SCA/controller/BaseController",
+	"sap/ui/model/Filter",
+	"sap/ui/model/FilterOperator"
+], function (BaseController, Filter, FilterOperator) {
 	"use strict";
 
 	return BaseController.extend("com.sap.alj.sca.ALJ_SCA.controller.Products", {
@@ -45,7 +47,21 @@ sap.ui.define([
 			var oAppModel = this.getModel("oAppModel");
 			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
 			oAppModel.setProperty("/ProductMainView", false);
+			oAppModel.setProperty("/SelectedProd", currObj);
+
 			// currObj.isSelected = !currObj.isSelected;
+			this.getModel("oAppModel").refresh();
+		},
+
+		onProdCategoryPress: function (oEvent) {
+			var oAppModel = this.getModel("oAppModel");
+			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
+			var aProdCategories = oAppModel.getProperty("/productCategory");
+			for (var counter = 0; counter < aProdCategories.length; counter++) {
+				aProdCategories[counter].isSelected = false;
+			}
+
+			currObj.isSelected = !currObj.isSelected;
 			this.getModel("oAppModel").refresh();
 		},
 
@@ -53,6 +69,29 @@ sap.ui.define([
 			var oAppModel = this.getModel("oAppModel");
 			oAppModel.setProperty("/ProductMainView", true);
 			this.getModel("oAppModel").refresh();
+		},
+
+		onProdSearch: function (oEvent) {
+			var sSearchItem = oEvent.getSource().getValue();
+			var aFilter = [];
+			var sQuery = sSearchItem;
+			var oList = this.getView().byId("productList");
+			var oBinding = oList.getBinding("content");
+
+			if (sQuery) {
+				aFilter = [];
+				aFilter.push(new Filter("serviceType", FilterOperator.Contains, sQuery));
+				// aFilter.push(new Filter("firstName", FilterOperator.Contains, sQuery));
+				// sQuery = this.getModel("oTripsDataModel").setProperty("/city", "");
+				oBinding.filter(aFilter);
+			} else {
+				aFilter = [];
+				oBinding.filter(aFilter);
+			}
+		},
+
+		onContinueBooking: function () {
+			this.getRouter().navTo("BookAService");
 		}
 
 		/**
