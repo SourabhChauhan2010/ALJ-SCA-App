@@ -8,7 +8,7 @@ sap.ui.define([
 	
 		onInit : function () 
 		{
-	
+	      
 		 },
 		 
 		 onSelectionChange : function (oEvt) 
