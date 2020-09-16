@@ -13,7 +13,7 @@ sap.ui.define([
 		onInit: function () {
 			this.fnInitApp();
 			this.setSVGContents();
-			// this.getUserInformation();
+			this.getUserInformation();
 			this.getVehicles();
 			this.getRouter().attachRoutePatternMatched(function (oEvent) {
 				this.setScreenDetails(oEvent.getParameter("name"));

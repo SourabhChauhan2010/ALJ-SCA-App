@@ -1,0 +1,21 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="com.sap.alj.sca.ALJ_SCA.controller.SafetyMaintenance" xmlns:html="http://www.w3.org/1999/xhtml">
+	<ScrollContainer class="sapUiMediumMarginTop">
+		<VBox >
+			<HBox width="100%" class="sapUiSmallMarginTopBottom sapUiMediumMarginBegin">
+				<core:Icon src="sap-icon://arrow-left" press="onNavBack"></core:Icon>
+			</HBox>
+			<HBox width="100%" class="sapUiSmallMargin" justifyContent="Center" alignItems="Center">
+				<Text text="Safety And Maintenance Tips" class="aljHomeText"/>
+			</HBox>
+		</VBox>
+		<VBox class="sapUiMediumMarginTop sapUiSmallMarginEnd sapUiMarginStartFAq">
+			<core:HTML id="idSafetyVideo1">
+			</core:HTML>	
+		</VBox>
+			<VBox class="sapUiMediumMarginTopBottom sapUiSmallMarginEnd sapUiMarginStartFAq">
+			<core:HTML id="idSafetyVideo2">
+			</core:HTML>	
+		</VBox>
+		</ScrollContainer>
+</mvc:View>

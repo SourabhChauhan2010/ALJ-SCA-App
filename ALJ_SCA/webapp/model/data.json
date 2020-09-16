@@ -34,7 +34,29 @@
 		"vin": "98975161892375",
 		"src": "image/supra.png"
 	}],
-	"vehicles": [],
+	"vehicles": [{
+		"model": "Avanza",
+		"year": "2020",
+		"lastServiceDate": "23/04/2020",
+		"src": "image/CarLogos/Avanza5d8e.svg",
+		"vin": "4T1BF1FK9GU973045",
+		"customerId": "NID12345678",
+		"plateNo": "NY99",
+		"vehicleType": "Own",
+		"warranty": "06/02/2020 to 06/02/2021",
+		"isDefault": false
+	}, {
+		"model": "Camry",
+		"year": "2020",
+		"lastServiceDate": "23/04/2020",
+		"src": "image/CarLogos/Camry4eb3.svg",
+		"vin": "5336499986",
+		"customerId": "NID12345678",
+		"plateNo": "TN99",
+		"vehicleType": "Pickup",
+		"warranty": "06/02/2020 to 06/02/2021",
+		"isDefault": true
+	}],
 	"recommendations": [{
 		"model": "Land Cruiser",
 		"serviceType": "Change Oil ",
@@ -60,20 +82,6 @@
 		"src": "image/major-service.png",
 		"sar1": "SR 300",
 		"sar2": "SR 500"
-	}],
-	"productCategory": [{
-		"serviceType": "Campaign",
-		"src": "image/Campaign.svg"
-	}, {
-		"serviceType": "General Jobs",
-		"src": "image/General-Jobs.svg"
-	}, {
-		"serviceType": "Service Contract",
-		"src": "image/Service-Contract.svg"
-
-	}, {
-		"serviceType": "Packages",
-		"src": "image/Packages.svg"
 	}],
 	"ServiceOffer": [{
 
@@ -216,8 +224,15 @@
 		"key": "Jeddah",
 		"text": "Safa Showroom"
 	}],
-	"UserInformation": {},
-	"isUserAvailable": false,
+	"UserInformation": {
+		"nameFirst": "Mohammed",
+		"nameMiddle": "",
+		"nameLast": "Ahmed",
+		"mobile2": "9553789324",
+		"email": "abc@gmail.com",
+		"NID": "2345543212",
+		"Password": "abcd1234"
+	},
 	"appointmentDetails": {
 		"appointmentNo": "987548265",
 		"vehicle": "Fortuner 2018",
@@ -282,5 +297,144 @@
 	}, {
 		"status": "Ready for Delivery"
 	}],
-	"currServiceStatus": "Car Received"
+	"currServiceStatus": "Car Received",
+   	"Spots" :
+		[
+			{
+                "pos": "9.98336;48.55024;0",
+                "contentOffset": "0;-6",
+                "type":"Default",
+                "key": "Toyota2",
+                "scale":"1;1;1",
+                "tooltip": "Toyota2",
+                 "src": "image/Mobile.png",
+                "icon": "factory"
+                	
+            },
+            {
+                "pos": "11.5820;48.1351;0",
+                "contentOffset": "0;-5",
+                "type":"Default",
+                "key": "Toyota1",
+                "scale":"1;1;1",
+                "tooltip": "Toyota1",
+                 "src": "image/Mobile.png",
+                "icon":  "image/camry.png"
+                	
+            },
+            {
+                "pos": "8.683340000;48.112000000;0",
+                "contentOffset": "0;-6",
+                "type":"Default",
+                "key": "Toyota3",
+                "scale":"1;1;1",
+                "tooltip": "Toyota3",
+                "src": "image/Mobile.png",
+                "icon": "factory"
+                
+            },
+             {
+                "pos": "8.683340000;50.432000000;0",
+                "contentOffset": "0;-6",
+                "type":"Default",
+                "key": "Berlin",
+                "scale":"1;1;1",
+                "tooltip": "Berlin",
+                "src": "image/Mobile.png",
+                "icon": "factory"
+                
+            },
+             {
+                "pos": "9.683340000;49.102000000;0",
+                "contentOffset": "0;-6",
+                "type":"Default",
+                "key": "Jedah",
+                "scale":"1;1;1",
+                "tooltip": "Jedah",
+                "src": "image/Mobile.png",
+                "icon": "factory"
+                
+            },
+             {
+                "pos": "5.683340000;49.899000000;0",
+                "contentOffset": "0;-6",
+                "type":"Default",
+                "key": "Walldorf",
+                "scale":"1;1;1",
+                "tooltip": "Walldorf",
+                "src": "image/Mobile.png",
+                "icon": "factory"
+                
+            },
+             {
+                "pos": "7.783340000;49.666000000;0",
+                "contentOffset": "0;-6",
+                "type":"Default",
+                "key": "Aachen",
+                "scale":"1;1;1",
+                "tooltip": "Aachen",
+                "src": "image/Mobile.png",
+                "icon": "factory"
+                
+            }
+            
+            ],
+    "Faqs":
+    [
+    	{
+    		"expandedTxtVisible"	: false,
+					"collapse": false,
+					"expand": true,
+    		"faq": "What are the vehicles included in the scope of Jameel Maintenance Program?",
+    		"expandedTxt": "Quisque sit amet felis vitae elit bibendum sollicitudin. Fusce sit amet enim viverra, pellentesque libero eu, gravida leo. Pellentesque eu nisl vestibulum, eleifend mi vel, molestie ante. Praesent id mauris nisl. Nunc aliquam turpis in rhoncus consequat. Curabitur et gravida enim, a ullamcorper massa. Cras id justo sit amet quam consectetur interdum. Etiam ac nisl sollicitudin, luctus sapien vitae, luctus sapien. Donec semper sem nec quam volutpat, ac sollicitudin lectus rhoncus. Proin a tempor enim, quis aliquet libero."
+    	},
+    	{
+    			"expandedTxtVisible"	: false,
+					"collapse": false,
+					"expand": true,
+    		"faq": "In which centers can customers avail this campaign?",
+    		"expandedTxt": "Quisque sit amet felis vitae elit bibendum sollicitudin. Fusce sit amet enim viverra, pellentesque libero eu, gravida leo. Pellentesque eu nisl vestibulum, eleifend mi vel, molestie ante. Praesent id mauris nisl. Nunc aliquam turpis in rhoncus consequat. Curabitur et gravida enim, a ullamcorper massa. Cras id justo sit amet quam consectetur interdum. Etiam ac nisl sollicitudin, luctus sapien vitae, luctus sapien. Donec semper sem nec quam volutpat, ac sollicitudin lectus rhoncus. Proin a tempor enim, quis aliquet libero."
+    	},
+    	{
+    			"expandedTxtVisible"	: false,
+					"collapse": false,
+					"expand": true,
+    		"faq": "Which type of customers are targeted for this campaign?",
+    		"expandedTxt": "Quisque sit amet felis vitae elit bibendum sollicitudin. Fusce sit amet enim viverra, pellentesque libero eu, gravida leo. Pellentesque eu nisl vestibulum, eleifend mi vel, molestie ante. Praesent id mauris nisl. Nunc aliquam turpis in rhoncus consequat. Curabitur et gravida enim, a ullamcorper massa. Cras id justo sit amet quam consectetur interdum. Etiam ac nisl sollicitudin, luctus sapien vitae, luctus sapien. Donec semper sem nec quam volutpat, ac sollicitudin lectus rhoncus. Proin a tempor enim, quis aliquet libero."
+    	},
+    	{
+    			"expandedTxtVisible"	: false,
+					"collapse": false,
+					"expand": true,
+    		"faq": "Which are the services covered under Jameel Maintenance Program?",
+    		"expandedTxt": "Quisque sit amet felis vitae elit bibendum sollicitudin. Fusce sit amet enim viverra, pellentesque libero eu, gravida leo. Pellentesque eu nisl vestibulum, eleifend mi vel, molestie ante. Praesent id mauris nisl. Nunc aliquam turpis in rhoncus consequat. Curabitur et gravida enim, a ullamcorper massa. Cras id justo sit amet quam consectetur interdum. Etiam ac nisl sollicitudin, luctus sapien vitae, luctus sapien. Donec semper sem nec quam volutpat, ac sollicitudin lectus rhoncus. Proin a tempor enim, quis aliquet libero."
+    	},
+    	{    	"expandedTxtVisible"	: false,
+					"collapse": false,
+					"expand": true,
+    		"faq": "What are the vehicles included in the scope of Jameel Maintenance Program?",
+    		"expandedTxt": "Quisque sit amet felis vitae elit bibendum sollicitudin. Fusce sit amet enim viverra, pellentesque libero eu, gravida leo. Pellentesque eu nisl vestibulum, eleifend mi vel, molestie ante. Praesent id mauris nisl. Nunc aliquam turpis in rhoncus consequat. Curabitur et gravida enim, a ullamcorper massa. Cras id justo sit amet quam consectetur interdum. Etiam ac nisl sollicitudin, luctus sapien vitae, luctus sapien. Donec semper sem nec quam volutpat, ac sollicitudin lectus rhoncus. Proin a tempor enim, quis aliquet libero."
+    	},
+    	{
+    			"expandedTxtVisible"	: false,
+					"collapse": false,
+					"expand": true,
+    		"faq": "In which centers can customers avail this campaign?",
+    		"expandedTxt": "Quisque sit amet felis vitae elit bibendum sollicitudin. Fusce sit amet enim viverra, pellentesque libero eu, gravida leo. Pellentesque eu nisl vestibulum, eleifend mi vel, molestie ante. Praesent id mauris nisl. Nunc aliquam turpis in rhoncus consequat. Curabitur et gravida enim, a ullamcorper massa. Cras id justo sit amet quam consectetur interdum. Etiam ac nisl sollicitudin, luctus sapien vitae, luctus sapien. Donec semper sem nec quam volutpat, ac sollicitudin lectus rhoncus. Proin a tempor enim, quis aliquet libero."
+    	},
+    	{
+    			"expandedTxtVisible"	: false,
+					"collapse": false,
+					"expand": true,
+    		"faq": "What are the vehicles included in the scope of Jameel Maintenance Program?",
+    		"expandedTxt": "Quisque sit amet felis vitae elit bibendum sollicitudin. Fusce sit amet enim viverra, pellentesque libero eu, gravida leo. Pellentesque eu nisl vestibulum, eleifend mi vel, molestie ante. Praesent id mauris nisl. Nunc aliquam turpis in rhoncus consequat. Curabitur et gravida enim, a ullamcorper massa. Cras id justo sit amet quam consectetur interdum. Etiam ac nisl sollicitudin, luctus sapien vitae, luctus sapien. Donec semper sem nec quam volutpat, ac sollicitudin lectus rhoncus. Proin a tempor enim, quis aliquet libero."
+    	},
+    	{
+    			"expandedTxtVisible"	: false,
+					"collapse": false,
+					"expand": true,
+    		"faq": "Which type of customers are targeted for this campaign?",
+    		"expandedTxt": "Quisque sit amet felis vitae elit bibendum sollicitudin. Fusce sit amet enim viverra, pellentesque libero eu, gravida leo. Pellentesque eu nisl vestibulum, eleifend mi vel, molestie ante. Praesent id mauris nisl. Nunc aliquam turpis in rhoncus consequat. Curabitur et gravida enim, a ullamcorper massa. Cras id justo sit amet quam consectetur interdum. Etiam ac nisl sollicitudin, luctus sapien vitae, luctus sapien. Donec semper sem nec quam volutpat, ac sollicitudin lectus rhoncus. Proin a tempor enim, quis aliquet libero."
+    	}
+    	]
 }

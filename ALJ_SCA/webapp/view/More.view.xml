@@ -1,8 +1,8 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.More"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout">
-	<VBox class="aljBoxContentStyle">
+	<VBox >
 		<VBox renderType="Bare">
-			<l:Grid containerQuery="true" defaultSpan="XL2 L3 M4 S6" class="aljMoreTilesStyle sapUiMediumMarginTop">
+			<!--	<l:Grid containerQuery="true" defaultSpan="XL2 L3 M4 S6" class="aljMoreTilesStyle sapUiMediumMarginTop">
 				<CustomListItem type="Active" press="openSafetyMaintenance">
 					<Text text="{i18n>SafetyMaintenanceTips}"/>
 				</CustomListItem>
@@ -12,7 +12,91 @@
 				<CustomListItem type="Active" press="onSelectableItemPress">
 					<Text text="{i18n>DefaultVehicle}"/>
 				</CustomListItem>
-			</l:Grid>
+			</l:Grid>-->
+			<l:VerticalLayout class="sapUiMediumMarginTop" width="100%">
+				<l:content>
+					<List >
+						<CustomListItem type="Navigation" press="onAcoountListPress">
+							<HBox class="UserInfoVBoxCSSMoreSection">
+								<Image src="image/account.png"/>
+								<Label text="Account" class="UserInfoBoxInner listStyleMore"/>
+							</HBox>
+						</CustomListItem>
+					</List >
+					<List >
+						<CustomListItem type="Navigation">
+							<HBox class="UserInfoVBoxCSSMoreSection">
+								<Image src="image/Wallet.png"/>
+								<Label text="Payment Method" class="UserInfoBoxInner listStyleMore"/>
+							</HBox>
+						</CustomListItem>
+					</List >
+					<List >
+						<CustomListItem type="Navigation" press="onPrefServCntrPress">
+							<HBox class="UserInfoVBoxCSSMoreSection">
+								<Image src="image/preferredLoc.png"/>
+								<Label text="Preferred Service Center" class="UserInfoBoxInner listStyleMore"/>
+							</HBox>
+						</CustomListItem>
+					</List >
+					<List >
+						<CustomListItem type="Navigation" press="onFaqPress">
+							<HBox class="UserInfoVBoxCSSMoreSection">
+								<Image src="image/faq.png"/>
+								<Label text="FAQ" class="UserInfoBoxInner listStyleMore"/>
+							</HBox>
+						</CustomListItem>
+					</List >
+					<List >
+						<CustomListItem type="Navigation" press="onSafetyPress">
+							<HBox class="UserInfoVBoxCSSMoreSection">
+								<Image src="image/Safety.png"/>
+								<Label text="Safety And Maintenance Tips" class="UserInfoBoxInner listStyleMore"/>
+							</HBox>
+						</CustomListItem>
+					</List >
+						<List >
+						<CustomListItem type="Navigation" press="onLanguagePress">
+							<HBox class="UserInfoVBoxCSSMoreSection">
+								<Image src="image/subject.png"/>
+								<Label text="Language" class="UserInfoBoxInner listStyleMore"/>
+							</HBox>
+						</CustomListItem>
+					</List >
+					<List >
+						<CustomListItem type="Navigation" press="onSharePress">
+							<HBox class="UserInfoVBoxCSSMoreSection">
+								<Image src="image/Share.png"/>
+								<Label text="Share" class="UserInfoBoxInner listStyleMore"/>
+							</HBox>
+						</CustomListItem>
+					</List >
+					<List >
+						<CustomListItem type="Navigation" press="onPrivacyPress">
+							<HBox class="UserInfoVBoxCSSMoreSection">
+								<Image src="image/privacyPolicy.png"/>
+								<Label text="Privacy Policy" class="UserInfoBoxInner listStyleMore"/>
+							</HBox>
+						</CustomListItem>
+					</List >
+					<List >
+						<CustomListItem type="Navigation" press="onTermsPress">
+							<HBox class="UserInfoVBoxCSSMoreSection">
+								<Image src="image/paper.png"/>
+								<Label text="Terms And Conditions" class="UserInfoBoxInner listStyleMore"/>
+							</HBox>
+						</CustomListItem>
+					</List >
+					<List >
+						<CustomListItem type="Navigation" press="onContactUsPress">
+							<HBox class="UserInfoVBoxCSSMoreSection">
+								<Image src="image/ContactUs.png"/>
+								<Label text="Contact Us" class="UserInfoBoxInner listStyleMore"/>
+							</HBox>
+						</CustomListItem>
+					</List >
+				</l:content>
+			</l:VerticalLayout>
 		</VBox>
 	</VBox>
 </mvc:View>

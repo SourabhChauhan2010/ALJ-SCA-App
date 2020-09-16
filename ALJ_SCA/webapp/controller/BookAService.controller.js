@@ -6,15 +6,7 @@ sap.ui.define([
 
 	return BaseController.extend("com.sap.alj.sca.ALJ_SCA.controller.BookAService", {
 		onInit: function () {
-			var oAppModel = this.getOwnerComponent().getModel("oAppModel");
-			this.getView().setModel(oAppModel, "oAppModel");
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			this.fnTimeSlot();
-			this.getUserPref();
-			this.getUserCreate();
-			this.getUserUpdate();
-			this.getServiceHist();
-
 		},
 
 		onAfterRendering: function () {
@@ -143,6 +135,89 @@ sap.ui.define([
 				this.Calendar = sap.ui.xmlfragment("com.sap.alj.sca.ALJ_SCA.fragment.Calendar", this);
 				this.getView().addDependent(this.Calendar);
 			}
+			var timeSlot = [{
+				time: "08: 00 AM",
+				available: false
+			}, {
+				time: "08: 30 AM",
+				available: true
+			}, {
+				time: "09: 00 AM",
+				available: true
+			}, {
+				time: "09: 30 AM",
+				available: true
+			}, {
+				time: "10: 00 AM",
+				available: false
+			}, {
+				time: "10: 30 AM",
+				available: true
+			}, {
+				time: "11: 00 AM",
+				available: true
+			}, {
+				time: "11: 30 AM",
+				available: false
+			}, {
+				time: "12: 00 PM",
+				available: true
+			}, {
+				time: "12: 30 PM",
+				available: true
+			}, {
+				time: "01: 00 PM",
+				available: true
+			}, {
+				time: "01: 30 PM",
+				available: true
+			}, {
+				time: "02: 00 PM",
+				available: false
+			}, {
+				time: "02: 30 PM",
+				available: true
+			}, {
+				time: "03: 00 PM",
+				available: true
+			}, {
+				time: "03: 30 PM",
+				available: true
+			}, {
+				time: "04: 00 PM",
+				available: true
+			}, {
+				time: "04: 30 PM",
+				available: true
+			}, {
+				time: "05: 00 PM",
+				available: true
+			}, {
+				time: "05: 30 PM",
+				available: true
+			}, {
+				time: "06: 00 PM",
+				available: true
+			}, {
+				time: "06: 30 PM",
+				available: true
+			}, {
+				time: "07: 00 PM",
+				available: true
+			}, {
+				time: "07: 30 PM",
+				available: true
+			}, {
+				time: "08: 00 PM",
+				available: true
+			}, {
+				time: "08: 30 PM",
+				available: true
+			}, {
+				time: "09: 00 PM",
+				available: true
+			}];
+			oAppModel.setProperty("/TimeSlot", timeSlot);
 			this.Calendar.open();
 
 			// this.oRouter.navTo("ServiceStatus");
@@ -181,31 +256,16 @@ sap.ui.define([
 			});
 		},
 
-		getBookingSlot: function (sDate) {
+		getBookingSlot: function () {
 			var sUrl = "/Location_and_Slot_MasterSet";
 			var oERPDataModel = this.getModel("oERPDataModel");
 			var oAppModel = this.getModel("oAppModel");
-			var aTimeSlots = oAppModel.getProperty("/TimeSlot");
 			var oFilter = [];
-			oFilter.push(new Filter("Zday", "EQ", sDate));
+			oFilter.push(new Filter("Zday", "EQ", '20200716'));
 			oFilter.push(new Filter("Werks", "EQ", '7030'));
 			oERPDataModel.read(sUrl, {
 				filters: oFilter,
 				success: function (oData) {
-					var aSlots = oData.results;
-					for (var counter = 0; counter < aSlots.length; counter++) {
-						for (var iSlotCount = 0; iSlotCount < aTimeSlots.length; iSlotCount++) {
-							aSlots[counter].TimeFrom.trim();
-							var time = aTimeSlots[iSlotCount].time;
-							if (aSlots[counter].TimeFrom === time && aTimeSlots[iSlotCount].available === false) {
-								aTimeSlots[iSlotCount].available = true;
-							}
-							// else {
-							// 	aTimeSlots[iSlotCount].available = false;
-							// }
-						}
-					}
-					oAppModel.refresh();
 					this._showToastMessage("Location_and_Slot_MasterSet Success");
 				}.bind(this),
 				error: function (oData) {}
@@ -214,20 +274,8 @@ sap.ui.define([
 
 		handleCalendarSelect: function (oEvent) {
 			var oAppModel = this.getModel("oAppModel");
-			var dSelectedDate = oEvent.getSource().getSelectedDates()[0].getStartDate();
-			var sDate = "" + dSelectedDate.getDate();
-			if (sDate.length !== 2) {
-				sDate = "0" + sDate;
-			}
-			var sYear = dSelectedDate.getFullYear();
-			var sMonth = "" + dSelectedDate.getMonth() + 1;
-			if (sMonth.length !== 2) {
-				sMonth = "0" + sMonth;
-			}
-			var sFullDate = "" + sYear + sMonth + sDate;
-			// var oData = oEvent;
+			var oData = oEvent;
 			this.getFridays();
-			this.getBookingSlot(sFullDate);
 
 		},
 
@@ -261,189 +309,7 @@ sap.ui.define([
 				}
 			}
 			oAppModel.setProperty("/Fridays", arr);
-		},
-		fnTimeSlot: function () {
-			var oAppModel = this.getModel("oAppModel");
-			var timeSlot = [{
-				text: "08:00 AM",
-				time: "08:00",
-				available: false
-			}, {
-				text: "08:30 AM",
-				time: "08:30",
-				available: false
-			}, {
-				text: "09:00 AM",
-				time: "09:00",
-				available: false
-			}, {
-				text: "09:30 AM",
-				time: "09:30",
-				available: false
-			}, {
-				text: "10:00 AM",
-				time: "10:00",
-				available: false
-			}, {
-				text: "10:30 AM",
-				time: "10:30",
-				available: false
-			}, {
-				text: "11:00 AM",
-				time: "11:00",
-				available: false
-			}, {
-				text: "11:30 AM",
-				time: "11:30",
-				available: false
-			}, {
-				text: "12:00 PM",
-				time: "12:00",
-				available: false
-			}, {
-				text: "12:30 PM",
-				time: "12:30",
-				available: false
-			}, {
-				text: "01:00 PM",
-				time: "13:00",
-				available: false
-			}, {
-				text: "01:30 PM",
-				time: "13:30",
-				available: false
-			}, {
-				text: "02:00 PM",
-				time: "14:00",
-				available: false
-			}, {
-				text: "02:30 PM",
-				time: "14:30",
-				available: false
-			}, {
-				text: "03: 00 PM",
-				time: "15:00",
-				available: false
-			}, {
-				text: "03:30 PM",
-				time: "15:30",
-				available: false
-			}, {
-				text: "04:00 PM",
-				time: "16:00",
-				available: false
-			}, {
-				text: "04:30 PM",
-				time: "16:30",
-				available: false
-			}, {
-				text: "05:00 PM",
-				time: "17:00",
-				available: false
-			}, {
-				text: "05:30 PM",
-				time: "17:30",
-				available: false
-			}, {
-				text: "06:00 PM",
-				time: "18:00",
-				available: false
-			}, {
-				text: "06:30 PM",
-				time: "18:30",
-				available: false
-			}, {
-				text: "07:00 PM",
-				time: "19:00",
-				available: false
-			}, {
-				text: "07:30 PM",
-				time: "19:30",
-				available: false
-			}, {
-				text: "08:00 PM",
-				time: "20:00",
-				available: false
-			}, {
-				text: "08:30 PM",
-				time: "20:30",
-				available: false
-			}, {
-				text: "09:00 PM",
-				time: "21:00",
-				available: false
-			}];
-			oAppModel.setProperty("/TimeSlot", timeSlot);
-		},
-
-		getUserPref: function () {
-			var oAppModelData = this.getModel("oAppModel");
-			var sUrl = "/Java_Service/alj/misc/pref/INC01314";
-			this.doAjax(sUrl, "GET", null, function (oEvent) {
-				if (oEvent) {
-					// var aData = oAppModelData.getProperty("/UserInformation");
-					// aData[0] = oEvent;
-					// oAppModelData.setProperty("/UserInformation", aData);
-					// oAppModelData.setProperty("/CampaignDetails", oEvent);
-				} else {
-					// oAppModelData.setProperty("/UserInformation", {});
-				}
-			}.bind(this), function (oEvent) {});
-		},
-		getServiceHist: function () {
-			var oAppModelData = this.getModel("oAppModel");
-			var sUrl = "/SCA_JAVA/alj/sales_history/vin/MR0HX8CD9L1393444";
-			this.doAjax(sUrl, "GET", null, function (oEvent) {
-				if (oEvent) {
-					// var aData = oAppModelData.getProperty("/UserInformation");
-					// aData[0] = oEvent;
-					// oAppModelData.setProperty("/UserInformation", aData);
-					// oAppModelData.setProperty("/CampaignDetails", oEvent);
-				} else {
-					// oAppModelData.setProperty("/UserInformation", {});
-				}
-			}.bind(this), function (oEvent) {});
-		},
-		getUserCreate: function () {
-			var oAppModelData = this.getModel("oAppModel");
-			var sUrl = "/Java_Service/alj/misc/pref";
-			var payLoad = {
-				"ownerId": "INC01315",
-				"prefLanguage": "TEST_LANG",
-				"prefVehicle": "TEST VIN",
-				"prefServiceCenter": "TEST_SERVICE_CENTER"
-			};
-			this.doAjax(sUrl, "POST", payLoad, function (oEvent) {
-				if (oEvent) {
-					// var aData = oAppModelData.getProperty("/UserInformation");
-					// aData[0] = oEvent;
-					// oAppModelData.setProperty("/UserInformation", aData);
-					// oAppModelData.setProperty("/CampaignDetails", oEvent);
-				} else {
-					// oAppModelData.setProperty("/UserInformation", {});
-				}
-			}.bind(this), function (oEvent) {});
-		},
-		getUserUpdate: function () {
-			var oAppModelData = this.getModel("oAppModel");
-			var sUrl = "/Java_Service/alj/misc/pref";
-			var payLoad = {
-				"ownerId": "INC01314",
-				"prefLanguage": "TEST_LANG",
-				"prefVehicle": "TEST VIN",
-				"prefServiceCenter": "TEST_SERVICE_CENTER"
-			};
-			this.doAjax(sUrl, "PUT", payLoad, function (oEvent) {
-				if (oEvent) {
-					// var aData = oAppModelData.getProperty("/UserInformation");
-					// aData[0] = oEvent;
-					// oAppModelData.setProperty("/UserInformation", aData);
-					// oAppModelData.setProperty("/CampaignDetails", oEvent);
-				} else {
-					// oAppModelData.setProperty("/UserInformation", {});
-				}
-			}.bind(this), function (oEvent) {});
-		},
+		}
 
 	});
 });

@@ -1,0 +1,44 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.ContactUs"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<VBox class="sapUiMediumMarginTop">
+		<VBox class="sapUiSmallMarginTop">
+			<HBox width="100%" class="sapUiSmallMargin sapUiLargeMarginBegin" >
+				<core:Icon
+			src="sap-icon://arrow-left"
+			press="onNavBack">
+		</core:Icon>
+			</HBox>
+			<HBox width="100%" class="sapUiSmallMargin" justifyContent="Center" alignItems="Center">
+				<Text text="{i18n>ContactUs}" class="aljHomeText"/>
+			</HBox>
+		</VBox>
+		<VBox class="sapUiTinyMarginTop sapUiSmallMarginEnd sapUiLargeMarginBegin aljMoreContactText">
+			<Text
+				text="{i18n>headerDescContact}"/>
+		</VBox>
+		
+		<VBox class="sapUiLargeMarginTop sapUiSmallMarginBeginEnd aljHomeText">
+			<HBox width="100%" class="sapUiSmallMarginTop sapUiSmallMarginBottom"  alignItems="Center">
+				<Image src="image/contact.png"/>
+			</HBox>
+	<!--	<Label text="920024454" design="Bold" class="sapUiSmallMarginTop sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"  textAlign="Center"/>-->
+	
+	
+	</VBox>
+		<VBox class="sapUiLargeMarginTop sapUiSmallMarginBeginEnd">
+			<HBox width="100%" class="sapUiSmallMarginTop sapUiSmallMarginBottom sapUiCustomMarginMore"  alignItems="Center">
+				<Image src="image/help.png"/>
+			</HBox>
+			<HBox width="100%" class="sapUiSmallMarginTop sapUiSmallMarginBottom sapUiCustomMarginMore aljTitleClass"  alignItems="Center">
+				<Label text="Follow Us" design="Bold"/>
+			</HBox>
+				<HBox width="100%" class="sapUiSmallMarginTop sapUiMediumMarginBottom sapUiCustomMediaMrgMore aljTitleClass"  alignItems="Center">
+				<Image src="image/socialMedia.png"/>
+			</HBox>
+	<!--	<Label text="920024454" design="Bold" class="sapUiSmallMarginTop sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"  textAlign="Center"/>-->
+	
+	
+	</VBox>
+	</VBox>
+</mvc:View>

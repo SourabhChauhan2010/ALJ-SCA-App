@@ -1,0 +1,30 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.FAQ"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<VBox class="sapUiMediumMarginTop">
+		<VBox >
+			<HBox width="100%" class="sapUiSmallMarginTopBottom sapUiMediumMarginBegin">
+				<core:Icon src="sap-icon://arrow-left" press="onNavBack"></core:Icon>
+			</HBox>
+			<HBox width="100%" class="sapUiSmallMargin" justifyContent="Center" alignItems="Center">
+				<Text text="{i18n>FAQ}" class="aljHomeText"/>
+			</HBox>
+		</VBox>
+		<VBox class="sapUiTinyMarginTop sapUiSmallMarginEnd sapUiMarginStartFAq aljMoreContentText ">
+			<Text text="{i18n>headerDescFaq}"/>
+		</VBox>
+		<!--	<VBox  items="{oAppModel>/Faqs}">-->
+		<List items="{oAppModel>/Faqs}" class=" sapUiMarginStartFAq aljMoreContentText">
+			<CustomListItem>
+				<HBox width="70%" class="sapUiMediumMarginTop sapUiSmallMarginEnd aljMoreContentText">
+					<Text class="sapUiMrgnRightFaq " text="{oAppModel>faq}"/>
+					<core:Icon src="sap-icon://add" class="plusIconFaq" press="onFaqBtnOpenPress" visible="{oAppModel>expand}"/>
+					<core:Icon src="sap-icon://less" class=" plusIconFaq " visible="{oAppModel>collapse}" press="onFaqBtnClsPress"/>
+				</HBox>
+				<HBox width="100%">
+					<Text class=" sapUiMrgnRightFaq sapUiTinyMarginTop " visible="{oAppModel>expandedTxtVisible}" text="{oAppModel>expandedTxt}"/>
+				</HBox>
+			</CustomListItem>
+		</List>
+		<!--	</VBox>-->
+	</VBox>
+</mvc:View>

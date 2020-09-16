@@ -11,10 +11,7 @@ sap.ui.define([
 		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.Products
 		 */
 		onInit: function () {
-			var oAppModel = this.getOwnerComponent().getModel("oAppModel");
-			this.getView().setModel(oAppModel, "oAppModel");
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oAppModel.setProperty("/ProductMainView", true);
 
 		},
 		onAddVehiclePress: function (oEvent) {
@@ -40,19 +37,6 @@ sap.ui.define([
 			oAppModel.setProperty("/oProductDetails", oProductDetails);
 
 			this.getRouter().navTo("ProductDetail");
-		},
-		onServiceItemPress: function (oEvent) {
-			var oAppModel = this.getModel("oAppModel");
-			var currObj = oEvent.getSource().getBindingContext("oAppModel").getObject();
-			oAppModel.setProperty("/ProductMainView", false);
-			// currObj.isSelected = !currObj.isSelected;
-			this.getModel("oAppModel").refresh();
-		},
-
-		onBack: function () {
-			var oAppModel = this.getModel("oAppModel");
-			oAppModel.setProperty("/ProductMainView", true);
-			this.getModel("oAppModel").refresh();
 		}
 
 		/**

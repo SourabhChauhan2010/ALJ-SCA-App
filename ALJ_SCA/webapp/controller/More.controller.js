@@ -16,33 +16,38 @@ sap.ui.define([
 		
 		openSafetyMaintenance: function() {
 			this.getRouter().navTo("SafetyTips");
+		},
+		
+		onAcoountListPress: function() {
+			this.getRouter().navTo("UserProfile");
+		},
+		
+		onContactUsPress: function() {
+			this.getRouter().navTo("ContactUs");
+		},
+		
+		onFaqPress: function() {
+			this.getRouter().navTo("FAQ");
+		},
+		onPrivacyPress: function() {
+			this.getRouter().navTo("Privacy");
+		},
+        onTermsPress: function() {
+			this.getRouter().navTo("TermsOfUse");
+		},
+		onLanguagePress: function() {
+			this.getRouter().navTo("Language");
+		},
+		onPrefServCntrPress: function() {
+			this.getRouter().navTo("ServiceCenter");
+		},
+		onSafetyPress: function() {
+			this.getRouter().navTo("SafetyMaintenance");
+		},
+		onSharePress: function() {
+			this.getRouter().navTo("Share");
 		}
 
-		/**
-		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
-		 * (NOT before the first rendering! onInit() is used for that one!).
-		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.More
-		 */
-		//	onBeforeRendering: function() {
-		//
-		//	},
-
-		/**
-		 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
-		 * This hook is the same one that SAPUI5 controls get after being rendered.
-		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.More
-		 */
-		//	onAfterRendering: function() {
-		//
-		//	},
-
-		/**
-		 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
-		 * @memberOf com.sap.alj.sca.ALJ_SCA.view.More
-		 */
-		//	onExit: function() {
-		//
-		//	}
 
 	});
 

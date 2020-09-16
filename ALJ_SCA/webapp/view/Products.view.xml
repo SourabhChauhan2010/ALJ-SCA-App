@@ -1,106 +1,23 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.Products"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.f" xmlns:l="sap.ui.layout">
-	<VBox class="aljBoxContentStyle">
-		<VBox>
-			<!--<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>-->
-			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.CarDetailsHeader" type="XML"/>
-		</VBox>
-		<HBox class="aljLightBottomBorder" width="100%" height="2.875rem" justifyContent="Center" alignItems="Center">
-			<Image src="image/Products.svg" width="2rem" class="sapUiSmallMarginEnd"/>
-			<Text class="aljHeaderText" text="{i18n>PRODUCTS}"></Text>
-		</HBox>
-		<VBox visible="{oAppModel>/ProductMainView}">
-			<!--<VBox class="styleProdCatBox">-->
-			<!--	<Label text="{i18n>ProductCatalog}" class="aljTitleClass sapUiTinyMarginBegin"/>-->
-			<!--	<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">-->
-			<!--		<HBox items="{oAppModel>/aProdCatelogs}" class="sapUiSmallMarginBeginEnd">-->
-			<!--			<CustomListItem class="styleProdServBookBox" type="Active" press="onProdCatPress">-->
-			<!--				<VBox alignItems="Center">-->
-			<!--					<Image src="{oAppModel>src}" width="6rem"/>-->
-			<!--					<Label text="{oAppModel>name}"/>-->
-			<!--				</VBox>-->
-			<!--			</CustomListItem>-->
-			<!--		</HBox>-->
-			<!--	</ScrollContainer>-->
-			<!--</VBox>-->
-			<VBox justifyContent="Center" class="sapUiMediumMarginTopBottom" alignItems="Center" width="100%">
-				<SearchField class="aljProductSearch"></SearchField>
-			</VBox>
-			<VBox class="sapUiSmallMarginBegin">
-				<Text text="{i18n>PRODUCTCAT}" class="aljTitleClass"/>
-			</VBox>
-			<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true"
-				class="sapUiTinyMarginBeginEnd sapUiSmallMarginBottom aljSSOuterContainerStyle">
-				<HBox items="{oAppModel>/productCategory}">
-					<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ProductCategory" type="XML"/>
-				</HBox>
-			</ScrollContainer>
-			<VBox class="sapUiSmallMarginBegin">
-				<Text text="{i18n>PRODUCTCAT}" class="aljTitleClass"/>
-			</VBox>
-			<!--<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true"-->
-			<!--class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom aljSSOuterContainerStyle">-->
-			<l:Grid defaultSpan="XL3 L3 M3 S3" class="sapUiMediumMarginBottom" content="{oAppModel>/recommendations}">
-				<l:content>
-					<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
-				</l:content>
-			</l:Grid>
-			<!--</ScrollContainer>-->
-			<VBox width="100%" alignItems="Center">
-				<Button class="aljContinueBtn" text="{i18n>ContinuetoBooking}" icon="sap-icon://navigation-right-arrow"></Button>
-			</VBox>
-		</VBox>
-		<VBox visible="{= ${oAppModel>/ProductMainView} === true ? false : true }" class="sapUiSmallMarginBeginEnd">
-			<Button icon="sap-icon://arrow-left" class="aljProdBackBtn" press="onBack"></Button>
-			<VBox class="aljProductImgBox sapUiSmallMarginTopBottom" alignItems="Center" justifyContent="Center">
-				<Text class="aljHeaderText" text="Product"></Text>
-				<Image src="image/engine-parts-trans.png" width="6.5rem" height="6.5rem"></Image>
-			</VBox>
-			<Text class="aljAddVehicleSamllText aljRedColorStyle sapUiTinyMarginBottom" text="Replace synthetic engine oil and oil filters"></Text>
-			<Text class="aljProdDetailsTextStyle sapUiTinyMarginBottom"
-				text="Includes 5 Quarts Synthetic Oil Check all fluid levels and top off as necessary, includes Multi-Point Courtesy Inspection"></Text>
-			<VBox class="aljProductDListBox sapUiTinyMarginBottom">
-				<List class="podCustomList podRemoveItemBorder">
-					<CustomListItem >
-						<HBox width="100%" class="aljProductDList">
-							<VBox width="90%" alignItems="Start" justifyContent="Center">
-								<Text text="Rotate tires"></Text>
-							</VBox>
-							<VBox width="10%" alignItems="End" justifyContent="Center">
-								<Image src="image/Check.svg" width="1rem"></Image>
-							</VBox>
-						</HBox>
-						<HBox width="100%" class="aljProductDList">
-							<VBox width="90%" alignItems="Start" justifyContent="Center">
-								<Text text="Rotate tires"></Text>
-							</VBox>
-							<VBox width="10%" alignItems="End" justifyContent="Center">
-								<Image src="image/Check.svg" width="1rem"></Image>
-							</VBox>
-						</HBox>
-						<HBox width="100%" class="aljProductDList">
-							<VBox width="90%" alignItems="Start" justifyContent="Center">
-								<Text text="Rotate tires"></Text>
-							</VBox>
-							<VBox width="10%" alignItems="End" justifyContent="Center">
-								<Image src="image/Check.svg" width="1rem"></Image>
-							</VBox>
-						</HBox>
-					</CustomListItem>
-				</List>
-			</VBox>
-			<HBox class="aljProdOfferBox sapUiSmallMarginBottom" height="2.8rem" width="100%" justifyContent="Center" alignItems="Center">
-				<Label class="aljOfferLbl sapUiTinyMarginEnd" text="{i18n>OFFER}"></Label>
-				<Label class="aljOfferLbl classStrike sapUiTinyMarginEnd" text="SR 500"></Label>
-				<Label class="aljOfferLbl sapUiTinyMarginEnd" text=" / SR 300"></Label>
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<VBox class="aljBoxContentStyle sapUiSmallMarginTop">
+		<VBox class="styleVehicleBox">
+			<HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBeginEnd sapUiTinyMarginBottom">
+				<Label text="{i18n>SelectVehicle{i18n>SelectVehicle}}" class="aljTitleClass"/>
+				<Button text="{i18n>AddVehicle}" class="aljLightGreyBtnStyle" press="onAddVehiclePress"/>
 			</HBox>
-			<Button text="{i18n>AddtoBookings}" class="aljRedBtnStyle aljLargeBtnStyle aljMyCarVehInfoBtn sapUiSmallMarginBottom" width="10.125rem"/>
-			<VBox>
-				<Text text="{i18n>RelatedOffers}" class="aljTitleClass"/>
-			</VBox>
-			<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true" class="aljSSOuterContainerStyle sapUiMediumMarginBottom">
-				<HBox items="{oAppModel>/recommendations}">
-					<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.ServiceList" type="XML"/>
+			<core:Fragment fragmentName="com.sap.alj.sca.ALJ_SCA.fragment.VehicleList" type="XML"/>
+		</VBox>
+		<VBox class="styleProdCatBox">
+			<Label text="{i18n>ProductCatalog}" class="aljTitleClass sapUiSmallMarginBegin"/>
+			<ScrollContainer height="100%" width="100%" horizontal="true" focusable="true">
+				<HBox items="{oAppModel>/aProdCatelogs}" class="sapUiSmallMarginBeginEnd">
+					<CustomListItem class="styleProdServBookBox" type="Active" press="onProdCatPress">
+						<VBox alignItems="Center">
+							<Image src="{oAppModel>src}" width="6rem"/>
+							<Label text="{oAppModel>name}"/>
+						</VBox>
+					</CustomListItem>
 				</HBox>
 			</ScrollContainer>
 		</VBox>

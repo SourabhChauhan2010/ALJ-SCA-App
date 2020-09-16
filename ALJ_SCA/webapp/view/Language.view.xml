@@ -1,0 +1,26 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.alj.sca.ALJ_SCA.controller.Language"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<VBox class="sapUiMediumMarginTop">
+		<VBox >
+				<HBox width="100%" class="sapUiSmallMargin sapUiLargeMarginBegin" >
+				<core:Icon
+			src="sap-icon://arrow-left"
+			press="onNavBack">
+		</core:Icon>
+			</HBox>
+			<HBox width="100%" class="sapUiSmallMarginTopBottom" justifyContent="Center" alignItems="Center">
+				<Text text="Select Your Language" class="aljHomeText"/>
+			</HBox>
+				<HBox>
+				<Text class="sapUiMrgnLangText" text="Later you can change the language from application settings."/>
+			
+			</HBox>
+		</VBox>
+			<VBox class="aljMyCarBtnBox sapUiSmallMarginTopBottom " alignItems="Center" justifyContent="Center">
+		<Button id="idEngBtn" text="English" class="aljRedBtnStyle aljLargeBtnStyle aljMyCarVehInfoBtn sapUiMrgnLang" width="90%" press="onPressEnglishLang"/>
+			<Button id="idArabBtn" press="onPressArabicLang" text="العربية" class="sapUiMrgnLang aljLargeBtnStyle aljBlackBtnStyleRev sapUiSmallMarginTopBottom aljMyCarVehInfoBtn" width="90%"/>
+		
+		</VBox>
+	</VBox>
+
+</mvc:View>

@@ -81,7 +81,7 @@ sap.ui.define([
 			//ODataModel holding metadata of Application's ERP ODATA services
 			var oERPDataModel = this.getOwnerComponent().getModel("oERPDataModel");
 			this.oERPDataModel = oERPDataModel;
-
+			
 			//ODataModel holding metadata of Application's CRM ODATA services
 			var oCRMDataModel = this.getOwnerComponent().getModel("oCRMDataModel");
 			this.oCRMDataModel = oCRMDataModel;
@@ -117,9 +117,6 @@ sap.ui.define([
 				url: sUrl,
 				data: oData,
 				async: !bSync,
-				// headers: {
-				// 	"X-CSRF-Token": this.getCSRFToken(sUrl)
-				// },
 				dataType: "json",
 				contentType: "application/json; charset=utf-8",
 				error: function (err) {
@@ -130,24 +127,6 @@ sap.ui.define([
 				},
 				type: sMethod
 			});
-		},
-
-		getCSRFToken: function (sUrl) {
-			// var sUrl = "InctureApDest/statusConfig/getAll/EN";
-			sUrl = "/Java_Service/alj/campaign/all";
-			var token = null;
-			$.ajax({
-				url: sUrl,
-				type: "GET",
-				async: false,
-				beforeSend: function (xhr) {
-					xhr.setRequestHeader("X-CSRF-Token", "Fetch");
-				},
-				complete: function (xhr) {
-					token = xhr.getResponseHeader("X-CSRF-Token");
-				}
-			});
-			return token;
 		},
 
 		/**
@@ -249,28 +228,16 @@ sap.ui.define([
 				"bpNumber": "1000052113",
 				"idNumber": "2201739097"
 			};
-			this.doAjax(sUrl, "POST", oPayload, function (oData) {
-				if (oData) {
+			this.doAjax(sUrl, "POST", oPayload, function (oEvent) {
+				if (oEvent) {
 					// var aData = oAppModelData.getProperty("/UserInformation");
 					// aData[0] = oEvent;
 					// oAppModelData.setProperty("/UserInformation", aData);
-					oAppModelData.setProperty("/UserInformation", oData);
-					oAppModelData.setProperty("/isUserAvailable", true);
+					oAppModelData.setProperty("/UserInformation", oEvent);
 				} else {
 					// oAppModelData.setProperty("/UserInformation", {});
 				}
 			}.bind(this), function (oEvent) {});
-
-			oAppModelData.setProperty("/UserInformation", {
-				"nameFirst": "Mohammed",
-				"nameMiddle": "",
-				"nameLast": "Ahmed",
-				"mobile2": "9553789324",
-				"email": "abc@gmail.com",
-				"NID": "2345543212",
-				"Password": "abcd1234"
-			});
-			oAppModelData.setProperty("/isUserAvailable", true);
 		},
 
 		getVehicles: function (ownerId) {
@@ -297,17 +264,6 @@ sap.ui.define([
 			// 	}.bind(this),
 			// 	error: function (oData) {}
 			// });
-
-			// var sUrl = "/ZGW_CRM_BUPA_SAA_SRV(Vbeln='3000010715',Abgru='A1')";
-			// var oERPDataModel = this.getModel("oERPDataModel");
-			// var oAppModel = this.getModel("oAppModel");
-			// oERPDataModel.read(sUrl, {
-			// 	success: function (oData) {
-			// 		this._showToastMessage("App_booking_cancellationSet Success");
-			// 	}.bind(this),
-			// 	error: function (oData) {}
-			// });
-
 			this.doAjax("/SCA_CRM/sap/opu/odata/sap/ZGW_CRM_BUPA_SAA_SRV/$metadata", "GET", null, function (aData) {
 				//Success block
 				// oAppModel.setProperty("/vehicles", aData);
