@@ -1780,6 +1780,15 @@ html.sap-desktop .aljCalender .sapUiCalHead>.sapUiCalHeadB:focus {
     font-weight: lighter;
 }
 
+.aljCarDetailsDropD.sapMSlt {
+    border-radius: 0.5rem;
+    width: 6rem !important;
+}
+
+.aljCarKMInput .sapMInputBaseContentWrapper {
+    border-radius: 0.5rem;
+}
+
 @media screen and (max-width: 500px) {
     .aljTextBlock {
         display: block !important;

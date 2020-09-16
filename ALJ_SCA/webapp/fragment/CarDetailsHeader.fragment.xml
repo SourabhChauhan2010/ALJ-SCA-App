@@ -1,5 +1,6 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
-	<HBox width="100%" height="5.8rem" justifyContent="Center" alignItems="Center" class="aljCarDetailsHearBox">
+	<HBox visible="{= ${oAppModel>/vehicles}.length > 0}" width="100%" height="5.8rem" justifyContent="Center" alignItems="Center"
+		class="aljCarDetailsHearBox">
 		<HBox height="100%" width="33%">
 			<VBox width="98%" justifyContent="Start" alignItems="Center">
 				<Image src="image/LC.svg" width="7rem"/>
@@ -19,6 +20,56 @@
 			<VBox width="100%" height="100%" justifyContent="Start" alignItems="Center">
 				<Text class="aljCarDetailsBoldLabel" text="{i18n>LastServiceDate}"></Text>
 				<Text class="aljCarDetailsText" text="16-4-2020"></Text>
+			</VBox>
+		</HBox>
+	</HBox>
+	<HBox visible="{= ${oAppModel>/vehicles}.length === 0}" width="100%" height="5.8rem" justifyContent="Center" alignItems="Center"
+		class="aljCarDetailsHearBox sapUiSizeCompact">
+		<HBox height="100%" width="33%">
+			<VBox class="sapUiSmallMarginBegin" width="100%" justifyContent="Start" alignItems="Start">
+				<HBox height="1.6rem" alignItems="Center">
+					<Image src="image/mycar.svg" class="sapUiTinyMarginEnd" width="2rem"/>
+					<Text class="aljCarDetailsText" text="{i18n>CarModel}"></Text>
+				</HBox>
+				<Select class="aljCarDetailsDropD" selectedKey="{oAppModel>/ShipmentTrack/FilterKey}" change="onStatusChange">
+					<items>
+						<core:Item text="{i18n>ALL}" key="all"/>
+						<core:Item text="{i18n>COMPLETED}" key="trip_completed"/>
+						<core:Item text="{i18n>CREATED}" key="trip_created"/>
+						<core:Item text="{i18n>DRIVERASSIGNED}" key="trip_driver_assigned"/>
+						<core:Item text="{i18n>INPROGRESS}" key="trip_inprogress"/>
+						<core:Item text="{i18n>STARTED}" key="trip_started"/>
+						<core:Item text="{i18n>CANCELED}" key="trip_cancelled"/>
+					</items>
+				</Select>
+			</VBox>
+		</HBox>
+		<HBox height="100%" width="33%">
+			<VBox width="100%" class="sapUiSmallMarginBegin" justifyContent="Start" alignItems="Start">
+				<HBox height="1.6rem" alignItems="Center">
+					<Image src="image/booking.svg" class="sapUiTinyMarginEnd" width="1rem"/>
+					<Text class="aljCarDetailsText" text="{i18n>ModelYear}"></Text>
+				</HBox>
+				<Select class="aljCarDetailsDropD" selectedKey="{oAppModel>/ShipmentTrack/FilterKey}" change="onStatusChange">
+					<items>
+						<core:Item text="{i18n>ALL}" key="all"/>
+						<core:Item text="{i18n>COMPLETED}" key="trip_completed"/>
+						<core:Item text="{i18n>CREATED}" key="trip_created"/>
+						<core:Item text="{i18n>DRIVERASSIGNED}" key="trip_driver_assigned"/>
+						<core:Item text="{i18n>INPROGRESS}" key="trip_inprogress"/>
+						<core:Item text="{i18n>STARTED}" key="trip_started"/>
+						<core:Item text="{i18n>CANCELED}" key="trip_cancelled"/>
+					</items>
+				</Select>
+			</VBox>
+		</HBox>
+		<HBox height="100%" class="sapUiSmallMarginBegin" width="33%">
+			<VBox width="100%" height="100%" justifyContent="Start" alignItems="Start">
+				<HBox height="1.6rem" alignItems="Center">
+					<Image src="image/booking.svg" class="sapUiTinyMarginEnd" width="1rem"/>
+					<Text class="aljCarDetailsText" text="{i18n>KMREADING}"></Text>
+				</HBox>
+				<Input class="aljCarKMInput" width="90%"></Input>
 			</VBox>
 		</HBox>
 	</HBox>
