@@ -15,7 +15,7 @@
 		</VBox>
 		<VBox class="sapUiMediumMarginTop sapUiSmallMarginEnd sapUiMarginStartFAq" alignItems="Center">
 			<core:HTML
-			content='&lt;div&gt;&lt;iframe type=&quot;text/html&quot; src=&quot;https://www.youtube.com/embed/3Vw9jKz5SrA&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;'></core:HTML>
+				content='&lt;div&gt;&lt;iframe type=&quot;text/html&quot; src=&quot;https://www.youtube.com/embed/3Vw9jKz5SrA&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;'></core:HTML>
 		</VBox>
 	</ScrollContainer>
 </mvc:View>
