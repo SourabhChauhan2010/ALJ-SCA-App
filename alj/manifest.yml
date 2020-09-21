@@ -1,0 +1,10 @@
+applications:
+-  name: alj-services-new
+   memory: 1G
+   path: target/alj-0.0.1-SNAPSHOT.jar
+   random-route: false
+   
+   buildpacks: 
+      - java_buildpack
+   services:
+   - ALJSCAAPP
